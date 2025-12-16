@@ -1,0 +1,171 @@
+@import 'tailwindcss';
+
+/* Enable dark mode with class strategy for Tailwind v4 */
+@variant dark (&:where(.dark, .dark *));
+
+/*
+ * Font fallback with metric overrides to prevent CLS
+ * These values are calibrated to match Inter's metrics
+ */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  ascent-override: 90%;
+  descent-override: 22.5%;
+  line-gap-override: 0%;
+  size-adjust: 107%;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono Fallback';
+  src: local('Courier New');
+  ascent-override: 78%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 98%;
+}
+
+/* Custom base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', 'Inter Fallback', system-ui, -apple-system, sans-serif;
+    background-color: white;
+    color: #111827;
+    transition-property: color, background-color;
+    transition-duration: 200ms;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', 'JetBrains Mono Fallback', ui-monospace, monospace;
+  }
+
+  .dark body {
+    background-color: #111827;
+    color: #f3f4f6;
+  }
+
+  /* Accessibility: Visible focus indicators for all interactive elements */
+  :focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+
+  .dark :focus-visible {
+    outline-color: #60a5fa;
+  }
+
+  /* Accessibility: Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+}
+
+/* Responsive: Touch-friendly tap targets (minimum 44x44px) */
+@layer components {
+  .tap-target {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Responsive: Mobile-first container padding */
+  .container-responsive {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-responsive {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-responsive {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
+/* Prose table styling for blog articles */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid #d1d5db;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.prose th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+.prose tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.dark .prose th,
+.dark .prose td {
+  border-color: #4b5563;
+}
+
+.dark .prose th {
+  background-color: #374151;
+}
+
+.dark .prose tr:nth-child(even) {
+  background-color: #1f2937;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: black;
+    background: white;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a[href]::after {
+    content: ' (' attr(href) ')';
+    font-size: 10pt;
+  }
+}

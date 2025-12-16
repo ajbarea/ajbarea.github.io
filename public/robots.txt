@@ -1,0 +1,11 @@
+# robots.txt for AJ Barea Portfolio
+# https://ajbarea.github.io
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ajbarea.github.io/sitemap.xml
+
+# Disallow admin/private paths (none currently)
+# Disallow: /admin/
