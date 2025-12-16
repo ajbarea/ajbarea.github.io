@@ -15,13 +15,13 @@ function handleError(error: Error) {
 <template>
   <div class="min-h-screen flex flex-col bg-white dark:bg-gray-950 transition-colors duration-200">
     <LayoutTheNavigation />
-    <main class="flex-1 px-4 sm:px-6 lg:px-8" role="main">
-      <CommonErrorBoundary
+    <main id="main-content" class="flex-1 px-4 sm:px-6 lg:px-8" role="main">
+      <LayoutErrorBoundary
         fallback-message="We encountered an error loading this page. Please try again."
         @error="handleError"
       >
         <slot />
-      </CommonErrorBoundary>
+      </LayoutErrorBoundary>
     </main>
     <LayoutTheFooter />
   </div>
