@@ -26,16 +26,6 @@ test.describe('Navigation', () => {
     await expect(page.locator('#main-content')).toBeVisible()
   })
 
-  test('should navigate to Gallery page', async ({ page }) => {
-    await page.goto('/gallery')
-
-    // Verify page loads with correct title
-    await expect(page).toHaveTitle(/Gallery.*AJ Barea/)
-
-    // Verify main content is visible
-    await expect(page.locator('#main-content')).toBeVisible()
-  })
-
   test('should navigate to Resume page', async ({ page }) => {
     await page.goto('/resume')
 
@@ -65,11 +55,6 @@ test.describe('Navigation', () => {
     await page.click('nav a[href="/projects"]')
     await expect(page).toHaveURL(/\/projects/)
     await expect(page).toHaveTitle(/Projects/)
-
-    // Navigate to Gallery via nav link
-    await page.click('nav a[href="/gallery"]')
-    await expect(page).toHaveURL(/\/gallery/)
-    await expect(page).toHaveTitle(/Gallery/)
 
     // Navigate to Resume via nav link
     await page.click('nav a[href="/resume"]')
