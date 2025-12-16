@@ -1,14 +1,18 @@
-import type { Profile, Education } from '~/types'
+import type { Profile, Education, HonorAward } from '~/types'
 
 export const profile: Profile = {
   name: 'AJ Barea',
   title: 'Software Engineer',
   roles: [
     'Software Engineer',
-    'Full Stack Developer',
+    'AI/ML Researcher',
+    'Full-Stack Developer',
+    'Distributed Systems Engineer',
     'Cloud Architect',
-    'ML Researcher',
-    'Graduate Teaching Assistant',
+    'Violinist',
+    'Hardcore Gamer',
+    'Otaku',
+    'Favorite Son',
   ],
   summary:
     'Software Engineer specializing in full-stack development, AI/ML, and cloud solutions. Currently completing MS in Software Engineering at RIT with research focus on federated learning and agentic AI.',
@@ -84,5 +88,21 @@ export const education: Education[] = [
     graduationDate: 'May 2022',
     gpa: 3.06,
     maxGpa: 4.0,
+  },
+]
+
+export const honorsAwards: HonorAward[] = [
+  {
+    title: 'Certificate of Performance – Jeremy Ramos Phiquest',
+    year: 2022,
+    documentUrl: '/documents/AJ Barea - Certificate of Performace - Phiquest.pdf',
+  },
+  {
+    title: 'NSLS | The National Society of Leadership and Success',
+    year: 2019,
+  },
+  {
+    title: 'Florida Bright Futures and Doorways/Take Stock in Children Scholarships',
+    year: 2018,
   },
 ]

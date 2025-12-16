@@ -84,6 +84,13 @@ export interface TeachingExperience {
   bullets: string[]
 }
 
+// Honor or Award
+export interface HonorAward {
+  title: string
+  year: number
+  documentUrl?: string
+}
+
 // Publication
 export interface Publication {
   id: string

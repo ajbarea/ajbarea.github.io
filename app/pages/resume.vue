@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useResumeStore } from '~/stores/resume'
-import { profile, education } from '~/data/profile'
+import { profile, education, honorsAwards } from '~/data/profile'
 import { professionalExperience, researchExperience, teachingExperience } from '~/data/timeline'
 import { publications } from '~/data/publications'
 import { skillCategories } from '~/data/skills'
@@ -126,7 +126,7 @@ function downloadResume(type: 'industry' | 'research') {
 
         <button
           @click="downloadResume(resumeStore.viewMode)"
-          class="flex items-center justify-center gap-2 min-h-[44px] px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+          class="flex items-center justify-center gap-2 min-h-[44px] px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-sm font-medium shadow-sm hover:shadow-md transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
           :aria-label="`Download ${resumeStore.viewMode} resume as PDF`"
         >
           <svg
@@ -202,6 +202,50 @@ function downloadResume(type: 'industry' | 'research') {
 
         <!-- Education -->
         <ResumeEducationCard :education="education" />
+
+        <!-- Honors & Awards -->
+        <section class="print:break-inside-avoid">
+          <h2
+            class="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2 print:text-lg print:mb-2"
+          >
+            <svg
+              class="w-5 h-5 text-yellow-500 dark:text-yellow-400 no-print"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+              />
+            </svg>
+            Honors & Awards
+          </h2>
+          <ul class="space-y-2">
+            <li
+              v-for="award in honorsAwards"
+              :key="award.title"
+              class="flex items-start gap-2 text-gray-700 dark:text-gray-300"
+            >
+              <span class="text-yellow-500 mt-1">•</span>
+              <span>
+                <a
+                  v-if="award.documentUrl"
+                  :href="award.documentUrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:text-primary-600 dark:hover:text-primary-400 underline"
+                >
+                  {{ award.title }}
+                </a>
+                <span v-else>{{ award.title }}</span>
+                <span class="text-gray-500 dark:text-gray-400"> ({{ award.year }})</span>
+              </span>
+            </li>
+          </ul>
+        </section>
 
         <!-- Skills -->
         <ResumeSkillsGrid :categories="skillCategories" />

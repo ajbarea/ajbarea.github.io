@@ -114,7 +114,7 @@ const unsortedEntries: TimelineEntry[] = [
     description: 'Assisting students with software architecture concepts and design patterns.',
     skills: ['Software Architecture', 'Design Patterns', 'Teaching'],
     icon: 'teaching',
-    isCurrent: true,
+    isCurrent: false,
     sortDate: '2025-08-01',
   },
   {
@@ -127,7 +127,7 @@ const unsortedEntries: TimelineEntry[] = [
     description: 'GPA: 4.0/4.0. Capstone: Federated Learning Framework.',
     skills: ['Machine Learning', 'Distributed Systems', 'Cloud Computing'],
     icon: 'education',
-    isCurrent: true,
+    isCurrent: false,
     sortDate: '2023-08-01',
   },
   {
