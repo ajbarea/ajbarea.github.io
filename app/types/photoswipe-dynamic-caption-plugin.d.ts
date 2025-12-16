@@ -17,6 +17,7 @@ declare module 'photoswipe-dynamic-caption-plugin' {
     mobileCaptionOverlapRatio?: number
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-extraneous-class
   export default class PhotoSwipeDynamicCaption {
     constructor(lightbox: PhotoSwipeLightbox, options?: PhotoSwipeDynamicCaptionOptions)
   }

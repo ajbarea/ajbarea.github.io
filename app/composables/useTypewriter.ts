@@ -82,6 +82,6 @@ export function useTypewriter(texts: string[], options: TypewriterOptions = {}) 
     isTyping,
     isDeleting,
     start,
-    stop,
+    stop
   }
 }
