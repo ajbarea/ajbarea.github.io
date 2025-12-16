@@ -28,7 +28,7 @@ export const profile: Profile = {
     },
     {
       platform: 'linkedin',
-      url: 'https://linkedin.com/in/ajbarea',
+      url: 'https://linkedin.com/in/aj-barea',
       icon: 'linkedin',
       label: 'LinkedIn',
     },
