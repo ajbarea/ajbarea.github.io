@@ -73,7 +73,7 @@ onMounted(() => {
   // Initialize dynamic caption plugin
   new PhotoSwipeDynamicCaption(lightbox, {
     type: 'auto',
-    captionContent: (slide: { data: { element?: HTMLElement } }) => {
+    captionContent: (slide) => {
       const el = slide.data.element
       if (el) {
         const caption = el.getAttribute('data-pswp-caption')
