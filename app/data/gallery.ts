@@ -12,7 +12,7 @@ export const galleryImages: GalleryImage[] = [
     width: 640,
     height: 480,
     alt: 'Alex portrait',
-    caption: 'Alex',
+    caption: 'Alex'
   },
   {
     id: 'art',
@@ -21,7 +21,7 @@ export const galleryImages: GalleryImage[] = [
     width: 960,
     height: 960,
     alt: 'Art piece',
-    caption: 'Art',
+    caption: 'Art'
   },
   {
     id: 'band',
@@ -30,7 +30,7 @@ export const galleryImages: GalleryImage[] = [
     width: 640,
     height: 640,
     alt: 'Band performance',
-    caption: 'Band',
+    caption: 'Band'
   },
   {
     id: 'band1',
@@ -38,7 +38,7 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/band1.jpg',
     width: 600,
     height: 450,
-    alt: 'Band performance',
+    alt: 'Band performance'
   },
   {
     id: 'band2',
@@ -46,7 +46,7 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/band2.jpg',
     width: 1106,
     height: 800,
-    alt: 'Band performance',
+    alt: 'Band performance'
   },
   {
     id: 'blizzcon',
@@ -55,7 +55,7 @@ export const galleryImages: GalleryImage[] = [
     width: 2048,
     height: 1152,
     alt: 'BlizzCon event',
-    caption: 'BlizzCon',
+    caption: 'BlizzCon'
   },
   {
     id: 'blizzcon1',
@@ -63,7 +63,7 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/blizzcon1.jpg',
     width: 1440,
     height: 2872,
-    alt: 'BlizzCon event',
+    alt: 'BlizzCon event'
   },
   {
     id: 'brandnew',
@@ -72,7 +72,7 @@ export const galleryImages: GalleryImage[] = [
     width: 960,
     height: 1280,
     alt: 'Brand New concert',
-    caption: 'Brand New',
+    caption: 'Brand New'
   },
   {
     id: 'brooke',
@@ -81,7 +81,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1536,
     height: 2048,
     alt: 'Brooke portrait',
-    caption: 'Brooke',
+    caption: 'Brooke'
   },
   {
     id: 'christina',
@@ -90,7 +90,7 @@ export const galleryImages: GalleryImage[] = [
     width: 480,
     height: 640,
     alt: 'Christina portrait',
-    caption: 'Christina',
+    caption: 'Christina'
   },
   {
     id: 'con2',
@@ -98,7 +98,7 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/con2.jpg',
     width: 1810,
     height: 1890,
-    alt: 'Convention photo',
+    alt: 'Convention photo'
   },
   {
     id: 'con3',
@@ -106,7 +106,7 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/con3.jpg',
     width: 1520,
     height: 1889,
-    alt: 'Convention photo',
+    alt: 'Convention photo'
   },
   {
     id: 'con4',
@@ -114,7 +114,7 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/con4.jpg',
     width: 1364,
     height: 1890,
-    alt: 'Convention photo',
+    alt: 'Convention photo'
   },
   {
     id: 'con5',
@@ -122,7 +122,7 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/con5.jpg',
     width: 1793,
     height: 1486,
-    alt: 'Convention photo',
+    alt: 'Convention photo'
   },
   {
     id: 'con6',
@@ -130,7 +130,7 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/con6.jpg',
     width: 1677,
     height: 1889,
-    alt: 'Convention photo',
+    alt: 'Convention photo'
   },
   {
     id: 'con7',
@@ -138,7 +138,7 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/con7.jpg',
     width: 1810,
     height: 1490,
-    alt: 'Convention photo',
+    alt: 'Convention photo'
   },
   {
     id: 'fabian',
@@ -147,7 +147,7 @@ export const galleryImages: GalleryImage[] = [
     width: 453,
     height: 301,
     alt: 'Fabian portrait',
-    caption: 'Fabian',
+    caption: 'Fabian'
   },
   {
     id: 'face1',
@@ -155,7 +155,7 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/face1.jpg',
     width: 720,
     height: 960,
-    alt: 'Portrait photo',
+    alt: 'Portrait photo'
   },
   {
     id: 'face2',
@@ -163,7 +163,7 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/face2.jpg',
     width: 568,
     height: 960,
-    alt: 'Portrait photo',
+    alt: 'Portrait photo'
   },
   {
     id: 'face3',
@@ -171,7 +171,7 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/face3.jpg',
     width: 720,
     height: 405,
-    alt: 'Portrait photo',
+    alt: 'Portrait photo'
   },
   {
     id: 'face4',
@@ -179,7 +179,7 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/face4.jpg',
     width: 768,
     height: 1024,
-    alt: 'Portrait photo',
+    alt: 'Portrait photo'
   },
   {
     id: 'fam',
@@ -188,7 +188,7 @@ export const galleryImages: GalleryImage[] = [
     width: 720,
     height: 960,
     alt: 'Family photo',
-    caption: 'Family',
+    caption: 'Family'
   },
   {
     id: 'fam2',
@@ -196,7 +196,7 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/fam2.jpg',
     width: 3088,
     height: 2320,
-    alt: 'Family photo',
+    alt: 'Family photo'
   },
   {
     id: 'games',
@@ -205,7 +205,7 @@ export const galleryImages: GalleryImage[] = [
     width: 717,
     height: 960,
     alt: 'Gaming setup',
-    caption: 'Games',
+    caption: 'Games'
   },
   {
     id: 'muzzies',
@@ -214,7 +214,7 @@ export const galleryImages: GalleryImage[] = [
     width: 960,
     height: 717,
     alt: 'Muzzies photo',
-    caption: 'Muzzies',
+    caption: 'Muzzies'
   },
   {
     id: 'tori',
@@ -223,7 +223,7 @@ export const galleryImages: GalleryImage[] = [
     width: 480,
     height: 640,
     alt: 'Tori portrait',
-    caption: 'Tori',
+    caption: 'Tori'
   },
   {
     id: 'tori2',
@@ -231,7 +231,7 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/tori2.jpg',
     width: 480,
     height: 640,
-    alt: 'Tori portrait',
+    alt: 'Tori portrait'
   },
   {
     id: 'uncle',
@@ -240,7 +240,7 @@ export const galleryImages: GalleryImage[] = [
     width: 720,
     height: 960,
     alt: 'Uncle photo',
-    caption: 'Uncle',
+    caption: 'Uncle'
   },
   {
     id: 'vote',
@@ -249,7 +249,7 @@ export const galleryImages: GalleryImage[] = [
     width: 540,
     height: 960,
     alt: 'Voting photo',
-    caption: 'Vote',
+    caption: 'Vote'
   },
   {
     id: 'vote1',
@@ -257,7 +257,7 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/vote1.jpg',
     width: 895,
     height: 894,
-    alt: 'Voting photo',
+    alt: 'Voting photo'
   },
   {
     id: 'youth',
@@ -266,6 +266,6 @@ export const galleryImages: GalleryImage[] = [
     width: 741,
     height: 564,
     alt: 'Youth photo',
-    caption: 'Youth',
-  },
+    caption: 'Youth'
+  }
 ]

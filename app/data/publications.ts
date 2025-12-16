@@ -7,7 +7,7 @@ export const publications: Publication[] = [
     title: 'IntelliFL: Intelligent Client Selection for Federated Learning',
     venue: 'IEEE Consumer Communications & Networking Conference (CCNC)',
     year: 2026,
-    status: 'under-review',
+    status: 'under-review'
   },
   {
     id: 'intellifl-framework-1',
@@ -15,7 +15,7 @@ export const publications: Publication[] = [
     title: 'Privacy-Preserving Aggregation in Federated Learning Systems',
     venue: 'TBD',
     year: 2025,
-    status: 'under-review',
+    status: 'under-review'
   },
   {
     id: 'intellifl-framework-2',
@@ -23,8 +23,8 @@ export const publications: Publication[] = [
     title: 'Testing Strategies for Distributed Machine Learning Systems',
     venue: 'TBD',
     year: 2025,
-    status: 'under-review',
-  },
+    status: 'under-review'
+  }
 ]
 
 export const presentations: Presentation[] = [
@@ -34,12 +34,12 @@ export const presentations: Presentation[] = [
     venue: 'YouTube (@ajbarea)',
     date: '2024-Present',
     type: 'tutorial',
-    url: 'https://youtube.com/@ajbarea',
-  },
+    url: 'https://youtube.com/@ajbarea'
+  }
 ]
 
 export const publicationsByStatus = {
   published: publications.filter((p) => p.status === 'published'),
   'under-review': publications.filter((p) => p.status === 'under-review'),
-  accepted: publications.filter((p) => p.status === 'accepted'),
+  accepted: publications.filter((p) => p.status === 'accepted')
 }

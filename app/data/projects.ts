@@ -11,7 +11,7 @@ export const projects: Project[] = [
     technologies: ['Python', 'PyTorch', 'Hugging Face', 'FastAPI', 'React', 'PostgreSQL'],
     type: 'ai-ml',
     githubUrl: 'https://github.com/ajbarea/news-aggregator',
-    featured: true,
+    featured: true
   },
   {
     id: 'security-eval',
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     technologies: ['Python', 'PyTorch', 'scikit-learn', 'Docker', 'AWS'],
     type: 'ai-ml',
     githubUrl: 'https://github.com/ajbarea/security-eval',
-    featured: true,
+    featured: true
   },
   {
     id: 'aws-image-translator',
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     technologies: ['AWS Lambda', 'AWS Rekognition', 'AWS Translate', 'React', 'Terraform'],
     type: 'cloud',
     githubUrl: 'https://github.com/ajbarea/aws-image-translator',
-    featured: true,
+    featured: true
   },
   {
     id: 'robot-navigation-rl',
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     type: 'ai-ml',
     githubUrl: 'https://github.com/ajbarea/robot-navigation-rl',
     youtubeUrl: 'https://youtube.com/@ajbarea',
-    featured: true,
+    featured: true
   },
   {
     id: 'intellifl',
@@ -58,7 +58,7 @@ export const projects: Project[] = [
       'Research project developing a novel federated learning framework that optimizes client selection based on data quality and computational resources while maintaining differential privacy guarantees.',
     technologies: ['Python', 'FLOWER', 'PyTorch', 'Docker', 'gRPC'],
     type: 'research',
-    featured: true,
+    featured: true
   },
   // Legacy projects from previous portfolio
   {
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     type: 'full-stack',
     githubUrl: 'https://github.com/ajbarea/tbd-banking-application',
     youtubeUrl: 'https://youtu.be/RiDxzmMX-qk',
-    featured: false,
+    featured: false
   },
   {
     id: 'thoughtcloud-social',
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     type: 'full-stack',
     githubUrl: 'https://github.com/ajbarea/thought-cloud-social',
     youtubeUrl: 'https://youtu.be/w8TgRcd1uWQ',
-    featured: false,
+    featured: false
   },
   {
     id: 'control-mobile-robots',
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     type: 'ai-ml',
     githubUrl: 'https://github.com/ajbarea/control-of-mobile-robots',
     youtubeUrl: 'https://www.youtube.com/playlist?list=PLmQVFU1FBDddYV_4IRW1zfXH6CAKuZjIM',
-    featured: false,
+    featured: false
   },
   {
     id: 'blockchain-explorer',
@@ -111,7 +111,7 @@ export const projects: Project[] = [
     type: 'full-stack',
     githubUrl: 'https://github.com/ajbarea/blockchain-explorer',
     youtubeUrl: 'https://youtube.com/playlist?list=PLmQVFU1FBDddVvJjHuwnRp6F6vwmz01X8',
-    featured: false,
+    featured: false
   },
   {
     id: 'expense-reimbursement',
@@ -124,7 +124,7 @@ export const projects: Project[] = [
     type: 'full-stack',
     githubUrl: 'https://github.com/ajbarea/expense-reimbursement-system',
     youtubeUrl: 'https://youtu.be/t2p_fUak_Mw',
-    featured: false,
+    featured: false
   },
   {
     id: 'portfolio',
@@ -137,8 +137,8 @@ export const projects: Project[] = [
     type: 'full-stack',
     demoUrl: 'https://ajbarea.github.io/',
     githubUrl: 'https://github.com/ajbarea/ajbarea.github.io',
-    featured: false,
-  },
+    featured: false
+  }
 ]
 
 export const featuredProjects = projects.filter((p) => p.featured)
@@ -147,5 +147,5 @@ export const projectsByType = {
   'ai-ml': projects.filter((p) => p.type === 'ai-ml'),
   'full-stack': projects.filter((p) => p.type === 'full-stack'),
   research: projects.filter((p) => p.type === 'research'),
-  cloud: projects.filter((p) => p.type === 'cloud'),
+  cloud: projects.filter((p) => p.type === 'cloud')
 }

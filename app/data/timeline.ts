@@ -3,6 +3,7 @@ import type {
   ProfessionalExperience,
   ResearchExperience,
   TeachingExperience,
+  TimelineEntryType
 } from '~/types'
 
 export const professionalExperience: ProfessionalExperience[] = [
@@ -19,9 +20,9 @@ export const professionalExperience: ProfessionalExperience[] = [
       'Developed and maintained full-stack applications using React, Java Spring Boot, and AWS services',
       'Implemented CI/CD pipelines using GitHub Actions and Terraform for infrastructure as code',
       'Collaborated with cross-functional teams to deliver features for e-commerce platform',
-      'Optimized application performance and reduced load times through caching strategies',
+      'Optimized application performance and reduced load times through caching strategies'
     ],
-    isCurrent: false,
+    isCurrent: false
   },
   {
     id: 'phiquest',
@@ -34,10 +35,10 @@ export const professionalExperience: ProfessionalExperience[] = [
     bullets: [
       'Developed web applications using modern JavaScript frameworks',
       'Participated in agile development processes and code reviews',
-      'Contributed to database design and API development',
+      'Contributed to database design and API development'
     ],
-    isCurrent: false,
-  },
+    isCurrent: false
+  }
 ]
 
 export const researchExperience: ResearchExperience[] = [
@@ -51,9 +52,9 @@ export const researchExperience: ResearchExperience[] = [
     bullets: [
       'Developing IntelliFL framework for federated learning with privacy-preserving techniques',
       'Researching agentic AI approaches for distributed machine learning systems',
-      'Publishing research papers on federated learning and ML testing',
+      'Publishing research papers on federated learning and ML testing'
     ],
-    isCurrent: true,
+    isCurrent: true
   },
   {
     id: 'independent-ml',
@@ -64,10 +65,10 @@ export const researchExperience: ResearchExperience[] = [
     bullets: [
       'Developed AI/ML projects including news aggregator and security evaluation systems',
       'Created educational content on YouTube covering AI/ML topics',
-      'Contributed to open source ML projects',
+      'Contributed to open source ML projects'
     ],
-    isCurrent: true,
-  },
+    isCurrent: true
+  }
 ]
 
 export const teachingExperience: TeachingExperience[] = [
@@ -81,12 +82,10 @@ export const teachingExperience: TeachingExperience[] = [
     bullets: [
       'Assisted students with software architecture concepts and design patterns',
       'Graded assignments and provided feedback on architectural decisions',
-      'Held office hours to support student learning',
-    ],
-  },
+      'Held office hours to support student learning'
+    ]
+  }
 ]
-
-import type { TimelineEntryType } from '~/types'
 
 // Combined timeline entries for home page display
 const unsortedEntries: TimelineEntry[] = [
@@ -102,7 +101,7 @@ const unsortedEntries: TimelineEntry[] = [
     skills: ['PyTorch', 'FLOWER', 'Python', 'Distributed Systems'],
     icon: 'research',
     isCurrent: true,
-    sortDate: '2025-05-01',
+    sortDate: '2025-05-01'
   },
   {
     id: 'rit-ta',
@@ -115,7 +114,7 @@ const unsortedEntries: TimelineEntry[] = [
     skills: ['Software Architecture', 'Design Patterns', 'Teaching'],
     icon: 'teaching',
     isCurrent: false,
-    sortDate: '2025-08-01',
+    sortDate: '2025-08-01'
   },
   {
     id: 'rit-ms',
@@ -128,7 +127,7 @@ const unsortedEntries: TimelineEntry[] = [
     skills: ['Machine Learning', 'Distributed Systems', 'Cloud Computing'],
     icon: 'education',
     isCurrent: false,
-    sortDate: '2023-08-01',
+    sortDate: '2023-08-01'
   },
   {
     id: 'lowes',
@@ -141,7 +140,7 @@ const unsortedEntries: TimelineEntry[] = [
     skills: ['React', 'Java', 'Spring Boot', 'AWS', 'Terraform'],
     icon: 'work',
     isCurrent: false,
-    sortDate: '2023-02-01',
+    sortDate: '2023-02-01'
   },
   {
     id: 'usf-bs',
@@ -154,7 +153,7 @@ const unsortedEntries: TimelineEntry[] = [
     skills: ['C++', 'Python', 'Embedded Systems'],
     icon: 'education',
     isCurrent: false,
-    sortDate: '2018-08-01',
+    sortDate: '2018-08-01'
   },
   {
     id: 'phiquest',
@@ -167,8 +166,8 @@ const unsortedEntries: TimelineEntry[] = [
     skills: ['JavaScript', 'Web Development', 'Agile'],
     icon: 'work',
     isCurrent: false,
-    sortDate: '2022-03-01',
-  },
+    sortDate: '2022-03-01'
+  }
 ]
 
 export const timelineEntries: TimelineEntry[] = unsortedEntries.sort(
