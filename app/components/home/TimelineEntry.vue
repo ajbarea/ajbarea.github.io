@@ -18,7 +18,7 @@ function getIconPath(icon: string): string {
     teaching:
       'M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z',
     award:
-      'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z',
+      'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'
   }
   return icons[icon] ?? defaultIcon
 }
@@ -29,7 +29,7 @@ function getTypeColor(type: string): string {
     education: 'bg-green-500',
     research: 'bg-purple-500',
     teaching: 'bg-orange-500',
-    award: 'bg-yellow-500',
+    award: 'bg-yellow-500'
   }
   return colors[type] || 'bg-gray-500'
 }
@@ -47,7 +47,7 @@ function getTypeColor(type: string): string {
     <div
       :class="[
         'absolute left-0 w-6 h-6 rounded-full flex items-center justify-center',
-        getTypeColor(entry.type),
+        getTypeColor(entry.type)
       ]"
       aria-hidden="true"
     >

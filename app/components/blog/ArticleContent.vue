@@ -23,7 +23,7 @@ function formatDate(dateString: string): string {
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
-    day: 'numeric',
+    day: 'numeric'
   })
 }
 
@@ -46,7 +46,7 @@ async function highlightCodeBlocks(html: string): Promise<string> {
 
       const highlighted = await codeToHtml(decodedCode, {
         lang: lang || 'text',
-        theme: 'github-dark',
+        theme: 'github-dark'
       })
       result = result.replace(fullMatch, highlighted)
     } catch {
@@ -144,7 +144,7 @@ async function renderMarkdown(content: string): Promise<string> {
   // Sanitize HTML to prevent XSS attacks
   html = DOMPurify.sanitize(html, {
     ADD_TAGS: ['iframe'],
-    ADD_ATTR: ['target', 'rel', 'loading'],
+    ADD_ATTR: ['target', 'rel', 'loading']
   })
 
   return html
@@ -283,10 +283,12 @@ watch(() => props.article.content, processContent)
     </div>
 
     <!-- Article Content -->
+    <!-- eslint-disable vue/no-v-html -- Required for rendering sanitized markdown -->
     <div
       v-else
       class="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-code:text-primary-600 dark:prose-code:text-primary-400 prose-pre:bg-gray-900 prose-pre:text-gray-100"
       v-html="renderedContent"
     />
+    <!-- eslint-enable vue/no-v-html -->
   </article>
 </template>

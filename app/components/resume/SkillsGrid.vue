@@ -12,7 +12,7 @@ function getCategoryColor(categoryId: string): string {
     languages: 'border-blue-500 bg-blue-50 dark:bg-blue-900/20',
     'cloud-devops': 'border-orange-500 bg-orange-50 dark:bg-orange-900/20',
     'ai-ml': 'border-purple-500 bg-purple-50 dark:bg-purple-900/20',
-    tools: 'border-green-500 bg-green-50 dark:bg-green-900/20',
+    tools: 'border-green-500 bg-green-50 dark:bg-green-900/20'
   }
   return colors[categoryId] || 'border-gray-500 bg-gray-50 dark:bg-gray-900/20'
 }
@@ -22,7 +22,7 @@ function getCategoryTextColor(categoryId: string): string {
     languages: 'text-blue-700 dark:text-blue-300',
     'cloud-devops': 'text-orange-700 dark:text-orange-300',
     'ai-ml': 'text-purple-700 dark:text-purple-300',
-    tools: 'text-green-700 dark:text-green-300',
+    tools: 'text-green-700 dark:text-green-300'
   }
   return colors[categoryId] || 'text-gray-700 dark:text-gray-300'
 }

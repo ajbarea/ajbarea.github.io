@@ -19,7 +19,7 @@ function getTypeLabel(type: Project['type']): string {
     'ai-ml': 'AI/ML',
     'full-stack': 'Full-Stack',
     research: 'Research',
-    cloud: 'Cloud',
+    cloud: 'Cloud'
   }
   return labels[type]
 }
@@ -29,7 +29,7 @@ function getTypeBadgeClasses(type: Project['type']): string {
     'ai-ml': 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300',
     'full-stack': 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300',
     research: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300',
-    cloud: 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300',
+    cloud: 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300'
   }
   return classes[type]
 }
@@ -72,7 +72,7 @@ function getTypeBadgeClasses(type: Project['type']): string {
       <span
         :class="[
           'absolute top-3 right-3 px-3 py-1 text-xs font-semibold rounded-full',
-          getTypeBadgeClasses(project.type),
+          getTypeBadgeClasses(project.type)
         ]"
       >
         {{ getTypeLabel(project.type) }}

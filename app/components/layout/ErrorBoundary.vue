@@ -6,7 +6,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  fallbackMessage: 'Something went wrong while loading this content.',
+  fallbackMessage: 'Something went wrong while loading this content.'
 })
 
 const emit = defineEmits<{

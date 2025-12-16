@@ -21,7 +21,7 @@ function getCategoryColor(categoryId: string): string {
     languages: 'from-blue-500 to-blue-600',
     'cloud-devops': 'from-orange-500 to-orange-600',
     'ai-ml': 'from-purple-500 to-purple-600',
-    tools: 'from-green-500 to-green-600',
+    tools: 'from-green-500 to-green-600'
   }
   return colors[categoryId] || 'from-gray-500 to-gray-600'
 }
@@ -32,7 +32,7 @@ function getCategoryBgColor(categoryId: string): string {
     'cloud-devops':
       'bg-orange-50 dark:bg-orange-900/20 hover:bg-orange-100 dark:hover:bg-orange-900/30',
     'ai-ml': 'bg-purple-50 dark:bg-purple-900/20 hover:bg-purple-100 dark:hover:bg-purple-900/30',
-    tools: 'bg-green-50 dark:bg-green-900/20 hover:bg-green-100 dark:hover:bg-green-900/30',
+    tools: 'bg-green-50 dark:bg-green-900/20 hover:bg-green-100 dark:hover:bg-green-900/30'
   }
   return (
     colors[categoryId] ||
@@ -75,7 +75,7 @@ function getCategoryBgColor(categoryId: string): string {
               :class="[
                 'relative min-h-[36px] sm:min-h-[40px] px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500',
                 getCategoryBgColor(category.id),
-                skill.docUrl ? 'cursor-pointer' : 'cursor-default',
+                skill.docUrl ? 'cursor-pointer' : 'cursor-default'
               ]"
               :aria-label="
                 skill.docUrl ? `${skill.name} - Click to view documentation` : skill.name

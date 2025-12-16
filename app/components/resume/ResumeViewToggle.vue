@@ -15,12 +15,12 @@ const resumeStore = useResumeStore()
         'min-h-[44px] px-3 sm:px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500',
         resumeStore.isIndustryView
           ? 'bg-white dark:bg-gray-700 text-primary-600 dark:text-primary-400 shadow-sm'
-          : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white',
+          : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
       ]"
-      @click="resumeStore.setViewMode('industry')"
       role="tab"
       :aria-selected="resumeStore.isIndustryView"
       aria-controls="resume-content"
+      @click="resumeStore.setViewMode('industry')"
     >
       <span class="flex items-center gap-1.5 sm:gap-2">
         <svg
@@ -45,12 +45,12 @@ const resumeStore = useResumeStore()
         'min-h-[44px] px-3 sm:px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500',
         resumeStore.isResearchView
           ? 'bg-white dark:bg-gray-700 text-primary-600 dark:text-primary-400 shadow-sm'
-          : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white',
+          : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
       ]"
-      @click="resumeStore.setViewMode('research')"
       role="tab"
       :aria-selected="resumeStore.isResearchView"
       aria-controls="resume-content"
+      @click="resumeStore.setViewMode('research')"
     >
       <span class="flex items-center gap-1.5 sm:gap-2">
         <svg

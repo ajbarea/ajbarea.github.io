@@ -12,7 +12,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  galleryId: 'photo-gallery',
+  galleryId: 'photo-gallery'
 })
 
 const emit = defineEmits<{
@@ -55,7 +55,7 @@ onMounted(() => {
     arrowPrevTitle: 'Previous (Arrow Left)',
     arrowNextTitle: 'Next (Arrow Right)',
     // Padding for caption space
-    paddingFn: () => ({ top: 30, bottom: 30, left: 70, right: 70 }),
+    paddingFn: () => ({ top: 30, bottom: 30, left: 70, right: 70 })
   })
 
   // Fallback: use domItemData filter for any images without predefined dimensions
@@ -80,7 +80,7 @@ onMounted(() => {
         return caption || ''
       }
       return ''
-    },
+    }
   })
 
   lightbox.init()

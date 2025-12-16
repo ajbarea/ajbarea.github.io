@@ -8,7 +8,7 @@ interface Props {
 }
 
 withDefaults(defineProps<Props>(), {
-  title: 'Experience & Education',
+  title: 'Experience & Education'
 })
 </script>
 
