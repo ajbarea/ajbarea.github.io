@@ -16,7 +16,7 @@ const mockEntries: TimelineEntryType[] = [
     skills: ['TypeScript', 'Vue', 'AWS'],
     icon: 'work',
     isCurrent: true,
-    sortDate: '2024-01-01',
+    sortDate: '2024-01-01'
   },
   {
     id: 'entry-2',
@@ -29,7 +29,7 @@ const mockEntries: TimelineEntryType[] = [
     skills: ['Machine Learning', 'Algorithms'],
     icon: 'education',
     isCurrent: false,
-    sortDate: '2022-08-01',
+    sortDate: '2022-08-01'
   },
   {
     id: 'entry-3',
@@ -42,8 +42,8 @@ const mockEntries: TimelineEntryType[] = [
     skills: ['React', 'Node.js'],
     icon: 'work',
     isCurrent: false,
-    sortDate: '2021-06-01',
-  },
+    sortDate: '2021-06-01'
+  }
 ]
 
 describe('ExperienceTimeline', () => {
@@ -51,8 +51,8 @@ describe('ExperienceTimeline', () => {
     const wrapper = mount(ExperienceTimeline, {
       props: { entries: mockEntries },
       global: {
-        components: { TimelineEntry },
-      },
+        components: { TimelineEntry }
+      }
     })
 
     const entries = wrapper.findAllComponents(TimelineEntry)
@@ -63,8 +63,8 @@ describe('ExperienceTimeline', () => {
     const wrapper = mount(ExperienceTimeline, {
       props: { entries: mockEntries },
       global: {
-        components: { TimelineEntry },
-      },
+        components: { TimelineEntry }
+      }
     })
 
     const titles = wrapper.findAll('h3')
@@ -77,8 +77,8 @@ describe('ExperienceTimeline', () => {
     const wrapper = mount(ExperienceTimeline, {
       props: { entries: mockEntries },
       global: {
-        components: { TimelineEntry },
-      },
+        components: { TimelineEntry }
+      }
     })
 
     const currentBadges = wrapper.findAll('[role="status"]')
@@ -91,8 +91,8 @@ describe('ExperienceTimeline', () => {
     const wrapper = mount(ExperienceTimeline, {
       props: { entries: pastEntries },
       global: {
-        components: { TimelineEntry },
-      },
+        components: { TimelineEntry }
+      }
     })
 
     const currentBadges = wrapper.findAll('[role="status"]')
@@ -103,11 +103,11 @@ describe('ExperienceTimeline', () => {
     const wrapper = mount(ExperienceTimeline, {
       props: {
         entries: mockEntries,
-        title: 'My Career Journey',
+        title: 'My Career Journey'
       },
       global: {
-        components: { TimelineEntry },
-      },
+        components: { TimelineEntry }
+      }
     })
 
     expect(wrapper.find('h2').text()).toBe('My Career Journey')
@@ -117,8 +117,8 @@ describe('ExperienceTimeline', () => {
     const wrapper = mount(ExperienceTimeline, {
       props: { entries: mockEntries },
       global: {
-        components: { TimelineEntry },
-      },
+        components: { TimelineEntry }
+      }
     })
 
     expect(wrapper.find('h2').text()).toBe('Experience & Education')
@@ -131,8 +131,8 @@ describe('ExperienceTimeline', () => {
     const wrapper = mount(ExperienceTimeline, {
       props: { entries: [firstEntry] },
       global: {
-        components: { TimelineEntry },
-      },
+        components: { TimelineEntry }
+      }
     })
 
     const skillTags = wrapper.findAll('ul[aria-label="Skills"] li')

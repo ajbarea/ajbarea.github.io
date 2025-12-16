@@ -7,14 +7,14 @@ import type { Profile } from '~/types'
 const TextScrollerStub = {
   name: 'TextScroller',
   props: ['texts'],
-  template: '<span>{{ texts[0] }}</span>',
+  template: '<span>{{ texts[0] }}</span>'
 }
 
 // Mock NuxtLink to avoid router dependency in unit tests
 const NuxtLinkStub = {
   name: 'NuxtLink',
   props: ['to'],
-  template: '<a :href="to"><slot /></a>',
+  template: '<a :href="to"><slot /></a>'
 }
 
 const mockProfile: Profile = {
@@ -27,28 +27,28 @@ const mockProfile: Profile = {
     email: 'test@example.com',
     phone: '(555) 123-4567',
     github: 'testuser',
-    youtube: '@testuser',
+    youtube: '@testuser'
   },
   socialLinks: [
     {
       platform: 'github',
       url: 'https://github.com/testuser',
       icon: 'github',
-      label: 'GitHub',
+      label: 'GitHub'
     },
     {
       platform: 'linkedin',
       url: 'https://linkedin.com/in/testuser',
       icon: 'linkedin',
-      label: 'LinkedIn',
+      label: 'LinkedIn'
     },
     {
       platform: 'email',
       url: 'mailto:test@example.com',
       icon: 'email',
-      label: 'Email',
-    },
-  ],
+      label: 'Email'
+    }
+  ]
 }
 
 describe('AuthorCard', () => {
@@ -56,8 +56,8 @@ describe('AuthorCard', () => {
     const wrapper = mount(AuthorCard, {
       props: { profile: mockProfile },
       global: {
-        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub },
-      },
+        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub }
+      }
     })
 
     expect(wrapper.find('h1').text()).toBe('Test User')
@@ -67,8 +67,8 @@ describe('AuthorCard', () => {
     const wrapper = mount(AuthorCard, {
       props: { profile: mockProfile },
       global: {
-        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub },
-      },
+        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub }
+      }
     })
 
     expect(wrapper.text()).toContain('A test summary about the user.')
@@ -78,8 +78,8 @@ describe('AuthorCard', () => {
     const wrapper = mount(AuthorCard, {
       props: { profile: mockProfile },
       global: {
-        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub },
-      },
+        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub }
+      }
     })
 
     const socialLinks = wrapper.findAll('nav a')
@@ -90,8 +90,8 @@ describe('AuthorCard', () => {
     const wrapper = mount(AuthorCard, {
       props: { profile: mockProfile },
       global: {
-        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub },
-      },
+        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub }
+      }
     })
 
     const links = wrapper.findAll('nav a')
@@ -104,8 +104,8 @@ describe('AuthorCard', () => {
     const wrapper = mount(AuthorCard, {
       props: { profile: mockProfile },
       global: {
-        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub },
-      },
+        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub }
+      }
     })
 
     const links = wrapper.findAll('nav a')
@@ -119,8 +119,8 @@ describe('AuthorCard', () => {
     const wrapper = mount(AuthorCard, {
       props: { profile: mockProfile },
       global: {
-        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub },
-      },
+        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub }
+      }
     })
 
     const links = wrapper.findAll('nav a')
@@ -133,8 +133,8 @@ describe('AuthorCard', () => {
     const wrapper = mount(AuthorCard, {
       props: { profile: mockProfile },
       global: {
-        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub },
-      },
+        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub }
+      }
     })
 
     const img = wrapper.find('img')
