@@ -20,13 +20,13 @@ useHead({
     {
       name: 'description',
       content:
-        "Explore AJ Barea's portfolio of software projects including AI/ML applications, full-stack development, cloud solutions, and research work.",
+        "Explore AJ Barea's portfolio of software projects including AI/ML applications, full-stack development, cloud solutions, and research work."
     },
     { property: 'og:title', content: 'Projects | AJ Barea' },
     {
       property: 'og:description',
       content:
-        "Explore AJ Barea's portfolio of software projects including AI/ML applications, full-stack development, cloud solutions, and research work.",
+        "Explore AJ Barea's portfolio of software projects including AI/ML applications, full-stack development, cloud solutions, and research work."
     },
     { property: 'og:image', content: '/images/og-image.png' },
     { property: 'og:url', content: 'https://ajbarea.github.io/projects' },
@@ -36,9 +36,9 @@ useHead({
     {
       name: 'twitter:description',
       content:
-        "Explore AJ Barea's portfolio of software projects including AI/ML applications, full-stack development, and cloud solutions.",
-    },
-  ],
+        "Explore AJ Barea's portfolio of software projects including AI/ML applications, full-stack development, and cloud solutions."
+    }
+  ]
 })
 </script>
 
@@ -64,7 +64,11 @@ useHead({
         v-if="filteredProjects.length > 0"
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
       >
-        <ProjectsProjectCard v-for="project in filteredProjects" :key="project.id" :project="project" />
+        <ProjectsProjectCard
+          v-for="project in filteredProjects"
+          :key="project.id"
+          :project="project"
+        />
       </div>
 
       <!-- Empty State -->

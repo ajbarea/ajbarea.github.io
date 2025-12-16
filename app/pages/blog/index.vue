@@ -9,13 +9,13 @@ useHead({
     {
       name: 'description',
       content:
-        'Technical articles and insights on software engineering, AI/ML, cloud development, and programming best practices by AJ Barea.',
+        'Technical articles and insights on software engineering, AI/ML, cloud development, and programming best practices by AJ Barea.'
     },
     { property: 'og:title', content: 'Blog | AJ Barea' },
     {
       property: 'og:description',
       content:
-        'Technical articles and insights on software engineering, AI/ML, cloud development, and programming best practices.',
+        'Technical articles and insights on software engineering, AI/ML, cloud development, and programming best practices.'
     },
     { property: 'og:image', content: '/images/og-image.png' },
     { property: 'og:url', content: 'https://ajbarea.github.io/blog' },
@@ -25,9 +25,9 @@ useHead({
     {
       name: 'twitter:description',
       content:
-        'Technical articles and insights on software engineering, AI/ML, and cloud development.',
-    },
-  ],
+        'Technical articles and insights on software engineering, AI/ML, and cloud development.'
+    }
+  ]
 })
 </script>
 

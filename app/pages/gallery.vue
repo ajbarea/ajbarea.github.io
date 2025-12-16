@@ -6,12 +6,12 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Photo gallery showcasing photography and memorable moments by AJ Barea.',
+      content: 'Photo gallery showcasing photography and memorable moments by AJ Barea.'
     },
     { property: 'og:title', content: 'Gallery | AJ Barea' },
     {
       property: 'og:description',
-      content: 'Photo gallery showcasing photography and memorable moments by AJ Barea.',
+      content: 'Photo gallery showcasing photography and memorable moments by AJ Barea.'
     },
     { property: 'og:image', content: '/images/og-image.png' },
     { property: 'og:url', content: 'https://ajbarea.github.io/gallery' },
@@ -20,9 +20,9 @@ useHead({
     { name: 'twitter:title', content: 'Gallery | AJ Barea' },
     {
       name: 'twitter:description',
-      content: 'Photo gallery showcasing photography and memorable moments by AJ Barea.',
-    },
-  ],
+      content: 'Photo gallery showcasing photography and memorable moments by AJ Barea.'
+    }
+  ]
 })
 </script>
 

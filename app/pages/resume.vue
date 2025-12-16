@@ -13,13 +13,13 @@ useHead({
     {
       name: 'description',
       content:
-        "AJ Barea's professional resume - Software Engineer with expertise in full-stack development, AI/ML, and cloud solutions.",
+        "AJ Barea's professional resume - Software Engineer with expertise in full-stack development, AI/ML, and cloud solutions."
     },
     { property: 'og:title', content: 'Resume | AJ Barea' },
     {
       property: 'og:description',
       content:
-        'Professional resume showcasing software engineering experience, research, and technical skills.',
+        'Professional resume showcasing software engineering experience, research, and technical skills.'
     },
     { property: 'og:image', content: '/images/og-image.png' },
     { property: 'og:url', content: 'https://ajbarea.github.io/resume' },
@@ -29,9 +29,9 @@ useHead({
     {
       name: 'twitter:description',
       content:
-        'Professional resume showcasing software engineering experience, research, and technical skills.',
-    },
-  ],
+        'Professional resume showcasing software engineering experience, research, and technical skills.'
+    }
+  ]
 })
 
 function downloadResume(type: 'industry' | 'research') {
@@ -125,9 +125,9 @@ function downloadResume(type: 'industry' | 'research') {
         <ResumeViewToggle />
 
         <button
-          @click="downloadResume(resumeStore.viewMode)"
           class="flex items-center justify-center gap-2 min-h-[44px] px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-sm font-medium shadow-sm hover:shadow-md transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
           :aria-label="`Download ${resumeStore.viewMode} resume as PDF`"
+          @click="downloadResume(resumeStore.viewMode)"
         >
           <svg
             class="w-4 h-4"

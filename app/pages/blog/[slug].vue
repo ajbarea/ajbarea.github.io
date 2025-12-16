@@ -13,7 +13,7 @@ useHead(
   computed(() => {
     if (!article.value) {
       return {
-        title: 'Article Not Found | AJ Barea',
+        title: 'Article Not Found | AJ Barea'
       }
     }
 
@@ -27,13 +27,13 @@ useHead(
         { property: 'og:type', content: 'article' },
         {
           property: 'og:image',
-          content: article.value.coverImage || '/images/og-image.png',
+          content: article.value.coverImage || '/images/og-image.png'
         },
         { property: 'article:published_time', content: article.value.date },
         { property: 'article:author', content: article.value.author },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: article.value.title },
-        { name: 'twitter:description', content: article.value.excerpt },
+        { name: 'twitter:description', content: article.value.excerpt }
       ],
       script: [
         {
@@ -47,15 +47,15 @@ useHead(
             datePublished: article.value.date,
             author: {
               '@type': 'Person',
-              name: article.value.author,
+              name: article.value.author
             },
             publisher: {
               '@type': 'Person',
-              name: 'AJ Barea',
-            },
-          }),
-        },
-      ],
+              name: 'AJ Barea'
+            }
+          })
+        }
+      ]
     }
   })
 )

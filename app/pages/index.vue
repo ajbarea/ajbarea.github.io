@@ -9,42 +9,42 @@ useHead({
     {
       name: 'description',
       content:
-        'Software Engineer specializing in full-stack development, AI/ML, and cloud solutions. Currently completing MS in Software Engineering at RIT.',
+        'Software Engineer specializing in full-stack development, AI/ML, and cloud solutions. Currently completing MS in Software Engineering at RIT.'
     },
     {
       property: 'og:title',
-      content: 'AJ Barea | Software Engineer',
+      content: 'AJ Barea | Software Engineer'
     },
     {
       property: 'og:description',
       content:
-        'Portfolio showcasing projects, research, and technical expertise in software engineering, AI/ML, and cloud solutions.',
+        'Portfolio showcasing projects, research, and technical expertise in software engineering, AI/ML, and cloud solutions.'
     },
     {
       property: 'og:image',
-      content: '/images/og-image.png',
+      content: '/images/og-image.png'
     },
     {
       property: 'og:url',
-      content: 'https://ajbarea.github.io/',
+      content: 'https://ajbarea.github.io/'
     },
     {
       property: 'og:type',
-      content: 'website',
+      content: 'website'
     },
     {
       name: 'twitter:card',
-      content: 'summary_large_image',
+      content: 'summary_large_image'
     },
     {
       name: 'twitter:title',
-      content: 'AJ Barea | Software Engineer',
+      content: 'AJ Barea | Software Engineer'
     },
     {
       name: 'twitter:description',
-      content: 'Portfolio showcasing projects, research, and technical expertise.',
-    },
-  ],
+      content: 'Portfolio showcasing projects, research, and technical expertise.'
+    }
+  ]
 })
 </script>
 

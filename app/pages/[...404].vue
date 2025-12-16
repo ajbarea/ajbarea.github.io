@@ -4,12 +4,12 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'The page you are looking for could not be found.',
+      content: 'The page you are looking for could not be found.'
     },
     { property: 'og:title', content: '404 - Page Not Found | AJ Barea' },
     {
       property: 'og:description',
-      content: 'The page you are looking for could not be found.',
+      content: 'The page you are looking for could not be found.'
     },
     { property: 'og:image', content: '/images/og-image.png' },
     { property: 'og:url', content: 'https://ajbarea.github.io/404' },
@@ -18,10 +18,10 @@ useHead({
     { name: 'twitter:title', content: '404 - Page Not Found | AJ Barea' },
     {
       name: 'twitter:description',
-      content: 'The page you are looking for could not be found.',
+      content: 'The page you are looking for could not be found.'
     },
-    { name: 'robots', content: 'noindex, nofollow' },
-  ],
+    { name: 'robots', content: 'noindex, nofollow' }
+  ]
 })
 </script>
 
