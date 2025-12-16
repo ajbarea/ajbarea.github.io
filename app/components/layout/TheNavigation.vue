@@ -8,7 +8,7 @@ const isMobileMenuOpen = ref(false)
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'Projects', path: '/projects' },
-  { name: 'Gallery', path: '/gallery' },
+  // { name: 'Gallery', path: '/gallery' },
   { name: 'Resume', path: '/resume' },
   { name: 'Blog', path: '/blog' },
 ]
