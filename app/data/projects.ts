@@ -10,7 +10,7 @@ export const projects: Project[] = [
       'A full-stack application that aggregates news from multiple sources, uses machine learning models for topic classification, and generates concise summaries using transformer-based models.',
     technologies: ['Python', 'PyTorch', 'Hugging Face', 'FastAPI', 'React', 'PostgreSQL'],
     type: 'ai-ml',
-    githubUrl: 'https://github.com/ajbarea/news-aggregator',
+    githubUrl: 'https://github.com/ajbarea/news-ai',
     featured: true
   },
   {
@@ -21,7 +21,7 @@ export const projects: Project[] = [
       'A comprehensive system for testing ML models against adversarial attacks, data poisoning, and model extraction attempts. Includes automated vulnerability scanning and reporting.',
     technologies: ['Python', 'PyTorch', 'scikit-learn', 'Docker', 'AWS'],
     type: 'ai-ml',
-    githubUrl: 'https://github.com/ajbarea/security-eval',
+    githubUrl: 'https://github.com/ajbarea/ses',
     featured: true
   },
   {
@@ -33,7 +33,7 @@ export const projects: Project[] = [
       'A cloud-native application leveraging AWS Rekognition for OCR, AWS Translate for multi-language translation, and Lambda for serverless processing. Features a React frontend with S3 hosting.',
     technologies: ['AWS Lambda', 'AWS Rekognition', 'AWS Translate', 'React', 'Terraform'],
     type: 'cloud',
-    githubUrl: 'https://github.com/ajbarea/aws-image-translator',
+    githubUrl: 'https://github.com/ajbarea/aws-image-translate',
     featured: true
   },
   {
@@ -45,8 +45,7 @@ export const projects: Project[] = [
       'Implementation of deep reinforcement learning algorithms (DQN, PPO) for training robots to navigate complex environments in Webots simulator. Includes curriculum learning and reward shaping.',
     technologies: ['Python', 'PyTorch', 'Webots', 'Reinforcement Learning', 'OpenAI Gym'],
     type: 'ai-ml',
-    githubUrl: 'https://github.com/ajbarea/robot-navigation-rl',
-    youtubeUrl: 'https://youtube.com/@ajbarea',
+    githubUrl: 'https://github.com/ajbarea/goal-seeker-ai',
     featured: true
   },
   {
@@ -58,6 +57,7 @@ export const projects: Project[] = [
       'Research project developing a novel federated learning framework that optimizes client selection based on data quality and computational resources while maintaining differential privacy guarantees.',
     technologies: ['Python', 'FLOWER', 'PyTorch', 'Docker', 'gRPC'],
     type: 'research',
+    githubUrl: 'https://github.com/dmitrykoro/fl-execution-framework',
     featured: true
   },
   // Legacy projects from previous portfolio
@@ -110,7 +110,7 @@ export const projects: Project[] = [
     technologies: ['JavaScript', 'Node.js', 'HTML', 'CSS'],
     type: 'full-stack',
     githubUrl: 'https://github.com/ajbarea/blockchain-explorer',
-    youtubeUrl: 'https://youtube.com/playlist?list=PLmQVFU1FBDddVvJjHuwnRp6F6vwmz01X8',
+    youtubeUrl: 'https://www.youtube.com/playlist?list=PLmQVFU1FBDdc3XyzoCp5NDFkoY5kzW3bT',
     featured: false
   },
   {
