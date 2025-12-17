@@ -47,6 +47,8 @@ onMounted(() => {
     gallery: `#${props.galleryId}`,
     children: 'a',
     pswpModule: () => import('photoswipe'),
+    // Solid background
+    bgOpacity: 1,
     // Enable keyboard navigation
     wheelToZoom: true,
     // Accessibility options

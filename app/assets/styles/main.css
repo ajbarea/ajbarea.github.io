@@ -169,6 +169,53 @@
   background-color: #1f2937;
 }
 
+/* PhotoSwipe Dynamic Caption - Custom Styling */
+/* Matches official PhotoSwipe demo: https://photoswipe.com */
+.pswp {
+  --pswp-bg: #1a1a1a;
+  --pswp-placeholder-bg: #222;
+}
+
+.pswp__dynamic-caption {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 350px;
+}
+
+/* Caption title styling */
+.pswp__dynamic-caption strong,
+.pswp__dynamic-caption b {
+  display: block;
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+/* Below positioning - for landscape images */
+.pswp__dynamic-caption--below {
+  padding: 20px 0 0;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Aside positioning - for portrait images */
+.pswp__dynamic-caption--aside {
+  padding: 20px 30px 20px 25px;
+  margin-top: 0;
+  width: 250px;
+}
+
+/* Mobile caption with subtle overlay */
+.pswp__dynamic-caption--mobile {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+}
+
 /* Print styles */
 @media print {
   .no-print {
