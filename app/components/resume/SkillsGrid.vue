@@ -56,13 +56,22 @@ function getCategoryTextColor(categoryId: string): string {
           {{ category.label }}
         </h3>
         <div class="flex flex-wrap gap-1.5">
-          <span
+          <a
             v-for="skill in category.skills"
             :key="skill.name"
-            class="px-2 py-0.5 text-xs bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded border border-gray-200 dark:border-gray-600"
+            :href="skill.docUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-2 py-0.5 text-xs bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded border border-gray-200 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150"
+            :title="`View ${skill.name} documentation`"
           >
-            {{ skill.name }}
-          </span>
+            <i
+              v-if="skill.icon"
+              :class="`devicon-${skill.icon}-plain text-sm`"
+              aria-hidden="true"
+            />
+            <span>{{ skill.name }}</span>
+          </a>
         </div>
       </div>
     </div>

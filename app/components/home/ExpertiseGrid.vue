@@ -73,7 +73,7 @@ function getCategoryBgColor(categoryId: string): string {
             <button
               type="button"
               :class="[
-                'relative min-h-[36px] sm:min-h-[40px] px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500',
+                'relative inline-flex items-center gap-1.5 min-h-[36px] sm:min-h-[40px] px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500',
                 getCategoryBgColor(category.id),
                 skill.docUrl ? 'cursor-pointer' : 'cursor-default'
               ]"
@@ -86,6 +86,11 @@ function getCategoryBgColor(categoryId: string): string {
               @focus="hoveredSkill = skill.name"
               @blur="hoveredSkill = null"
             >
+              <i
+                v-if="skill.icon"
+                :class="`devicon-${skill.icon}-plain text-base`"
+                aria-hidden="true"
+              />
               <span class="text-gray-700 dark:text-gray-300">
                 {{ skill.name }}
               </span>
