@@ -172,8 +172,8 @@
 /* PhotoSwipe Dynamic Caption - Custom Styling */
 /* Matches official PhotoSwipe demo: https://photoswipe.com */
 .pswp {
-  --pswp-bg: #1a1a1a;
-  --pswp-placeholder-bg: #222;
+  --pswp-bg: #333333ff !important;
+  --pswp-placeholder-bg: #222 !important;
 }
 
 .pswp__dynamic-caption {
