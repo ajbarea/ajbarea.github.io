@@ -15,7 +15,7 @@ export const profile: Profile = {
     'Favorite Son'
   ],
   summary:
-    'Software Engineer specializing in full-stack development, AI/ML, and cloud solutions. Currently completing MS in Software Engineering at RIT with research focus on federated learning and agentic AI.',
+    'Detail-oriented Software Engineer experienced in developing scalable tools and cloud solutions using Python, React, Java, and AWS. Skilled in full-stack development and AI/ML engineering involving PyTorch, transformers, and reinforcement learning. Passionate about building reliable, intelligent systems that bridge software engineering and applied machine learning.',
   profileImage: '/images/profile.png',
   contact: {
     email: 'ajbareaa@gmail.com',
@@ -50,11 +50,11 @@ export const profile: Profile = {
     }
   ],
   researchInterests: [
-    'Federated learning',
-    'Agentic AI',
-    'Testing for distributed ML',
-    'Developer experience',
-    'AI-assisted development'
+    'Federated learning systems',
+    'Agentic AI with tool use',
+    'Testing methodologies for distributed ML',
+    'Developer experience in ML research infrastructure',
+    'AI-assisted software development'
   ]
 }
 
@@ -68,16 +68,24 @@ export const education: Education[] = [
     gpa: 4.0,
     maxGpa: 4.0,
     relevantCoursework: [
+      'Software Construction',
       'Software Architecture',
-      'Machine Learning',
-      'Distributed Systems',
-      'Software Testing',
-      'Cloud Computing'
+      'Software Quality Assurance',
+      'Model-Driven Development',
+      'Collaborative Software Development',
+      'Engineering Cloud Software Systems',
+      'Self-Adaptive Systems with Reinforcement Learning'
     ],
     capstoneResearch: {
-      title: 'Federated Learning Framework',
-      advisor: 'TBD',
-      focus: ['Federated learning', 'Privacy-preserving ML', 'Distributed systems']
+      title: 'Enhancing Federated Learning Execution Framework',
+      advisor: 'Dr. Leon Reznik',
+      focus: [
+        'Testing infrastructure',
+        'Full-stack developer interface',
+        'CI/CD pipelines',
+        'Cross-platform compatibility',
+        'Collaborative algorithm prototyping'
+      ]
     }
   },
   {

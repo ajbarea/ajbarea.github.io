@@ -10,32 +10,33 @@ export const professionalExperience: ProfessionalExperience[] = [
   {
     id: 'lowes',
     title: 'Software Engineer',
-    company: "Lowe's Companies, Inc.",
-    location: 'Charlotte, NC',
+    company: "Lowe's Home Improvement",
+    location: 'Remote, US',
     startDate: 'Feb 2023',
     endDate: 'Aug 2024',
     type: 'full-time',
-    department: 'Technology',
+    department: 'Application Development Support - Distribution Management Systems',
     bullets: [
-      'Developed and maintained full-stack applications using React, Java Spring Boot, and AWS services',
-      'Implemented CI/CD pipelines using GitHub Actions and Terraform for infrastructure as code',
-      'Collaborated with cross-functional teams to deliver features for e-commerce platform',
-      'Optimized application performance and reduced load times through caching strategies'
+      'Cut daily error logs by 150,000 across RDCs by resolving bugs, optimizing log analysis, and enhancing system performance',
+      'Developed a full-stack app to streamline database queries and generate SQL scripts, reducing support ticket resolution time',
+      'Authored SOPs, slashing new engineer onboarding time by 80%',
+      'Conducted root cause analysis for Tier 3 support, documenting solutions in BMC SmartIT and collaborating with supervisors',
+      'Delivered secure, tested code updates to fix bugs and boost system efficiency, tracked via Jira and Confluence',
+      'Thrived in Agile sprints, contributing to stand-ups and retrospectives'
     ],
     isCurrent: false
   },
   {
     id: 'phiquest',
-    title: 'Software Developer Intern',
+    title: 'UX Developer (Internship)',
     company: 'Phiquest',
     location: 'Tampa, FL',
     startDate: 'Mar 2022',
     endDate: 'May 2022',
     type: 'internship',
     bullets: [
-      'Developed web applications using modern JavaScript frameworks',
-      'Participated in agile development processes and code reviews',
-      'Contributed to database design and API development'
+      'Designed wireframes for web apps, collaborating with cross-functional teams to ensure feasible, user-friendly solutions',
+      'Engineered a blockchain-based document authenticator Chrome extension using Node.js, enabling secure verification'
     ],
     isCurrent: false
   }
@@ -46,28 +47,32 @@ export const researchExperience: ResearchExperience[] = [
     id: 'rit-gra',
     title: 'Graduate Research Assistant',
     institution: 'Rochester Institute of Technology',
-    project: 'Federated Learning Framework',
+    project: "Federated Learning Framework Enhancement - Dr. Leon Reznik's Research Group",
     startDate: 'May 2025',
     endDate: 'Present',
     bullets: [
-      'Developing IntelliFL framework for federated learning with privacy-preserving techniques',
-      'Researching agentic AI approaches for distributed machine learning systems',
-      'Publishing research papers on federated learning and ML testing'
+      'Designed comprehensive pytest testing suite achieving 80%+ code coverage for distributed FL systems (IntelliFL framework)',
+      'Built React + FastAPI web interface improving researcher onboarding time and experimental reproducibility',
+      'Collaborated with PhD students to rapidly prototype novel aggregation strategies including Byzantine-robust methods (Krum, Bulyan, RFA, Trimmed Mean) and trust-based federated learning approaches',
+      'Implemented dynamic dataset poisoning system enabling adversarial robustness evaluation during federated training',
+      'Integrated transformer-based models for federated learning on text datasets spanning medical, legal, and financial domains',
+      'Extended framework compatibility across Python 3.9-3.11 and multiple operating systems (Windows, macOS, Linux)',
+      'Established CI pipeline and comprehensive error handling, transforming research prototype into production-ready system'
     ],
     isCurrent: true
   },
   {
     id: 'independent-ml',
-    title: 'Independent ML Researcher',
+    title: 'Independent ML Research Projects',
     institution: 'Self-directed',
-    startDate: 'Jan 2024',
-    endDate: 'Present',
+    startDate: '2024',
+    endDate: '2025',
     bullets: [
-      'Developed AI/ML projects including news aggregator and security evaluation systems',
-      'Created educational content on YouTube covering AI/ML topics',
-      'Contributed to open source ML projects'
+      'Autonomous Robot Navigation RL - Developed Q-learning and DQN framework in Webots simulator with state discretization, replay buffers, and PyTorch-based hyperparameter optimization (documented via YouTube tutorials)',
+      'Federated Learning Security - Built evaluation system combining CLIPS rule-based expert systems, PyTorch neural networks, and federated learning techniques to assess Byzantine fault tolerance in distributed ML systems',
+      'Natural Language Processing - Implemented news summarization system using Hugging Face Transformers (BART) with personalized recommendations via collaborative filtering (scikit-surprise)'
     ],
-    isCurrent: true
+    isCurrent: false
   }
 ]
 
@@ -80,9 +85,10 @@ export const teachingExperience: TeachingExperience[] = [
     startDate: 'Aug 2025',
     endDate: 'Dec 2025',
     bullets: [
-      'Assisted students with software architecture concepts and design patterns',
-      'Graded assignments and provided feedback on architectural decisions',
-      'Held office hours to support student learning'
+      'Mentor students in software design patterns, architectural styles, quality attributes and tactics',
+      'Lead recitation sections and office hours providing technical guidance on architecture decisions',
+      'Taught full class session during instructor absence, receiving positive student feedback',
+      'Grade assignments with detailed feedback emphasizing rigorous software engineering practices'
     ]
   }
 ]
@@ -93,12 +99,12 @@ const unsortedEntries: TimelineEntry[] = [
     id: 'rit-gra',
     type: 'research' as TimelineEntryType,
     title: 'Graduate Research Assistant',
-    subtitle: 'Federated Learning Framework',
+    subtitle: "Dr. Leon Reznik's Research Group",
     organization: 'Rochester Institute of Technology',
     timeframe: 'May 2025 – Present',
     description:
-      'Developing IntelliFL framework for federated learning with privacy-preserving techniques.',
-    skills: ['PyTorch', 'FLOWER', 'Python', 'Distributed Systems'],
+      'Enhancing IntelliFL federated learning framework with 80%+ test coverage, React/FastAPI interface, and Byzantine-robust aggregation methods.',
+    skills: ['PyTorch', 'FLOWER', 'React', 'FastAPI', 'pytest'],
     icon: 'research',
     isCurrent: true,
     sortDate: '2025-05-01'
@@ -110,7 +116,8 @@ const unsortedEntries: TimelineEntry[] = [
     subtitle: 'Software Architecture',
     organization: 'Rochester Institute of Technology',
     timeframe: 'Aug 2025 – Dec 2025',
-    description: 'Assisting students with software architecture concepts and design patterns.',
+    description:
+      'Mentoring students in design patterns, architectural styles, and quality attributes. Led full class session during instructor absence.',
     skills: ['Software Architecture', 'Design Patterns', 'Teaching'],
     icon: 'teaching',
     isCurrent: false,
@@ -123,8 +130,9 @@ const unsortedEntries: TimelineEntry[] = [
     subtitle: 'Software Engineering',
     organization: 'Rochester Institute of Technology',
     timeframe: 'Aug 2023 – Dec 2025',
-    description: 'GPA: 4.0/4.0. Capstone: Federated Learning Framework.',
-    skills: ['Machine Learning', 'Distributed Systems', 'Cloud Computing'],
+    description:
+      'GPA: 4.0/4.0. Capstone: Enhancing Federated Learning Execution Framework (Advisor: Dr. Leon Reznik).',
+    skills: ['Machine Learning', 'Distributed Systems', 'Cloud Computing', 'Software Architecture'],
     icon: 'education',
     isCurrent: false,
     sortDate: '2023-08-01'
@@ -132,12 +140,13 @@ const unsortedEntries: TimelineEntry[] = [
   {
     id: 'lowes',
     type: 'professional' as TimelineEntryType,
-    title: 'Software Engineer',
-    subtitle: 'Technology',
-    organization: "Lowe's Companies, Inc.",
+    title: 'Software Engineer (Contract)',
+    subtitle: 'Distribution Management Systems',
+    organization: "Lowe's Home Improvement",
     timeframe: 'Feb 2023 – Aug 2024',
-    description: 'Full-stack development with React, Java Spring Boot, and AWS services.',
-    skills: ['React', 'Java', 'Spring Boot', 'AWS', 'Terraform'],
+    description:
+      'Cut daily error logs by 150,000 across RDCs. Built full-stack automation tooling. Reduced onboarding time by 80%.',
+    skills: ['Java', 'SQL', 'Jira', 'Confluence', 'Agile'],
     icon: 'work',
     isCurrent: false,
     sortDate: '2023-02-01'
@@ -150,7 +159,7 @@ const unsortedEntries: TimelineEntry[] = [
     organization: 'University of South Florida',
     timeframe: 'Aug 2018 – May 2022',
     description: 'GPA: 3.06/4.0.',
-    skills: ['C++', 'Python', 'Embedded Systems'],
+    skills: ['C++', 'C', 'Python', 'Embedded Systems'],
     icon: 'education',
     isCurrent: false,
     sortDate: '2018-08-01'
@@ -158,12 +167,13 @@ const unsortedEntries: TimelineEntry[] = [
   {
     id: 'phiquest',
     type: 'professional' as TimelineEntryType,
-    title: 'Software Developer Intern',
+    title: 'UX Developer (Internship)',
     subtitle: 'Development Team',
     organization: 'Phiquest',
     timeframe: 'Mar 2022 – May 2022',
-    description: 'Web application development using modern JavaScript frameworks.',
-    skills: ['JavaScript', 'Web Development', 'Agile'],
+    description:
+      'Designed wireframes for web apps. Built blockchain-based document authenticator Chrome extension using Node.js.',
+    skills: ['Node.js', 'UX Design', 'Blockchain', 'Chrome Extension'],
     icon: 'work',
     isCurrent: false,
     sortDate: '2022-03-01'
