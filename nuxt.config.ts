@@ -14,6 +14,11 @@ export default defineNuxtConfig({
     }
   },
 
+  routeRules: {
+    '/portfolio': { redirect: '/' },
+    '/portfolio/**': { redirect: '/' }
+  },
+
   modules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxt/eslint'],
 
   vite: {
