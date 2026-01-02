@@ -21,12 +21,12 @@ echo "Running unit tests..."
 npm run test:unit -- --run
 
 echo ""
-echo "Running E2E tests..."
-npm run test:e2e
-
-echo ""
 echo "Building for production..."
 npm run build
+
+echo ""
+echo "Running E2E tests..."
+npm run test:e2e
 
 echo ""
 echo "All checks passed! Ready to ship."
