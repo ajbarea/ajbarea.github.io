@@ -32,9 +32,7 @@ useHead({
       <!-- Page Header -->
       <header class="mb-8 text-center">
         <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">Gallery</h1>
-        <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          A collection of photography and memorable moments.
-        </p>
+        <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Proof of life.</p>
       </header>
 
       <!-- Gallery Grid -->
