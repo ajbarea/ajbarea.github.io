@@ -8,23 +8,27 @@
 ## Manual Processing
 
 ### Create full-size (max 2000px):
+
 ```bash
 npx sharp-cli -i "public/images/to-do/ORIGINAL.jpg" -o "public/images/gallery/full/" -f jpg -q 85 resize 2000 2000 --fit inside --withoutEnlargement
 mv "public/images/gallery/full/ORIGINAL.jpg" "public/images/gallery/full/NEW-NAME.jpg"
 ```
 
 ### Create thumbnail (max 250px):
+
 ```bash
 npx sharp-cli -i "public/images/to-do/ORIGINAL.jpg" -o "public/images/gallery/" -f jpg -q 80 resize 250 250 --fit inside --withoutEnlargement
 mv "public/images/gallery/ORIGINAL.jpg" "public/images/gallery/NEW-NAME-thumb.jpg"
 ```
 
 ### For HEIC-converted images (use --autoOrient):
+
 ```bash
 npx sharp-cli --autoOrient -i "public/images/to-do/ORIGINAL.jpeg" -o "public/images/gallery/full/" -f jpg -q 85 resize 2000 2000 --fit inside --withoutEnlargement
 ```
 
 ### Get dimensions (for gallery.ts):
+
 ```bash
 node -e "
 const fs = require('fs');
@@ -43,6 +47,7 @@ while (i < buffer.length) {
 ```
 
 ### Add to `app/data/gallery.ts`:
+
 ```ts
 {
   id: 'new-name',
