@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import type { GalleryImage } from '~/types'
 import PhotoSwipeLightbox from 'photoswipe/lightbox'
 import PhotoSwipeDynamicCaption from 'photoswipe-dynamic-caption-plugin'
@@ -20,6 +20,34 @@ const emit = defineEmits<{
   imageError: [id: string]
 }>()
 
+/**
+ * Fisher-Yates shuffle algorithm - O(n) in-place shuffle
+ * Research: https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+ * Preferred over sort(() => Math.random() - 0.5) which has O(n log n) complexity
+ * and produces biased results in some JS engines
+ */
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    const temp = shuffled[i]!
+    shuffled[i] = shuffled[j]!
+    shuffled[j] = temp
+  }
+  return shuffled
+}
+
+// Client-side shuffle state - triggers re-shuffle when incremented
+const shuffleSeed = ref(0)
+
+// Shuffle images on client to avoid SSR hydration mismatch
+// Server renders original order, client shuffles after mount
+const shuffledImages = computed(() => {
+  // Dependency on shuffleSeed allows re-shuffle via incrementing seed
+  void shuffleSeed.value
+  return shuffleArray(props.images)
+})
+
 let lightbox: PhotoSwipeLightbox | null = null
 const loadedImages = ref<Set<string>>(new Set())
 const errorImages = ref<Set<string>>(new Set())
@@ -35,28 +63,26 @@ const handleImageLoad = (id: string) => {
 
 const handleImageError = (id: string, event: Event) => {
   errorImages.value.add(id)
-  // Set fallback placeholder
   const img = event.target as HTMLImageElement
   img.src = '/images/placeholder.svg'
   emit('imageError', id)
 }
 
 onMounted(() => {
+  // Trigger initial shuffle on client mount
+  shuffleSeed.value++
+
   // Initialize PhotoSwipe lightbox
   lightbox = new PhotoSwipeLightbox({
     gallery: `#${props.galleryId}`,
     children: 'a',
     pswpModule: () => import('photoswipe'),
-    // Solid background
     bgOpacity: 1,
-    // Enable keyboard navigation
     wheelToZoom: true,
-    // Accessibility options
     closeTitle: 'Close (Esc)',
     zoomTitle: 'Zoom',
     arrowPrevTitle: 'Previous (Arrow Left)',
     arrowNextTitle: 'Next (Arrow Right)',
-    // Padding for caption space
     paddingFn: () => ({ top: 30, bottom: 30, left: 70, right: 70 })
   })
 
@@ -104,10 +130,11 @@ onUnmounted(() => {
     aria-label="Photo gallery - click any image to view full size"
   >
     <figure
-      v-for="image in images"
+      v-for="(image, index) in shuffledImages"
       :key="image.id"
-      class="break-inside-avoid mb-3 sm:mb-4"
+      class="gallery-item break-inside-avoid mb-3 sm:mb-4"
       role="listitem"
+      :style="{ '--stagger-delay': `${Math.min(index * 30, 600)}ms` }"
     >
       <a
         :href="image.fullUrl"
@@ -127,15 +154,18 @@ onUnmounted(() => {
           aria-hidden="true"
         />
 
-        <!-- Thumbnail image with lazy loading -->
+        <!-- Thumbnail image with lazy loading and staggered fade-in -->
         <img
           :src="image.thumbnailUrl"
           :alt="image.alt"
           :width="image.width"
           :height="image.height"
           loading="lazy"
-          class="w-full h-auto rounded-lg transition-transform duration-300 group-hover:scale-105"
-          :class="{ 'opacity-0': !isImageLoaded(image.id) && !hasImageError(image.id) }"
+          class="gallery-image w-full h-auto rounded-lg transition-transform duration-300 group-hover:scale-105"
+          :class="{
+            'opacity-0': !isImageLoaded(image.id) && !hasImageError(image.id),
+            'animate-fade-in': isImageLoaded(image.id)
+          }"
           @load="handleImageLoad(image.id)"
           @error="handleImageError(image.id, $event)"
         />
@@ -149,3 +179,40 @@ onUnmounted(() => {
     </figure>
   </div>
 </template>
+
+<style scoped>
+/**
+ * Staggered fade-in animation for gallery images
+ * Research: https://gist.github.com/gregnb/a81d07c1900295df6af91b694742419
+ * Uses CSS custom property for per-item delay, capped at 600ms to prevent
+ * excessive wait times for images further down the page
+ */
+.gallery-item {
+  --stagger-delay: 0ms;
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.4s ease-out forwards;
+  animation-delay: var(--stagger-delay);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+  }
+}
+</style>
