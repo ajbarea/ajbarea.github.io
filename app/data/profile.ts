@@ -16,7 +16,7 @@ export const profile: Profile = {
   ],
   summary:
     'Detail-oriented Software Engineer experienced in developing scalable tools and cloud solutions using Python, React, Java, and AWS. Skilled in full-stack development and AI/ML engineering involving PyTorch, transformers, and reinforcement learning. Passionate about building reliable, intelligent systems that bridge software engineering and applied machine learning.',
-  profileImage: '/images/profile.png',
+  profileImage: 'https://res.cloudinary.com/dumwa1w5x/image/upload/q_auto,f_auto/profile_ubnllm',
   contact: {
     email: 'ajbareaa@gmail.com',
     phone: '(727) 262-7305',
