@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { Project } from '~/types'
+import type { ProjectType } from '~/types'
 
-type FilterType = Project['type'] | 'all'
+type FilterType = ProjectType | 'all'
 
 interface Props {
   modelValue: FilterType
@@ -23,7 +23,7 @@ const filterOptions: FilterOption[] = [
   { value: 'all', label: 'All' },
   { value: 'ai-ml', label: 'AI/ML' },
   { value: 'full-stack', label: 'Full-Stack' },
-  { value: 'research', label: 'Research' },
+  { value: 'robotics', label: 'Robotics' },
   { value: 'cloud', label: 'Cloud' }
 ]
 

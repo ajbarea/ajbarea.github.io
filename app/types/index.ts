@@ -129,13 +129,15 @@ export interface SkillCategory {
 }
 
 // Project
+export type ProjectType = 'ai-ml' | 'full-stack' | 'robotics' | 'cloud'
+
 export interface Project {
   id: string
   title: string
   description: string
   longDescription?: string
   technologies: string[]
-  type: 'ai-ml' | 'full-stack' | 'research' | 'cloud'
+  types: ProjectType[]
   thumbnailUrl?: string
   demoUrl?: string
   githubUrl?: string

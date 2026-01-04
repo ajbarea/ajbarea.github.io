@@ -8,8 +8,8 @@ export const projects: Project[] = [
       'Intelligent news aggregation system using NLP for content classification and summarization.',
     longDescription:
       'A full-stack application that aggregates news from multiple sources, uses machine learning models for topic classification, and generates concise summaries using transformer-based models.',
-    technologies: ['Python', 'PyTorch', 'Hugging Face', 'FastAPI', 'React', 'PostgreSQL'],
-    type: 'ai-ml',
+    technologies: ['Python', 'PyTorch', 'Hugging Face', 'FastAPI', 'React'],
+    types: ['ai-ml', 'full-stack'],
     githubUrl: 'https://github.com/ajbarea/news-ai',
     featured: true
   },
@@ -20,7 +20,7 @@ export const projects: Project[] = [
     longDescription:
       'A comprehensive system for testing ML models against adversarial attacks, data poisoning, and model extraction attempts. Includes automated vulnerability scanning and reporting.',
     technologies: ['Python', 'PyTorch', 'scikit-learn', 'Docker', 'AWS'],
-    type: 'ai-ml',
+    types: ['ai-ml'],
     githubUrl: 'https://github.com/ajbarea/ses',
     featured: true
   },
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     longDescription:
       'A cloud-native application leveraging AWS Rekognition for OCR, AWS Translate for multi-language translation, and Lambda for serverless processing. Features a React frontend with S3 hosting.',
     technologies: ['AWS Lambda', 'AWS Rekognition', 'AWS Translate', 'React', 'Terraform'],
-    type: 'cloud',
+    types: ['cloud', 'ai-ml'],
     githubUrl: 'https://github.com/ajbarea/aws-image-translate',
     featured: true
   },
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     longDescription:
       'Implementation of deep reinforcement learning algorithms (DQN, PPO) for training robots to navigate complex environments in Webots simulator. Includes curriculum learning and reward shaping.',
     technologies: ['Python', 'PyTorch', 'Webots', 'Reinforcement Learning', 'OpenAI Gym'],
-    type: 'ai-ml',
+    types: ['ai-ml', 'robotics'],
     githubUrl: 'https://github.com/ajbarea/goal-seeker-ai',
     featured: true
   },
@@ -55,8 +55,8 @@ export const projects: Project[] = [
       'Federated learning framework with intelligent client selection and privacy-preserving aggregation.',
     longDescription:
       'Research project developing a novel federated learning framework that optimizes client selection based on data quality and computational resources while maintaining differential privacy guarantees.',
-    technologies: ['Python', 'FLOWER', 'PyTorch', 'Docker', 'gRPC'],
-    type: 'research',
+    technologies: ['Python', 'PyTorch', 'FLOWER', 'Federated Learning', 'Docker'],
+    types: ['ai-ml'],
     githubUrl: 'https://github.com/dmitrykoro/fl-execution-framework',
     featured: true
   },
@@ -68,8 +68,8 @@ export const projects: Project[] = [
       'Banking app enabling account creation, credentials management, and fund transfers with transaction tracking.',
     longDescription:
       'Full-stack banking application with real-time notifications, transaction tracking, and secure fund transfers. Built with Spring Boot backend and Angular frontend.',
-    technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL'],
-    type: 'full-stack',
+    technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'REST API'],
+    types: ['full-stack'],
     githubUrl: 'https://github.com/ajbarea/tbd-banking-application',
     youtubeUrl: 'https://youtu.be/RiDxzmMX-qk',
     featured: false
@@ -81,8 +81,8 @@ export const projects: Project[] = [
       'Social platform for sharing thoughts, building networks, and engaging with posts and notifications.',
     longDescription:
       'A social networking platform where users can share thoughts, follow other users, and receive real-time notifications. Features post creation, commenting, and user engagement tracking.',
-    technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL'],
-    type: 'full-stack',
+    technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Real-time'],
+    types: ['full-stack'],
     githubUrl: 'https://github.com/ajbarea/thought-cloud-social',
     youtubeUrl: 'https://youtu.be/w8TgRcd1uWQ',
     featured: false
@@ -94,8 +94,8 @@ export const projects: Project[] = [
       'Mobile robot control systems using Python and Webots covering localization, navigation, and sensor integration.',
     longDescription:
       'Coursework labs covering mobile robot control systems including localization algorithms, path planning, navigation strategies, and sensor integration with comprehensive video explainers.',
-    technologies: ['Python', 'Webots', 'Robotics', 'Simulation'],
-    type: 'ai-ml',
+    technologies: ['Python', 'Webots', 'Robotics', 'Localization', 'Path Planning'],
+    types: ['robotics'],
     githubUrl: 'https://github.com/ajbarea/control-of-mobile-robots',
     youtubeUrl: 'https://www.youtube.com/playlist?list=PLmQVFU1FBDddYV_4IRW1zfXH6CAKuZjIM',
     featured: false
@@ -107,8 +107,8 @@ export const projects: Project[] = [
       'Custom blockchain for authenticating digital signatures with tamper-proof verification.',
     longDescription:
       'A custom blockchain implementation for authenticating digital signatures with tamper-proof verification and real-time transaction searches. Demonstrates core blockchain concepts.',
-    technologies: ['JavaScript', 'Node.js', 'HTML', 'CSS'],
-    type: 'full-stack',
+    technologies: ['JavaScript', 'Node.js', 'Blockchain', 'Cryptography', 'Express'],
+    types: ['full-stack'],
     githubUrl: 'https://github.com/ajbarea/blockchain-explorer',
     youtubeUrl: 'https://www.youtube.com/playlist?list=PLmQVFU1FBDdc3XyzoCp5NDFkoY5kzW3bT',
     featured: false
@@ -120,8 +120,8 @@ export const projects: Project[] = [
       'System for submitting and approving expense reimbursements with employee and manager workflows.',
     longDescription:
       'A complete expense management system with role-based access for employees and managers. Features expense submission, approval workflows, and reimbursement tracking.',
-    technologies: ['Java', 'Maven', 'PostgreSQL', 'JDBC'],
-    type: 'full-stack',
+    technologies: ['Java', 'Servlets', 'PostgreSQL', 'JDBC', 'REST API'],
+    types: ['full-stack'],
     githubUrl: 'https://github.com/ajbarea/expense-reimbursement-system',
     youtubeUrl: 'https://youtu.be/t2p_fUak_Mw',
     featured: false
@@ -133,8 +133,8 @@ export const projects: Project[] = [
       'This website - a modern Nuxt 3 portfolio showcasing projects, resume, gallery, and blog.',
     longDescription:
       'A responsive single-page application built with Nuxt 3, Vue 3, and Tailwind CSS. Features dark mode, SSR/SSG support, photo gallery with PhotoSwipe, and dual resume views.',
-    technologies: ['Nuxt.js', 'Vue.js', 'TypeScript', 'Tailwind CSS'],
-    type: 'full-stack',
+    technologies: ['Nuxt.js', 'Vue.js', 'TypeScript', 'Tailwind CSS', 'SSG'],
+    types: ['full-stack'],
     demoUrl: 'https://ajbarea.github.io/',
     githubUrl: 'https://github.com/ajbarea/ajbarea.github.io',
     featured: false
@@ -144,8 +144,8 @@ export const projects: Project[] = [
 export const featuredProjects = projects.filter((p) => p.featured)
 
 export const projectsByType = {
-  'ai-ml': projects.filter((p) => p.type === 'ai-ml'),
-  'full-stack': projects.filter((p) => p.type === 'full-stack'),
-  research: projects.filter((p) => p.type === 'research'),
-  cloud: projects.filter((p) => p.type === 'cloud')
+  'ai-ml': projects.filter((p) => p.types.includes('ai-ml')),
+  'full-stack': projects.filter((p) => p.types.includes('full-stack')),
+  robotics: projects.filter((p) => p.types.includes('robotics')),
+  cloud: projects.filter((p) => p.types.includes('cloud'))
 }

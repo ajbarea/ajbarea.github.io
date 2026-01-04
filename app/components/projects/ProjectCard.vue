@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import type { Project } from '~/types'
+import { ref, computed } from 'vue'
+import type { Project, ProjectType } from '~/types'
 
 interface Props {
   project: Project
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
 
 const imageError = ref(false)
 
@@ -14,21 +14,33 @@ function handleImageError() {
   imageError.value = true
 }
 
-function getTypeLabel(type: Project['type']): string {
-  const labels: Record<Project['type'], string> = {
+// Sort type badges alphabetically
+const typeSortOrder: Record<ProjectType, number> = {
+  'ai-ml': 0,
+  cloud: 1,
+  'full-stack': 2,
+  robotics: 3
+}
+
+const sortedTypes = computed(() =>
+  [...props.project.types].sort((a, b) => typeSortOrder[a] - typeSortOrder[b])
+)
+
+function getTypeLabel(type: ProjectType): string {
+  const labels: Record<ProjectType, string> = {
     'ai-ml': 'AI/ML',
     'full-stack': 'Full-Stack',
-    research: 'Research',
+    robotics: 'Robotics',
     cloud: 'Cloud'
   }
   return labels[type]
 }
 
-function getTypeBadgeClasses(type: Project['type']): string {
-  const classes: Record<Project['type'], string> = {
+function getTypeBadgeClasses(type: ProjectType): string {
+  const classes: Record<ProjectType, string> = {
     'ai-ml': 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300',
     'full-stack': 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300',
-    research: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300',
+    robotics: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300',
     cloud: 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300'
   }
   return classes[type]
@@ -68,28 +80,36 @@ function getTypeBadgeClasses(type: Project['type']): string {
         </svg>
       </div>
 
-      <!-- Project Type Badge -->
-      <span
-        :class="[
-          'absolute top-3 right-3 px-3 py-1 text-xs font-semibold rounded-full',
-          getTypeBadgeClasses(project.type)
-        ]"
-      >
-        {{ getTypeLabel(project.type) }}
-      </span>
+      <!-- Project Type Badges -->
+      <div class="absolute top-3 right-3 flex flex-wrap justify-end gap-1.5">
+        <span
+          v-for="type in sortedTypes"
+          :key="type"
+          :class="[
+            'px-2.5 py-1 text-xs font-semibold rounded-full',
+            getTypeBadgeClasses(type)
+          ]"
+        >
+          {{ getTypeLabel(type) }}
+        </span>
+      </div>
 
       <!-- YouTube Indicator -->
-      <span
+      <a
         v-if="project.youtubeUrl"
-        class="absolute top-3 left-3 p-2 bg-red-600 text-white rounded-full shadow-md"
-        title="Video demo available"
+        :href="project.youtubeUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="absolute top-3 left-3 p-2 bg-red-600 hover:bg-red-500 text-white rounded-full shadow-md hover:shadow-lg hover:scale-125 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
+        :title="`Watch video demo for ${project.title}`"
+        :aria-label="`Watch video demo for ${project.title}`"
       >
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path
             d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
           />
         </svg>
-      </span>
+      </a>
     </div>
 
     <!-- Content -->

@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import type { Project } from '~/types'
+import type { ProjectType } from '~/types'
 import { projects } from '~/data/projects'
 
-type FilterType = Project['type'] | 'all'
+type FilterType = ProjectType | 'all'
 
 const activeFilter = ref<FilterType>('all')
 
@@ -11,7 +11,7 @@ const filteredProjects = computed(() => {
   if (activeFilter.value === 'all') {
     return projects
   }
-  return projects.filter((project) => project.type === activeFilter.value)
+  return projects.filter((project) => project.types.includes(activeFilter.value))
 })
 
 useHead({
