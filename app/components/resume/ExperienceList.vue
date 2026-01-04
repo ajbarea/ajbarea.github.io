@@ -45,7 +45,7 @@ defineProps<Props>()
                 {{ exp.title }}
                 <span
                   v-if="exp.isCurrent"
-                  class="px-2 py-0.5 text-xs font-medium bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full"
+                  class="px-2 py-0.5 text-xs font-semibold bg-green-500 dark:bg-green-600 text-white rounded-full shadow-sm"
                 >
                   Current
                 </span>
@@ -101,7 +101,7 @@ defineProps<Props>()
                 {{ exp.title }}
                 <span
                   v-if="exp.isCurrent"
-                  class="px-2 py-0.5 text-xs font-medium bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full"
+                  class="px-2 py-0.5 text-xs font-semibold bg-green-500 dark:bg-green-600 text-white rounded-full shadow-sm"
                 >
                   Current
                 </span>

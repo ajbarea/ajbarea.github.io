@@ -75,7 +75,7 @@ function getTypeColor(type: string): string {
             <span>{{ entry.title }}</span>
             <span
               v-if="entry.isCurrent"
-              class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400"
+              class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-green-500 dark:bg-green-600 text-white shadow-sm"
               role="status"
             >
               Current
