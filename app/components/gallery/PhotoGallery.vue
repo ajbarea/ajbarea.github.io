@@ -68,6 +68,21 @@ const handleImageError = (id: string, event: Event) => {
   emit('imageError', id)
 }
 
+/**
+ * Build HTML caption with optional location tag
+ * Location displayed as muted text with pin icon below caption
+ */
+const buildCaptionHtml = (image: GalleryImage): string => {
+  const caption = image.caption || image.alt
+  if (!image.location) {
+    return caption
+  }
+
+  const pinIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:4px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>`
+
+  return `<span class="pswp-caption-text">${caption}</span><span class="pswp-caption-location">${pinIcon}${image.location}</span>`
+}
+
 onMounted(() => {
   // Trigger initial shuffle on client mount
   shuffleSeed.value++
@@ -140,7 +155,7 @@ onUnmounted(() => {
         :href="image.fullUrl"
         :data-pswp-width="image.width"
         :data-pswp-height="image.height"
-        :data-pswp-caption="image.caption || image.alt"
+        :data-pswp-caption="buildCaptionHtml(image)"
         target="_blank"
         rel="noreferrer"
         class="block relative overflow-hidden rounded-lg group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900 min-h-[44px]"

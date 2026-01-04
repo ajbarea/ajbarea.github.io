@@ -12,7 +12,8 @@ export const galleryImages: GalleryImage[] = [
     width: 640,
     height: 480,
     alt: 'With Cope',
-    caption: 'with Cope'
+    caption: 'with Cope at The Goat House',
+    location: 'Odessa, FL'
   },
   {
     id: 'art',
@@ -21,7 +22,8 @@ export const galleryImages: GalleryImage[] = [
     width: 960,
     height: 960,
     alt: "Brooke's artwork",
-    caption: "with Brooke's artwork"
+    caption: "with Brooke's artwork",
+    location: 'Largo, FL'
   },
   {
     id: 'band',
@@ -30,7 +32,8 @@ export const galleryImages: GalleryImage[] = [
     width: 640,
     height: 640,
     alt: 'The Goat House',
-    caption: 'Playing bass with Jack on drums at The Goat House'
+    caption: 'playing bass with Jack on drums at The Goat House',
+    location: 'Odessa, FL'
   },
   {
     id: 'band1',
@@ -38,9 +41,9 @@ export const galleryImages: GalleryImage[] = [
     fullUrl: '/images/gallery/full/band1.jpg',
     width: 600,
     height: 450,
-    alt: "Neptune's, Tarpon Springs",
-    caption:
-      "with bandmates and fans at Neptune's Lounge in Tarpon Springs FL - Sam, Nick, Jeremy, Fabian, Elena, AJ, Zayda, and JG"
+    alt: "Neptune's Lounge show",
+    caption: "with bandmates and fans at Neptune's Lounge - Sam, Nick, Jeremy, Fabian, Elena, AJ, Zayda, and JG",
+    location: 'Tarpon Springs, FL'
   },
   {
     id: 'band2',
@@ -49,7 +52,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1106,
     height: 800,
     alt: 'Band promo shoot: Jack, Alex, Jason, and AJ',
-    caption: 'Band promo shoot - Jack (drums), Alex (guitar), Jason (vocals), AJ (bass)'
+    caption: 'band promo shoot - Jack (drums), Alex (guitar), Jason (vocals), AJ (bass)',
+    location: 'Tarpon Springs, FL'
   },
   {
     id: 'blizzcon',
@@ -58,7 +62,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2048,
     height: 1152,
     alt: 'Valeera (World of Warcraft) cosplay',
-    caption: 'with Valeera (World of Warcraft) at BlizzCon'
+    caption: 'with Valeera (World of Warcraft) at BlizzCon',
+    location: 'Anaheim, CA'
   },
   {
     id: 'cod-esports',
@@ -67,7 +72,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1440,
     height: 2872,
     alt: 'Call of Duty esports',
-    caption: 'with Jens and Brandon at a Call of Duty esports event'
+    caption: 'with Jens and Brandon at a Call of Duty esports event',
+    location: 'Atlanta, GA'
   },
   {
     id: 'brandnew',
@@ -76,7 +82,8 @@ export const galleryImages: GalleryImage[] = [
     width: 960,
     height: 1280,
     alt: 'Brand New fan',
-    caption: 'after finally seeing Brand New live'
+    caption: 'after finally seeing Brand New live',
+    location: 'Orlando, FL'
   },
   {
     id: 'brooke',
@@ -85,7 +92,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1536,
     height: 2048,
     alt: 'With Brooke',
-    caption: 'with Brooke at Countryside Christian Church in Clearwater FL'
+    caption: 'with Brooke at Countryside Christian Church',
+    location: 'Clearwater, FL'
   },
   {
     id: 'christina',
@@ -94,7 +102,8 @@ export const galleryImages: GalleryImage[] = [
     width: 480,
     height: 640,
     alt: 'Silly selfie with Christina eating food',
-    caption: 'Munchies with Tini'
+    caption: 'munchies with Tini',
+    location: 'Tarpon Springs, FL'
   },
   {
     id: 'con2',
@@ -103,7 +112,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1810,
     height: 1890,
     alt: 'San (Princess Mononoke) cosplay',
-    caption: 'with San (Princess Mononoke) at MetroCon'
+    caption: 'with San (Princess Mononoke) at MetroCon',
+    location: 'Tampa, FL'
   },
   {
     id: 'con3',
@@ -112,7 +122,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1520,
     height: 1889,
     alt: 'Bulma (Dragon Ball Z) cosplay',
-    caption: 'with Bulma (Dragon Ball Z) at MetroCon'
+    caption: 'with Bulma (Dragon Ball Z) at MetroCon',
+    location: 'Tampa, FL'
   },
   {
     id: 'con4',
@@ -121,7 +132,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1364,
     height: 1890,
     alt: 'Ochaco Uraraka (My Hero Academia) cosplay',
-    caption: 'with Ochaco Uraraka (My Hero Academia) at MetroCon'
+    caption: 'with Ochaco Uraraka (My Hero Academia) at MetroCon',
+    location: 'Tampa, FL'
   },
   {
     id: 'con5',
@@ -130,7 +142,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1793,
     height: 1486,
     alt: 'Lightning and Serah (Final Fantasy XIII) cosplay',
-    caption: 'with Lightning and Serah (Final Fantasy XIII) at MetroCon'
+    caption: 'with Lightning and Serah (Final Fantasy XIII) at MetroCon',
+    location: 'Tampa, FL'
   },
   {
     id: 'con6',
@@ -139,7 +152,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1677,
     height: 1889,
     alt: 'Raphtalia (The Rising of the Shield Hero) cosplay',
-    caption: 'with Raphtalia (The Rising of the Shield Hero) at MetroCon'
+    caption: 'with Raphtalia (The Rising of the Shield Hero) at MetroCon',
+    location: 'Tampa, FL'
   },
   {
     id: 'con7',
@@ -148,7 +162,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1810,
     height: 1490,
     alt: 'Illumi and Hisoka (Hunter x Hunter) cosplay',
-    caption: 'with Illumi and Hisoka (Hunter x Hunter) at MetroCon'
+    caption: 'with Illumi and Hisoka (Hunter x Hunter) at MetroCon',
+    location: 'Tampa, FL'
   },
   {
     id: 'fabian',
@@ -157,7 +172,8 @@ export const galleryImages: GalleryImage[] = [
     width: 453,
     height: 301,
     alt: 'With Fabian, 9th grade',
-    caption: 'Hanging out with Fabian at Countryside Mall'
+    caption: 'hanging out with Fabian at Countryside Mall',
+    location: 'Clearwater, FL'
   },
   {
     id: 'face1',
@@ -166,7 +182,8 @@ export const galleryImages: GalleryImage[] = [
     width: 720,
     height: 960,
     alt: 'Mirror selfie',
-    caption: 'ready for another long drive for Lightning Express'
+    caption: 'ready for another long drive',
+    location: 'Largo, FL'
   },
   {
     id: 'face2',
@@ -175,7 +192,8 @@ export const galleryImages: GalleryImage[] = [
     width: 568,
     height: 960,
     alt: 'Mirror selfie',
-    caption: 'triennial pfp update'
+    caption: 'triennial pfp update',
+    location: 'Largo, FL'
   },
   {
     id: 'face3',
@@ -184,7 +202,8 @@ export const galleryImages: GalleryImage[] = [
     width: 720,
     height: 405,
     alt: 'Boston, Massachusetts',
-    caption: 'First time visiting Boston'
+    caption: 'visiting family friends in Boston',
+    location: 'Boston, MA'
   },
   {
     id: 'face4',
@@ -193,7 +212,8 @@ export const galleryImages: GalleryImage[] = [
     width: 768,
     height: 1024,
     alt: 'Popeyes run',
-    caption: 'Eating fried chicken at Popeyes'
+    caption: 'eating fried chicken at Popeyes',
+    location: 'Atlanta, GA'
   },
   {
     id: 'fam',
@@ -202,7 +222,8 @@ export const galleryImages: GalleryImage[] = [
     width: 720,
     height: 960,
     alt: 'Family portrait',
-    caption: 'Family portrait from the 90s'
+    caption: 'family portrait from the 90s',
+    location: 'Rochester, NY'
   },
   {
     id: 'fam2',
@@ -211,7 +232,8 @@ export const galleryImages: GalleryImage[] = [
     width: 3088,
     height: 2320,
     alt: 'Family dinner',
-    caption: 'Family dinner at Chopsticks'
+    caption: 'family dinner at Chopsticks buffet',
+    location: 'Clearwater, FL'
   },
   {
     id: 'games',
@@ -220,7 +242,8 @@ export const galleryImages: GalleryImage[] = [
     width: 717,
     height: 960,
     alt: 'Game Boy collection',
-    caption: 'Found my Game Boy collection'
+    caption: 'found my Game Boy collection',
+    location: 'Rochester, NY'
   },
   {
     id: 'muzzies',
@@ -229,7 +252,8 @@ export const galleryImages: GalleryImage[] = [
     width: 960,
     height: 717,
     alt: 'Muzzies deli',
-    caption: 'Feeding the rowing team at Muzzies in Tarpon Springs FL'
+    caption: 'feeding the rowing team at Muzzies',
+    location: 'Tarpon Springs, FL'
   },
   {
     id: 'tori',
@@ -238,7 +262,8 @@ export const galleryImages: GalleryImage[] = [
     width: 480,
     height: 640,
     alt: 'With Tori',
-    caption: 'Hanging out with my best friend Tori'
+    caption: 'hanging out with my best friend Tori',
+    location: 'Odessa, FL'
   },
   {
     id: 'tori2',
@@ -247,7 +272,8 @@ export const galleryImages: GalleryImage[] = [
     width: 480,
     height: 640,
     alt: 'With Tori',
-    caption: 'Silly faces with my best friend Tori'
+    caption: 'silly faces with my best friend Tori',
+    location: 'Odessa, FL'
   },
   {
     id: 'uncle',
@@ -256,7 +282,8 @@ export const galleryImages: GalleryImage[] = [
     width: 720,
     height: 960,
     alt: 'Holding newborn',
-    caption: 'Becoming an uncle for the first time - meeting Micah'
+    caption: 'becoming an uncle for the first time - meeting Micah',
+    location: 'Clearwater, FL'
   },
   {
     id: 'vote',
@@ -265,7 +292,8 @@ export const galleryImages: GalleryImage[] = [
     width: 540,
     height: 960,
     alt: 'I Voted sticker',
-    caption: 'Bernie Would Have Won'
+    caption: 'berniewouldhavewon',
+    location: 'Largo, FL'
   },
   {
     id: 'vote1',
@@ -274,7 +302,8 @@ export const galleryImages: GalleryImage[] = [
     width: 895,
     height: 894,
     alt: 'I Voted sticker',
-    caption: 'Another election, another vote'
+    caption: 'another election; another vote',
+    location: 'Largo, FL'
   },
   {
     id: 'youth',
@@ -283,7 +312,8 @@ export const galleryImages: GalleryImage[] = [
     width: 741,
     height: 564,
     alt: 'Childhood photo',
-    caption: 'The making of a software engineer - with my sisters at the family computer'
+    caption: 'with my sisters at the family computer in the 90s - the making of a software engineer',
+    location: 'Rochester, NY'
   },
   {
     id: 'jens-wedding-party',
@@ -292,7 +322,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1334,
     alt: "Jens's wedding",
-    caption: "Seated with the wedding party at Jens's wedding"
+    caption: "with the wedding party at Jens's wedding",
+    location: 'Ontario, CA'
   },
   {
     id: 'marmot-watching',
@@ -301,7 +332,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 946,
     alt: 'Marmot at Mount Rainier',
-    caption: 'Photographing a marmot on Mount Rainier'
+    caption: 'photographing a marmot on the trail at Paradise',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-panorama',
@@ -310,7 +342,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 946,
     alt: 'Mount Rainier panorama',
-    caption: 'Mount Rainier panorama with glaciers from Paradise'
+    caption: 'panorama with glaciers from Paradise',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-hike',
@@ -319,7 +352,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Hiking at Paradise',
-    caption: 'Hiking at Paradise with friends and Mount Rainier in the background'
+    caption: 'hiking at Paradise with friends',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-friends',
@@ -328,7 +362,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Hiking at Paradise',
-    caption: 'Group selfie on the trail with the Tatoosh Range behind us'
+    caption: 'group selfie on the trail with the Tatoosh Range behind us',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'tatoosh-range',
@@ -337,7 +372,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 946,
     alt: 'Tatoosh Range',
-    caption: 'The Tatoosh Range from Paradise at Mount Rainier'
+    caption: 'the Tatoosh Range views from Paradise',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-glaciers',
@@ -346,7 +382,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 948,
     alt: 'Rainier glaciers',
-    caption: 'Hikers on the trail approaching Mount Rainier glaciers'
+    caption: 'on the trail approaching the glaciers',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-selfie',
@@ -355,7 +392,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 948,
     alt: 'Rainier selfie',
-    caption: 'captured by Cody near Mount Rainier glaciers'
+    caption: 'caught slipping by Cody near the glaciers',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-trail',
@@ -364,7 +402,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 946,
     alt: 'On the trail',
-    caption: 'Friends hiking the rocky trail at Paradise'
+    caption: 'friends hiking the rocky trail at Paradise',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'cascade-vista',
@@ -373,7 +412,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 946,
     alt: 'Cascade Range vista',
-    caption: 'Panoramic view of the Cascade Range from Paradise'
+    caption: 'panoramic view of the Cascade Range from Paradise',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-ridge',
@@ -382,7 +422,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Rocky ridge selfie',
-    caption: 'with Cody on the rocky ridge at Paradise'
+    caption: 'with Cody on the rocky ridge at Paradise',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-summit',
@@ -391,7 +432,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 946,
     alt: 'Summit rest',
-    caption: 'with Tini taking a break at the summit of Mount Rainier'
+    caption: 'with Tini taking a break at the summit',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-group',
@@ -400,7 +442,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Group on the rocks',
-    caption: 'Group photo on the rocky trail at Paradise'
+    caption: 'group photo on the rocky trail at Paradise',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'paradise-valley',
@@ -409,7 +452,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 946,
     alt: 'Paradise valley',
-    caption: 'Looking down at Paradise valley and the Tatoosh Range'
+    caption: 'looking down at Paradise valley and the Tatoosh Range',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'paradise-descent',
@@ -418,7 +462,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 946,
     alt: 'Trail descent',
-    caption: 'Hiking down the trail through evergreens at Paradise'
+    caption: 'hiking down the trail through evergreens at Paradise',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-meadow',
@@ -427,7 +472,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 946,
     alt: 'Alpine meadow',
-    caption: 'Mount Rainier towering over the alpine meadow'
+    caption: 'the mountain towering over the alpine meadow',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'paradise-meadow',
@@ -436,16 +482,18 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 946,
     alt: 'Meadow hike',
-    caption: 'Hiking through the alpine meadow at Paradise'
+    caption: 'hiking through the alpine meadow at Paradise',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'jens-wedding-break',
     thumbnailUrl: '/images/gallery/jens-wedding-break-thumb.jpg',
     fullUrl: '/images/gallery/full/jens-wedding-break.jpg',
     width: 934,
-    height: 2000,
+    height: 1245,
     alt: 'Wedding setup break',
-    caption: "taking a break from setting up Jens's wedding"
+    caption: 'taking a break from setting up the wedding - Jens, Rody, Cody, Tini, AJ, Themelis, Cliff',
+    location: 'Ontario, CA'
   },
   {
     id: 'jens-wedding-toast',
@@ -454,7 +502,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1334,
     alt: 'Groomsmen toast',
-    caption: "toasting at Jens's wedding"
+    caption: "toasting at Jens's wedding",
+    location: 'Ontario, CA'
   },
   {
     id: 'wedding-group-toast',
@@ -463,7 +512,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1334,
     alt: 'Wedding toast',
-    caption: 'Wedding guests raising glasses in celebration'
+    caption: 'wedding guests raising glasses in celebration',
+    location: 'Ontario, CA'
   },
   {
     id: 'wedding-reception-dinner',
@@ -472,7 +522,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1334,
     alt: 'Reception dinner',
-    caption: 'Candlelit reception dinner for Jens and Britt'
+    caption: 'candlelit reception dinner for Jens and Britt',
+    location: 'Ontario, CA'
   },
   {
     id: 'wedding-poolside-night',
@@ -481,7 +532,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1334,
     alt: 'Poolside reception',
-    caption: 'Poolside wedding reception at night for Jens and Britt'
+    caption: 'poolside wedding reception at night for Jens and Britt',
+    location: 'Ontario, CA'
   },
   {
     id: 'jens-groomsmen',
@@ -490,7 +542,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1334,
     alt: 'The groomsmen',
-    caption: 'Jens with his groomsmen'
+    caption: 'Jens with his groomsmen',
+    location: 'Ontario, CA'
   },
   {
     id: 'wedding-boys-table',
@@ -499,7 +552,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1506,
     alt: 'Wedding boys table',
-    caption: 'Cliff, Cody, Jens, and Themelis'
+    caption: 'the boys - Cliff, Cody, Jens, and Themelis',
+    location: 'Ontario, CA'
   },
   {
     id: 'wedding-groom-prep',
@@ -508,7 +562,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1500,
     height: 2000,
     alt: 'Groom prep',
-    caption: 'helping Jens get dressed for the big day'
+    caption: 'helping Jens get dressed for the big day',
+    location: 'Ontario, CA'
   },
   {
     id: 'wedding-getting-dressed',
@@ -517,7 +572,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1500,
     height: 2000,
     alt: 'Getting dressed',
-    caption: 'Getting Jens ready for his wedding day'
+    caption: 'getting Jens ready for his wedding day',
+    location: 'Ontario, CA'
   },
   {
     id: 'rainier-tatoosh-trail',
@@ -526,7 +582,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1500,
     height: 2000,
     alt: 'Tatoosh trail view',
-    caption: 'Trail view with the Tatoosh Range at Mount Rainier'
+    caption: 'trail view with the Tatoosh Range',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-trail-duo',
@@ -535,7 +592,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1500,
     height: 2000,
     alt: 'Trail duo',
-    caption: 'Tini and Ashlee on the trail at Mount Rainier'
+    caption: 'with Tini and Ashlee on the trail',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-snow-break',
@@ -544,7 +602,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1500,
     height: 2000,
     alt: 'Snow break',
-    caption: 'Themelis taking a break in the snow at Paradise'
+    caption: 'Themelis taking a break in the snow at Paradise',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-couple-selfie',
@@ -553,7 +612,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1500,
     height: 2000,
     alt: 'Couple selfie',
-    caption: 'with Tini on the Mount Rainier trail'
+    caption: 'with Tini on the trail',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-summit-couple',
@@ -562,7 +622,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1500,
     height: 2000,
     alt: 'Summit selfie',
-    caption: 'with Tini at the summit of Mount Rainier'
+    caption: 'with Tini at the summit',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-stream',
@@ -571,7 +632,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1500,
     height: 2000,
     alt: 'Mountain stream',
-    caption: 'Mountain stream with Mount Rainier in the background'
+    caption: 'mountain stream with the peak in the background',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-group-trail',
@@ -580,7 +642,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Trail group selfie',
-    caption: 'On the trail at Mount Rainier'
+    caption: 'on the trail',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-group-mountain',
@@ -589,7 +652,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Group at Paradise',
-    caption: 'Group photo with Mount Rainier behind us'
+    caption: 'group photo with the mountain behind us',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-summit-pano',
@@ -598,7 +662,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 613,
     alt: 'Summit panorama',
-    caption: 'Panoramic view from the summit at Mount Rainier'
+    caption: 'panoramic view from the summit',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'rainier-glacier-approach',
@@ -607,7 +672,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Glacier approach',
-    caption: 'Tini teaching me to love nature at Mount Rainier'
+    caption: 'Tini teaching me to love nature',
+    location: 'Mount Rainier, WA'
   },
   {
     id: 'patio-drinks',
@@ -616,7 +682,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1500,
     height: 2000,
     alt: 'Patio drinks',
-    caption: 'Outdoor patio drinks with Themelis and Ashlee'
+    caption: 'outdoor patio drinks with Themelis and Ashlee',
+    location: 'Seattle, WA'
   },
   {
     id: 'road-trip-car',
@@ -625,7 +692,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Road trip selfie',
-    caption: 'Road trip to Mount Rainier - Tini, Themelis, Ashlee, AJ, and Cody'
+    caption: 'road trip to Mount Rainier - Tini, Themelis, Ashlee, AJ, and Cody',
+    location: 'Washington'
   },
   {
     id: 'escape-room-fun',
@@ -634,7 +702,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Escape room',
-    caption: 'Silly signs after completing an escape room'
+    caption: 'silly signs after completing an escape room',
+    location: 'Seattle, WA'
   },
   {
     id: 'korean-bbq-spread',
@@ -643,7 +712,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1500,
     height: 2000,
     alt: 'Korean BBQ',
-    caption: 'Korean BBQ table spread with all the fixings'
+    caption: 'Korean BBQ table spread',
+    location: 'Seattle, WA'
   },
   {
     id: 'seattle-rooftop-sunset',
@@ -652,7 +722,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Rooftop sunset',
-    caption: 'Rooftop deck gathering at sunset in Seattle'
+    caption: 'rooftop deck gathering at sunset',
+    location: 'Seattle, WA'
   },
   {
     id: 'deck-gathering',
@@ -661,7 +732,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Deck hangout',
-    caption: "Gathering on the roof in Seattle with Jens's dog River"
+    caption: "gathering on the roof with River (Jens's dog)",
+    location: 'Seattle, WA'
   },
   {
     id: 'korean-bbq-dinner',
@@ -670,7 +742,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Korean BBQ dinner',
-    caption: 'Enjoying Korean BBQ at a restaurant in Seattle'
+    caption: 'enjoying Korean BBQ',
+    location: 'Seattle, WA'
   },
   {
     id: 'brunch-spread',
@@ -679,7 +752,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Brunch',
-    caption: 'Brunch spread at a restaurant outdoor patio in Seattle'
+    caption: 'brunch spread at an outdoor patio',
+    location: 'Seattle, WA'
   },
   {
     id: 'living-room-hangout',
@@ -688,7 +762,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1414,
     alt: 'Living room hangout',
-    caption: 'Trading new music and relaxing in Seattle - Jens, River, AJ, and Themelis'
+    caption: 'trading new music and relaxing - Jens, River, AJ, and Themelis',
+    location: 'Seattle, WA'
   },
   {
     id: 'rooftop-dinner',
@@ -697,7 +772,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1506,
     alt: 'Rooftop dinner',
-    caption: 'having dinner on the Seattle rooftop at sunset - Cody, Themelis, Tini, AJ, and Ashlee'
+    caption: 'having dinner on the rooftop at sunset - Cody, Themelis, Tini, AJ, and Ashlee',
+    location: 'Seattle, WA'
   },
   {
     id: 'sunset-photographer',
@@ -706,7 +782,8 @@ export const galleryImages: GalleryImage[] = [
     width: 1506,
     height: 2000,
     alt: 'Sunset photographer',
-    caption: 'Capturing Ashlee capturing the sunset from the Seattle rooftop'
+    caption: 'capturing Ashlee capturing the sunset from the rooftop',
+    location: 'Seattle, WA'
   },
   {
     id: 'seattle-sculpture',
@@ -715,6 +792,27 @@ export const galleryImages: GalleryImage[] = [
     width: 1500,
     height: 2000,
     alt: 'Seattle art',
-    caption: 'At a geometric art installation in Seattle - Ashlee, AJ, Tini, Cody, and Jens'
+    caption: 'at a geometric art installation - Ashlee, AJ, Tini, Cody, and Jens',
+    location: 'Seattle, WA'
+  },
+  {
+    id: 'pfp-2024',
+    thumbnailUrl: '/images/gallery/pfp-2024-thumb.jpg',
+    fullUrl: '/images/gallery/full/pfp-2024.jpg',
+    width: 1333,
+    height: 2000,
+    alt: 'Profile photo 2024',
+    caption: 'headshot provided by RIT 2024',
+    location: 'Rochester, NY'
+  },
+  {
+    id: 'pfp-2025',
+    thumbnailUrl: '/images/gallery/pfp-2025-thumb.jpg',
+    fullUrl: '/images/gallery/full/pfp-2025.jpg',
+    width: 1334,
+    height: 2000,
+    alt: 'Profile photo 2025',
+    caption: 'headshot provided by RIT 2025',
+    location: 'Rochester, NY'
   }
 ]

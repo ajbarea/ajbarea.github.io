@@ -169,6 +169,7 @@ export interface GalleryImage {
   height: number
   alt: string
   caption?: string
+  location?: string
 }
 
 // Blog Article
