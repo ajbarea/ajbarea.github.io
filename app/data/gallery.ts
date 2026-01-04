@@ -42,7 +42,8 @@ export const galleryImages: GalleryImage[] = [
     width: 600,
     height: 450,
     alt: "Neptune's Lounge show",
-    caption: "with bandmates and fans at Neptune's Lounge - Sam, Nick, Jeremy, Fabian, Elena, AJ, Zayda, and JG",
+    caption:
+      "with bandmates and fans at Neptune's Lounge - Sam, Nick, Jeremy, Fabian, Elena, AJ, Zayda, and JG",
     location: 'Tarpon Springs, FL'
   },
   {
@@ -312,7 +313,8 @@ export const galleryImages: GalleryImage[] = [
     width: 741,
     height: 564,
     alt: 'Childhood photo',
-    caption: 'with my sisters at the family computer in the 90s - the making of a software engineer',
+    caption:
+      'with my sisters at the family computer in the 90s - the making of a software engineer',
     location: 'Rochester, NY'
   },
   {
@@ -492,7 +494,8 @@ export const galleryImages: GalleryImage[] = [
     width: 934,
     height: 1245,
     alt: 'Wedding setup break',
-    caption: 'taking a break from setting up the wedding - Jens, Rody, Cody, Tini, AJ, Themelis, Cliff',
+    caption:
+      'taking a break from setting up the wedding - Jens, Rody, Cody, Tini, AJ, Themelis, Cliff',
     location: 'Ontario, CA'
   },
   {
