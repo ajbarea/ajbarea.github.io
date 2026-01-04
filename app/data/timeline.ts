@@ -104,7 +104,7 @@ const unsortedEntries: TimelineEntry[] = [
     timeframe: 'May 2025 – Present',
     description:
       'Enhancing IntelliFL federated learning framework with 80%+ test coverage, React/FastAPI interface, and Byzantine-robust aggregation methods.',
-    skills: ['PyTorch', 'FLOWER', 'React', 'FastAPI', 'pytest'],
+    skills: ['Federated Learning', 'PyTorch', 'React', 'FastAPI', 'Python'],
     icon: 'research',
     isCurrent: true,
     sortDate: '2025-05-01'
@@ -118,7 +118,7 @@ const unsortedEntries: TimelineEntry[] = [
     timeframe: 'Aug 2025 – Dec 2025',
     description:
       'Mentoring students in design patterns, architectural styles, and quality attributes. Led full class session during instructor absence.',
-    skills: ['Software Architecture', 'Design Patterns', 'Teaching'],
+    skills: ['Software Architecture', 'Design Patterns', 'Mentoring', 'Code Review', 'Teaching'],
     icon: 'teaching',
     isCurrent: false,
     sortDate: '2025-08-01'
@@ -132,7 +132,7 @@ const unsortedEntries: TimelineEntry[] = [
     timeframe: 'Aug 2023 – Dec 2025',
     description:
       'GPA: 4.0/4.0. Capstone: Enhancing Federated Learning Execution Framework (Advisor: Dr. Leon Reznik).',
-    skills: ['Machine Learning', 'Distributed Systems', 'Cloud Computing', 'Software Architecture'],
+    skills: ['Machine Learning', 'Distributed Systems', 'Cloud Computing', 'Software Architecture', 'Python'],
     icon: 'education',
     isCurrent: false,
     sortDate: '2023-08-01'
@@ -146,7 +146,7 @@ const unsortedEntries: TimelineEntry[] = [
     timeframe: 'Feb 2023 – Aug 2024',
     description:
       'Cut daily error logs by 150,000 across RDCs. Built full-stack automation tooling. Reduced onboarding time by 80%.',
-    skills: ['Java', 'SQL', 'Jira', 'Confluence', 'Agile'],
+    skills: ['Java', 'SQL', 'Spring Boot', 'Full-Stack', 'Agile'],
     icon: 'work',
     isCurrent: false,
     sortDate: '2023-02-01'
@@ -159,7 +159,7 @@ const unsortedEntries: TimelineEntry[] = [
     organization: 'University of South Florida',
     timeframe: 'Aug 2018 – May 2022',
     description: 'GPA: 3.06/4.0.',
-    skills: ['C++', 'C', 'Python', 'Embedded Systems'],
+    skills: ['C', 'C++', 'Embedded Systems', 'Digital Logic', 'Microcontrollers'],
     icon: 'education',
     isCurrent: false,
     sortDate: '2018-08-01'
@@ -173,7 +173,7 @@ const unsortedEntries: TimelineEntry[] = [
     timeframe: 'Mar 2022 – May 2022',
     description:
       'Designed wireframes for web apps. Built blockchain-based document authenticator Chrome extension using Node.js.',
-    skills: ['Node.js', 'UX Design', 'Blockchain', 'Chrome Extension'],
+    skills: ['JavaScript', 'Node.js', 'UX Design', 'Blockchain', 'Figma'],
     icon: 'work',
     isCurrent: false,
     sortDate: '2022-03-01'
