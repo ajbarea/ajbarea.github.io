@@ -21,6 +21,17 @@ npx sharp-cli -i "public/images/to-do/ORIGINAL.jpg" -o "public/images/gallery/" 
 mv "public/images/gallery/ORIGINAL.jpg" "public/images/gallery/NEW-NAME-thumb.jpg"
 ```
 
+### For portrait/tall images (use 250x350):
+
+Tall images become blurry with 250x250 because they shrink to narrow thumbnails. Use a taller max height to preserve aspect ratio:
+
+```bash
+npx sharp-cli -i "public/images/gallery/full/NAME.jpg" -o "public/images/gallery/" -f jpg -q 80 resize 250 350 --fit inside
+mv "public/images/gallery/NAME.jpg" "public/images/gallery/NAME-thumb.jpg"
+```
+
+This keeps the original ratio (e.g., 3:4 → 250x333, 2:3 → 233x350).
+
 ### For HEIC-converted images (use --autoOrient):
 
 ```bash
