@@ -17,7 +17,10 @@ useHead({
       content:
         'Technical articles and insights on software engineering, AI/ML, cloud development, and programming best practices.'
     },
-    { property: 'og:image', content: '/images/og-image.png' },
+    {
+      property: 'og:image',
+      content: 'https://res.cloudinary.com/dumwa1w5x/image/upload/q_auto,f_auto/portfolio_ujli4t'
+    },
     { property: 'og:url', content: 'https://ajbarea.github.io/blog' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },

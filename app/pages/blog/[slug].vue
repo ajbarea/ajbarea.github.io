@@ -27,7 +27,9 @@ useHead(
         { property: 'og:type', content: 'article' },
         {
           property: 'og:image',
-          content: article.value.coverImage || '/images/og-image.png'
+          content:
+            article.value.coverImage ||
+            'https://res.cloudinary.com/dumwa1w5x/image/upload/q_auto,f_auto/portfolio_ujli4t'
         },
         { property: 'article:published_time', content: article.value.date },
         { property: 'article:author', content: article.value.author },

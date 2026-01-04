@@ -21,7 +21,10 @@ useHead({
       content:
         'Professional resume showcasing software engineering experience, research, and technical skills.'
     },
-    { property: 'og:image', content: '/images/og-image.png' },
+    {
+      property: 'og:image',
+      content: 'https://res.cloudinary.com/dumwa1w5x/image/upload/q_auto,f_auto/portfolio_ujli4t'
+    },
     { property: 'og:url', content: 'https://ajbarea.github.io/resume' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary' },

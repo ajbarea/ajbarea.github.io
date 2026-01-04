@@ -28,7 +28,10 @@ useHead({
       content:
         "Explore AJ Barea's portfolio of software projects including AI/ML applications, full-stack development, cloud solutions, and research work."
     },
-    { property: 'og:image', content: '/images/og-image.png' },
+    {
+      property: 'og:image',
+      content: 'https://res.cloudinary.com/dumwa1w5x/image/upload/q_auto,f_auto/portfolio_ujli4t'
+    },
     { property: 'og:url', content: 'https://ajbarea.github.io/projects' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
