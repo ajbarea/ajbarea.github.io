@@ -140,7 +140,7 @@ onUnmounted(() => {
 <template>
   <div
     :id="galleryId"
-    class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-3 sm:gap-4 space-y-3 sm:space-y-4"
+    class="columns-2 lg:columns-3 xl:columns-4 gap-3 sm:gap-4 space-y-3 sm:space-y-4"
     role="list"
     aria-label="Photo gallery - click any image to view full size"
   >
