@@ -132,7 +132,13 @@ const unsortedEntries: TimelineEntry[] = [
     timeframe: 'Aug 2023 – Dec 2025',
     description:
       'GPA: 4.0/4.0. Capstone: Enhancing Federated Learning Execution Framework (Advisor: Dr. Leon Reznik).',
-    skills: ['Machine Learning', 'Distributed Systems', 'Cloud Computing', 'Software Architecture', 'Python'],
+    skills: [
+      'Machine Learning',
+      'Distributed Systems',
+      'Cloud Computing',
+      'Software Architecture',
+      'Python'
+    ],
     icon: 'education',
     isCurrent: false,
     sortDate: '2023-08-01'

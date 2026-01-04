@@ -73,7 +73,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1440,
     height: 2872,
     alt: 'Call of Duty esports',
-    caption: 'with Jens and Brandon at a Call of Duty esports event',
+    caption: 'with Jens and Brandon at a Call of Duty esports tournament',
     location: 'Atlanta, GA'
   },
   {
@@ -83,7 +83,7 @@ export const galleryImages: GalleryImage[] = [
     width: 960,
     height: 1280,
     alt: 'Brand New fan',
-    caption: 'after finally seeing Brand New live',
+    caption: 'finally saw Brand New at the House of Blues',
     location: 'Orlando, FL'
   },
   {
@@ -203,7 +203,7 @@ export const galleryImages: GalleryImage[] = [
     width: 720,
     height: 405,
     alt: 'Boston, Massachusetts',
-    caption: 'visiting family friends in Boston',
+    caption: 'exploring Boston for the first time',
     location: 'Boston, MA'
   },
   {
@@ -213,7 +213,7 @@ export const galleryImages: GalleryImage[] = [
     width: 768,
     height: 1024,
     alt: 'Popeyes run',
-    caption: 'eating fried chicken at Popeyes',
+    caption: 'fried chicken at Popeyes during a road trip',
     location: 'Atlanta, GA'
   },
   {
@@ -253,7 +253,7 @@ export const galleryImages: GalleryImage[] = [
     width: 960,
     height: 717,
     alt: 'Muzzies deli',
-    caption: 'feeding the rowing team at Muzzies',
+    caption: 'feeding the whole rowing team at Muzzies',
     location: 'Tarpon Springs, FL'
   },
   {
@@ -263,7 +263,7 @@ export const galleryImages: GalleryImage[] = [
     width: 480,
     height: 640,
     alt: 'With Tori',
-    caption: 'hanging out with my best friend Tori',
+    caption: 'with my best friend Tori at The Goat House',
     location: 'Odessa, FL'
   },
   {
@@ -735,7 +735,7 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Deck hangout',
-    caption: "gathering on the roof with River (Jens's dog)",
+    caption: 'gathering on the roof with River',
     location: 'Seattle, WA'
   },
   {
@@ -745,7 +745,7 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Korean BBQ dinner',
-    caption: 'enjoying Korean BBQ',
+    caption: 'enjoying Korean BBQ after a day hiking Mount Rainier',
     location: 'Seattle, WA'
   },
   {
@@ -795,7 +795,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1500,
     height: 2000,
     alt: 'Seattle art',
-    caption: 'at a geometric art installation - Ashlee, AJ, Tini, Cody, and Jens',
+    caption: 'geometric art installation in the city - Ashlee, AJ, Tini, Cody, and Jens',
     location: 'Seattle, WA'
   },
   {

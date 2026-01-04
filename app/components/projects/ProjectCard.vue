@@ -85,10 +85,7 @@ function getTypeBadgeClasses(type: ProjectType): string {
         <span
           v-for="type in sortedTypes"
           :key="type"
-          :class="[
-            'px-2.5 py-1 text-xs font-semibold rounded-full',
-            getTypeBadgeClasses(type)
-          ]"
+          :class="['px-2.5 py-1 text-xs font-semibold rounded-full', getTypeBadgeClasses(type)]"
         >
           {{ getTypeLabel(type) }}
         </span>
