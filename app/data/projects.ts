@@ -57,6 +57,7 @@ export const projects: Project[] = [
       'Research project developing a novel federated learning framework that optimizes client selection based on data quality and computational resources while maintaining differential privacy guarantees.',
     technologies: ['Python', 'PyTorch', 'FLOWER', 'Federated Learning', 'Docker'],
     types: ['ai-ml'],
+    thumbnailUrl: '/images/projects/intellifl.png',
     githubUrl: 'https://github.com/dmitrykoro/fl-execution-framework',
     featured: true
   },
@@ -70,6 +71,7 @@ export const projects: Project[] = [
       'Full-stack banking application with real-time notifications, transaction tracking, and secure fund transfers. Built with Spring Boot backend and Angular frontend.',
     technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'REST API'],
     types: ['full-stack'],
+    thumbnailUrl: '/images/projects/tbd-bank.png',
     githubUrl: 'https://github.com/ajbarea/tbd-banking-application',
     youtubeUrl: 'https://youtu.be/RiDxzmMX-qk',
     featured: false
@@ -83,6 +85,7 @@ export const projects: Project[] = [
       'A social networking platform where users can share thoughts, follow other users, and receive real-time notifications. Features post creation, commenting, and user engagement tracking.',
     technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Real-time'],
     types: ['full-stack'],
+    thumbnailUrl: '/images/projects/thoughtcloud.png',
     githubUrl: 'https://github.com/ajbarea/thought-cloud-social',
     youtubeUrl: 'https://youtu.be/w8TgRcd1uWQ',
     featured: false
@@ -96,6 +99,7 @@ export const projects: Project[] = [
       'Coursework labs covering mobile robot control systems including localization algorithms, path planning, navigation strategies, and sensor integration with comprehensive video explainers.',
     technologies: ['Python', 'Webots', 'Robotics', 'Localization', 'Path Planning'],
     types: ['robotics'],
+    thumbnailUrl: '/images/projects/control-robots.png',
     githubUrl: 'https://github.com/ajbarea/control-of-mobile-robots',
     youtubeUrl: 'https://www.youtube.com/playlist?list=PLmQVFU1FBDddYV_4IRW1zfXH6CAKuZjIM',
     featured: false
@@ -109,6 +113,7 @@ export const projects: Project[] = [
       'A custom blockchain implementation for authenticating digital signatures with tamper-proof verification and real-time transaction searches. Demonstrates core blockchain concepts.',
     technologies: ['JavaScript', 'Node.js', 'Blockchain', 'Cryptography', 'Express'],
     types: ['full-stack'],
+    thumbnailUrl: '/images/projects/blockchain.png',
     githubUrl: 'https://github.com/ajbarea/blockchain-explorer',
     youtubeUrl: 'https://www.youtube.com/playlist?list=PLmQVFU1FBDdc3XyzoCp5NDFkoY5kzW3bT',
     featured: false
@@ -122,6 +127,7 @@ export const projects: Project[] = [
       'A complete expense management system with role-based access for employees and managers. Features expense submission, approval workflows, and reimbursement tracking.',
     technologies: ['Java', 'Servlets', 'PostgreSQL', 'JDBC', 'REST API'],
     types: ['full-stack'],
+    thumbnailUrl: '/images/projects/reimbursement.png',
     githubUrl: 'https://github.com/ajbarea/expense-reimbursement-system',
     youtubeUrl: 'https://youtu.be/t2p_fUak_Mw',
     featured: false
@@ -135,6 +141,7 @@ export const projects: Project[] = [
       'A responsive single-page application built with Nuxt 3, Vue 3, and Tailwind CSS. Features dark mode, SSR/SSG support, photo gallery with PhotoSwipe, and dual resume views.',
     technologies: ['Nuxt.js', 'Vue.js', 'TypeScript', 'Tailwind CSS', 'SSG'],
     types: ['full-stack'],
+    thumbnailUrl: '/images/projects/portfolio.png',
     demoUrl: 'https://ajbarea.github.io/',
     githubUrl: 'https://github.com/ajbarea/ajbarea.github.io',
     featured: false
