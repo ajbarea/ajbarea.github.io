@@ -165,8 +165,7 @@ export interface TimelineEntry {
 // Gallery Image
 export interface GalleryImage {
   id: string
-  thumbnailUrl: string
-  fullUrl: string
+  cloudinaryId: string
   width: number
   height: number
   alt: string

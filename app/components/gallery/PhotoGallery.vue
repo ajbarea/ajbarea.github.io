@@ -15,6 +15,36 @@ const props = withDefaults(defineProps<Props>(), {
   galleryId: 'photo-gallery'
 })
 
+// Cloudinary base URL
+const CLOUDINARY_BASE = 'https://res.cloudinary.com/dumwa1w5x/image/upload'
+
+/**
+ * Generate Cloudinary URL with transformations
+ * @param cloudinaryId - The public ID from Cloudinary
+ * @param transforms - Optional transformation string (e.g., 'w_400,c_fill,q_auto,f_auto')
+ */
+const getCloudinaryUrl = (cloudinaryId: string, transforms?: string): string => {
+  if (transforms) {
+    return `${CLOUDINARY_BASE}/${transforms}/${cloudinaryId}`
+  }
+  return `${CLOUDINARY_BASE}/${cloudinaryId}`
+}
+
+/**
+ * Get thumbnail URL with automatic optimization
+ * Uses 400px width, fill crop, auto quality and format
+ */
+const getThumbnailUrl = (image: GalleryImage): string => {
+  return getCloudinaryUrl(image.cloudinaryId, 'w_400,c_fill,q_auto,f_auto')
+}
+
+/**
+ * Get full-size URL with auto quality and format
+ */
+const getFullUrl = (image: GalleryImage): string => {
+  return getCloudinaryUrl(image.cloudinaryId, 'q_auto,f_auto')
+}
+
 const emit = defineEmits<{
   imageLoad: [id: string]
   imageError: [id: string]
@@ -152,7 +182,7 @@ onUnmounted(() => {
       :style="{ '--stagger-delay': `${Math.min(index * 30, 600)}ms` }"
     >
       <a
-        :href="image.fullUrl"
+        :href="getFullUrl(image)"
         :data-pswp-width="image.width"
         :data-pswp-height="image.height"
         :data-pswp-caption="buildCaptionHtml(image)"
@@ -171,7 +201,7 @@ onUnmounted(() => {
 
         <!-- Thumbnail image with lazy loading and staggered fade-in -->
         <img
-          :src="image.thumbnailUrl"
+          :src="getThumbnailUrl(image)"
           :alt="image.alt"
           :width="image.width"
           :height="image.height"
