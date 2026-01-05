@@ -28,7 +28,7 @@ export const professionalExperience: ProfessionalExperience[] = [
   },
   {
     id: 'phiquest',
-    title: 'UX Developer (Internship)',
+    title: 'UX Developer',
     company: 'Phiquest',
     location: 'Tampa, FL',
     startDate: 'Mar 2022',
@@ -63,7 +63,7 @@ export const researchExperience: ResearchExperience[] = [
   },
   {
     id: 'independent-ml',
-    title: 'Independent ML Research Projects',
+    title: 'Machine Learning Research Projects',
     institution: 'Self-directed',
     startDate: '2024',
     endDate: '2025',
@@ -129,7 +129,7 @@ const unsortedEntries: TimelineEntry[] = [
     title: 'Master of Science',
     subtitle: 'Software Engineering',
     organization: 'Rochester Institute of Technology',
-    timeframe: 'Aug 2023 – Dec 2025',
+    timeframe: 'Aug 2024 – Dec 2025',
     description:
       'GPA: 4.0/4.0. Capstone: Enhancing Federated Learning Execution Framework (Advisor: Dr. Leon Reznik).',
     skills: [
