@@ -40,7 +40,8 @@ def optimize_round(clients):
 
 #### Final Thoughts
 
-> "Intelligence is the ability to adapt to change."
-> -- Stephen Hawking
+> Intelligence is the ability to adapt to change.
+
+— Stephen Hawking
 
 By allowing the system to reconfigure itself in real-time, IntelliFL prevents stragglers from holding back the global model, ensuring consistent performance even in volatile environments.

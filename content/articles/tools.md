@@ -36,7 +36,8 @@ One thing I learned recently is how to sync my settings across different machine
 
 #### Why It Matters
 
-> "Give me six hours to chop down a tree and I will spend the first four sharpening the axe."
-> -- Abraham Lincoln
+> Give me six hours to chop down a tree and I will spend the first four sharpening the axe.
+
+— Abraham Lincoln
 
 Spending time on your tooling isn't procrastination; it's sharpening your axe. A good setup lets you focus on the logic, not the syntax errors.

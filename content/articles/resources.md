@@ -34,8 +34,8 @@ Here are some key resources I discovered during that journey that helped sharpen
 
 #### Final Thoughts
 
-> "You always pass failure on your way to success."
->
-> -- Mickey Rooney
+> You always pass failure on your way to success.
+
+— Mickey Rooney
 
 These resources turned coding practice into something I genuinely enjoy. If you're an aspiring programmer, give them a try. Failure's just a pit stop on the road to success—keep coding, keep learning, and don't quit.

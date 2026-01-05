@@ -29,7 +29,8 @@ We found that the "one-size-fits-all" approach of traditional FL is inefficient 
 
 #### Conclusion
 
-> "You can't manage what you can't measure."
-> -- Peter Drucker
+> You can't manage what you can't measure.
+
+— Peter Drucker
 
 By measuring channel states and computational capacity in real-time, we built a system that manages itself. The future of edge AI isn't just distributed; it's intelligent.

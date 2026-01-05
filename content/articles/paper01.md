@@ -32,7 +32,8 @@ In my recent research, we proposed a joint optimization problem that tackles res
 
 #### Why It Matters
 
-> "Efficiency is doing things right; effectiveness is doing the right things."
-> -- Peter Drucker
+> Efficiency is doing things right; effectiveness is doing the right things.
+
+— Peter Drucker
 
 By formulating this as a minimization problem for total delay, we can significantly accelerate how quickly the model converges to a high accuracy, making real-time edge AI a reality.
