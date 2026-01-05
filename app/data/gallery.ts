@@ -68,7 +68,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1440,
     height: 2872,
     alt: 'Call of Duty esports',
-    caption: 'with Jens and Brandon at a Call of Duty esports tournament',
+    caption: 'at a Call of Duty esports tournament - AJ, Jens, and Brandon',
     location: 'Atlanta, GA'
   },
   {
@@ -77,7 +77,7 @@ export const galleryImages: GalleryImage[] = [
     width: 960,
     height: 1280,
     alt: 'Brand New fan',
-    caption: 'finally saw Brand New at the House of Blues',
+    caption: 'saw Brand New at the House of Blues with Jack',
     location: 'Orlando, FL'
   },
   {
@@ -194,7 +194,7 @@ export const galleryImages: GalleryImage[] = [
     width: 768,
     height: 1024,
     alt: 'Popeyes run',
-    caption: 'fried chicken at Popeyes during a road trip',
+    caption: 'fried chicken stop at Popeyes during a road trip',
     location: 'Atlanta, GA'
   },
   {
@@ -212,7 +212,7 @@ export const galleryImages: GalleryImage[] = [
     width: 3088,
     height: 2320,
     alt: 'Family dinner',
-    caption: 'family dinner at Chopsticks buffet',
+    caption: 'family dinner at Chopsticks buffet - AJ, Mom, Joey, Abby',
     location: 'Clearwater, FL'
   },
   {
@@ -348,7 +348,7 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 948,
     alt: 'Rainier glaciers',
-    caption: 'on the trail approaching the glaciers',
+    caption: 'on the trail approaching the glaciers - Themelis, Ashlee, Tini, and AJ',
     location: 'Mount Rainier, WA'
   },
   {
@@ -402,7 +402,8 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Group on the rocks',
-    caption: 'group photo on the rocky trail at Paradise',
+    caption:
+      'on the rocky trail at Paradise - Cody, Tini, Themelis, Ashlee, AJ, and total stranger',
     location: 'Mount Rainier, WA'
   },
   {
@@ -448,7 +449,7 @@ export const galleryImages: GalleryImage[] = [
     height: 1245,
     alt: 'Wedding setup break',
     caption:
-      'taking a break from setting up the wedding - Jens, Rody, Cody, Tini, AJ, Themelis, Cliff',
+      'taking a break from setting up the wedding - Jens, River, Rody, Cody, Tini, AJ, Themelis, and Cliff',
     location: 'Ontario, CA'
   },
   {
@@ -457,7 +458,7 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1334,
     alt: 'Groomsmen toast',
-    caption: "toasting at Jens's wedding",
+    caption: "toasting at Jens's wedding - Brandon, Kat, Rody",
     location: 'Ontario, CA'
   },
   {
@@ -493,7 +494,7 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1334,
     alt: 'The groomsmen',
-    caption: 'Jens with his groomsmen',
+    caption: 'Jens with his groomsmen - Cliff, Rody, Jens, Themelis, Cody, and AJ',
     location: 'Ontario, CA'
   },
   {
@@ -592,7 +593,7 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Group at Paradise',
-    caption: 'group photo with the mountain behind us',
+    caption: 'group photo - Ashlee, Themelis, Tini, Cody, and AJ',
     location: 'Mount Rainier, WA'
   },
   {
@@ -628,7 +629,7 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Road trip selfie',
-    caption: 'road trip to Mount Rainier - Tini, Themelis, Ashlee, AJ, and Cody',
+    caption: 'off to Mount Rainier - Tini, Themelis, Ashlee, AJ, and Cody',
     location: 'Washington'
   },
   {
@@ -637,7 +638,7 @@ export const galleryImages: GalleryImage[] = [
     width: 2000,
     height: 1500,
     alt: 'Escape room',
-    caption: 'silly signs after completing an escape room',
+    caption: 'silly signs after completing an escape room - Ashlee, Jens, Tini, Themelis, and AJ',
     location: 'Seattle, WA'
   },
   {
@@ -727,7 +728,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1333,
     height: 2000,
     alt: 'Profile photo 2024',
-    caption: 'headshot provided by RIT 2024',
+    caption: 'provided by RIT 2024',
     location: 'Rochester, NY'
   },
   {
@@ -736,7 +737,7 @@ export const galleryImages: GalleryImage[] = [
     width: 1334,
     height: 2000,
     alt: 'Profile photo 2025',
-    caption: 'headshot provided by RIT 2025',
+    caption: 'provided by RIT 2025',
     location: 'Rochester, NY'
   }
 ]

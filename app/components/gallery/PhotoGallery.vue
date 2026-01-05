@@ -128,7 +128,16 @@ onMounted(() => {
     zoomTitle: 'Zoom',
     arrowPrevTitle: 'Previous (Arrow Left)',
     arrowNextTitle: 'Next (Arrow Right)',
-    paddingFn: () => ({ top: 30, bottom: 30, left: 70, right: 70 })
+    // Responsive padding
+    paddingFn: (viewportSize) => {
+      const isMobile = viewportSize.x < 640
+      return {
+        top: isMobile ? 10 : 30,
+        bottom: isMobile ? 60 : 30,
+        left: isMobile ? 10 : 70,
+        right: isMobile ? 10 : 70
+      }
+    }
   })
 
   // Fallback: use domItemData filter for any images without predefined dimensions
