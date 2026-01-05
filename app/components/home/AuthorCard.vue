@@ -3,6 +3,7 @@ import { ref } from 'vue'
 
 import type { Profile } from '~/types'
 import TextScroller from './TextScroller.vue'
+import { useClipboard } from '~/composables/useClipboard'
 
 interface Props {
   profile: Profile
@@ -11,9 +12,15 @@ interface Props {
 defineProps<Props>()
 
 const imageError = ref(false)
+const clipboard = useClipboard()
 
 function handleImageError() {
   imageError.value = true
+}
+
+function handleEmailClick(e: Event, email: string) {
+  e.preventDefault()
+  clipboard.copyEmail(email)
 }
 
 function getSocialIcon(platform: string): string {
@@ -92,19 +99,30 @@ function getSocialIcon(platform: string): string {
         class="flex items-center justify-center md:justify-start gap-3 sm:gap-4"
         aria-label="Social media profiles"
       >
-        <a
-          v-for="link in profile.socialLinks"
-          :key="link.platform"
-          :href="link.url"
-          :aria-label="link.label"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="min-w-[44px] min-h-[44px] p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 hover:scale-110 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
-        >
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path :d="getSocialIcon(link.icon)" />
-          </svg>
-        </a>
+        <template v-for="link in profile.socialLinks" :key="link.platform">
+          <button
+            v-if="link.platform === 'email'"
+            :aria-label="`Copy email address`"
+            class="min-w-[44px] min-h-[44px] p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 hover:scale-110 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900 cursor-pointer"
+            @click="handleEmailClick($event, profile.contact.email)"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path :d="getSocialIcon(link.icon)" />
+            </svg>
+          </button>
+          <a
+            v-else
+            :href="link.url"
+            :aria-label="link.label"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="min-w-[44px] min-h-[44px] p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 hover:scale-110 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path :d="getSocialIcon(link.icon)" />
+            </svg>
+          </a>
+        </template>
       </nav>
     </div>
   </article>

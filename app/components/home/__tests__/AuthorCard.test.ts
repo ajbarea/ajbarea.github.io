@@ -74,7 +74,7 @@ describe('AuthorCard', () => {
     expect(wrapper.text()).toContain('A test summary about the user.')
   })
 
-  it('renders all social links', () => {
+  it('renders all social links and email button', () => {
     const wrapper = mount(AuthorCard, {
       props: { profile: mockProfile },
       global: {
@@ -83,7 +83,10 @@ describe('AuthorCard', () => {
     })
 
     const socialLinks = wrapper.findAll('nav a')
-    expect(socialLinks).toHaveLength(3)
+    expect(socialLinks).toHaveLength(2)
+
+    const emailButton = wrapper.find('nav button')
+    expect(emailButton.exists()).toBe(true)
   })
 
   it('social links have correct href attributes', () => {
@@ -97,7 +100,6 @@ describe('AuthorCard', () => {
     const links = wrapper.findAll('nav a')
     expect(links.at(0)?.attributes('href')).toBe('https://github.com/testuser')
     expect(links.at(1)?.attributes('href')).toBe('https://linkedin.com/in/testuser')
-    expect(links.at(2)?.attributes('href')).toBe('mailto:test@example.com')
   })
 
   it('social links open in new tab with security attributes', () => {
@@ -126,7 +128,9 @@ describe('AuthorCard', () => {
     const links = wrapper.findAll('nav a')
     expect(links.at(0)?.attributes('aria-label')).toBe('GitHub')
     expect(links.at(1)?.attributes('aria-label')).toBe('LinkedIn')
-    expect(links.at(2)?.attributes('aria-label')).toBe('Email')
+
+    const emailButton = wrapper.find('nav button')
+    expect(emailButton.attributes('aria-label')).toBe('Copy email address')
   })
 
   it('renders profile image with correct alt text', () => {

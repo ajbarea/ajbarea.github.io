@@ -4,8 +4,14 @@ import { profile, education, honorsAwards } from '~/data/profile'
 import { professionalExperience, researchExperience, teachingExperience } from '~/data/timeline'
 import { publications } from '~/data/publications'
 import { skillCategories } from '~/data/skills'
+import { useClipboard } from '~/composables/useClipboard'
 
 const resumeStore = useResumeStore()
+const clipboard = useClipboard()
+
+function copyEmail() {
+  clipboard.copyEmail(profile.contact.email)
+}
 
 useHead({
   title: 'Resume | AJ Barea',
@@ -62,9 +68,11 @@ function downloadResume(type: 'industry' | 'research') {
         <div
           class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-gray-600 dark:text-gray-400 print:text-xs"
         >
-          <a
-            :href="`mailto:${profile.contact.email}`"
-            class="flex items-center gap-1 hover:text-primary-600 dark:hover:text-primary-400"
+          <button
+            type="button"
+            class="flex items-center gap-1 hover:text-primary-600 dark:hover:text-primary-400 cursor-pointer"
+            title="Click to copy email"
+            @click="copyEmail"
           >
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
@@ -75,7 +83,7 @@ function downloadResume(type: 'industry' | 'research') {
               />
             </svg>
             {{ profile.contact.email }}
-          </a>
+          </button>
           <span class="hidden sm:inline text-gray-300 dark:text-gray-600">|</span>
           <a
             :href="`tel:${profile.contact.phone.replace(/[^0-9+]/g, '')}`"
@@ -233,18 +241,57 @@ function downloadResume(type: 'industry' | 'research') {
               class="flex items-start gap-2 text-gray-700 dark:text-gray-300"
             >
               <span class="text-yellow-500 mt-1">•</span>
-              <span>
+              <span class="flex items-center gap-1.5 flex-wrap">
                 <a
                   v-if="award.documentUrl"
                   :href="award.documentUrl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="hover:text-primary-600 dark:hover:text-primary-400 underline"
+                  class="hover:text-primary-600 dark:hover:text-primary-400 underline inline-flex items-center gap-1"
+                  :title="`Download ${award.title} certificate`"
                 >
                   {{ award.title }}
+                  <svg
+                    class="w-3.5 h-3.5 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                    />
+                  </svg>
+                </a>
+                <a
+                  v-else-if="award.externalUrl"
+                  :href="award.externalUrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:text-primary-600 dark:hover:text-primary-400 underline inline-flex items-center gap-1"
+                  :title="`Visit ${award.title} website`"
+                >
+                  {{ award.title }}
+                  <svg
+                    class="w-3.5 h-3.5 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
                 </a>
                 <span v-else>{{ award.title }}</span>
-                <span class="text-gray-500 dark:text-gray-400"> ({{ award.year }})</span>
+                <span class="text-gray-500 dark:text-gray-400">({{ award.year }})</span>
               </span>
             </li>
           </ul>
