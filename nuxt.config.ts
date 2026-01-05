@@ -79,5 +79,12 @@ export default defineNuxtConfig({
 
   typescript: {
     strict: true
+  },
+
+  runtimeConfig: {
+    public: {
+      // Get your free key at https://web3forms.com
+      web3formsKey: process.env.NUXT_PUBLIC_WEB3FORMS_KEY || ''
+    }
   }
 })

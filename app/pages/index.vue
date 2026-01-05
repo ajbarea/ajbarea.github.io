@@ -60,5 +60,8 @@ useHead({
 
     <!-- Expertise Grid Section -->
     <HomeExpertiseGrid :categories="skillCategories" />
+
+    <!-- Contact Section -->
+    <HomeContactSection />
   </div>
 </template>

@@ -24,6 +24,7 @@ function handleError(error: Error) {
       </LayoutErrorBoundary>
     </main>
     <LayoutTheFooter />
+    <UiToastContainer />
   </div>
 </template>
 
