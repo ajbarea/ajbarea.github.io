@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     '/portfolio/**': { redirect: '/' }
   },
 
-  modules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxt/eslint', '@nuxt/image'],
+  modules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxt/eslint', '@nuxt/image', '@nuxt/content'],
 
   image: {
     cloudinary: {

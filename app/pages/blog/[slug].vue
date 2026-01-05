@@ -1,41 +1,44 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { getArticleBySlug, getRelatedArticles } from '~/data/articles'
-
 const route = useRoute()
-
 const slug = computed(() => route.params.slug as string)
-const article = computed(() => getArticleBySlug(slug.value))
-const relatedArticles = computed(() => (article.value ? getRelatedArticles(slug.value, 3) : []))
 
-// Dynamic SEO meta tags
+const { data: article } = await useAsyncData(`blog-${slug.value}`, () =>
+  queryCollection('blog').where('stem', '=', `articles/${slug.value}`).first()
+)
+
+const { data: relatedArticles } = await useAsyncData(`blog-related-${slug.value}`, () =>
+  queryCollection('blog')
+    .where('stem', '<>', `articles/${slug.value}`)
+    .order('date', 'DESC')
+    .limit(3)
+    .all()
+)
+
 useHead(
   computed(() => {
     if (!article.value) {
-      return {
-        title: 'Article Not Found | AJ Barea'
-      }
+      return { title: 'Article Not Found | AJ Barea' }
     }
 
     return {
       title: `${article.value.title} | AJ Barea`,
       meta: [
-        { name: 'description', content: article.value.excerpt },
+        { name: 'description', content: article.value.description },
         { property: 'og:title', content: article.value.title },
-        { property: 'og:description', content: article.value.excerpt },
-        { property: 'og:url', content: `https://ajbarea.github.io/blog/${article.value.slug}` },
+        { property: 'og:description', content: article.value.description },
+        { property: 'og:url', content: `https://ajbarea.github.io/blog/${slug.value}` },
         { property: 'og:type', content: 'article' },
         {
           property: 'og:image',
           content:
-            article.value.coverImage ||
+            article.value.image ||
             'https://res.cloudinary.com/dumwa1w5x/image/upload/q_auto,f_auto/portfolio_ujli4t'
         },
         { property: 'article:published_time', content: article.value.date },
         { property: 'article:author', content: article.value.author },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: article.value.title },
-        { name: 'twitter:description', content: article.value.excerpt }
+        { name: 'twitter:description', content: article.value.description }
       ],
       script: [
         {
@@ -44,8 +47,8 @@ useHead(
             '@context': 'https://schema.org',
             '@type': 'Article',
             headline: article.value.title,
-            description: article.value.excerpt,
-            image: article.value.coverImage,
+            description: article.value.description,
+            image: article.value.image,
             datePublished: article.value.date,
             author: {
               '@type': 'Person',
@@ -61,14 +64,21 @@ useHead(
     }
   })
 )
+
+function formatDate(dateString: string): string {
+  const date = new Date(dateString)
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  })
+}
 </script>
 
 <template>
   <main class="min-h-screen py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
-    <!-- Article Found -->
     <template v-if="article">
       <div class="max-w-4xl mx-auto">
-        <!-- Back to Blog Link -->
         <nav class="mb-6 sm:mb-8" aria-label="Breadcrumb">
           <NuxtLink
             to="/blog"
@@ -92,12 +102,77 @@ useHead(
           </NuxtLink>
         </nav>
 
-        <!-- Article Content -->
-        <BlogArticleContent :article="article" />
+        <article class="max-w-4xl mx-auto">
+          <header class="mb-8 pb-8 border-b border-gray-200 dark:border-gray-700">
+            <div v-if="article.tags && article.tags.length > 0" class="flex flex-wrap gap-2 mb-4">
+              <span
+                v-for="tag in article.tags"
+                :key="tag"
+                class="px-3 py-1 text-sm font-medium rounded-full bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-200"
+              >
+                {{ tag }}
+              </span>
+            </div>
 
-        <!-- Related Articles -->
+            <h1
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 leading-tight"
+            >
+              {{ article.title }}
+            </h1>
+
+            <div class="flex flex-wrap items-center gap-4 text-gray-600 dark:text-gray-400">
+              <span class="flex items-center gap-2">
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  />
+                </svg>
+                {{ article.author }}
+              </span>
+              <span class="flex items-center gap-2">
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+                <time :datetime="article.date">{{ formatDate(article.date) }}</time>
+              </span>
+            </div>
+          </header>
+
+          <div
+            v-if="article.image"
+            class="mb-8 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700"
+          >
+            <img :src="article.image" :alt="article.title" class="w-full h-auto" loading="lazy" />
+          </div>
+
+          <ContentRenderer
+            :value="article"
+            class="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-code:text-primary-600 dark:prose-code:text-primary-400 prose-pre:bg-gray-900 prose-pre:text-gray-100"
+          />
+        </article>
+
         <section
-          v-if="relatedArticles.length > 0"
+          v-if="relatedArticles && relatedArticles.length > 0"
           class="mt-12 sm:mt-16 pt-8 sm:pt-12 border-t border-gray-200 dark:border-gray-700"
           aria-labelledby="related-articles-heading"
         >
@@ -108,17 +183,30 @@ useHead(
             Continue Reading
           </h2>
           <div class="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <BlogCard
+            <article
               v-for="relatedArticle in relatedArticles"
-              :key="relatedArticle.slug"
-              :article="relatedArticle"
-            />
+              :key="relatedArticle.stem"
+              class="group bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+            >
+              <NuxtLink
+                :to="`/blog/${relatedArticle.stem?.replace('articles/', '')}`"
+                class="block p-6"
+              >
+                <h3
+                  class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors"
+                >
+                  {{ relatedArticle.title }}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
+                  {{ relatedArticle.description }}
+                </p>
+              </NuxtLink>
+            </article>
           </div>
         </section>
       </div>
     </template>
 
-    <!-- Article Not Found -->
     <template v-else>
       <div class="max-w-2xl mx-auto text-center py-12 sm:py-16" role="alert">
         <svg

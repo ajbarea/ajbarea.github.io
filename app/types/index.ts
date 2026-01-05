@@ -173,19 +173,6 @@ export interface GalleryImage {
   location?: string
 }
 
-// Blog Article
-export interface Article {
-  slug: string
-  title: string
-  date: string
-  author: string
-  excerpt: string
-  content: string // Raw markdown
-  readingTime: number // minutes
-  tags?: string[]
-  coverImage?: string
-}
-
 // Resume View Mode
 export type ResumeViewMode = 'industry' | 'research'
 

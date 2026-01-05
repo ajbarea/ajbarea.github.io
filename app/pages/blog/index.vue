@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { getArticlesSortedByDate } from '~/data/articles'
-
-const articles = getArticlesSortedByDate()
+const { data: articles } = await useAsyncData('blog-articles', () =>
+  queryCollection('blog').order('date', 'DESC').all()
+)
 
 useHead({
   title: 'Blog | AJ Barea',
@@ -37,7 +37,6 @@ useHead({
 <template>
   <main class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl mx-auto">
-      <!-- Header -->
       <header class="text-center mb-12">
         <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">Blog</h1>
         <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -46,12 +45,63 @@ useHead({
         </p>
       </header>
 
-      <!-- Articles Grid -->
-      <div v-if="articles.length > 0" class="space-y-8">
-        <BlogCard v-for="article in articles" :key="article.slug" :article="article" />
+      <div v-if="articles && articles.length > 0" class="space-y-8">
+        <article
+          v-for="article in articles"
+          :key="article.stem"
+          class="group bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+        >
+          <NuxtLink :to="`/blog/${article.stem?.replace('articles/', '')}`" class="block p-5">
+            <div class="flex flex-col sm:flex-row gap-4">
+              <div
+                v-if="article.image"
+                class="sm:w-40 md:w-48 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700"
+              >
+                <img
+                  :src="article.image"
+                  :alt="article.title"
+                  class="w-full h-full object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex-1 min-w-0">
+                <div
+                  v-if="article.tags && article.tags.length > 0"
+                  class="flex flex-wrap gap-2 mb-2"
+                >
+                  <span
+                    v-for="tag in article.tags"
+                    :key="tag"
+                    class="px-2 py-0.5 text-xs font-medium rounded-full bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-200"
+                  >
+                    {{ tag }}
+                  </span>
+                </div>
+                <h2
+                  class="text-lg font-bold text-gray-900 dark:text-white mb-1 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors line-clamp-2"
+                >
+                  {{ article.title }}
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">
+                  {{ article.description }}
+                </p>
+                <div class="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-500">
+                  <span>{{ article.author }}</span>
+                  <span>•</span>
+                  <time :datetime="article.date">{{
+                    new Date(article.date).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric'
+                    })
+                  }}</time>
+                </div>
+              </div>
+            </div>
+          </NuxtLink>
+        </article>
       </div>
 
-      <!-- Empty State -->
       <div v-else class="text-center py-16">
         <svg
           class="w-16 h-16 mx-auto text-gray-300 dark:text-gray-600 mb-4"
