@@ -1,7 +1,7 @@
 ---
 title: Programming Practice Resources - Learning from My First Amazon Interview
 description: First tech interview with Amazon, fresh out of college. Didn't pass, but turned the experience into a coding skill boost by discovering key resources.
-date: 2026-01-05
+date: 2025-11-12
 author: AJ Barea
 tags:
   - amazon

@@ -1,13 +1,13 @@
 ---
 title: Building a Self-Optimizing AI Network
 description: How intelligent parameter tuning outperforms traditional FedAvg in extensive simulations.
-date: 2026-01-05
+date: 2026-01-03
 author: AJ Barea
 tags:
   - simulation
   - performance
   - research
-image: image_5.png
+image: https://res.cloudinary.com/dumwa1w5x/image/upload/v1767628162/paper03_ikgpew.png
 draft: false
 ---
 

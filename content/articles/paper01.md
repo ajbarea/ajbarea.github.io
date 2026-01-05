@@ -1,7 +1,7 @@
 ---
 title: Supercharging Federated Learning at the Edge
 description: Optimizing resource allocation and client selection to reduce training latency in Mobile Edge Computing.
-date: 2026-01-05
+date: 2025-12-08
 author: AJ Barea
 tags:
   - federated learning
@@ -24,11 +24,11 @@ If you wait for the slowest device to finish training, your whole network stalls
 
 In my recent research, we proposed a joint optimization problem that tackles resource allocation and client selection simultaneously. Instead of random selection, we mathematically determine which clients maximize convergence speed based on their current states.
 
-| Parameter                | Function                                                                              |
-| :----------------------- | :------------------------------------------------------------------------------------ |
-| **Bandwidth ($B$)**      | Allocating frequency slots to clients with poor connections to speed up transmission. |
-| **CPU Cycles ($f$)**     | Adjusting the computation frequency to balance energy consumption with delay.         |
-| **Selection ($\alpha$)** | A binary indicator deciding if a client participates in the current round.            |
+| Parameter            | Function                                                                              |
+| :------------------- | :------------------------------------------------------------------------------------ |
+| **Bandwidth (_B_)**  | Allocating frequency slots to clients with poor connections to speed up transmission. |
+| **CPU Cycles (_f_)** | Adjusting the computation frequency to balance energy consumption with delay.         |
+| **Selection (_α_)**  | A binary indicator deciding if a client participates in the current round.            |
 
 #### Why It Matters
 

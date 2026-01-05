@@ -39,10 +39,7 @@ useHead({
     <div class="max-w-4xl mx-auto">
       <header class="text-center mb-12">
         <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">Blog</h1>
-        <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Thoughts on software engineering, AI/ML, cloud development, and lessons learned along the
-          way.
-        </p>
+        <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Notes in progress.</p>
       </header>
 
       <div v-if="articles && articles.length > 0" class="space-y-8">
@@ -92,7 +89,8 @@ useHead({
                     new Date(article.date).toLocaleDateString('en-US', {
                       year: 'numeric',
                       month: 'short',
-                      day: 'numeric'
+                      day: 'numeric',
+                      timeZone: 'UTC'
                     })
                   }}</time>
                 </div>

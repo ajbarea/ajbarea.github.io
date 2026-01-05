@@ -1,7 +1,7 @@
 ---
 title: 5 VSCode Extensions I Can't Live Without
 description: A quick look at the tools that power my daily workflow and save me hours of debugging time.
-date: 2026-01-05
+date: 2025-11-25
 author: AJ Barea
 tags:
   - vscode

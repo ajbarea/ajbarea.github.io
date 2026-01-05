@@ -1,7 +1,7 @@
 ---
 title: 'IntelliFL: An Adaptive Framework for Dynamic Edge Networks'
 description: A new framework that adapts to the volatile nature of edge networks for robust model training.
-date: 2026-01-05
+date: 2025-12-20
 author: AJ Barea
 tags:
   - IntelliFL

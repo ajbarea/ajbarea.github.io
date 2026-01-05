@@ -52,8 +52,7 @@ useHead({
       <header class="text-center mb-12">
         <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">Projects</h1>
         <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          A collection of my work spanning AI/ML, full-stack development, cloud solutions, and
-          research.
+          Designed and delivered.
         </p>
       </header>
 
@@ -65,7 +64,7 @@ useHead({
       <!-- Projects Grid -->
       <div
         v-if="filteredProjects.length > 0"
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
       >
         <ProjectsProjectCard
           v-for="project in filteredProjects"
