@@ -107,10 +107,17 @@ export const honorsAwards: HonorAward[] = [
   },
   {
     title: 'NSLS | The National Society of Leadership and Success',
-    year: 2019
+    year: 2019,
+    externalUrl: 'https://www.nsls.org/'
   },
   {
-    title: 'Florida Bright Futures and Doorways/Take Stock in Children Scholarships',
-    year: 2018
+    title: 'Florida Bright Futures Scholarship',
+    year: 2014,
+    externalUrl: 'https://floridabrightfutures.gov/'
+  },
+  {
+    title: 'Take Stock in Children Scholarship',
+    year: 2011,
+    externalUrl: 'https://www.takestockinchildren.org/'
   }
 ]
