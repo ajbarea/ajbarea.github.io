@@ -88,7 +88,8 @@ export interface TeachingExperience {
 export interface HonorAward {
   title: string
   year: number
-  documentUrl?: string
+  documentUrl?: string // Local download
+  externalUrl?: string // External link
 }
 
 // Publication
@@ -101,6 +102,8 @@ export interface Publication {
   status: 'published' | 'under-review' | 'accepted'
   doi?: string
   url?: string
+  abstract?: string
+  keywords?: string[]
 }
 
 // Presentation
