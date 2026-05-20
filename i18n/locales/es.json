@@ -183,6 +183,7 @@
     },
     "types": {
       "ai-ml": "IA/ML",
+      "federated-learning": "Aprendizaje Federado",
       "full-stack": "Full-Stack",
       "robotics": "Robótica",
       "cloud": "Cloud"

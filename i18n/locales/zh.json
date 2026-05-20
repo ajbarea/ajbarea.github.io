@@ -187,6 +187,7 @@
     },
     "types": {
       "ai-ml": "AI/ML",
+      "federated-learning": "联邦学习",
       "full-stack": "全栈",
       "robotics": "机器人学",
       "cloud": "云"

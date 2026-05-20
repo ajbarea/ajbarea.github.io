@@ -27,7 +27,7 @@ export const projects: Project[] = [
     id: 'velocity-fl',
     title: 'VelocityFL',
     technologies: ['Rust', 'Python', 'Typer', 'maturin', 'Zensical', 'uv'],
-    types: ['ai-ml'],
+    types: ['ai-ml', 'federated-learning'],
     thumbnailUrl:
       'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779282974/velocity-fl_dukewt.webp',
     docsUrl: 'https://ajbarea.github.io/vFL/',
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     id: 'phalanx-fl',
     title: 'Phalanx-FL',
     technologies: ['Python', 'Flower', 'Docker', 'Redis', 'Celery', 'uv'],
-    types: ['ai-ml'],
+    types: ['ai-ml', 'federated-learning'],
     thumbnailUrl:
       'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779282973/phalanx-fl_hlq7gn.webp',
     docsUrl: 'https://ajbarea.github.io/phalanx-fl/',
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     id: 'security-eval',
     title: 'ML Security Evaluation System',
     technologies: ['Python', 'PyTorch', 'scikit-learn', 'Docker', 'AWS'],
-    types: ['ai-ml'],
+    types: ['ai-ml', 'federated-learning'],
     thumbnailUrl: 'https://res.cloudinary.com/dumwa1w5x/image/upload/v1767632723/ses_mfbacm.png',
     githubUrl: 'https://github.com/ajbarea/ses',
     featured: true
@@ -174,6 +174,7 @@ export const featuredProjects = projects.filter((p) => p.featured)
 
 export const projectsByType = {
   'ai-ml': projects.filter((p) => p.types.includes('ai-ml')),
+  'federated-learning': projects.filter((p) => p.types.includes('federated-learning')),
   'full-stack': projects.filter((p) => p.types.includes('full-stack')),
   robotics: projects.filter((p) => p.types.includes('robotics')),
   cloud: projects.filter((p) => p.types.includes('cloud'))

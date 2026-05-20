@@ -183,6 +183,7 @@
     },
     "types": {
       "ai-ml": "AI/ML",
+      "federated-learning": "連合学習",
       "full-stack": "フルスタック",
       "robotics": "ロボティクス",
       "cloud": "クラウド"

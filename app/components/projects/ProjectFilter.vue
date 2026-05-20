@@ -25,6 +25,7 @@ interface FilterOption {
 const filterOptions: FilterOption[] = [
   { value: 'all', labelKey: 'projects.page.filterAll' },
   { value: 'ai-ml', labelKey: 'projects.types.ai-ml' },
+  { value: 'federated-learning', labelKey: 'projects.types.federated-learning' },
   { value: 'full-stack', labelKey: 'projects.types.full-stack' },
   { value: 'robotics', labelKey: 'projects.types.robotics' },
   { value: 'cloud', labelKey: 'projects.types.cloud' }
