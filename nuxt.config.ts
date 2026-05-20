@@ -32,7 +32,11 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
     detectBrowserLanguage: false,
-    locales: [{ code: 'en', language: 'en', file: 'en.json', name: 'English' }]
+    baseUrl: 'https://ajbarea.github.io',
+    locales: [
+      { code: 'en', language: 'en', file: 'en.json', name: 'English' },
+      { code: 'es', language: 'es', file: 'es.json', name: 'Español' }
+    ]
   },
 
   image: {

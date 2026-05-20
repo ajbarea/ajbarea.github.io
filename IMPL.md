@@ -205,6 +205,8 @@ Confirmed 2026-05-18 (AJ delegated; web-research-grounded):
 
 **Phase 1b is complete.** All ~280 user-visible strings extracted, all data-file/i18n drift resolved.
 
+- **Phase 2 — done.** Hand-authored `i18n/locales/es.json` covering the full key set (Latin-American neutral Spanish, masculine, informal `tú`). Registered the `es` locale in `nuxt.config.ts`; the existing `LanguageSelector.vue` picked it up automatically (dynamic locale list). `/es/`, `/es/projects/`, `/es/resume/` etc. prerender from the same templates. Multilingual SEO wired up alongside (research 2026-05): added `baseUrl: 'https://ajbarea.github.io'` and switched the three page-level `useHead` calls to merge `useLocaleHead({ seo: true })`, so the build now emits per-page `hreflang` (`en`, `es`, `x-default`), `og:locale` + `og:locale:alternate`, and self-referential `<link rel="canonical">` on both EN and ES variants.
+
 ### Gotchas (footguns hit during Phase 1a/1b)
 
 - **vue-i18n v10 compiles messages to AST.** `tm('foo.array')` returns AST nodes, not strings — `String(item)` yields `[object Object]`. Use `rt(item)` to resolve each entry. See `AuthorCard.vue` for the `resolveMessageArray` helper.

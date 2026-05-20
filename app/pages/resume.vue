@@ -10,6 +10,7 @@ import { useClipboard } from '~/composables/useClipboard'
 const resumeStore = useResumeStore()
 const clipboard = useClipboard()
 const { t, tm, rt } = useI18n()
+const i18nHead = useLocaleHead({ seo: true })
 
 function copyEmail() {
   clipboard.copyEmail(profile.contact.email)
@@ -22,7 +23,10 @@ const researchInterests = computed<string[]>(() => {
 
 useHead(() => ({
   title: t('meta.resumeTitle'),
+  htmlAttrs: { lang: i18nHead.value.htmlAttrs?.lang },
+  link: [...(i18nHead.value.link || [])],
   meta: [
+    ...(i18nHead.value.meta || []),
     { name: 'description', content: t('meta.resumeDescription') },
     { property: 'og:title', content: t('meta.resumeTitle') },
     { property: 'og:description', content: t('meta.resumeOgDescription') },
@@ -30,7 +34,6 @@ useHead(() => ({
       property: 'og:image',
       content: 'https://res.cloudinary.com/dumwa1w5x/image/upload/q_auto,f_auto/portfolio_ujli4t'
     },
-    { property: 'og:url', content: 'https://ajbarea.github.io/resume' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary' },
     { name: 'twitter:title', content: t('meta.resumeTitle') },

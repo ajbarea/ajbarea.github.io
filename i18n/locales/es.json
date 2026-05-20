@@ -1,0 +1,384 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "resume": "Currículum",
+    "blog": "Blog"
+  },
+  "lang": {
+    "select": "Seleccionar idioma"
+  },
+  "meta": {
+    "homeTitle": "AJ Barea | Ingeniero de Software",
+    "homeDescription": "Ingeniero de Software especializado en desarrollo full-stack, IA/ML y soluciones en la nube. Actualmente cursando la maestría en Ingeniería de Software en RIT.",
+    "homeOgDescription": "Portafolio que muestra proyectos, investigación y experiencia técnica en ingeniería de software, IA/ML y soluciones en la nube.",
+    "homeTwitterDescription": "Portafolio que muestra proyectos, investigación y experiencia técnica.",
+    "resumeTitle": "Currículum | AJ Barea",
+    "resumeDescription": "Currículum profesional de AJ Barea — Ingeniero de Software con experiencia en desarrollo full-stack, IA/ML y soluciones en la nube.",
+    "resumeOgDescription": "Currículum profesional que muestra experiencia en ingeniería de software, investigación y habilidades técnicas.",
+    "resumeTwitterDescription": "Currículum profesional que muestra experiencia en ingeniería de software, investigación y habilidades técnicas.",
+    "projectsTitle": "Proyectos | AJ Barea",
+    "projectsDescription": "Explora el portafolio de proyectos de software de AJ Barea, incluyendo aplicaciones de IA/ML, desarrollo full-stack, soluciones en la nube y trabajo de investigación.",
+    "projectsTwitterDescription": "Explora el portafolio de proyectos de software de AJ Barea, incluyendo aplicaciones de IA/ML, desarrollo full-stack y soluciones en la nube."
+  },
+  "profile": {
+    "title": "Ingeniero de Software",
+    "summary": "Construyo frameworks de aprendizaje federado y sistemas de desarrollo multi-agente. Mi investigación se sitúa en la intersección entre ML distribuido confiable, agentes de IA con supervisión humana y experiencia de desarrollador para software asistido por IA.",
+    "roles": [
+      "Investigador de IA/ML",
+      "Desarrollador Full-Stack",
+      "Ingeniero de Sistemas Distribuidos",
+      "Arquitecto Cloud",
+      "Violinista",
+      "Gamer Empedernido",
+      "Otaku",
+      "Hijo Favorito"
+    ],
+    "credibilityChips": ["RIT GRA · Grupo Reznik", "4 Artículos IEEE 2026", "MS SWE · GPA 4.0"],
+    "researchInterests": [
+      "Sistemas de aprendizaje federado",
+      "IA con agentes y uso de herramientas",
+      "Metodologías de pruebas para ML distribuido",
+      "Experiencia de desarrollador en infraestructura de investigación en ML",
+      "Desarrollo de software asistido por IA"
+    ]
+  },
+  "hero": {
+    "viewProjects": "Ver Proyectos",
+    "latestPaper": "Último artículo",
+    "viewGalleryAria": "Ver galería de fotos",
+    "profileImageAlt": "Foto de perfil de {name}",
+    "profileInitialsAlt": "Iniciales de {name}",
+    "credentialsAria": "Credenciales",
+    "copyEmailAria": "Copiar dirección de correo electrónico",
+    "socialAria": "Perfiles en redes sociales"
+  },
+  "sections": {
+    "experience": "Experiencia y Educación",
+    "experienceAria": "Entradas de la línea de tiempo",
+    "highlights": "Actividad Destacada 2026",
+    "expertise": "Experiencia Técnica",
+    "expertiseSkillsAria": "Habilidades de {category}",
+    "expertiseSkillDocAria": "{skill} — Haz clic para ver la documentación",
+    "expertiseTooltip": "Ver documentación",
+    "skills": "Habilidades Técnicas",
+    "contact": "Contáctame",
+    "contactLead": "¿Tienes una pregunta o quieres colaborar? Envíame un mensaje y te responderé pronto."
+  },
+  "activity": {
+    "kind": {
+      "publication": "Publicación",
+      "hackathon": "Hackathon",
+      "conference": "Conferencia"
+    }
+  },
+  "skills": {
+    "categories": {
+      "languages": "Lenguajes y Frameworks",
+      "cloud-devops": "Cloud y DevOps",
+      "ai-ml": "IA y Aprendizaje Automático",
+      "tools": "Herramientas y Plataformas"
+    }
+  },
+  "timeline": {
+    "labels": {
+      "current": "Actual",
+      "incoming": "Próximo",
+      "skillsAria": "Habilidades"
+    },
+    "rit-phd-2026": {
+      "title": "Doctorado",
+      "subtitle": "Ciencias de la Computación y la Información",
+      "description": "Doctorado en Ciencias de la Computación y la Información continuando la investigación en aprendizaje federado con el Dr. Leon Reznik."
+    },
+    "ncsu-scads-2026": {
+      "title": "Becario de Investigación de Verano",
+      "subtitle": "SCADS · Conferencia de Verano sobre Ciencia de Datos Aplicada",
+      "description": "Seleccionado como SCADS Summer Research Scholar en NC State LAS para el verano de 2026."
+    },
+    "rit-gra": {
+      "title": "Asistente de Investigación de Posgrado",
+      "subtitle": "Grupo de Investigación del Dr. Leon Reznik",
+      "description": "Mejorando el framework de aprendizaje federado IntelliFL con más del 80% de cobertura de pruebas, interfaz React/FastAPI y métodos de agregación robustos contra ataques bizantinos.",
+      "bullets": [
+        "Diseñé una suite de pruebas pytest integral que alcanza más del 80% de cobertura de código para sistemas FL distribuidos (framework IntelliFL)",
+        "Construí una interfaz web React + FastAPI que mejora el tiempo de incorporación de investigadores y la reproducibilidad experimental",
+        "Colaboré con estudiantes de doctorado para prototipar rápidamente nuevas estrategias de agregación, incluyendo métodos robustos contra ataques bizantinos (Krum, Bulyan, RFA, Trimmed Mean) y enfoques de aprendizaje federado basados en confianza",
+        "Implementé un sistema dinámico de envenenamiento de datasets que permite evaluar la robustez adversarial durante el entrenamiento federado",
+        "Integré modelos basados en transformers para aprendizaje federado sobre datasets de texto en dominios médico, legal y financiero",
+        "Extendí la compatibilidad del framework a Python 3.9-3.11 y múltiples sistemas operativos (Windows, macOS, Linux)",
+        "Establecí un pipeline de CI y manejo integral de errores, convirtiendo un prototipo de investigación en un sistema listo para producción"
+      ]
+    },
+    "rit-ta": {
+      "title": "Asistente de Cátedra",
+      "subtitle": "Arquitectura de Software",
+      "description": "Mentoreo a estudiantes en patrones de diseño, estilos arquitectónicos y atributos de calidad. Lideré una sesión completa de clase durante la ausencia del instructor.",
+      "bullets": [
+        "Mentoreo a estudiantes en patrones de diseño de software, estilos arquitectónicos, atributos de calidad y tácticas",
+        "Lidero secciones de repaso y horas de oficina ofreciendo orientación técnica sobre decisiones arquitectónicas",
+        "Enseñé una sesión completa de clase durante la ausencia del instructor, recibiendo retroalimentación positiva de los estudiantes",
+        "Califico tareas con retroalimentación detallada, enfatizando prácticas rigurosas de ingeniería de software"
+      ]
+    },
+    "rit-ms": {
+      "title": "Maestría en Ciencias",
+      "subtitle": "Ingeniería de Software",
+      "description": "GPA: 4.0/4.0. Proyecto final: Mejorando el Framework de Ejecución de Aprendizaje Federado (Asesor: Dr. Leon Reznik)."
+    },
+    "lowes": {
+      "title": "Ingeniero de Software (Contrato)",
+      "subtitle": "Sistemas de Gestión de Distribución",
+      "description": "Reduje los registros de errores diarios en 150,000 a través de los RDC. Construí herramientas de automatización full-stack. Reduje el tiempo de incorporación en un 80%.",
+      "bullets": [
+        "Reduje los registros de errores diarios en 150,000 a través de los RDC resolviendo bugs, optimizando el análisis de logs y mejorando el rendimiento del sistema",
+        "Desarrollé una aplicación full-stack para simplificar consultas a la base de datos y generar scripts SQL, reduciendo el tiempo de resolución de tickets de soporte",
+        "Redacté SOPs, reduciendo el tiempo de incorporación de nuevos ingenieros en un 80%",
+        "Realicé análisis de causa raíz para soporte de Nivel 3, documentando soluciones en BMC SmartIT y colaborando con supervisores",
+        "Entregué actualizaciones de código seguras y probadas para corregir bugs y mejorar la eficiencia del sistema, con seguimiento en Jira y Confluence",
+        "Prosperé en sprints ágiles, contribuyendo en stand-ups y retrospectivas"
+      ]
+    },
+    "usf-bs": {
+      "title": "Licenciatura en Ciencias",
+      "subtitle": "Ingeniería en Computación",
+      "description": "GPA: 3.06/4.0."
+    },
+    "phiquest": {
+      "title": "Desarrollador UX (Pasantía)",
+      "subtitle": "Equipo de Desarrollo",
+      "description": "Diseñé wireframes para aplicaciones web. Construí una extensión de Chrome para autenticación de documentos basada en blockchain usando Node.js.",
+      "bullets": [
+        "Diseñé wireframes para aplicaciones web, colaborando con equipos multidisciplinarios para asegurar soluciones viables y centradas en el usuario",
+        "Diseñé una extensión de Chrome autenticadora de documentos basada en blockchain usando Node.js, habilitando verificación segura"
+      ]
+    },
+    "independent-ml": {
+      "title": "Proyectos de Investigación en Aprendizaje Automático",
+      "bullets": [
+        "Navegación Autónoma de Robots con RL — Desarrollé un framework de Q-learning y DQN en el simulador Webots con discretización de estados, replay buffers y optimización de hiperparámetros basada en PyTorch (documentado mediante tutoriales en YouTube)",
+        "Seguridad en Aprendizaje Federado — Construí un sistema de evaluación que combina sistemas expertos basados en reglas CLIPS, redes neuronales en PyTorch y técnicas de aprendizaje federado para evaluar la tolerancia a fallos bizantinos en sistemas ML distribuidos",
+        "Procesamiento de Lenguaje Natural — Implementé un sistema de resumen de noticias usando Hugging Face Transformers (BART) con recomendaciones personalizadas mediante filtrado colaborativo (scikit-surprise)"
+      ]
+    }
+  },
+  "projects": {
+    "page": {
+      "heading": "Proyectos",
+      "lead": "Diseñados y entregados.",
+      "filterAria": "Filtrar proyectos por tipo",
+      "filterAll": "Todos",
+      "linksAria": "Enlaces del proyecto",
+      "demo": "Demo",
+      "docs": "Docs",
+      "github": "GitHub",
+      "video": "Video",
+      "demoAria": "Ver demo de {title}",
+      "docsAria": "Ver documentación de {title}",
+      "githubAria": "Ver repositorio en GitHub de {title}",
+      "videoAria": "Ver demo en video de {title}",
+      "thumbnailAlt": "Miniatura de {title}",
+      "emptyState": "No se encontraron proyectos para esta categoría.",
+      "viewAll": "Ver todos los proyectos"
+    },
+    "types": {
+      "ai-ml": "IA/ML",
+      "full-stack": "Full-Stack",
+      "robotics": "Robótica",
+      "cloud": "Cloud"
+    },
+    "kourai-khryseai": {
+      "title": "Kourai Khryseai",
+      "description": "Sistema interactivo de desarrollo multi-agente: diez agentes especializados transmiten su razonamiento, piden orientación e iteran en vivo en terminal, GUI pygame con TTS y una novela visual Ren'Py."
+    },
+    "velocity-fl": {
+      "title": "VelocityFL",
+      "description": "Orquestador de aprendizaje federado en Rust + Python con estrategias de agregación citadas en artículos y simulaciones de ataques a nivel de ronda y de pipeline de datos."
+    },
+    "phalanx-fl": {
+      "title": "Phalanx-FL",
+      "description": "Framework solo de ejecución e investigación en aprendizaje federado: agregación configurable, tolerancia a fallos bizantinos, simulación de ataques adversariales y experimentos definidos en JSON."
+    },
+    "techne": {
+      "title": "Techne",
+      "description": "Ocho skills de Claude Code instalables como un único /plugin: auditar builds, reducir ruido de CI, detectar deriva entre docs y código, mantener repos hermanos sincronizados."
+    },
+    "news-aggregator": {
+      "title": "Agregador de Noticias con IA",
+      "description": "Sistema inteligente de agregación de noticias que usa PLN para clasificación y resumen de contenido."
+    },
+    "security-eval": {
+      "title": "Sistema de Evaluación de Seguridad en ML",
+      "description": "Framework para evaluar vulnerabilidades de seguridad en modelos de aprendizaje automático."
+    },
+    "aws-image-translator": {
+      "title": "Traductor de Imágenes en AWS",
+      "description": "Aplicación serverless para extraer y traducir texto de imágenes usando servicios de AWS."
+    },
+    "robot-navigation-rl": {
+      "title": "Navegación de Robots con RL",
+      "description": "Agente de aprendizaje por refuerzo para navegación autónoma de robots en entornos simulados."
+    },
+    "intellifl": {
+      "title": "InteFL",
+      "description": "Framework de aprendizaje federado con selección inteligente de clientes y agregación que preserva la privacidad."
+    },
+    "tbd-banking": {
+      "title": "Aplicación Bancaria TBD",
+      "description": "Aplicación bancaria que permite la creación de cuentas, gestión de credenciales y transferencias de fondos con seguimiento de transacciones."
+    },
+    "thoughtcloud-social": {
+      "title": "ThoughtCloud Social",
+      "description": "Plataforma social para compartir pensamientos, construir redes e interactuar con publicaciones y notificaciones."
+    },
+    "control-mobile-robots": {
+      "title": "Control de Robots Móviles",
+      "description": "Sistemas de control de robots móviles usando Python y Webots, abarcando localización, navegación e integración de sensores."
+    },
+    "blockchain-explorer": {
+      "title": "Explorador de Blockchain",
+      "description": "Blockchain personalizado para autenticar firmas digitales con verificación a prueba de manipulación."
+    },
+    "expense-reimbursement": {
+      "title": "Sistema de Reembolso de Gastos",
+      "description": "Sistema para enviar y aprobar reembolsos de gastos con flujos de trabajo para empleados y gerentes."
+    },
+    "portfolio": {
+      "title": "Sitio Portafolio",
+      "description": "¡Este sitio! — un portafolio moderno en Nuxt 3 que muestra proyectos, currículum, galería y blog."
+    }
+  },
+  "resume": {
+    "viewToggleAria": "Opciones de vista del currículum",
+    "downloadPdf": "Descargar PDF",
+    "downloadPdfShort": "PDF",
+    "downloadPdfAria": "Descargar currículum {mode} como PDF",
+    "contentAria": "Contenido del currículum {mode}",
+    "viewMode": {
+      "industry": "Industria",
+      "research": "Investigación"
+    },
+    "sections": {
+      "researchInterests": "Intereses de Investigación",
+      "professional": "Experiencia Profesional",
+      "research": "Experiencia de Investigación",
+      "teaching": "Experiencia Docente",
+      "publications": "Publicaciones",
+      "education": "Educación",
+      "honorsAwards": "Honores y Premios",
+      "skills": "Habilidades Técnicas"
+    },
+    "experience": {
+      "projectPrefix": "Proyecto:"
+    },
+    "education": {
+      "degreeIn": "{degree} en {field}",
+      "gpaLabel": "GPA",
+      "relevantCoursework": "Cursos Relevantes",
+      "capstoneResearch": "Proyecto Final de Investigación",
+      "advisor": "Asesor: {name}",
+      "downloadCertificate": "Descargar certificado de {title}",
+      "visitWebsite": "Visitar sitio web de {title}"
+    }
+  },
+  "hackathons": {
+    "types": {
+      "solo": "Individual",
+      "team": "Equipo"
+    },
+    "hackerrank-orchestrate-2026": {
+      "description": "Agente multi-dominio para triaje de soporte: enruta tickets a través de los corpus de HackerRank, Claude y Visa con respuestas fundamentadas en el corpus, procesamiento por lotes asíncrono y defensa contra inyección de prompts.",
+      "result": "Puesto 11 / 1349"
+    },
+    "aware-ai-bioradio-2026": {
+      "description": "Cosmic Ritual: gestos EMG de BioRadio impulsan un motor de acordes en tiempo real. Contribuí con el clasificador de gestos, el motor MIDI (sustain por velocidad, reproducción no bloqueante, búsqueda de acordes O(1)), el modo musical con GUI y el sitio de docs Zensical con temática de horror cósmico.",
+      "result": "Mejor Modelo de IA"
+    }
+  },
+  "conferences": {
+    "formats": {
+      "poster": "Póster",
+      "oral": "Oral",
+      "workshop-paper": "Artículo de Taller",
+      "talk": "Charla",
+      "demo": "Demo"
+    },
+    "ne-agents-day-2026": {
+      "title": "Kourai Khryseai: Desarrollo Transparente de Software Multi-Agente con Supervisión Humana",
+      "description": "Replantea la programación multi-agente como un problema de interpretabilidad mediante tres pilares: Monitor (observabilidad con OpenTelemetry / Jaeger / Prometheus), Comunicar (los agentes piden aclaración sobre requisitos ambiguos) y Controlar (ciclos de reparación acotados para una recuperación deliberada). Demuestra Hephaestus, un orquestador que enruta a agentes especialistas sobre MCP con estado compartido en SQLite."
+    },
+    "rit-aware-ai-poster-2026": {
+      "title": "Interfaces Narrativas para el Desarrollo de Software Multi-Agente",
+      "description": "Examina cómo la encarnación, la voz y el marco de novela visual Ren'Py afectan la forma en que los usuarios supervisan y redirigen software multi-agente. Justifica la arquitectura de interfaz de tres hosts (REPL en terminal, GUI pygame con TTS, VN en Ren'Py) que sustenta Kourai Khryseai."
+    }
+  },
+  "publications": {
+    "statuses": {
+      "published": "Publicado",
+      "under-review": "En Revisión",
+      "accepted": "Aceptado",
+      "doi": "DOI"
+    },
+    "list": {
+      "view": "Ver",
+      "doiPrefix": "DOI:",
+      "requestPaper": "Solicitar Artículo",
+      "showAbstract": "Mostrar Resumen",
+      "hideAbstract": "Ocultar Resumen",
+      "andConnector": " y "
+    },
+    "ieee-ccnc-2026": {
+      "title": "Precisión y Convergencia del Aprendizaje Federado en Imágenes Médicas Centradas en el Consumidor",
+      "abstract": "Investigamos cómo la reducción de la relación señal-ruido en imágenes médicas afecta la precisión y la convergencia de los modelos de aprendizaje automático entrenados en clientes distribuidos. Usando nueve subconjuntos de Medical MNIST degradados con niveles controlados de SNR, demostramos que el ruido moderado conduce a una degradación de la precisión que va de 1.7 a 25.7 puntos porcentuales y retrasa la convergencia hasta en 17 rondas de comunicación. Nuestros hallazgos destacan la importancia de evaluar algoritmos FL sobre datasets que reflejen la variabilidad de los datos inducida por la comunicación."
+    },
+    "ieee-is-2026": {
+      "title": "IntelliFL Framework: Optimizando el Aprendizaje Federado con Metacognición para el Diseño y Despliegue de Aplicaciones",
+      "abstract": "Argumentamos que la metacognición debería ser el principio rector para el diseño y despliegue de aplicaciones de Aprendizaje Federado (FL). Las funciones metacognitivas en FL, como el monitoreo y el control, permiten la adaptación dinámica al entorno, las actualizaciones de los clientes, una mayor interacción con el usuario y un aprendizaje optimizado consciente de los recursos. Presentamos IntelliFL, el primer framework que facilita el diseño de sistemas FL metacognitivos al proporcionar mecanismos y herramientas para investigar cómo los posibles cambios en las condiciones de ejecución y aprendizaje impactan el rendimiento y la seguridad de FL, y luego elegir u optimizar la estructura y el proceso de aprendizaje en función de su evaluación. Demostramos la aplicación del framework en la práctica con casos que muestran cómo la elección de hiperparámetros FL, como los algoritmos de agregación de modelos, puede adaptarse dinámicamente o ajustarse en respuesta a cambios en el entorno de ejecución, incluyendo variaciones en la calidad de los datos, las condiciones de red o ataques adversariales."
+    },
+    "ijcnn-wcci-2026": {
+      "title": "InteFL: Framework para el Diseño Asistido por IA de Aplicaciones de Aprendizaje Federado Confiables y Eficientes",
+      "abstract": "Aunque el Aprendizaje Federado (FL) mejora la seguridad y la privacidad de los clientes al mantener los datos localmente, la naturaleza descentralizada de este paradigma lo expone a diversas acciones maliciosas, así como a problemas tecnológicos y de fiabilidad que pueden degradar la calidad de los datos, dificultar la convergencia y reducir la precisión del modelo global. Considerar estos factores desestabilizadores es esencial en el diseño de FL para su integración en aplicaciones prácticas robustas y confiables. Para abordar esta necesidad, presentamos InteFL, una herramienta de software diseñada para el diseño y la evaluación sistemáticos de FL eficiente y seguro. InteFL proporciona funcionalidad para evaluar el rendimiento de FL bajo diversas condiciones, incluyendo ataques adversariales estáticos y temporalmente dinámicos, y permite configurar y ajustar finamente algoritmos de agregación robustos y sus parámetros. Construido como una extensión de herramientas FL existentes, InteFL posee una mayor practicidad al incorporar agentes inteligentes que mejoran su usabilidad. Presentamos varios casos de uso que demuestran cómo nuestra herramienta apoya la búsqueda e investigación de técnicas de agregación más resilientes para diversos modelos de ataque, y cómo el ajuste fino de parámetros acelera la convergencia y mejora la precisión de los modelos ML resultantes."
+    },
+    "ieee-dsn-2026": {
+      "title": "IntelliFL Framework: Herramienta de Diseño y Evaluación para Aprendizaje Federado Confiable",
+      "abstract": "Presentamos IntelliFL, una herramienta de software diseñada para el diseño y evaluación sistemáticos de la fiabilidad de sistemas FL. IntelliFL ofrece funcionalidad para evaluar el rendimiento de FL bajo diversas condiciones, incluyendo ataques adversariales estáticos y temporalmente dinámicos, y admite algoritmos de agregación robustos configurables. El framework incorpora mecanismos de control inteligente, incluyendo selección automática de parámetros, mejora en la detección de anomalías y adaptación consciente del contexto mediante un agente de IA interactivo."
+    }
+  },
+  "highlights": {
+    "overrides": {
+      "ieee-is-2026": {
+        "title": "IntelliFL: Framework Metacognitivo de Aprendizaje Federado"
+      },
+      "aware-ai-bioradio-2026": {
+        "description": "Cosmic Ritual: gestos EMG de BioRadio impulsan un motor de acordes en tiempo real. Construí el clasificador de gestos, el motor MIDI, el modo musical con GUI y el sitio de docs Zensical."
+      }
+    }
+  },
+  "contactForm": {
+    "emailLabel": "Tu Correo Electrónico",
+    "emailOptional": "(opcional)",
+    "emailPlaceholder": "tu{'@'}ejemplo.com",
+    "emailHelp": "Inclúyelo si quieres recibir una respuesta",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Hola AJ, quería escribirte sobre...",
+    "messageRequired": "*",
+    "sending": "Enviando...",
+    "sendMessage": "Enviar Mensaje",
+    "successHeading": "¡Mensaje Enviado!",
+    "successBody": "Gracias por escribirme. Te responderé pronto.",
+    "divider": "o escríbeme directamente",
+    "clickToCopy": "(haz clic para copiar)",
+    "toastSuccess": "¡Mensaje enviado! Te responderé pronto.",
+    "toastError": "Falló el envío. ¡Correo copiado al portapapeles!",
+    "copyEmailFallback": "Correo copiado: {email} — ¡por favor envíame tu mensaje directamente!"
+  },
+  "toast": {
+    "ariaLabel": "Notificaciones",
+    "dismiss": "Descartar notificación"
+  },
+  "clipboard": {
+    "copied": "¡Copiado al portapapeles!",
+    "failed": "Falló la copia al portapapeles",
+    "emailCopied": "Correo copiado: {email}"
+  }
+}
