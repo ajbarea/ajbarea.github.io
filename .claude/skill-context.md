@@ -11,7 +11,7 @@ tooling changes.
 - language: TypeScript (Nuxt 4 + Vue 3) — no Python, no Rust
 - cli_entrypoint: `npm run <script>` (see `package.json` `scripts`)
 - runner_module: no Python runner; npm scripts drive the pipeline
-- default_branch: `master` (not `main` — deploy.yml triggers on push to master; rename pending a separate decision)
+- default_branch: `main` (renamed from `master` 2026-05-20; deploy.yml triggers on push)
 - has: Nuxt 4, Vue 3, Tailwind v4, Pinia, Nuxt Content, @nuxtjs/i18n (four locales — en / es / ja / zh), ESLint flat config, Prettier, Vitest, Playwright + @axe-core/playwright, PhotoSwipe + Cloudinary CDN, local-LLM translation pipeline via Ollama (Qwen2.5-7B-Instruct)
 
 ## audit
@@ -19,21 +19,26 @@ tooling changes.
 No `make` wrapper today — audit drives npm scripts directly, in dependency order:
 
 ### Phase 1 — Setup
+
 1. `npm ci` — clean install from `package-lock.json`. **Required before lint/test** — Nuxt's `postinstall` runs `nuxt prepare` which generates `.nuxt/` type stubs that ESLint and TypeScript depend on.
 
 ### Phase 2 — Fix (one-way door)
+
 2. `npm run format` — `prettier --write .`
 3. `npm run lint -- --fix` — `eslint . --fix` (no auto-target in package.json today; pass the flag inline)
 
 ### Phase 3 — Granular lint
+
 4. `npm run format:check` — `prettier --check .`
 5. `npm run lint:check` — `eslint .`
 
 ### Phase 4 — Granular test
+
 6. `npm run test:unit` — `vitest` (component / composable / store tests)
 7. `npm run test:e2e` — `playwright test`. **Side-effectful**: spawns Chromium, needs `npx playwright install` first run. Skip when running headless / WSL2 without graphical support.
 
 ### Phase 5 — End-to-end gates
+
 8. `npm run generate` — `nuxt generate` static-site build. The "is it deployable" probe. Renders all 64 prerendered routes (16 per locale).
 9. `node scripts/audit.mjs` — local Playwright sweep against `npm run dev` at `:3000`: screenshots × 3 viewports × 2 color schemes, console / network capture, axe accessibility scan, focus-order check, lightweight performance metrics. Writes to `/tmp/audit/`.
 10. `node scripts/audit-prod.mjs` — same shape against the production-build preview at `:4000`. Catches differences between dev and generated output.
@@ -43,6 +48,7 @@ Fast audit = `npm ci → format:check → lint:check → test:unit → generate`
 Stop-early phase: Phase 1 (`npm ci`). If install fails, abort — every downstream step depends on it.
 
 Do-not-run targets (long-running, interactive, or external-state):
+
 - `npm run dev` (interactive dev server)
 - `npm run preview` (interactive preview server)
 - Anything spawning Ollama (`scripts/auto-translate.mjs` runs Qwen2.5-7B locally — expects `ollama serve` and the model pulled)
@@ -50,12 +56,14 @@ Do-not-run targets (long-running, interactive, or external-state):
 ## ci_audit
 
 Referenced configs a CI failure can trace to:
+
 - `package.json` (scripts, deps, engines if any)
 - `nuxt.config.ts` (i18n, content, image, SSG output)
 - `.github/workflows/deploy.yml` (the single workflow)
 - `.npmrc`, `tsconfig.json`, `eslint.config.*`, `prettier` config (in `.prettierrc`)
 
 Tool error markers (extend the default grep set):
+
 - `nuxt` / `nitro` (SSG build errors)
 - `vite` (dev / build pipeline errors)
 - `eslint` (lint failures)
@@ -64,7 +72,7 @@ Tool error markers (extend the default grep set):
 - `playwright` (e2e failures)
 - `axe` / `accessibility` (a11y violations from `scripts/audit*.mjs`)
 
-Expected external PR checks: none configured (deploy.yml is push-on-master only — PRs don't fire CI today). Worth filing as a separate concern.
+Expected external PR checks: none configured today (deploy.yml is push-on-main only — PRs don't fire CI). Worth filing as a separate concern.
 
 ## slop_ground_truth
 
@@ -80,6 +88,7 @@ Any quantitative claim not traceable to one of those is slop.
 ## scan_scope
 
 Skip paths:
+
 - `.nuxt/`, `.output/`, `.nitro/`, `.data/`, `.cache/`, `dist/`, `node_modules/`
 - `package-lock.json`
 - `playwright-report/`, `test-results/`, `lighthouse*.json`
@@ -88,6 +97,7 @@ Skip paths:
 - `design-assets/` (source `.webp` files for project thumbnails; not part of the site bundle)
 
 Subagent scan-area split:
+
 - App: `app/**/*.{vue,ts}` (pages, layouts, components, composables, stores)
 - Content: `content/**/*.{md,yml}` (blog articles + frontmatter)
 - Scripts: `scripts/**/*.mjs` (audit + translate utilities)
@@ -97,7 +107,7 @@ Subagent scan-area split:
 
 ## docs_site
 
-There is no separate docs site for this repo — the site **is** the docs surface. The portfolio publishes to `https://ajbarea.github.io/` via GitHub Pages from the `master` branch.
+There is no separate docs site for this repo — the site **is** the docs surface. The portfolio publishes to `https://ajbarea.github.io/` via GitHub Pages from the `main` branch.
 
 - config: `nuxt.config.ts` (SSG mode + i18n + content routing)
 - workflow: `.github/workflows/deploy.yml`
