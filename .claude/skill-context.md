@@ -72,7 +72,7 @@ Tool error markers (extend the default grep set):
 - `playwright` (e2e failures)
 - `axe` / `accessibility` (a11y violations from `scripts/audit*.mjs`)
 
-Expected external PR checks: none configured today (deploy.yml is push-on-main only — PRs don't fire CI). Worth filing as a separate concern.
+Expected external PR checks: GitGuardian + the `ci.yml` matrix (lint + unit + build + e2e + README claims). `deploy.yml` is push-on-main only.
 
 ## slop_ground_truth
 
@@ -80,10 +80,22 @@ Source of truth for quantitative claims in README / blog:
 
 - **Locale strings:** `i18n/locales/{en,es,ja,zh}.json` — the canonical content surface. Claim about "~280 strings" or "four locales" must trace here.
 - **Prerendered route count:** `nuxt.config.ts` route generation rules; the README "64 prerendered routes (16 per locale)" claim derives from `nuxt generate` output.
-- **Project gallery counts:** `app/data/projects.ts` (or wherever project metadata lives) — claim about "15+ projects" / "8 flagship" must trace here.
+- **Project gallery counts:** `app/data/projects.ts` — claim about "N curated projects" + filter categories must trace here. Enforced at PR time by `scripts/check-readme-claims.mjs` (see `## fragile_docs`).
 - **Performance / accessibility scores:** `scripts/audit.mjs` / `scripts/audit-prod.mjs` reports under `/tmp/audit/` (ephemeral); persistent claims need a captured artifact.
 
 Any quantitative claim not traceable to one of those is slop.
+
+## fragile_docs
+
+Marketing claims in README.md most likely to drift away from the code, and how each is verified. The CI assertion script `scripts/check-readme-claims.mjs` runs on every PR; the registry below is the human-readable index of what it covers.
+
+| README claim                                               | Ground truth                                      | Verified by                                                                                                                                                                                          |
+| ---------------------------------------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `**Project gallery:** N curated projects, filterable by …` | `app/data/projects.ts` — `types:` array per entry | `check-readme-claims.mjs` asserts count + every category label maps bidirectionally to a `types:` slug                                                                                               |
+| `**N locales:** …`                                         | `nuxt.config.ts` `i18n.locales` array             | `check-readme-claims.mjs` asserts the spelled-out word matches the array length                                                                                                                      |
+| `**N prerendered routes:** M per locale`                   | `nuxt generate` output under `.output/public/`    | `check-readme-claims.mjs` only verifies the internal `M × locales = N` math; precise route-count verification needs a `nuxt generate` pass and is wired into the `build-check` ci.yml job indirectly |
+
+When a new fragile claim lands in README, extend the script (a new `// ─── …` block) and add a row here. Don't add ungrounded numbers to README without a corresponding ground-truth file and an assertion — that's how drift starts.
 
 ## scan_scope
 

@@ -32,6 +32,12 @@ jobs:
       - name: ESLint check
         run: npm run lint:check
 
+      - name: README claims match data files
+        # Catches stale README counts / filter lists (e.g. project gallery
+        # bullet drift after a projects.ts rebalance). See the script for the
+        # current fragile-claim registry.
+        run: node scripts/check-readme-claims.mjs
+
   test-unit:
     name: Vitest (unit)
     runs-on: ubuntu-latest
