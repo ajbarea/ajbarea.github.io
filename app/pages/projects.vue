@@ -6,6 +6,7 @@ import { projects } from '~/data/projects'
 type FilterType = ProjectType | 'all'
 
 const activeFilter = ref<FilterType>('all')
+const { t } = useI18n()
 
 const filteredProjects = computed(() => {
   if (activeFilter.value === 'all') {
@@ -14,20 +15,12 @@ const filteredProjects = computed(() => {
   return projects.filter((project) => project.types.includes(activeFilter.value))
 })
 
-useHead({
-  title: 'Projects | AJ Barea',
+useHead(() => ({
+  title: t('meta.projectsTitle'),
   meta: [
-    {
-      name: 'description',
-      content:
-        "Explore AJ Barea's portfolio of software projects including AI/ML applications, full-stack development, cloud solutions, and research work."
-    },
-    { property: 'og:title', content: 'Projects | AJ Barea' },
-    {
-      property: 'og:description',
-      content:
-        "Explore AJ Barea's portfolio of software projects including AI/ML applications, full-stack development, cloud solutions, and research work."
-    },
+    { name: 'description', content: t('meta.projectsDescription') },
+    { property: 'og:title', content: t('meta.projectsTitle') },
+    { property: 'og:description', content: t('meta.projectsDescription') },
     {
       property: 'og:image',
       content: 'https://res.cloudinary.com/dumwa1w5x/image/upload/q_auto,f_auto/portfolio_ujli4t'
@@ -35,14 +28,10 @@ useHead({
     { property: 'og:url', content: 'https://ajbarea.github.io/projects' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Projects | AJ Barea' },
-    {
-      name: 'twitter:description',
-      content:
-        "Explore AJ Barea's portfolio of software projects including AI/ML applications, full-stack development, and cloud solutions."
-    }
+    { name: 'twitter:title', content: t('meta.projectsTitle') },
+    { name: 'twitter:description', content: t('meta.projectsTwitterDescription') }
   ]
-})
+}))
 </script>
 
 <template>
@@ -50,9 +39,11 @@ useHead({
     <div class="max-w-7xl mx-auto">
       <!-- Header -->
       <header class="text-center mb-12">
-        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">Projects</h1>
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          {{ $t('projects.page.heading') }}
+        </h1>
         <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Designed and delivered.
+          {{ $t('projects.page.lead') }}
         </p>
       </header>
 
@@ -90,14 +81,14 @@ useHead({
           />
         </svg>
         <p class="text-gray-500 dark:text-gray-400 text-base sm:text-lg">
-          No projects found for this category.
+          {{ $t('projects.page.emptyState') }}
         </p>
         <button
           type="button"
           class="mt-4 min-h-[44px] px-4 py-2 text-sm font-medium text-primary-600 dark:text-primary-400 hover:underline focus-visible:ring-2 focus-visible:ring-primary-500 rounded-lg"
           @click="activeFilter = 'all'"
         >
-          View all projects
+          {{ $t('projects.page.viewAll') }}
         </button>
       </div>
     </div>

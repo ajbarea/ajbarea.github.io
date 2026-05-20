@@ -134,8 +134,6 @@ export type ProjectType = 'ai-ml' | 'full-stack' | 'robotics' | 'cloud'
 export interface Project {
   id: string
   title: string
-  description: string
-  longDescription?: string
   technologies: string[]
   types: ProjectType[]
   thumbnailUrl?: string

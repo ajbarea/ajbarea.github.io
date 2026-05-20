@@ -16,7 +16,10 @@
     "resumeTitle": "Resume | AJ Barea",
     "resumeDescription": "AJ Barea's professional resume - Software Engineer with expertise in full-stack development, AI/ML, and cloud solutions.",
     "resumeOgDescription": "Professional resume showcasing software engineering experience, research, and technical skills.",
-    "resumeTwitterDescription": "Professional resume showcasing software engineering experience, research, and technical skills."
+    "resumeTwitterDescription": "Professional resume showcasing software engineering experience, research, and technical skills.",
+    "projectsTitle": "Projects | AJ Barea",
+    "projectsDescription": "Explore AJ Barea's portfolio of software projects including AI/ML applications, full-stack development, cloud solutions, and research work.",
+    "projectsTwitterDescription": "Explore AJ Barea's portfolio of software projects including AI/ML applications, full-stack development, and cloud solutions."
   },
   "profile": {
     "title": "Software Engineer",
@@ -157,6 +160,92 @@
         "Federated Learning Security - Built evaluation system combining CLIPS rule-based expert systems, PyTorch neural networks, and federated learning techniques to assess Byzantine fault tolerance in distributed ML systems",
         "Natural Language Processing - Implemented news summarization system using Hugging Face Transformers (BART) with personalized recommendations via collaborative filtering (scikit-surprise)"
       ]
+    }
+  },
+  "projects": {
+    "page": {
+      "heading": "Projects",
+      "lead": "Designed and delivered.",
+      "filterAria": "Filter projects by type",
+      "filterAll": "All",
+      "linksAria": "Project links",
+      "demo": "Demo",
+      "docs": "Docs",
+      "github": "GitHub",
+      "video": "Video",
+      "demoAria": "View demo for {title}",
+      "docsAria": "View docs for {title}",
+      "githubAria": "View GitHub repository for {title}",
+      "videoAria": "Watch video demo for {title}",
+      "thumbnailAlt": "{title} thumbnail",
+      "emptyState": "No projects found for this category.",
+      "viewAll": "View all projects"
+    },
+    "types": {
+      "ai-ml": "AI/ML",
+      "full-stack": "Full-Stack",
+      "robotics": "Robotics",
+      "cloud": "Cloud"
+    },
+    "kourai-khryseai": {
+      "title": "Kourai Khryseai",
+      "description": "Interactive multi-agent development system: ten specialized agents stream their reasoning, ask for guidance, and iterate live across terminal, pygame GUI with TTS, and a Ren'Py visual novel."
+    },
+    "velocity-fl": {
+      "title": "VelocityFL",
+      "description": "Rust + Python federated learning orchestrator with paper-cited aggregation strategies and round-level / data-pipeline attack simulations."
+    },
+    "phalanx-fl": {
+      "title": "Phalanx-FL",
+      "description": "Solo federated learning execution and research framework: configurable aggregation, Byzantine fault tolerance, adversarial attack simulation, JSON-driven experiments."
+    },
+    "techne": {
+      "title": "Techne",
+      "description": "Eight Claude Code skills installable as a single /plugin: audit builds, tame CI noise, hunt doc/code drift, keep sister repos in lockstep."
+    },
+    "news-aggregator": {
+      "title": "AI News Aggregator",
+      "description": "Intelligent news aggregation system using NLP for content classification and summarization."
+    },
+    "security-eval": {
+      "title": "ML Security Evaluation System",
+      "description": "Framework for evaluating security vulnerabilities in machine learning models."
+    },
+    "aws-image-translator": {
+      "title": "AWS Image Translator",
+      "description": "Serverless application for extracting and translating text from images using AWS services."
+    },
+    "robot-navigation-rl": {
+      "title": "Robot Navigation with RL",
+      "description": "Reinforcement learning agent for autonomous robot navigation in simulated environments."
+    },
+    "intellifl": {
+      "title": "InteFL",
+      "description": "Federated learning framework with intelligent client selection and privacy-preserving aggregation."
+    },
+    "tbd-banking": {
+      "title": "TBD Banking Application",
+      "description": "Banking app enabling account creation, credentials management, and fund transfers with transaction tracking."
+    },
+    "thoughtcloud-social": {
+      "title": "ThoughtCloud Social",
+      "description": "Social platform for sharing thoughts, building networks, and engaging with posts and notifications."
+    },
+    "control-mobile-robots": {
+      "title": "Control of Mobile Robots",
+      "description": "Mobile robot control systems using Python and Webots covering localization, navigation, and sensor integration."
+    },
+    "blockchain-explorer": {
+      "title": "Blockchain Explorer",
+      "description": "Custom blockchain for authenticating digital signatures with tamper-proof verification."
+    },
+    "expense-reimbursement": {
+      "title": "Expense Reimbursement System",
+      "description": "System for submitting and approving expense reimbursements with employee and manager workflows."
+    },
+    "portfolio": {
+      "title": "Portfolio Website",
+      "description": "This website! - a modern Nuxt 3 portfolio showcasing projects, resume, gallery, and blog."
     }
   },
   "resume": {

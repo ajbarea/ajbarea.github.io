@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import type { ProjectType } from '~/types'
 
 type FilterType = ProjectType | 'all'
@@ -14,18 +15,24 @@ interface Emits {
 defineProps<Props>()
 const emit = defineEmits<Emits>()
 
+const { t } = useI18n()
+
 interface FilterOption {
   value: FilterType
-  label: string
+  labelKey: string
 }
 
 const filterOptions: FilterOption[] = [
-  { value: 'all', label: 'All' },
-  { value: 'ai-ml', label: 'AI/ML' },
-  { value: 'full-stack', label: 'Full-Stack' },
-  { value: 'robotics', label: 'Robotics' },
-  { value: 'cloud', label: 'Cloud' }
+  { value: 'all', labelKey: 'projects.page.filterAll' },
+  { value: 'ai-ml', labelKey: 'projects.types.ai-ml' },
+  { value: 'full-stack', labelKey: 'projects.types.full-stack' },
+  { value: 'robotics', labelKey: 'projects.types.robotics' },
+  { value: 'cloud', labelKey: 'projects.types.cloud' }
 ]
+
+const labeledOptions = computed(() =>
+  filterOptions.map((opt) => ({ value: opt.value, label: t(opt.labelKey) }))
+)
 
 function selectFilter(value: FilterType) {
   emit('update:modelValue', value)
@@ -36,10 +43,10 @@ function selectFilter(value: FilterType) {
   <nav
     class="flex flex-wrap items-center justify-center gap-2 sm:gap-3"
     role="group"
-    aria-label="Filter projects by type"
+    :aria-label="$t('projects.page.filterAria')"
   >
     <button
-      v-for="option in filterOptions"
+      v-for="option in labeledOptions"
       :key="option.value"
       type="button"
       :class="[
