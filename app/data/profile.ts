@@ -3,18 +3,6 @@ import type { Profile, Education, HonorAward } from '~/types'
 export const profile: Profile = {
   name: 'AJ Barea',
   title: 'Software Engineer',
-  roles: [
-    'AI/ML Researcher',
-    'Full-Stack Developer',
-    'Distributed Systems Engineer',
-    'Cloud Architect',
-    'Violinist',
-    'Hardcore Gamer',
-    'Otaku',
-    'Favorite Son'
-  ],
-  summary:
-    'I build federated learning frameworks and multi-agent development systems. My research sits at the intersection of trustworthy distributed ML, human-on-the-loop AI agents, and developer experience for AI-assisted software.',
   profileImage: 'https://res.cloudinary.com/dumwa1w5x/image/upload/q_auto,f_auto/profile_ubnllm',
   contact: {
     email: 'ajbareaa@gmail.com',
@@ -47,15 +35,7 @@ export const profile: Profile = {
       icon: 'email',
       label: 'Email'
     }
-  ],
-  researchInterests: [
-    'Federated learning systems',
-    'Agentic AI with tool use',
-    'Testing methodologies for distributed ML',
-    'Developer experience in ML research infrastructure',
-    'AI-assisted software development'
-  ],
-  credibilityChips: ['RIT GRA · Reznik Group', '4 IEEE 2026 Papers', 'MS SWE · 4.0 GPA']
+  ]
 }
 
 export const education: Education[] = [

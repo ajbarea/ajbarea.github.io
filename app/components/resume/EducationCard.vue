@@ -28,7 +28,7 @@ defineProps<Props>()
           d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
         />
       </svg>
-      Education
+      {{ $t('resume.sections.education') }}
     </h2>
     <div class="space-y-4">
       <article
@@ -39,7 +39,7 @@ defineProps<Props>()
         <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
           <div>
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              {{ edu.degree }} in {{ edu.field }}
+              {{ $t('resume.education.degreeIn', { degree: edu.degree, field: edu.field }) }}
             </h3>
             <p class="text-primary-600 dark:text-primary-400 font-medium">
               {{ edu.institution }}
@@ -54,7 +54,9 @@ defineProps<Props>()
               v-if="edu.gpa != null && edu.maxGpa != null"
               class="font-medium text-gray-700 dark:text-gray-300"
             >
-              GPA: {{ edu.gpa.toFixed(2) }}/{{ edu.maxGpa.toFixed(1) }}
+              {{ $t('resume.education.gpaLabel') }}: {{ edu.gpa.toFixed(2) }}/{{
+                edu.maxGpa.toFixed(1)
+              }}
             </p>
           </div>
         </div>
@@ -62,7 +64,7 @@ defineProps<Props>()
         <!-- Relevant Coursework -->
         <div v-if="edu.relevantCoursework?.length" class="mt-3">
           <h4 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Relevant Coursework
+            {{ $t('resume.education.relevantCoursework') }}
           </h4>
           <div class="flex flex-wrap gap-2">
             <span
@@ -81,7 +83,7 @@ defineProps<Props>()
           class="mt-4 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg"
         >
           <h4 class="text-sm font-medium text-purple-700 dark:text-purple-300 mb-1">
-            Capstone Research
+            {{ $t('resume.education.capstoneResearch') }}
           </h4>
           <p class="text-sm text-gray-700 dark:text-gray-300 font-medium">
             {{ edu.capstoneResearch.title }}
@@ -90,7 +92,7 @@ defineProps<Props>()
             v-if="edu.capstoneResearch.advisor"
             class="text-xs text-gray-500 dark:text-gray-400 mt-1"
           >
-            Advisor: {{ edu.capstoneResearch.advisor }}
+            {{ $t('resume.education.advisor', { name: edu.capstoneResearch.advisor }) }}
           </p>
           <div v-if="edu.capstoneResearch.focus?.length" class="flex flex-wrap gap-1 mt-2">
             <span

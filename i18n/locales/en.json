@@ -12,7 +12,11 @@
     "homeTitle": "AJ Barea | Software Engineer",
     "homeDescription": "Software Engineer specializing in full-stack development, AI/ML, and cloud solutions. Currently completing MS in Software Engineering at RIT.",
     "homeOgDescription": "Portfolio showcasing projects, research, and technical expertise in software engineering, AI/ML, and cloud solutions.",
-    "homeTwitterDescription": "Portfolio showcasing projects, research, and technical expertise."
+    "homeTwitterDescription": "Portfolio showcasing projects, research, and technical expertise.",
+    "resumeTitle": "Resume | AJ Barea",
+    "resumeDescription": "AJ Barea's professional resume - Software Engineer with expertise in full-stack development, AI/ML, and cloud solutions.",
+    "resumeOgDescription": "Professional resume showcasing software engineering experience, research, and technical skills.",
+    "resumeTwitterDescription": "Professional resume showcasing software engineering experience, research, and technical skills."
   },
   "profile": {
     "title": "Software Engineer",
@@ -71,6 +75,121 @@
       "cloud-devops": "Cloud & DevOps",
       "ai-ml": "AI & Machine Learning",
       "tools": "Tools & Platforms"
+    }
+  },
+  "timeline": {
+    "labels": {
+      "current": "Current",
+      "incoming": "Incoming",
+      "skillsAria": "Skills"
+    },
+    "rit-phd-2026": {
+      "title": "Doctor of Philosophy",
+      "subtitle": "Computing and Information Sciences",
+      "description": "PhD in Computing and Information Sciences continuing federated learning research with Dr. Leon Reznik."
+    },
+    "ncsu-scads-2026": {
+      "title": "Summer Research Scholar",
+      "subtitle": "SCADS · Summer Conference on Applied Data Science",
+      "description": "Selected as a SCADS Summer Research Scholar at NC State LAS for summer 2026."
+    },
+    "rit-gra": {
+      "title": "Graduate Research Assistant",
+      "subtitle": "Dr. Leon Reznik's Research Group",
+      "description": "Enhancing IntelliFL federated learning framework with 80%+ test coverage, React/FastAPI interface, and Byzantine-robust aggregation methods.",
+      "bullets": [
+        "Designed comprehensive pytest testing suite achieving 80%+ code coverage for distributed FL systems (IntelliFL framework)",
+        "Built React + FastAPI web interface improving researcher onboarding time and experimental reproducibility",
+        "Collaborated with PhD students to rapidly prototype novel aggregation strategies including Byzantine-robust methods (Krum, Bulyan, RFA, Trimmed Mean) and trust-based federated learning approaches",
+        "Implemented dynamic dataset poisoning system enabling adversarial robustness evaluation during federated training",
+        "Integrated transformer-based models for federated learning on text datasets spanning medical, legal, and financial domains",
+        "Extended framework compatibility across Python 3.9-3.11 and multiple operating systems (Windows, macOS, Linux)",
+        "Established CI pipeline and comprehensive error handling, transforming research prototype into production-ready system"
+      ]
+    },
+    "rit-ta": {
+      "title": "Teaching Assistant",
+      "subtitle": "Software Architecture",
+      "description": "Mentoring students in design patterns, architectural styles, and quality attributes. Led full class session during instructor absence.",
+      "bullets": [
+        "Mentor students in software design patterns, architectural styles, quality attributes and tactics",
+        "Lead recitation sections and office hours providing technical guidance on architecture decisions",
+        "Taught full class session during instructor absence, receiving positive student feedback",
+        "Grade assignments with detailed feedback emphasizing rigorous software engineering practices"
+      ]
+    },
+    "rit-ms": {
+      "title": "Master of Science",
+      "subtitle": "Software Engineering",
+      "description": "GPA: 4.0/4.0. Capstone: Enhancing Federated Learning Execution Framework (Advisor: Dr. Leon Reznik)."
+    },
+    "lowes": {
+      "title": "Software Engineer (Contract)",
+      "subtitle": "Distribution Management Systems",
+      "description": "Cut daily error logs by 150,000 across RDCs. Built full-stack automation tooling. Reduced onboarding time by 80%.",
+      "bullets": [
+        "Cut daily error logs by 150,000 across RDCs by resolving bugs, optimizing log analysis, and enhancing system performance",
+        "Developed a full-stack app to streamline database queries and generate SQL scripts, reducing support ticket resolution time",
+        "Authored SOPs, slashing new engineer onboarding time by 80%",
+        "Conducted root cause analysis for Tier 3 support, documenting solutions in BMC SmartIT and collaborating with supervisors",
+        "Delivered secure, tested code updates to fix bugs and boost system efficiency, tracked via Jira and Confluence",
+        "Thrived in Agile sprints, contributing to stand-ups and retrospectives"
+      ]
+    },
+    "usf-bs": {
+      "title": "Bachelor of Science",
+      "subtitle": "Computer Engineering",
+      "description": "GPA: 3.06/4.0."
+    },
+    "phiquest": {
+      "title": "UX Developer (Internship)",
+      "subtitle": "Development Team",
+      "description": "Designed wireframes for web apps. Built blockchain-based document authenticator Chrome extension using Node.js.",
+      "bullets": [
+        "Designed wireframes for web apps, collaborating with cross-functional teams to ensure feasible, user-friendly solutions",
+        "Engineered a blockchain-based document authenticator Chrome extension using Node.js, enabling secure verification"
+      ]
+    },
+    "independent-ml": {
+      "title": "Machine Learning Research Projects",
+      "bullets": [
+        "Autonomous Robot Navigation RL - Developed Q-learning and DQN framework in Webots simulator with state discretization, replay buffers, and PyTorch-based hyperparameter optimization (documented via YouTube tutorials)",
+        "Federated Learning Security - Built evaluation system combining CLIPS rule-based expert systems, PyTorch neural networks, and federated learning techniques to assess Byzantine fault tolerance in distributed ML systems",
+        "Natural Language Processing - Implemented news summarization system using Hugging Face Transformers (BART) with personalized recommendations via collaborative filtering (scikit-surprise)"
+      ]
+    }
+  },
+  "resume": {
+    "viewToggleAria": "Resume view options",
+    "downloadPdf": "Download PDF",
+    "downloadPdfShort": "PDF",
+    "downloadPdfAria": "Download {mode} resume as PDF",
+    "contentAria": "{mode} resume content",
+    "viewMode": {
+      "industry": "Industry",
+      "research": "Research"
+    },
+    "sections": {
+      "researchInterests": "Research Interests",
+      "professional": "Professional Experience",
+      "research": "Research Experience",
+      "teaching": "Teaching Experience",
+      "publications": "Publications",
+      "education": "Education",
+      "honorsAwards": "Honors & Awards",
+      "skills": "Technical Skills"
+    },
+    "experience": {
+      "projectPrefix": "Project:"
+    },
+    "education": {
+      "degreeIn": "{degree} in {field}",
+      "gpaLabel": "GPA",
+      "relevantCoursework": "Relevant Coursework",
+      "capstoneResearch": "Capstone Research",
+      "advisor": "Advisor: {name}",
+      "downloadCertificate": "Download {title} certificate",
+      "visitWebsite": "Visit {title} website"
     }
   }
 }

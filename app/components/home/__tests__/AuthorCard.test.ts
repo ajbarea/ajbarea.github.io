@@ -20,8 +20,6 @@ const NuxtLinkStub = {
 const mockProfile: Profile = {
   name: 'Test User',
   title: 'Software Engineer',
-  roles: ['Developer', 'Architect', 'Researcher'],
-  summary: 'A test summary about the user.',
   profileImage: '/images/test-profile.jpg',
   contact: {
     email: 'test@example.com',
@@ -63,7 +61,7 @@ describe('AuthorCard', () => {
     expect(wrapper.find('h1').text()).toBe('Test User')
   })
 
-  it('renders profile summary', () => {
+  it('renders profile summary from i18n', () => {
     const wrapper = mount(AuthorCard, {
       props: { profile: mockProfile },
       global: {
@@ -71,7 +69,7 @@ describe('AuthorCard', () => {
       }
     })
 
-    expect(wrapper.text()).toContain('A test summary about the user.')
+    expect(wrapper.text()).toContain('federated learning frameworks')
   })
 
   it('renders all social links and email button', () => {

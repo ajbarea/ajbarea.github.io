@@ -195,11 +195,12 @@ Confirmed 2026-05-18 (AJ delegated; web-research-grounded):
 - [x] Translation source: **manual ES + Qwen2.5-7B-Instruct via Ollama for JA/ZH** (walk-back from Argos; Qwen dominates JA/ZH in 2026 MT-LLM benchmarks; Argos retained as fallback)
 - [x] Native-script language names: **日本語, 中文, Español**
 
-### Status (2026-05-18)
+### Status (2026-05-20)
 
 - **Phase 1a — done.** `@nuxtjs/i18n` v10.3.0 installed; `i18n/locales/en.json` at project root (NOT `app/locales/` — Nuxt 4 + v10 module resolves langDir from rootDir, so files live at `<root>/i18n/locales/`); `LanguageSelector.vue` mounted in `TheNavigation.vue` (desktop + mobile); `<html lang="en">` set automatically; opt-in only, no auto-detect.
-- **Phase 1b Stage 1 — done.** Home page UI chrome + profile bio extracted (~30 keys: nav, lang, meta, profile, hero, sections, activity, skills.categories). Files: `AuthorCard.vue`, `ContactSection.vue`, `ExpertiseGrid.vue`, `ExperienceTimeline.vue`, `ActivityHighlights.vue`, `index.vue`, `SkillsGrid.vue`. profile.ts still has duplicate English strings (drift TODO; defer to Stage 2).
-- **Phase 1b Stages 2-4 — pending.** Timeline narratives + resume page (Stage 2), project descriptions (Stage 3), publication/conference/hackathon content + ContactForm + ToastContainer (Stage 4).
+- **Phase 1b Stage 1 — done.** Home page UI chrome + profile bio extracted (~30 keys: nav, lang, meta, profile, hero, sections, activity, skills.categories). Files: `AuthorCard.vue`, `ContactSection.vue`, `ExpertiseGrid.vue`, `ExperienceTimeline.vue`, `ActivityHighlights.vue`, `index.vue`, `SkillsGrid.vue`.
+- **Phase 1b Stage 2 — done.** Timeline narratives + resume page extracted (~60 keys under `timeline.{id}.*` per entry, `timeline.labels`, `resume.sections`, `resume.viewMode`, `resume.education`, `resume.downloadPdf*`, `meta.resume*`). Files: `TimelineEntry.vue`, `ExperienceList.vue`, `EducationCard.vue`, `ResumeViewToggle.vue`, `resume.vue`. profile.ts duplication cleaned up: `roles`, `summary`, `credibilityChips`, `researchInterests` removed from data file and `Profile` interface (i18n is now the single source).
+- **Phase 1b Stages 3-4 — pending.** Project descriptions (Stage 3), publication/conference/hackathon content + ContactForm + ToastContainer (Stage 4).
 
 ### Gotchas (footguns hit during Phase 1a/1b)
 

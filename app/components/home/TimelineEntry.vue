@@ -72,24 +72,24 @@ function getTypeColor(type: string): string {
           <h3
             class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white flex flex-wrap items-center gap-2"
           >
-            <span>{{ entry.title }}</span>
+            <span>{{ $t('timeline.' + entry.id + '.title') }}</span>
             <span
               v-if="entry.isCurrent"
               class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-green-700 text-white shadow-sm"
               role="status"
             >
-              Current
+              {{ $t('timeline.labels.current') }}
             </span>
             <span
               v-else-if="entry.isIncoming"
               class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-sky-100 text-sky-800 dark:bg-sky-900/40 dark:text-sky-300 ring-1 ring-inset ring-sky-200 dark:ring-sky-800"
               role="status"
             >
-              Incoming
+              {{ $t('timeline.labels.incoming') }}
             </span>
           </h3>
           <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
-            {{ entry.subtitle }} · {{ entry.organization }}
+            {{ $t('timeline.' + entry.id + '.subtitle') }} · {{ entry.organization }}
           </p>
         </div>
         <time class="text-xs sm:text-sm text-gray-500 dark:text-gray-500 whitespace-nowrap">
@@ -98,14 +98,14 @@ function getTypeColor(type: string): string {
       </div>
 
       <p class="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3">
-        {{ entry.description }}
+        {{ $t('timeline.' + entry.id + '.description') }}
       </p>
 
       <!-- Skill tags -->
       <ul
         v-if="entry.skills && entry.skills.length > 0"
         class="flex flex-wrap gap-1.5 sm:gap-2"
-        aria-label="Skills"
+        :aria-label="$t('timeline.labels.skillsAria')"
       >
         <li
           v-for="skill in entry.skills"

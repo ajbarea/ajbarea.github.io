@@ -21,13 +21,9 @@ export interface Profile {
   name: string
   pronouns?: string
   title: string
-  roles: string[] // For typewriter animation
-  summary: string
   profileImage: string
   contact: ContactInfo
   socialLinks: SocialLink[]
-  researchInterests?: string[]
-  credibilityChips?: string[]
 }
 
 // Education

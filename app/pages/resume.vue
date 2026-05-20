@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useResumeStore } from '~/stores/resume'
 import { profile, education, honorsAwards } from '~/data/profile'
 import { professionalExperience, researchExperience, teachingExperience } from '~/data/timeline'
@@ -8,25 +9,23 @@ import { useClipboard } from '~/composables/useClipboard'
 
 const resumeStore = useResumeStore()
 const clipboard = useClipboard()
+const { t, tm, rt } = useI18n()
 
 function copyEmail() {
   clipboard.copyEmail(profile.contact.email)
 }
 
-useHead({
-  title: 'Resume | AJ Barea',
+const researchInterests = computed<string[]>(() => {
+  const raw = tm('profile.researchInterests')
+  return Array.isArray(raw) ? raw.map((item) => rt(item)) : []
+})
+
+useHead(() => ({
+  title: t('meta.resumeTitle'),
   meta: [
-    {
-      name: 'description',
-      content:
-        "AJ Barea's professional resume - Software Engineer with expertise in full-stack development, AI/ML, and cloud solutions."
-    },
-    { property: 'og:title', content: 'Resume | AJ Barea' },
-    {
-      property: 'og:description',
-      content:
-        'Professional resume showcasing software engineering experience, research, and technical skills.'
-    },
+    { name: 'description', content: t('meta.resumeDescription') },
+    { property: 'og:title', content: t('meta.resumeTitle') },
+    { property: 'og:description', content: t('meta.resumeOgDescription') },
     {
       property: 'og:image',
       content: 'https://res.cloudinary.com/dumwa1w5x/image/upload/q_auto,f_auto/portfolio_ujli4t'
@@ -34,14 +33,10 @@ useHead({
     { property: 'og:url', content: 'https://ajbarea.github.io/resume' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary' },
-    { name: 'twitter:title', content: 'Resume | AJ Barea' },
-    {
-      name: 'twitter:description',
-      content:
-        'Professional resume showcasing software engineering experience, research, and technical skills.'
-    }
+    { name: 'twitter:title', content: t('meta.resumeTitle') },
+    { name: 'twitter:description', content: t('meta.resumeTwitterDescription') }
   ]
-})
+}))
 
 function downloadResume(type: 'industry' | 'research') {
   const filename =
@@ -71,7 +66,7 @@ function downloadResume(type: 'industry' | 'research') {
           <button
             type="button"
             class="flex items-center gap-1 hover:text-primary-600 dark:hover:text-primary-400 cursor-pointer"
-            title="Click to copy email"
+            :title="$t('hero.copyEmailAria')"
             @click="copyEmail"
           >
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -137,7 +132,7 @@ function downloadResume(type: 'industry' | 'research') {
 
         <button
           class="flex items-center justify-center gap-2 min-h-[44px] px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-sm font-medium shadow-sm hover:shadow-md transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
-          :aria-label="`Download ${resumeStore.viewMode} resume as PDF`"
+          :aria-label="$t('resume.downloadPdfAria', { mode: resumeStore.viewMode })"
           @click="downloadResume(resumeStore.viewMode)"
         >
           <svg
@@ -154,14 +149,14 @@ function downloadResume(type: 'industry' | 'research') {
               d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
             />
           </svg>
-          <span class="hidden xs:inline">Download PDF</span>
-          <span class="xs:hidden">PDF</span>
+          <span class="hidden xs:inline">{{ $t('resume.downloadPdf') }}</span>
+          <span class="xs:hidden">{{ $t('resume.downloadPdfShort') }}</span>
         </button>
       </div>
 
       <!-- Research Interests (Research View Only) -->
       <section
-        v-if="resumeStore.isResearchView && profile.researchInterests?.length"
+        v-if="resumeStore.isResearchView && researchInterests.length"
         class="mb-8 print:mb-4"
       >
         <h2
@@ -180,11 +175,11 @@ function downloadResume(type: 'industry' | 'research') {
               d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
             />
           </svg>
-          Research Interests
+          {{ $t('resume.sections.researchInterests') }}
         </h2>
         <div class="flex flex-wrap gap-2">
           <span
-            v-for="interest in profile.researchInterests"
+            v-for="interest in researchInterests"
             :key="interest"
             class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm"
           >
@@ -198,7 +193,7 @@ function downloadResume(type: 'industry' | 'research') {
         id="resume-content"
         class="space-y-6 sm:space-y-8 print:space-y-4"
         role="tabpanel"
-        :aria-label="`${resumeStore.viewMode} resume content`"
+        :aria-label="$t('resume.contentAria', { mode: resumeStore.viewMode })"
       >
         <!-- Experience Section -->
         <ResumeExperienceList
@@ -232,7 +227,7 @@ function downloadResume(type: 'industry' | 'research') {
                 d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
               />
             </svg>
-            Honors & Awards
+            {{ $t('resume.sections.honorsAwards') }}
           </h2>
           <ul class="space-y-2">
             <li
@@ -248,7 +243,7 @@ function downloadResume(type: 'industry' | 'research') {
                   target="_blank"
                   rel="noopener noreferrer"
                   class="hover:text-primary-600 dark:hover:text-primary-400 underline inline-flex items-center gap-1"
-                  :title="`Download ${award.title} certificate`"
+                  :title="$t('resume.education.downloadCertificate', { title: award.title })"
                 >
                   {{ award.title }}
                   <svg
@@ -272,7 +267,7 @@ function downloadResume(type: 'industry' | 'research') {
                   target="_blank"
                   rel="noopener noreferrer"
                   class="hover:text-primary-600 dark:hover:text-primary-400 underline inline-flex items-center gap-1"
-                  :title="`Visit ${award.title} website`"
+                  :title="$t('resume.education.visitWebsite', { title: award.title })"
                 >
                   {{ award.title }}
                   <svg
