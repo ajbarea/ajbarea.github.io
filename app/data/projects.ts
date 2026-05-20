@@ -96,7 +96,7 @@ export const projects: Project[] = [
     id: 'intellifl',
     title: 'InteFL',
     technologies: ['Python', 'PyTorch', 'FLOWER', 'Federated Learning', 'Docker'],
-    types: ['ai-ml'],
+    types: ['ai-ml', 'federated-learning'],
     thumbnailUrl:
       'https://res.cloudinary.com/dumwa1w5x/image/upload/v1767633883/IntelliFL_r48xde.png',
     githubUrl: 'https://github.com/dmitrykoro/fl-execution-framework',
