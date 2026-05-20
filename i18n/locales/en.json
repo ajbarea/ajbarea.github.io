@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "resume": "Resume",
+    "blog": "Blog"
+  },
+  "lang": {
+    "select": "Select language"
+  },
+  "meta": {
+    "homeTitle": "AJ Barea | Software Engineer",
+    "homeDescription": "Software Engineer specializing in full-stack development, AI/ML, and cloud solutions. Currently completing MS in Software Engineering at RIT.",
+    "homeOgDescription": "Portfolio showcasing projects, research, and technical expertise in software engineering, AI/ML, and cloud solutions.",
+    "homeTwitterDescription": "Portfolio showcasing projects, research, and technical expertise."
+  },
+  "profile": {
+    "title": "Software Engineer",
+    "summary": "I build federated learning frameworks and multi-agent development systems. My research sits at the intersection of trustworthy distributed ML, human-on-the-loop AI agents, and developer experience for AI-assisted software.",
+    "roles": [
+      "AI/ML Researcher",
+      "Full-Stack Developer",
+      "Distributed Systems Engineer",
+      "Cloud Architect",
+      "Violinist",
+      "Hardcore Gamer",
+      "Otaku",
+      "Favorite Son"
+    ],
+    "credibilityChips": ["RIT GRA · Reznik Group", "4 IEEE 2026 Papers", "MS SWE · 4.0 GPA"],
+    "researchInterests": [
+      "Federated learning systems",
+      "Agentic AI with tool use",
+      "Testing methodologies for distributed ML",
+      "Developer experience in ML research infrastructure",
+      "AI-assisted software development"
+    ]
+  },
+  "hero": {
+    "viewProjects": "View Projects",
+    "latestPaper": "Latest paper",
+    "viewGalleryAria": "View photo gallery",
+    "profileImageAlt": "Profile photo of {name}",
+    "profileInitialsAlt": "{name} initials",
+    "credentialsAria": "Credentials",
+    "copyEmailAria": "Copy email address",
+    "socialAria": "Social media profiles"
+  },
+  "sections": {
+    "experience": "Experience & Education",
+    "experienceAria": "Timeline entries",
+    "highlights": "Selected Activity 2026",
+    "expertise": "Technical Expertise",
+    "expertiseSkillsAria": "{category} skills",
+    "expertiseSkillDocAria": "{skill} - Click to view documentation",
+    "expertiseTooltip": "View docs",
+    "skills": "Technical Skills",
+    "contact": "Get In Touch",
+    "contactLead": "Have a question or want to work together? Send me a message and I'll get back to you."
+  },
+  "activity": {
+    "kind": {
+      "publication": "Publication",
+      "hackathon": "Hackathon",
+      "conference": "Conference"
+    }
+  },
+  "skills": {
+    "categories": {
+      "languages": "Languages & Frameworks",
+      "cloud-devops": "Cloud & DevOps",
+      "ai-ml": "AI & Machine Learning",
+      "tools": "Tools & Platforms"
+    }
+  }
+}

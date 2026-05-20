@@ -19,7 +19,21 @@ export default defineNuxtConfig({
     '/portfolio/**': { redirect: '/' }
   },
 
-  modules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxt/eslint', '@nuxt/image', '@nuxt/content'],
+  modules: [
+    '@pinia/nuxt',
+    '@vueuse/nuxt',
+    '@nuxt/eslint',
+    '@nuxt/image',
+    '@nuxt/content',
+    '@nuxtjs/i18n'
+  ],
+
+  i18n: {
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: false,
+    locales: [{ code: 'en', language: 'en', file: 'en.json', name: 'English' }]
+  },
 
   image: {
     cloudinary: {

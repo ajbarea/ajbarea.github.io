@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+import LanguageSelector from './LanguageSelector.vue'
 import ThemeToggle from './ThemeToggle.vue'
 
 const isMobileMenuOpen = ref(false)
@@ -44,16 +45,18 @@ function closeMobileMenu() {
             :key="link.path"
             :to="link.path"
             class="px-4 py-2.5 min-h-[44px] flex items-center rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
-            active-class="!text-primary-600 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-900/20"
+            active-class="!text-primary-700 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-900/20"
             :exact="link.path === '/'"
           >
             {{ link.name }}
           </NuxtLink>
+          <LanguageSelector class="ml-2" />
           <ThemeToggle class="ml-2" />
         </nav>
 
         <!-- Mobile Menu Button -->
         <div class="flex items-center md:hidden">
+          <LanguageSelector class="mr-2" />
           <ThemeToggle class="mr-2" />
           <button
             type="button"
@@ -121,7 +124,7 @@ function closeMobileMenu() {
             :key="link.path"
             :to="link.path"
             class="block px-4 py-3 min-h-[44px] rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-500"
-            active-class="!text-primary-600 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-900/20"
+            active-class="!text-primary-700 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-900/20"
             :exact="link.path === '/'"
             @click="closeMobileMenu"
           >
