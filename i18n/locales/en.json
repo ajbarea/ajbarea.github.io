@@ -9,15 +9,15 @@
     "select": "Select language"
   },
   "meta": {
-    "homeTitle": "AJ Barea | Software Engineer",
+    "homeTitle": "AJ Barea · Software Engineer",
     "homeDescription": "Software Engineer specializing in full-stack development, AI/ML, and cloud solutions. Currently completing MS in Software Engineering at RIT.",
     "homeOgDescription": "Portfolio showcasing projects, research, and technical expertise in software engineering, AI/ML, and cloud solutions.",
     "homeTwitterDescription": "Portfolio showcasing projects, research, and technical expertise.",
-    "resumeTitle": "Resume | AJ Barea",
+    "resumeTitle": "Resume · AJ Barea",
     "resumeDescription": "AJ Barea's professional resume - Software Engineer with expertise in full-stack development, AI/ML, and cloud solutions.",
     "resumeOgDescription": "Professional resume showcasing software engineering experience, research, and technical skills.",
     "resumeTwitterDescription": "Professional resume showcasing software engineering experience, research, and technical skills.",
-    "projectsTitle": "Projects | AJ Barea",
+    "projectsTitle": "Projects · AJ Barea",
     "projectsDescription": "Explore AJ Barea's portfolio of software projects including AI/ML applications, full-stack development, cloud solutions, and research work.",
     "projectsTwitterDescription": "Explore AJ Barea's portfolio of software projects including AI/ML applications, full-stack development, and cloud solutions."
   },
