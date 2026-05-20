@@ -8,13 +8,6 @@ export const hackathons: Hackathon[] = [
     date: 'May 2026',
     durationHours: 24,
     type: 'solo',
-    description:
-      'Multi-domain support-triage agent: routes tickets across HackerRank, Claude, and Visa corpuses with corpus-grounded responses, async batching, and prompt-injection defense.',
-    result: 'Rank 11 / 1349',
-    metrics: [
-      '100% on every graded column of the labeled sample (10 tickets)',
-      '29/29 on the production batch in 4 minutes'
-    ],
     technologies: ['Claude Opus', 'Anthropic Async Batch API', 'Python', 'Pydantic', 'uv'],
     links: {
       event: 'https://www.hackerrank.com/hackerrank-orchestrate-may26',
@@ -31,9 +24,6 @@ export const hackathons: Hackathon[] = [
     date: 'Feb 2026',
     durationHours: 24,
     type: 'team',
-    description:
-      'Cosmic Ritual: BioRadio EMG gestures drive a real-time chord engine. Contributed the gesture classifier, MIDI engine (velocity sustain, non-blocking playback, O(1) chord lookup), GUI music mode, and the cosmic-horror themed Zensical docs site.',
-    result: 'Best AI Model',
     technologies: [
       'Python',
       'MIDI',

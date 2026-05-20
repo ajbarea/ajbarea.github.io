@@ -2,14 +2,16 @@ import { useToast } from './useToast'
 
 export function useClipboard() {
   const toast = useToast()
+  const { t } = useI18n()
 
-  async function copy(text: string, successMessage = 'Copied to clipboard!') {
+  async function copy(text: string, successMessage?: string) {
+    const successMsg = successMessage ?? t('clipboard.copied')
+    const failureMsg = t('clipboard.failed')
     try {
       await navigator.clipboard.writeText(text)
-      toast.success(successMessage)
+      toast.success(successMsg)
       return true
     } catch {
-      // Fallback for older browsers
       const textArea = document.createElement('textarea')
       textArea.value = text
       textArea.style.position = 'fixed'
@@ -21,10 +23,10 @@ export function useClipboard() {
 
       try {
         document.execCommand('copy')
-        toast.success(successMessage)
+        toast.success(successMsg)
         return true
       } catch {
-        toast.error('Failed to copy to clipboard')
+        toast.error(failureMsg)
         return false
       } finally {
         textArea.remove()
@@ -33,7 +35,7 @@ export function useClipboard() {
   }
 
   async function copyEmail(email: string) {
-    return copy(email, `Email copied: ${email}`)
+    return copy(email, t('clipboard.emailCopied', { email }))
   }
 
   return {

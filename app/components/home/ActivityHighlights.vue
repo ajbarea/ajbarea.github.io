@@ -1,17 +1,79 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import type { ActivityHighlight } from '~/types'
+import { activityHighlightRefs } from '~/data/highlights'
+import { publications } from '~/data/publications'
+import { hackathons } from '~/data/hackathons'
+import { conferences } from '~/data/conferences'
 
-interface Props {
-  highlights: ActivityHighlight[]
-}
-
-defineProps<Props>()
+const { t, te } = useI18n()
 
 const kindColor: Record<ActivityHighlight['kind'], string> = {
   publication: 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300',
   hackathon: 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300',
   conference: 'bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300'
 }
+
+function firstSentence(text: string): string {
+  const match = text.match(/^[^.!?]+[.!?]/)
+  return match ? match[0].trim() : text
+}
+
+const highlights = computed<ActivityHighlight[]>(() => {
+  const items: ActivityHighlight[] = []
+  for (const ref of activityHighlightRefs) {
+    const titleOverride = `highlights.overrides.${ref.id}.title`
+    const descOverride = `highlights.overrides.${ref.id}.description`
+
+    if (ref.kind === 'publication') {
+      const p = publications.find((x) => x.id === ref.id)
+      if (!p) continue
+      items.push({
+        id: p.id,
+        kind: 'publication',
+        title: te(titleOverride) ? t(titleOverride) : t(`publications.${p.id}.title`),
+        meta: `${p.venue} · ${p.year}`,
+        description: te(descOverride)
+          ? t(descOverride)
+          : firstSentence(t(`publications.${p.id}.abstract`)),
+        result: p.doi
+          ? t('publications.statuses.doi')
+          : p.status === 'accepted'
+            ? t('publications.statuses.accepted')
+            : undefined,
+        url: p.url
+      })
+    } else if (ref.kind === 'hackathon') {
+      const h = hackathons.find((x) => x.id === ref.id)
+      if (!h) continue
+      items.push({
+        id: h.id,
+        kind: 'hackathon',
+        title: te(titleOverride) ? t(titleOverride) : h.name,
+        meta: `${t(`hackathons.types.${h.type}`)} · ${h.organizer} · ${h.date}`,
+        description: te(descOverride)
+          ? t(descOverride)
+          : firstSentence(t(`hackathons.${h.id}.description`)),
+        result: t(`hackathons.${h.id}.result`),
+        url: h.links.docs || h.links.repo || h.links.linkedin
+      })
+    } else {
+      const c = conferences.find((x) => x.id === ref.id)
+      if (!c) continue
+      items.push({
+        id: c.id,
+        kind: 'conference',
+        title: te(titleOverride) ? t(titleOverride) : t(`conferences.${c.id}.title`),
+        meta: `${t(`conferences.formats.${c.format}`)} · ${c.name} · ${c.date}`,
+        description: te(descOverride)
+          ? t(descOverride)
+          : firstSentence(t(`conferences.${c.id}.description`)),
+        url: c.writeupUrl || c.eventUrl
+      })
+    }
+  }
+  return items
+})
 </script>
 
 <template>

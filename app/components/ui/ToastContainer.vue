@@ -9,7 +9,7 @@ const { toasts, remove } = useToast()
     <section
       class="fixed bottom-4 right-4 z-50 flex flex-col gap-2 pointer-events-none"
       aria-live="polite"
-      aria-label="Notifications"
+      :aria-label="$t('toast.ariaLabel')"
     >
       <TransitionGroup name="toast">
         <div
@@ -73,7 +73,7 @@ const { toasts, remove } = useToast()
 
           <button
             class="ml-auto p-1 rounded hover:bg-white/20 transition-colors"
-            aria-label="Dismiss notification"
+            :aria-label="$t('toast.dismiss')"
             @click="remove(toast.id)"
           >
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

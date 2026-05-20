@@ -40,17 +40,15 @@ function getStatusBadgeClass(status: Publication['status']): string {
   return classes[status]
 }
 
+const { t } = useI18n()
+
 function getStatusLabel(status: Publication['status']): string {
-  const labels: Record<Publication['status'], string> = {
-    published: 'Published',
-    'under-review': 'Under Review',
-    accepted: 'Accepted'
-  }
-  return labels[status]
+  return t(`publications.statuses.${status}`)
 }
 
 function formatAuthorsWithHighlight(authors: string[]): { text: string; highlighted: boolean }[] {
   const result: { text: string; highlighted: boolean }[] = []
+  const andConnector = t('publications.list.andConnector')
 
   authors.forEach((author, index) => {
     const isHighlighted = author === props.highlightAuthor
@@ -61,7 +59,7 @@ function formatAuthorsWithHighlight(authors: string[]): { text: string; highligh
 
     if (!isLast) {
       if (isSecondToLast && authors.length > 1) {
-        result.push({ text: ', and ', highlighted: false })
+        result.push({ text: andConnector, highlighted: false })
       } else {
         result.push({ text: ', ', highlighted: false })
       }
@@ -92,7 +90,7 @@ function requestPaper(_pub: Publication): void {
           d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
         />
       </svg>
-      Publications
+      {{ $t('resume.sections.publications') }}
     </h2>
     <div class="space-y-4">
       <article
@@ -103,7 +101,7 @@ function requestPaper(_pub: Publication): void {
         <!-- Title and Status Badge -->
         <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
           <h3 class="text-base font-semibold text-gray-900 dark:text-white flex-1">
-            {{ pub.title }}
+            {{ $t('publications.' + pub.id + '.title') }}
           </h3>
           <span
             :class="[
@@ -151,7 +149,7 @@ function requestPaper(_pub: Publication): void {
             rel="noopener noreferrer"
             class="text-primary-600 dark:text-primary-400 hover:underline"
           >
-            DOI: {{ pub.doi }}
+            {{ $t('publications.list.doiPrefix') }} {{ pub.doi }}
           </a>
           <a
             v-if="pub.url"
@@ -168,7 +166,7 @@ function requestPaper(_pub: Publication): void {
                 d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
               />
             </svg>
-            View
+            {{ $t('publications.list.view') }}
           </a>
           <!-- Request Paper button for under-review papers -->
           <button
@@ -185,12 +183,12 @@ function requestPaper(_pub: Publication): void {
                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
               />
             </svg>
-            Request Paper
+            {{ $t('publications.list.requestPaper') }}
           </button>
         </div>
 
         <!-- Expandable Abstract -->
-        <div v-if="pub.abstract">
+        <div>
           <button
             type="button"
             class="flex items-center gap-1 text-sm text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
@@ -210,7 +208,11 @@ function requestPaper(_pub: Publication): void {
                 d="M9 5l7 7-7 7"
               />
             </svg>
-            {{ isExpanded(pub.id) ? 'Hide Abstract' : 'Show Abstract' }}
+            {{
+              isExpanded(pub.id)
+                ? $t('publications.list.hideAbstract')
+                : $t('publications.list.showAbstract')
+            }}
           </button>
           <Transition
             enter-active-class="transition-all duration-200 ease-out"
@@ -224,7 +226,7 @@ function requestPaper(_pub: Publication): void {
               <p
                 class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed pl-4 border-l-2 border-primary-200 dark:border-primary-700"
               >
-                {{ pub.abstract }}
+                {{ $t('publications.' + pub.id + '.abstract') }}
               </p>
             </div>
           </Transition>

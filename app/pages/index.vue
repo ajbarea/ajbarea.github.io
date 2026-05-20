@@ -2,7 +2,6 @@
 import { profile } from '~/data/profile'
 import { timelineEntries } from '~/data/timeline'
 import { skillCategories } from '~/data/skills'
-import { activityHighlights } from '~/data/highlights'
 
 const { t } = useI18n()
 
@@ -36,7 +35,7 @@ useHead(() => ({
     <HomeExperienceTimeline :entries="timelineEntries" />
 
     <!-- Selected Activity 2026 -->
-    <HomeActivityHighlights :highlights="activityHighlights" />
+    <HomeActivityHighlights />
 
     <!-- Expertise Grid Section -->
     <HomeExpertiseGrid :categories="skillCategories" />

@@ -93,13 +93,11 @@ export interface HonorAward {
 export interface Publication {
   id: string
   authors: string[]
-  title: string
   venue: string
   year: number
   status: 'published' | 'under-review' | 'accepted'
   doi?: string
   url?: string
-  abstract?: string
   keywords?: string[]
 }
 
@@ -163,8 +161,6 @@ export interface Conference {
   venue: string
   date: string
   format: 'poster' | 'oral' | 'workshop-paper' | 'talk' | 'demo'
-  title: string
-  description: string
   posterNumber?: string
   writeupUrl?: string
   posterUrl?: string
@@ -192,9 +188,6 @@ export interface Hackathon {
   date: string // e.g. "Feb 2026"
   durationHours?: number
   type: 'solo' | 'team'
-  description: string
-  result: string
-  metrics?: string[]
   technologies: string[]
   links: {
     event?: string

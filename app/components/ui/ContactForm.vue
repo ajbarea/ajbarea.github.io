@@ -13,6 +13,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const toast = useToast()
 const clipboard = useClipboard()
+const { t } = useI18n()
 
 const form = ref({
   email: '',
@@ -26,20 +27,15 @@ const isValid = computed(() => {
   return form.value.message.trim().length > 0
 })
 
-// Web3Forms access key - get yours at https://web3forms.com
 const WEB3FORMS_ACCESS_KEY = useRuntimeConfig().public.web3formsKey || ''
 
 async function copyEmailFallback() {
-  await clipboard.copy(
-    props.email,
-    `Email copied: ${props.email} - Please send your message directly!`
-  )
+  await clipboard.copy(props.email, t('contactForm.copyEmailFallback', { email: props.email }))
 }
 
 async function handleSubmit() {
   if (!isValid.value || isSubmitting.value) return
 
-  // If Web3Forms isn't configured, copy email to clipboard
   if (!WEB3FORMS_ACCESS_KEY) {
     await copyEmailFallback()
     return
@@ -68,10 +64,9 @@ async function handleSubmit() {
 
     if (result.success) {
       isSuccess.value = true
-      toast.success("Message sent! I'll get back to you soon.")
+      toast.success(t('contactForm.toastSuccess'))
       form.value = { email: '', message: '' }
 
-      // Reset success state after a delay
       setTimeout(() => {
         isSuccess.value = false
       }, 5000)
@@ -79,7 +74,7 @@ async function handleSubmit() {
       throw new Error(result.message || 'Failed to send message')
     }
   } catch (error) {
-    toast.error('Failed to send. Email copied to clipboard!')
+    toast.error(t('contactForm.toastError'))
     console.error('Contact form error:', error)
     await copyEmailFallback()
   } finally {
@@ -100,18 +95,21 @@ function copyEmail() {
           for="contact-email"
           class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
         >
-          Your Email <span class="text-gray-500 dark:text-gray-400">(optional)</span>
+          {{ $t('contactForm.emailLabel') }}
+          <span class="text-gray-500 dark:text-gray-400">{{
+            $t('contactForm.emailOptional')
+          }}</span>
         </label>
         <input
           id="contact-email"
           v-model="form.email"
           type="email"
-          placeholder="you@example.com"
+          :placeholder="$t('contactForm.emailPlaceholder')"
           autocomplete="email"
           class="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
         />
         <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
-          Include if you'd like a response
+          {{ $t('contactForm.emailHelp') }}
         </p>
       </div>
 
@@ -120,14 +118,15 @@ function copyEmail() {
           for="contact-message"
           class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
         >
-          Message <span class="text-red-500">*</span>
+          {{ $t('contactForm.messageLabel') }}
+          <span class="text-red-500">{{ $t('contactForm.messageRequired') }}</span>
         </label>
         <textarea
           id="contact-message"
           v-model="form.message"
           rows="4"
           required
-          placeholder="Hi AJ, I wanted to reach out about..."
+          :placeholder="$t('contactForm.messagePlaceholder')"
           class="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none"
         />
       </div>
@@ -160,7 +159,7 @@ function copyEmail() {
             d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
           />
         </svg>
-        <span>{{ isSubmitting ? 'Sending...' : 'Send Message' }}</span>
+        <span>{{ isSubmitting ? $t('contactForm.sending') : $t('contactForm.sendMessage') }}</span>
       </button>
     </form>
 
@@ -183,9 +182,11 @@ function copyEmail() {
           />
         </svg>
       </div>
-      <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Message Sent!</h3>
+      <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+        {{ $t('contactForm.successHeading') }}
+      </h3>
       <p class="text-gray-600 dark:text-gray-400">
-        Thanks for reaching out. I'll get back to you soon.
+        {{ $t('contactForm.successBody') }}
       </p>
     </div>
 
@@ -195,7 +196,7 @@ function copyEmail() {
       </div>
       <div class="relative flex justify-center text-sm">
         <span class="px-3 bg-white dark:bg-gray-900 text-gray-500 dark:text-gray-400">
-          or email directly
+          {{ $t('contactForm.divider') }}
         </span>
       </div>
     </div>
@@ -214,7 +215,9 @@ function copyEmail() {
         />
       </svg>
       <span class="font-medium">{{ email }}</span>
-      <span class="text-gray-500 dark:text-gray-400 text-sm">(click to copy)</span>
+      <span class="text-gray-500 dark:text-gray-400 text-sm">{{
+        $t('contactForm.clickToCopy')
+      }}</span>
     </button>
   </div>
 </template>
