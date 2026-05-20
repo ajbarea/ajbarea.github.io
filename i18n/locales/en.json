@@ -209,8 +209,8 @@
       "description": "Intelligent news aggregation system using NLP for content classification and summarization."
     },
     "security-eval": {
-      "title": "ML Security Evaluation System",
-      "description": "Framework for evaluating security vulnerabilities in machine learning models."
+      "title": "Security Evaluation System",
+      "description": "Windows security assessment tool that scores system metrics (patches, ports, firewall, antivirus) via Python rules, a CLIPS expert system, ML neural networks, or federated learning."
     },
     "aws-image-translator": {
       "title": "AWS Image Translator",

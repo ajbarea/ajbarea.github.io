@@ -213,8 +213,8 @@
       "description": "基于NLP的内容分类与摘要的智能新闻聚合系统"
     },
     "security-eval": {
-      "title": "机器学习安全评估系统",
-      "description": "机器学习模型安全性漏洞评估框架"
+      "title": "安全评估系统",
+      "description": "Windows 安全评估工具。通过 Python 规则、CLIPS 专家系统、神经网络或联邦学习，对系统指标（补丁、端口、防火墙、杀毒）进行评分。"
     },
     "aws-image-translator": {
       "title": "AWS 图像翻译器",

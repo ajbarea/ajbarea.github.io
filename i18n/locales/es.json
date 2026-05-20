@@ -209,8 +209,8 @@
       "description": "Sistema inteligente de agregación de noticias que usa PLN para clasificación y resumen de contenido."
     },
     "security-eval": {
-      "title": "Sistema de Evaluación de Seguridad en ML",
-      "description": "Framework para evaluar vulnerabilidades de seguridad en modelos de aprendizaje automático."
+      "title": "Sistema de Evaluación de Seguridad",
+      "description": "Herramienta de evaluación de seguridad para Windows que puntúa métricas del sistema (parches, puertos, firewall, antivirus) mediante reglas en Python, un sistema experto CLIPS, redes neuronales o aprendizaje federado."
     },
     "aws-image-translator": {
       "title": "Traductor de Imágenes en AWS",

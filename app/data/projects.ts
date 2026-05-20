@@ -66,8 +66,8 @@ export const projects: Project[] = [
   },
   {
     id: 'security-eval',
-    title: 'ML Security Evaluation System',
-    technologies: ['Python', 'PyTorch', 'scikit-learn', 'Docker', 'AWS'],
+    title: 'Security Evaluation System',
+    technologies: ['Python', 'FastAPI', 'CLIPS', 'PyTorch', 'Next.js'],
     types: ['ai-ml', 'federated-learning'],
     thumbnailUrl: 'https://res.cloudinary.com/dumwa1w5x/image/upload/v1767632723/ses_mfbacm.png',
     githubUrl: 'https://github.com/ajbarea/ses',
