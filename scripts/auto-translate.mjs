@@ -76,21 +76,32 @@ function validate(source, target) {
   return null
 }
 
+const failures = []
+
 async function translate(source, targetLang, path) {
+  let lastResult = null
+  let lastReason = null
   for (let attempt = 1; attempt <= 3; attempt++) {
     let result
     try {
       result = await callOllama(source, targetLang)
     } catch (err) {
       console.warn(`  ${path} attempt ${attempt} HTTP error: ${err.message}`)
-      if (attempt === 3) throw err
+      if (attempt === 3) {
+        failures.push({ path, source, reason: `HTTP error: ${err.message}` })
+        return source
+      }
       continue
     }
     const reason = validate(source, result)
     if (!reason) return result
+    lastResult = result
+    lastReason = reason
     console.warn(`  ${path} attempt ${attempt} rejected (${reason}); retrying`)
   }
-  throw new Error(`${path}: failed after 3 attempts`)
+  failures.push({ path, source, qwen: lastResult, reason: lastReason })
+  console.warn(`  ${path} ALL retries failed — keeping English source as placeholder`)
+  return source
 }
 
 function shortPreview(s) {
@@ -183,6 +194,17 @@ async function main() {
   await writeFile(draftPath, JSON.stringify(out, null, 2) + '\n', 'utf8')
   console.log(`\nWrote ${draftPath}`)
   console.log(`Elapsed: ${elapsedSec}s`)
+
+  if (failures.length > 0) {
+    console.log(`\n${failures.length} key(s) kept English as a placeholder (manual review needed):`)
+    for (const f of failures) {
+      console.log(`  - ${f.path}: ${f.reason}`)
+      if (f.qwen) console.log(`      qwen output: ${shortPreview(f.qwen)}`)
+    }
+  } else {
+    console.log(`\nAll keys translated cleanly.`)
+  }
+
   const existingFinal = resolve(LOCALES, `${target}.json`)
   if (existsSync(existingFinal)) {
     console.log(`\nVerify by diffing against your committed file:`)
