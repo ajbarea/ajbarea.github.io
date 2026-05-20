@@ -36,6 +36,6 @@ Screenshot*.png
 # AJ working-doc convention: COMMITS.md is always local
 COMMITS.md
 
-# Cloudinary transition: composited project thumbnails ship locally as a fallback.
-# After upload + thumbnailUrl swap in app/data/projects.ts, uncomment the line below.
-# public/images/projects/
+# Project thumbnails composited locally and uploaded to Cloudinary; the source
+# webp files live under design-assets/ and are not tracked here.
+public/images/projects/

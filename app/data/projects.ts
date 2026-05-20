@@ -17,7 +17,8 @@ export const projects: Project[] = [
       'uv'
     ],
     types: ['ai-ml'],
-    thumbnailUrl: '/images/projects/kourai-khryseai.webp',
+    thumbnailUrl:
+      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779282973/kourai-khryseai_nrxqnu.webp',
     docsUrl: 'https://ajbarea.github.io/kourai-khryseai/',
     githubUrl: 'https://github.com/ajbarea/kourai-khryseai',
     featured: true
@@ -27,7 +28,8 @@ export const projects: Project[] = [
     title: 'VelocityFL',
     technologies: ['Rust', 'Python', 'Typer', 'maturin', 'Zensical', 'uv'],
     types: ['ai-ml'],
-    thumbnailUrl: '/images/projects/velocity-fl.webp',
+    thumbnailUrl:
+      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779282974/velocity-fl_dukewt.webp',
     docsUrl: 'https://ajbarea.github.io/vFL/',
     githubUrl: 'https://github.com/ajbarea/vFL',
     featured: true
@@ -37,7 +39,8 @@ export const projects: Project[] = [
     title: 'Phalanx-FL',
     technologies: ['Python', 'Flower', 'Docker', 'Redis', 'Celery', 'uv'],
     types: ['ai-ml'],
-    thumbnailUrl: '/images/projects/phalanx-fl.webp',
+    thumbnailUrl:
+      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779282973/phalanx-fl_hlq7gn.webp',
     docsUrl: 'https://ajbarea.github.io/phalanx-fl/',
     githubUrl: 'https://github.com/ajbarea/phalanx-fl',
     featured: true
@@ -47,7 +50,8 @@ export const projects: Project[] = [
     title: 'Techne',
     technologies: ['Claude Code', 'Python', 'TOML', 'Bash'],
     types: ['ai-ml'],
-    thumbnailUrl: '/images/projects/techne.webp',
+    thumbnailUrl:
+      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779282974/techne_m0vadx.webp',
     githubUrl: 'https://github.com/ajbarea/techne',
     featured: true
   },
