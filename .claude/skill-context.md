@@ -11,7 +11,7 @@ tooling changes.
 - language: TypeScript (Nuxt 4 + Vue 3) — no Python, no Rust
 - cli_entrypoint: `npm run <script>` (see `package.json` `scripts`)
 - runner_module: no Python runner; npm scripts drive the pipeline
-- default_branch: `master` (not `main` — deploy.yml triggers on push to master; rename pending a separate decision)
+- default_branch: `main` (renamed from `master` 2026-05-20; deploy.yml triggers on push)
 - has: Nuxt 4, Vue 3, Tailwind v4, Pinia, Nuxt Content, @nuxtjs/i18n (four locales — en / es / ja / zh), ESLint flat config, Prettier, Vitest, Playwright + @axe-core/playwright, PhotoSwipe + Cloudinary CDN, local-LLM translation pipeline via Ollama (Qwen2.5-7B-Instruct)
 
 ## audit
@@ -64,7 +64,7 @@ Tool error markers (extend the default grep set):
 - `playwright` (e2e failures)
 - `axe` / `accessibility` (a11y violations from `scripts/audit*.mjs`)
 
-Expected external PR checks: none configured (deploy.yml is push-on-master only — PRs don't fire CI today). Worth filing as a separate concern.
+Expected external PR checks: none configured today (deploy.yml is push-on-main only — PRs don't fire CI). Worth filing as a separate concern.
 
 ## slop_ground_truth
 
@@ -97,7 +97,7 @@ Subagent scan-area split:
 
 ## docs_site
 
-There is no separate docs site for this repo — the site **is** the docs surface. The portfolio publishes to `https://ajbarea.github.io/` via GitHub Pages from the `master` branch.
+There is no separate docs site for this repo — the site **is** the docs surface. The portfolio publishes to `https://ajbarea.github.io/` via GitHub Pages from the `main` branch.
 
 - config: `nuxt.config.ts` (SSG mode + i18n + content routing)
 - workflow: `.github/workflows/deploy.yml`
