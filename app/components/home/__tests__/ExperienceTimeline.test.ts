@@ -4,9 +4,13 @@ import ExperienceTimeline from '../ExperienceTimeline.vue'
 import TimelineEntry from '../TimelineEntry.vue'
 import type { TimelineEntry as TimelineEntryType } from '~/types'
 
+// Mock entries use real IDs from i18n/locales/en.json — TimelineEntry
+// reads its visible title/subtitle via $t('timeline.' + entry.id + '.title'),
+// so test mocks need IDs that have corresponding i18n keys. Generic
+// "entry-1" IDs render as the literal key string and fail assertions.
 const mockEntries: TimelineEntryType[] = [
   {
-    id: 'entry-1',
+    id: 'rit-gra',
     type: 'professional',
     title: 'Senior Developer',
     subtitle: 'Engineering Team',
@@ -19,7 +23,7 @@ const mockEntries: TimelineEntryType[] = [
     sortDate: '2024-01-01'
   },
   {
-    id: 'entry-2',
+    id: 'rit-ms',
     type: 'education',
     title: 'Master of Science',
     subtitle: 'Computer Science',
@@ -32,7 +36,7 @@ const mockEntries: TimelineEntryType[] = [
     sortDate: '2022-08-01'
   },
   {
-    id: 'entry-3',
+    id: 'phiquest',
     type: 'professional',
     title: 'Junior Developer',
     subtitle: 'Development Team',
@@ -67,10 +71,13 @@ describe('ExperienceTimeline', () => {
       }
     })
 
+    // Assertions match the strings the component will actually render —
+    // $t('timeline.<id>.title') resolved against the real en.json. If
+    // those locale strings get renamed later, this test fails loudly.
     const titles = wrapper.findAll('h3')
-    expect(titles.at(0)?.text()).toContain('Senior Developer')
+    expect(titles.at(0)?.text()).toContain('Graduate Research Assistant')
     expect(titles.at(1)?.text()).toContain('Master of Science')
-    expect(titles.at(2)?.text()).toContain('Junior Developer')
+    expect(titles.at(2)?.text()).toContain('UX Developer')
   })
 
   it('displays "Current" badge for active positions', () => {

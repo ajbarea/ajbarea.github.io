@@ -10,6 +10,7 @@ export default defineVitestConfig({
     },
     include: ['app/**/__tests__/**/*.test.ts'],
     exclude: ['e2e/**', 'node_modules/**'],
+    setupFiles: ['./vitest.setup.ts'],
     pool: 'forks'
     // Forward-compat note: when the runtime moves to Node 25+, re-add
     // `poolOptions.forks.execArgv: ['--no-webstorage']` to suppress the
