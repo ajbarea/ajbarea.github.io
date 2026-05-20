@@ -7,21 +7,21 @@ interface Props {
   title?: string
 }
 
-withDefaults(defineProps<Props>(), {
-  title: 'Experience & Education'
-})
+defineProps<Props>()
 </script>
 
 <template>
-  <section class="py-6 sm:py-8" aria-labelledby="timeline-heading">
+  <section class="mb-12" aria-labelledby="timeline-heading">
     <h2
       id="timeline-heading"
-      class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6"
+      class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6"
     >
-      {{ title }}
+      {{ title || $t('sections.experience') }}
     </h2>
-    <div class="relative" role="list" aria-label="Timeline entries">
-      <TimelineEntryComponent v-for="entry in entries" :key="entry.id" :entry="entry" />
-    </div>
+    <ul class="relative list-none p-0 m-0" :aria-label="$t('sections.experienceAria')">
+      <li v-for="entry in entries" :key="entry.id" class="list-none last:[&>article]:pb-0">
+        <TimelineEntryComponent :entry="entry" />
+      </li>
+    </ul>
   </section>
 </template>

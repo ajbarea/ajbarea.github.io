@@ -42,12 +42,12 @@ function getCategoryBgColor(categoryId: string): string {
 </script>
 
 <template>
-  <section class="py-6 sm:py-8" aria-labelledby="expertise-heading">
+  <section class="mb-12" aria-labelledby="expertise-heading">
     <h2
       id="expertise-heading"
-      class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6"
+      class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6"
     >
-      Technical Expertise
+      {{ $t('sections.expertise') }}
     </h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
@@ -63,12 +63,17 @@ function getCategoryBgColor(categoryId: string): string {
             aria-hidden="true"
           ></div>
           <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white">
-            {{ category.label }}
+            {{ $t('skills.categories.' + category.id) }}
           </h3>
         </div>
 
         <!-- Skills Grid -->
-        <ul class="flex flex-wrap gap-1.5 sm:gap-2" :aria-label="`${category.label} skills`">
+        <ul
+          class="flex flex-wrap gap-1.5 sm:gap-2"
+          :aria-label="
+            $t('sections.expertiseSkillsAria', { category: $t('skills.categories.' + category.id) })
+          "
+        >
           <li v-for="skill in category.skills" :key="skill.name">
             <button
               type="button"
@@ -78,7 +83,9 @@ function getCategoryBgColor(categoryId: string): string {
                 skill.docUrl ? 'cursor-pointer' : 'cursor-default'
               ]"
               :aria-label="
-                skill.docUrl ? `${skill.name} - Click to view documentation` : skill.name
+                skill.docUrl
+                  ? $t('sections.expertiseSkillDocAria', { skill: skill.name })
+                  : skill.name
               "
               @click="openDocumentation(skill.docUrl)"
               @mouseenter="hoveredSkill = skill.name"
@@ -109,7 +116,7 @@ function getCategoryBgColor(categoryId: string): string {
                   class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-gray-900 dark:bg-gray-700 rounded whitespace-nowrap z-10"
                   role="tooltip"
                 >
-                  View docs
+                  {{ $t('sections.expertiseTooltip') }}
                   <span
                     class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-gray-700"
                     aria-hidden="true"

@@ -2,50 +2,27 @@
 import { profile } from '~/data/profile'
 import { timelineEntries } from '~/data/timeline'
 import { skillCategories } from '~/data/skills'
+import { activityHighlights } from '~/data/highlights'
 
-useHead({
-  title: 'AJ Barea | Software Engineer',
+const { t } = useI18n()
+
+useHead(() => ({
+  title: t('meta.homeTitle'),
   meta: [
-    {
-      name: 'description',
-      content:
-        'Software Engineer specializing in full-stack development, AI/ML, and cloud solutions. Currently completing MS in Software Engineering at RIT.'
-    },
-    {
-      property: 'og:title',
-      content: 'AJ Barea | Software Engineer'
-    },
-    {
-      property: 'og:description',
-      content:
-        'Portfolio showcasing projects, research, and technical expertise in software engineering, AI/ML, and cloud solutions.'
-    },
+    { name: 'description', content: t('meta.homeDescription') },
+    { property: 'og:title', content: t('meta.homeTitle') },
+    { property: 'og:description', content: t('meta.homeOgDescription') },
     {
       property: 'og:image',
       content: 'https://res.cloudinary.com/dumwa1w5x/image/upload/q_auto,f_auto/portfolio_ujli4t'
     },
-    {
-      property: 'og:url',
-      content: 'https://ajbarea.github.io/'
-    },
-    {
-      property: 'og:type',
-      content: 'website'
-    },
-    {
-      name: 'twitter:card',
-      content: 'summary_large_image'
-    },
-    {
-      name: 'twitter:title',
-      content: 'AJ Barea | Software Engineer'
-    },
-    {
-      name: 'twitter:description',
-      content: 'Portfolio showcasing projects, research, and technical expertise.'
-    }
+    { property: 'og:url', content: 'https://ajbarea.github.io/' },
+    { property: 'og:type', content: 'website' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: t('meta.homeTitle') },
+    { name: 'twitter:description', content: t('meta.homeTwitterDescription') }
   ]
-})
+}))
 </script>
 
 <template>
@@ -57,6 +34,9 @@ useHead({
 
     <!-- Timeline Section -->
     <HomeExperienceTimeline :entries="timelineEntries" />
+
+    <!-- Selected Activity 2026 -->
+    <HomeActivityHighlights :highlights="activityHighlights" />
 
     <!-- Expertise Grid Section -->
     <HomeExpertiseGrid :categories="skillCategories" />

@@ -100,7 +100,7 @@ function copyEmail() {
           for="contact-email"
           class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
         >
-          Your Email <span class="text-gray-400 dark:text-gray-500">(optional)</span>
+          Your Email <span class="text-gray-500 dark:text-gray-400">(optional)</span>
         </label>
         <input
           id="contact-email"
@@ -214,7 +214,7 @@ function copyEmail() {
         />
       </svg>
       <span class="font-medium">{{ email }}</span>
-      <span class="text-gray-400 text-sm">(click to copy)</span>
+      <span class="text-gray-500 dark:text-gray-400 text-sm">(click to copy)</span>
     </button>
   </div>
 </template>

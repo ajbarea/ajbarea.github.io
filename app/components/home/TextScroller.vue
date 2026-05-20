@@ -27,18 +27,17 @@ const longestText = computed(() => props.texts.reduce((a, b) => (a.length > b.le
 
 <template>
   <span class="relative inline-flex items-center">
-    <!-- Invisible placeholder to reserve space for longest text -->
     <span class="invisible whitespace-nowrap" aria-hidden="true">{{ longestText }}</span>
-    <!-- Visible typed text positioned absolutely over placeholder -->
-    <span class="absolute left-0 text-primary-600 dark:text-primary-400 whitespace-nowrap">{{
-      displayText
-    }}</span>
-    <!-- Cursor positioned after the placeholder width -->
     <span
-      class="ml-0.5 w-0.5 h-6 bg-primary-600 dark:bg-primary-400 animate-pulse"
-      :class="{ 'opacity-100': isTyping, 'opacity-0': !isTyping }"
-      aria-hidden="true"
-    ></span>
+      class="absolute left-0 inline-flex items-center whitespace-nowrap text-primary-600 dark:text-primary-400"
+    >
+      <span>{{ displayText }}</span>
+      <span
+        class="ml-0.5 w-0.5 h-6 bg-primary-600 dark:bg-primary-400 motion-safe:animate-pulse"
+        :class="{ 'opacity-100': isTyping, 'opacity-0': !isTyping }"
+        aria-hidden="true"
+      ></span>
+    </span>
     <span class="sr-only">{{ texts.join(', ') }}</span>
   </span>
 </template>

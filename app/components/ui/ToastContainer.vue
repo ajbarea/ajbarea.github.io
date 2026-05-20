@@ -6,7 +6,7 @@ const { toasts, remove } = useToast()
 
 <template>
   <Teleport to="body">
-    <div
+    <section
       class="fixed bottom-4 right-4 z-50 flex flex-col gap-2 pointer-events-none"
       aria-live="polite"
       aria-label="Notifications"
@@ -87,7 +87,7 @@ const { toasts, remove } = useToast()
           </button>
         </div>
       </TransitionGroup>
-    </div>
+    </section>
   </Teleport>
 </template>
 

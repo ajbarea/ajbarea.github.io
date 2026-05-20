@@ -25,18 +25,18 @@ function getIconPath(icon: string): string {
 
 function getTypeColor(type: string): string {
   const colors: Record<string, string> = {
-    professional: 'bg-blue-500',
-    education: 'bg-green-500',
-    research: 'bg-purple-500',
-    teaching: 'bg-orange-500',
-    award: 'bg-yellow-500'
+    professional: 'bg-blue-600',
+    education: 'bg-green-600',
+    research: 'bg-purple-600',
+    teaching: 'bg-orange-600',
+    award: 'bg-yellow-600'
   }
-  return colors[type] || 'bg-gray-500'
+  return colors[type] || 'bg-gray-600'
 }
 </script>
 
 <template>
-  <article class="relative pl-8 pb-6 sm:pb-8 last:pb-0" role="listitem">
+  <article class="relative pl-8 pb-6 sm:pb-8">
     <!-- Timeline line -->
     <div
       class="absolute left-3 top-3 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-700"
@@ -75,10 +75,17 @@ function getTypeColor(type: string): string {
             <span>{{ entry.title }}</span>
             <span
               v-if="entry.isCurrent"
-              class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-green-500 dark:bg-green-600 text-white shadow-sm"
+              class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-green-700 text-white shadow-sm"
               role="status"
             >
               Current
+            </span>
+            <span
+              v-else-if="entry.isIncoming"
+              class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-sky-100 text-sky-800 dark:bg-sky-900/40 dark:text-sky-300 ring-1 ring-inset ring-sky-200 dark:ring-sky-800"
+              role="status"
+            >
+              Incoming
             </span>
           </h3>
           <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">

@@ -50,7 +50,10 @@ defineProps<Props>()
           </div>
           <div class="text-sm text-gray-500 dark:text-gray-400 sm:text-right">
             <p>{{ edu.graduationDate }}</p>
-            <p class="font-medium text-gray-700 dark:text-gray-300">
+            <p
+              v-if="edu.gpa != null && edu.maxGpa != null"
+              class="font-medium text-gray-700 dark:text-gray-300"
+            >
               GPA: {{ edu.gpa.toFixed(2) }}/{{ edu.maxGpa.toFixed(1) }}
             </p>
           </div>

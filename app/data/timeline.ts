@@ -44,6 +44,16 @@ export const professionalExperience: ProfessionalExperience[] = [
 
 export const researchExperience: ResearchExperience[] = [
   {
+    id: 'ncsu-scads-2026',
+    title: 'Summer Research Scholar',
+    institution: 'NC State University · Laboratory for Analytic Sciences (LAS)',
+    project: 'SCADS (Summer Conference on Applied Data Science)',
+    startDate: 'May 2026',
+    endDate: 'Aug 2026',
+    bullets: [],
+    isCurrent: true
+  },
+  {
     id: 'rit-gra',
     title: 'Graduate Research Assistant',
     institution: 'Rochester Institute of Technology',
@@ -95,6 +105,34 @@ export const teachingExperience: TeachingExperience[] = [
 
 // Combined timeline entries for home page display
 const unsortedEntries: TimelineEntry[] = [
+  {
+    id: 'rit-phd-2026',
+    type: 'education' as TimelineEntryType,
+    title: 'Doctor of Philosophy',
+    subtitle: 'Computing and Information Sciences',
+    organization: 'Rochester Institute of Technology',
+    timeframe: 'Aug 2026 – Present',
+    description:
+      'PhD in Computing and Information Sciences continuing federated learning research with Dr. Leon Reznik.',
+    skills: ['Federated Learning', 'Distributed ML', 'Agentic AI', 'Research'],
+    icon: 'education',
+    isCurrent: false,
+    isIncoming: true,
+    sortDate: '2026-08-15'
+  },
+  {
+    id: 'ncsu-scads-2026',
+    type: 'research' as TimelineEntryType,
+    title: 'Summer Research Scholar',
+    subtitle: 'SCADS · Summer Conference on Applied Data Science',
+    organization: 'NC State · Laboratory for Analytic Sciences',
+    timeframe: 'May 2026 – Aug 2026',
+    description: 'Selected as a SCADS Summer Research Scholar at NC State LAS for summer 2026.',
+    skills: ['Applied Data Science', 'SCADS'],
+    icon: 'research',
+    isCurrent: true,
+    sortDate: '2026-05-01'
+  },
   {
     id: 'rit-gra',
     type: 'research' as TimelineEntryType,

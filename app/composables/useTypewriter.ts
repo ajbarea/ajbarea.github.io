@@ -54,6 +54,14 @@ export function useTypewriter(texts: string[], options: TypewriterOptions = {}) 
 
   function start() {
     if (texts.length === 0) return
+    if (
+      typeof window !== 'undefined' &&
+      window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+    ) {
+      displayText.value = texts[0] || ''
+      isTyping.value = false
+      return
+    }
     displayText.value = ''
     currentIndex.value = 0
     isTyping.value = true

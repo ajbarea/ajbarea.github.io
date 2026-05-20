@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 import type { Profile } from '~/types'
 import TextScroller from './TextScroller.vue'
@@ -10,6 +10,13 @@ interface Props {
 }
 
 defineProps<Props>()
+
+const { tm, rt } = useI18n()
+function resolveMessageArray(value: unknown): string[] {
+  return Array.isArray(value) ? value.map((item) => rt(item)) : []
+}
+const roles = computed(() => resolveMessageArray(tm('profile.roles')))
+const credibilityChips = computed(() => resolveMessageArray(tm('profile.credibilityChips')))
 
 const imageError = ref(false)
 const clipboard = useClipboard()
@@ -47,12 +54,12 @@ function getSocialIcon(platform: string): string {
       <NuxtLink
         to="/gallery"
         class="block relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full overflow-hidden ring-4 ring-primary-100 dark:ring-primary-900 shadow-xl transition-transform duration-300 hover:scale-105 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
-        aria-label="View photo gallery"
+        :aria-label="$t('hero.viewGalleryAria')"
       >
         <img
           v-if="!imageError"
           :src="profile.profileImage"
-          :alt="`Profile photo of ${profile.name}`"
+          :alt="$t('hero.profileImageAlt', { name: profile.name })"
           class="w-full h-full object-cover"
           loading="lazy"
           @error="handleImageError"
@@ -61,7 +68,7 @@ function getSocialIcon(platform: string): string {
           v-else
           class="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center"
           role="img"
-          :aria-label="`${profile.name} initials`"
+          :aria-label="$t('hero.profileInitialsAlt', { name: profile.name })"
         >
           <span class="text-4xl sm:text-5xl font-bold text-white" aria-hidden="true">
             {{
@@ -85,24 +92,71 @@ function getSocialIcon(platform: string): string {
         class="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4 min-h-[2rem]"
         aria-live="polite"
       >
-        <TextScroller :texts="profile.roles" />
+        <TextScroller :texts="roles" />
       </div>
+
+      <ul
+        v-if="credibilityChips.length > 0"
+        class="flex flex-wrap justify-center md:justify-start gap-2 mb-4"
+        role="list"
+        :aria-label="$t('hero.credentialsAria')"
+      >
+        <li
+          v-for="chip in credibilityChips"
+          :key="chip"
+          class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 ring-1 ring-inset ring-gray-200 dark:ring-gray-700"
+        >
+          {{ chip }}
+        </li>
+      </ul>
 
       <p
         class="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-2xl mb-6 leading-relaxed"
       >
-        {{ profile.summary }}
+        {{ $t('profile.summary') }}
       </p>
+
+      <!-- Primary + secondary CTAs -->
+      <div class="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-3 mb-6">
+        <NuxtLink
+          to="/projects"
+          class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary-600 hover:bg-primary-700 text-white text-base font-bold shadow-sm hover:shadow-md transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
+        >
+          {{ $t('hero.viewProjects') }}
+        </NuxtLink>
+        <a
+          href="https://ieeexplore.ieee.org/document/11366920/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1 text-sm font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded"
+        >
+          {{ $t('hero.latestPaper') }}
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            />
+          </svg>
+        </a>
+      </div>
 
       <!-- Social Links -->
       <nav
         class="flex items-center justify-center md:justify-start gap-3 sm:gap-4"
-        aria-label="Social media profiles"
+        :aria-label="$t('hero.socialAria')"
       >
         <template v-for="link in profile.socialLinks" :key="link.platform">
           <button
             v-if="link.platform === 'email'"
-            :aria-label="`Copy email address`"
+            :aria-label="$t('hero.copyEmailAria')"
             class="min-w-[44px] min-h-[44px] p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 hover:scale-110 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900 cursor-pointer"
             @click="handleEmailClick($event, profile.contact.email)"
           >

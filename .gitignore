@@ -27,3 +27,15 @@ logs
 playwright-report/
 test-results/
 lighthouse*.json
+
+# Scratch — local-only screenshots dropped at repo root for chat references
+Screenshot*.png
+*.scratch/
+*.tmp/
+
+# AJ working-doc convention: COMMITS.md is always local
+COMMITS.md
+
+# Cloudinary transition: composited project thumbnails ship locally as a fallback.
+# After upload + thumbnailUrl swap in app/data/projects.ts, uncomment the line below.
+# public/images/projects/

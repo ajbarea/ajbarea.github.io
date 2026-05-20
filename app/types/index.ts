@@ -27,6 +27,7 @@ export interface Profile {
   contact: ContactInfo
   socialLinks: SocialLink[]
   researchInterests?: string[]
+  credibilityChips?: string[]
 }
 
 // Education
@@ -36,8 +37,8 @@ export interface Education {
   institution: string
   location: string
   graduationDate: string
-  gpa: number
-  maxGpa: number
+  gpa?: number
+  maxGpa?: number
   relevantCoursework?: string[]
   capstoneResearch?: {
     title: string
@@ -143,9 +144,72 @@ export interface Project {
   types: ProjectType[]
   thumbnailUrl?: string
   demoUrl?: string
+  docsUrl?: string
   githubUrl?: string
   youtubeUrl?: string
   featured?: boolean
+}
+
+// Activity Highlight (curated entry for home page section)
+export interface ActivityHighlight {
+  id: string
+  kind: 'publication' | 'hackathon' | 'conference'
+  title: string
+  meta: string
+  description: string
+  result?: string
+  url?: string
+}
+
+// Conference (presented work)
+export interface Conference {
+  id: string
+  name: string
+  fullName?: string
+  venue: string
+  date: string
+  format: 'poster' | 'oral' | 'workshop-paper' | 'talk' | 'demo'
+  title: string
+  description: string
+  posterNumber?: string
+  writeupUrl?: string
+  posterUrl?: string
+  eventUrl?: string
+}
+
+// Workshop (attended training, research talks, etc.)
+export interface Workshop {
+  id: string
+  name: string
+  organizer: string
+  date: string
+  format: 'in-person' | 'virtual' | 'hybrid'
+  kind: 'training' | 'workshop' | 'research-talk'
+  topic: string
+  facilitator?: string
+  url?: string
+}
+
+// Hackathon
+export interface Hackathon {
+  id: string
+  name: string
+  organizer: string
+  date: string // e.g. "Feb 2026"
+  durationHours?: number
+  type: 'solo' | 'team'
+  description: string
+  result: string
+  metrics?: string[]
+  technologies: string[]
+  links: {
+    event?: string
+    repo?: string
+    demo?: string
+    docs?: string
+    linkedin?: string
+    video?: string
+  }
 }
 
 // Timeline Entry (union type for home page)
@@ -162,6 +226,7 @@ export interface TimelineEntry {
   skills?: string[]
   icon: string
   isCurrent: boolean
+  isIncoming?: boolean
   sortDate: string // ISO date for sorting
 }
 

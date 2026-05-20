@@ -2,6 +2,72 @@ import type { Project } from '~/types'
 
 export const projects: Project[] = [
   {
+    id: 'kourai-khryseai',
+    title: 'Kourai Khryseai',
+    description:
+      "Interactive multi-agent development system: ten specialized agents stream their reasoning, ask for guidance, and iterate live across terminal, pygame GUI with TTS, and a Ren'Py visual novel.",
+    longDescription:
+      'Κοῦραι Χρύσεαι ("Golden Maidens") is a collaborative multi-agent dev system. An orchestrator (Hephaestus) routes work to specialists (Metis for planning, Techne for coding, Dokimasia for testing, Kallos for review, Mneme for commit synthesis, and more). Agents share state via SQLite, communicate over the A2A Protocol, expose tools via MCP, and emit end-to-end traces through OpenTelemetry, Jaeger, and Prometheus. Three interfaces share the same backend: CLI REPL, pygame chat with voice synthesis, and an illustrated Ren\'Py visual novel.',
+    technologies: [
+      'Python',
+      'A2A Protocol',
+      'MCP',
+      'OpenTelemetry',
+      'Jaeger',
+      'Prometheus',
+      'SQLite',
+      'pygame',
+      "Ren'Py",
+      'uv'
+    ],
+    types: ['ai-ml'],
+    thumbnailUrl: '/images/projects/kourai-khryseai.webp',
+    docsUrl: 'https://ajbarea.github.io/kourai-khryseai/',
+    githubUrl: 'https://github.com/ajbarea/kourai-khryseai',
+    featured: true
+  },
+  {
+    id: 'velocity-fl',
+    title: 'VelocityFL',
+    description:
+      'Rust + Python federated learning orchestrator with paper-cited aggregation strategies and round-level / data-pipeline attack simulations.',
+    longDescription:
+      'A federated learning research platform with a Rust core (vfl-core) for aggregation, attack simulation, and round orchestration, plus a Python package (velocity) with a researcher-facing API and Typer CLI. Implements eight paper-cited aggregation strategies (FedAvg, FedProx, FedMedian, TrimmedMean, Krum, MultiKrum, Bulyan, GeometricMedian) with unit-test fixtures derived from each paper. Includes round-level attacks (model poisoning, sybil nodes, gaussian noise) and data-pipeline attacks (label flipping, targeted label flipping).',
+    technologies: ['Rust', 'Python', 'Typer', 'maturin', 'Zensical', 'uv'],
+    types: ['ai-ml'],
+    thumbnailUrl: '/images/projects/velocity-fl.webp',
+    docsUrl: 'https://ajbarea.github.io/vFL/',
+    githubUrl: 'https://github.com/ajbarea/vFL',
+    featured: true
+  },
+  {
+    id: 'phalanx-fl',
+    title: 'Phalanx-FL',
+    description:
+      'Solo federated learning execution and research framework: configurable aggregation, Byzantine fault tolerance, adversarial attack simulation, JSON-driven experiments.',
+    longDescription:
+      'A full-stack federated learning platform built solo. Define experiments in JSON, execute with one command, and compare results across aggregation strategies. Includes a CLI (intellifl-dev) plus a full stack of API, frontend, Redis, and Celery for orchestrating larger simulation runs. Built on Flower with modern Python tooling (uv, Docker).',
+    technologies: ['Python', 'Flower', 'Docker', 'Redis', 'Celery', 'uv'],
+    types: ['ai-ml'],
+    thumbnailUrl: '/images/projects/phalanx-fl.webp',
+    docsUrl: 'https://ajbarea.github.io/phalanx-fl/',
+    githubUrl: 'https://github.com/ajbarea/phalanx-fl',
+    featured: true
+  },
+  {
+    id: 'techne',
+    title: 'Techne',
+    description:
+      'Eight Claude Code skills installable as a single /plugin: audit builds, tame CI noise, hunt doc/code drift, keep sister repos in lockstep.',
+    longDescription:
+      'A Claude Code plugin shipping eight skills: techne:audit (make-target reconciliation), techne:auto-commit (working-tree → structured COMMITS.md plan), techne:ci-audit (GitHub Actions log triage with in-repo fixes), techne:deslop and techne:reslop (AI-slop comment hunting and grounded rewrites), techne:docs-site (Zensical site maintenance), techne:docsync (doc claims vs code reality), and techne:sisters (cross-repo drift across ~/.claude/techne.toml). Installed via /plugin marketplace add.',
+    technologies: ['Claude Code', 'Python', 'TOML', 'Bash'],
+    types: ['ai-ml'],
+    thumbnailUrl: '/images/projects/techne.webp',
+    githubUrl: 'https://github.com/ajbarea/techne',
+    featured: true
+  },
+  {
     id: 'news-aggregator',
     title: 'AI News Aggregator',
     description:
@@ -55,7 +121,7 @@ export const projects: Project[] = [
   },
   {
     id: 'intellifl',
-    title: 'IntelliFL Framework',
+    title: 'InteFL',
     description:
       'Federated learning framework with intelligent client selection and privacy-preserving aggregation.',
     longDescription:
