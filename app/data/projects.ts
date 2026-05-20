@@ -16,7 +16,7 @@ export const projects: Project[] = [
       "Ren'Py",
       'uv'
     ],
-    types: ['ai-ml'],
+    types: ['ai-ml', 'full-stack'],
     thumbnailUrl:
       'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779282973/kourai-khryseai_nrxqnu.webp',
     docsUrl: 'https://ajbarea.github.io/kourai-khryseai/',
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     id: 'security-eval',
     title: 'Security Evaluation System',
     technologies: ['Python', 'FastAPI', 'CLIPS', 'PyTorch', 'Next.js'],
-    types: ['ai-ml', 'federated-learning'],
+    types: ['ai-ml', 'federated-learning', 'full-stack'],
     thumbnailUrl: 'https://res.cloudinary.com/dumwa1w5x/image/upload/v1767632723/ses_mfbacm.png',
     githubUrl: 'https://github.com/ajbarea/ses',
     featured: true
@@ -93,6 +93,17 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/ajbarea/control-of-mobile-robots',
     youtubeUrl: 'https://www.youtube.com/playlist?list=PLmQVFU1FBDddYV_4IRW1zfXH6CAKuZjIM',
     featured: true
+  },
+  {
+    id: 'portfolio',
+    title: 'Portfolio Website',
+    technologies: ['Nuxt 4', 'Vue 3', 'TypeScript', 'Tailwind CSS', 'vue-i18n', 'Ollama'],
+    types: ['ai-ml', 'full-stack'],
+    thumbnailUrl:
+      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1767634496/portfolio_smiobu.png',
+    demoUrl: 'https://ajbarea.github.io/',
+    githubUrl: 'https://github.com/ajbarea/ajbarea.github.io',
+    featured: true
   }
 ]
 
@@ -102,6 +113,5 @@ export const projectsByType = {
   'ai-ml': projects.filter((p) => p.types.includes('ai-ml')),
   'federated-learning': projects.filter((p) => p.types.includes('federated-learning')),
   'full-stack': projects.filter((p) => p.types.includes('full-stack')),
-  robotics: projects.filter((p) => p.types.includes('robotics')),
-  cloud: projects.filter((p) => p.types.includes('cloud'))
+  robotics: projects.filter((p) => p.types.includes('robotics'))
 }

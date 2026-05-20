@@ -185,8 +185,7 @@
       "ai-ml": "IA/ML",
       "federated-learning": "Aprendizaje Federado",
       "full-stack": "Full-Stack",
-      "robotics": "Robótica",
-      "cloud": "Cloud"
+      "robotics": "Robótica"
     },
     "kourai-khryseai": {
       "title": "Kourai Khryseai",
@@ -219,6 +218,10 @@
     "control-mobile-robots": {
       "title": "Control de Robots Móviles",
       "description": "Sistemas de control de robots móviles usando Python y Webots, abarcando localización, navegación e integración de sensores."
+    },
+    "portfolio": {
+      "title": "Sitio Portafolio",
+      "description": "Portafolio multilingüe en Nuxt 4 (EN/ES/JA/ZH) con SEO pre-renderizado, vistas duales de currículum (industria e investigación) y un pipeline local de traducción con Qwen vía Ollama."
     }
   },
   "resume": {

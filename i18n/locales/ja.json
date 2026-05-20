@@ -185,8 +185,7 @@
       "ai-ml": "AI/ML",
       "federated-learning": "連合学習",
       "full-stack": "フルスタック",
-      "robotics": "ロボティクス",
-      "cloud": "クラウド"
+      "robotics": "ロボティクス"
     },
     "kourai-khryseai": {
       "title": "Kourai Khryseai",
@@ -219,6 +218,10 @@
     "control-mobile-robots": {
       "title": "移動ロボットの制御",
       "description": "PythonとWebotsを用いた移動ロボットの制御システム。位置推定、ナビゲーション、センサ統合を扱う。"
+    },
+    "portfolio": {
+      "title": "ポートフォリオサイト",
+      "description": "多言語対応のNuxt 4ポートフォリオ（EN/ES/JA/ZH）。プリレンダリング済みSEO、業界向け・研究向けの二種類の履歴書ビュー、Qwen × Ollamaによるローカル翻訳パイプラインを搭載。"
     }
   },
   "resume": {

@@ -232,6 +232,7 @@ Original spec said "opt-in selector only, no auto-detect." In practice that mean
 Current config: `detectBrowserLanguage: { useCookie: true, cookieKey: 'i18n_redirected', redirectOn: 'root', alwaysRedirect: false }`.
 
 Behavior:
+
 - Visit `/` for the first time → renders English (no cookie yet). Note: with `useCookie: true`, the module ALSO checks `Accept-Language` on first root visit, so Spanish-locale browsers WILL get redirected to `/es/` once. Mild departure from original spec but matches the "preferred language stays" UX AJ wanted.
 - Click "Español" in the selector → URL becomes `/es/...`, cookie written.
 - Navigate within `/es/` → all internal links use `localePath()` so they stay prefixed.
