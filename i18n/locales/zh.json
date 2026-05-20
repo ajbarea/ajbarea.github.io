@@ -1,0 +1,388 @@
+{
+  "nav": {
+    "home": "首页",
+    "projects": "项目",
+    "resume": "简历",
+    "blog": "博客"
+  },
+  "lang": {
+    "select": "选择语言"
+  },
+  "meta": {
+    "homeTitle": "AJ Barea | 软件工程师",
+    "homeDescription": "软件工程师，专注于全栈开发、AI/ML和云解决方案。目前在RIT完成软件工程硕士学位。",
+    "homeOgDescription": "展示软件工程、AI/ML 和云解决方案领域项目、研究和技术专长的作品集。",
+    "homeTwitterDescription": "展示项目、研究和技术专长的个人作品集。",
+    "resumeTitle": "简历 | AJ Barea",
+    "resumeDescription": "AJ Barea的专业简历 - 软件工程师，擅长全栈开发、AI/ML和云解决方案。",
+    "resumeOgDescription": "专业简历，展示软件工程经验、研究和技术技能。",
+    "resumeTwitterDescription": "展示软件工程经验、研究和技术技能的专业简历。",
+    "projectsTitle": "项目 | AJ Barea",
+    "projectsDescription": "探索AJ Barea的软件项目组合，包括AI/ML应用、全栈开发、云解决方案和研究工作。",
+    "projectsTwitterDescription": "探索AJ Barea的软件项目组合，包括AI/ML应用、全栈开发和云解决方案。"
+  },
+  "profile": {
+    "title": "软件工程师",
+    "summary": "我构建联邦学习框架和多代理开发系统。我的研究位于可信赖分布式机器学习、人类在环AI代理以及AI辅助软件开发人员体验的交叉点。",
+    "roles": [
+      "人工智能/机器学习研究员",
+      "全栈开发工程师",
+      "分布式系统工程师",
+      "云架构师",
+      "小提琴手",
+      "硬核玩家",
+      "御宅族",
+      "最爱的儿子"
+    ],
+    "credibilityChips": [
+      "RIT GRA · Reznik 研究组",
+      "IEEE 2026 论文 4 篇",
+      "软件工程硕士 · GPA 4.0"
+    ],
+    "researchInterests": [
+      "联邦学习系统",
+      "代理型AI与工具使用",
+      "分布式机器学习的测试方法学",
+      "机器学习研究基础设施的开发体验",
+      "AI辅助软件开发"
+    ]
+  },
+  "hero": {
+    "viewProjects": "查看项目",
+    "latestPaper": "最新论文",
+    "viewGalleryAria": "查看照片画廊",
+    "profileImageAlt": "{name}的个人照片",
+    "profileInitialsAlt": "{name} 首字母",
+    "credentialsAria": "资质",
+    "copyEmailAria": "复制电子邮件地址",
+    "socialAria": "社交媒体资料"
+  },
+  "sections": {
+    "experience": "经验与教育",
+    "experienceAria": "时间轴条目",
+    "highlights": "选中的活动 2026",
+    "expertise": "技术专长",
+    "expertiseSkillsAria": "{category}技能",
+    "expertiseSkillDocAria": "{skill} - 点击查看文档",
+    "expertiseTooltip": "查看文档",
+    "skills": "技术技能",
+    "contact": "联系我们",
+    "contactLead": "有疑问或想合作？给我发消息，我会回复你。"
+  },
+  "activity": {
+    "kind": {
+      "publication": "出版物",
+      "hackathon": "黑客松",
+      "conference": "会议"
+    }
+  },
+  "skills": {
+    "categories": {
+      "languages": "语言与框架",
+      "cloud-devops": "云与DevOps",
+      "ai-ml": "人工智能 & 机器学习",
+      "tools": "工具与平台"
+    }
+  },
+  "timeline": {
+    "labels": {
+      "current": "当前",
+      "incoming": "即将",
+      "skillsAria": "技能"
+    },
+    "rit-phd-2026": {
+      "title": "哲学博士",
+      "subtitle": "计算机与信息科学",
+      "description": "在计算与信息科学博士学位课程中，继续与莱昂·雷尼克博士合作开展联邦学习研究。"
+    },
+    "ncsu-scads-2026": {
+      "title": "暑期研究学者",
+      "subtitle": "SCADS · 应用数据科学夏季会议",
+      "description": "被选为北卡州立大学文理学院SCADS夏季研究学者，时间为2026年夏天。"
+    },
+    "rit-gra": {
+      "title": "研究生研究员",
+      "subtitle": "莱昂·雷兹尼克博士的研究小组",
+      "description": "增强IntelliFL联邦学习框架，实现80%以上的测试覆盖率、React/FastAPI接口以及拜占庭容错聚合方法。",
+      "bullets": [
+        "为分布式FL系统（IntelliFL框架）设计了全面的pytest测试套件，代码覆盖率超过80%",
+        "构建React + FastAPI Web界面，提高研究人员入职时间并增强实验可复现性",
+        "与博士生合作快速原型设计了新颖的聚合策略，包括拜占庭容错方法（Krum、Bulyan、RFA、截断平均）和基于信任的联邦学习方法",
+        "实施了动态数据集污染系统，能够在联邦训练期间评估对抗鲁棒性",
+        "集成基于变压器的模型在医疗、法律和金融领域的联邦学习文本数据集上",
+        "跨Python 3.9-3.11版本及多种操作系统（Windows、macOS、Linux）的框架兼容性",
+        "建立完善的CI管道和全面的错误处理，将研究原型转化为生产级系统"
+      ]
+    },
+    "rit-ta": {
+      "title": "教学助理",
+      "subtitle": "软件架构",
+      "description": "指导学生学习设计模式、架构风格和质量属性。在教师缺席时带领整个班级的课程。",
+      "bullets": [
+        "指导学生学习软件设计模式、架构风格、质量属性和策略",
+        "带领诵读小组和办公室时间提供技术指导以决策架构",
+        "在教师缺席时讲完整堂课，获得学生积极反馈",
+        "使用详细反馈评估作业，强调严格的软件工程实践"
+      ]
+    },
+    "rit-ms": {
+      "title": "硕士学位",
+      "subtitle": "软件工程",
+      "description": "GPA: 4.0/4.0。毕业设计：增强联邦学习执行框架（导师：莱昂·雷尼克博士）。"
+    },
+    "lowes": {
+      "title": "软件工程师（合同工）",
+      "subtitle": "分布管理系统",
+      "description": "减少RDC每日错误日志15万条。构建全栈自动化工具。将入职时间减少了80%。",
+      "bullets": [
+        "减少RDC每日错误日志15万条，通过解决bug、优化日志分析和提升系统性能",
+        "开发了一个全栈应用，用于简化数据库查询并生成SQL脚本，从而减少支持工单的处理时间",
+        "撰写了SOP，将新工程师入职时间减少了80%",
+        "在Tier 3支持中进行了根本原因分析，并在BMC SmartIT中记录解决方案，与上级协作",
+        "交付了安全、经过测试的代码更新以修复bug并提升系统效率，通过Jira和Confluence进行跟踪",
+        "在敏捷迭代中蓬勃发展，积极参与站会和回顾会议"
+      ]
+    },
+    "usf-bs": {
+      "title": "学士学位",
+      "subtitle": "计算机工程",
+      "description": "GPA: 3.06/4.0."
+    },
+    "phiquest": {
+      "title": "用户体验开发实习生",
+      "subtitle": "开发团队",
+      "description": "为网络应用设计了线框图。使用Node.js构建了基于区块链的文档认证Chrome扩展。",
+      "bullets": [
+        "为web应用设计线框图，并与跨功能团队合作，确保解决方案既可行又用户友好",
+        "使用Node.js开发了一个基于区块链的文档认证Chrome扩展，实现安全验证"
+      ]
+    },
+    "independent-ml": {
+      "title": "机器学习研究项目",
+      "bullets": [
+        "自主机器人导航RL - 开发了在Webots模拟器中的Q学习和DQN框架，包含状态离散化、回放缓冲区以及基于PyTorch的超参数优化（通过YouTube教程文档记录）",
+        "联邦学习安全 - 构建结合CLIPS基于规则的专家系统、PyTorch神经网络和联邦学习技术的评估系统，以评估分布式机器学习系统的拜占庭容错能力",
+        "自然语言处理 - 使用 Hugging Face Transformers（BART）实现新闻摘要系统，并通过协同过滤（scikit-surprise）提供个性化推荐"
+      ]
+    }
+  },
+  "projects": {
+    "page": {
+      "heading": "项目",
+      "lead": "设计与交付。",
+      "filterAria": "按类型筛选项目",
+      "filterAll": "全部",
+      "linksAria": "项目链接",
+      "demo": "演示",
+      "docs": "文档",
+      "github": "GitHub",
+      "video": "视频",
+      "demoAria": "查看{title}演示",
+      "docsAria": "查看{title}文档",
+      "githubAria": "查看 {title} 的 GitHub 仓库",
+      "videoAria": "观看{title}的视频演示",
+      "thumbnailAlt": "{title}缩略图",
+      "emptyState": "暂无该类别的项目。",
+      "viewAll": "查看所有项目"
+    },
+    "types": {
+      "ai-ml": "AI/ML",
+      "full-stack": "全栈",
+      "robotics": "机器人学",
+      "cloud": "云"
+    },
+    "kourai-khryseai": {
+      "title": "Kourai Khryseai",
+      "description": "交互式多代理开发系统：十个专门的代理流式传输其推理过程，请求指导，并在终端、pygame GUI 与 TTS 以及一个 Ren'Py 视频小说中实时迭代。"
+    },
+    "velocity-fl": {
+      "title": "VelocityFL",
+      "description": "Rust + Python 联邦学习调度器，包含论文引用的聚合策略和轮次级/数据管道攻击模拟。"
+    },
+    "phalanx-fl": {
+      "title": "Phalanx-FL",
+      "description": "单独联邦学习执行与研究框架：可配置聚合、拜占庭容错、对抗攻击模拟、JSON驱动实验。"
+    },
+    "techne": {
+      "title": "Techne",
+      "description": "八个 Claude Code 技能可作为单个 /plugin 安装：审核构建、抑制 CI 噪音、追踪文档/代码漂移、同步姐妹仓库。"
+    },
+    "news-aggregator": {
+      "title": "AI新闻聚合器",
+      "description": "基于NLP的内容分类与摘要的智能新闻聚合系统"
+    },
+    "security-eval": {
+      "title": "机器学习安全评估系统",
+      "description": "机器学习模型安全性漏洞评估框架"
+    },
+    "aws-image-translator": {
+      "title": "AWS 图像翻译器",
+      "description": "使用AWS服务实现的无服务器应用，用于从图片中提取并翻译文本。"
+    },
+    "robot-navigation-rl": {
+      "title": "基于RL的机器人导航",
+      "description": "自主机器人在模拟环境中自主导航的强化学习代理"
+    },
+    "intellifl": {
+      "title": "IntelliFL",
+      "description": "联邦学习框架，具备智能客户端选择和隐私保护聚合功能。"
+    },
+    "tbd-banking": {
+      "title": "待定银行应用",
+      "description": "银行业务应用，支持账户创建、凭证管理及资金转账，并具备交易追踪功能。"
+    },
+    "thoughtcloud-social": {
+      "title": "ThoughtCloud 社交",
+      "description": "社交平台，用于分享想法、建立网络以及互动和接收通知。"
+    },
+    "control-mobile-robots": {
+      "title": "移动机器人控制",
+      "description": "使用Python和Webots的移动机器人控制系统，涵盖定位、导航和传感器集成。"
+    },
+    "blockchain-explorer": {
+      "title": "区块链浏览器",
+      "description": "用于身份验证数字签名的自定义区块链，具有防篡改验证功能。"
+    },
+    "expense-reimbursement": {
+      "title": "费用报销系统",
+      "description": "员工提交和经理审批的费用报销系统"
+    },
+    "portfolio": {
+      "title": "个人作品集网站",
+      "description": "这个网站！一个现代的 Nuxt 3 技术简历作品集，展示项目、简历、画廊和博客。"
+    }
+  },
+  "resume": {
+    "viewToggleAria": "简历查看选项",
+    "downloadPdf": "下载PDF",
+    "downloadPdfShort": "PDF",
+    "downloadPdfAria": "下载{mode}简历作为PDF文件",
+    "contentAria": "{mode}简历内容",
+    "viewMode": {
+      "industry": "行业",
+      "research": "研究"
+    },
+    "sections": {
+      "researchInterests": "研究兴趣",
+      "professional": "专业经验",
+      "research": "研究经历",
+      "teaching": "教学经验",
+      "publications": "出版物",
+      "education": "教育",
+      "honorsAwards": "荣誉与奖励",
+      "skills": "技术技能"
+    },
+    "experience": {
+      "projectPrefix": "项目:"
+    },
+    "education": {
+      "degreeIn": "{field}{degree}",
+      "gpaLabel": "GPA",
+      "relevantCoursework": "相关课程",
+      "capstoneResearch": "毕业研究",
+      "advisor": "顾问: {name}",
+      "downloadCertificate": "下载{title}证书",
+      "visitWebsite": "访问{title}网站"
+    }
+  },
+  "hackathons": {
+    "types": {
+      "solo": "单人模式",
+      "team": "团队"
+    },
+    "hackerrank-orchestrate-2026": {
+      "description": "多领域支持-分类代理：跨HackerRank、Claude和Visa语料库路由工单，使用基于语料库的响应、异步批量处理及提示注入防护。",
+      "result": "排名第 11 / 1349"
+    },
+    "aware-ai-bioradio-2026": {
+      "description": "宇宙仪式：BioRadio 电磁肌电图手势驱动实时和弦引擎。贡献了手势分类器、MIDI 引擎（力度持续控制、非阻塞播放、O(1) 和弦查找）、GUI 音乐模式以及具有宇宙恐怖主题的 Zensical 文档站点。",
+      "result": "最佳AI模型"
+    }
+  },
+  "conferences": {
+    "formats": {
+      "poster": "海报",
+      "oral": "口述",
+      "workshop-paper": "工作坊论文",
+      "talk": "演讲",
+      "demo": "演示"
+    },
+    "ne-agents-day-2026": {
+      "title": "Kourai Khryseai: 透明的人机交互多代理软件开发",
+      "description": "将多代理编程重新定义为可解释性问题，通过三大支柱：监控（使用OpenTelemetry / Jaeger / Prometheus可观测性），沟通（代理请求对模糊要求的澄清），以及控制（有界修复循环以实现故意恢复）。展示了Hephaestus，一个调度器通过MCP路由至专业代理，并共享SQLite状态。"
+    },
+    "rit-aware-ai-poster-2026": {
+      "title": "多代理软件开发的叙事界面",
+      "description": "考察身体感、声音和Ren'Py视觉小说框架如何影响用户监督和重定向多代理软件。阐述Kourai Khryseai背后所采用的三主机界面架构（终端REPL、pygame GUI配TTS、Ren'Py VN）。"
+    }
+  },
+  "publications": {
+    "statuses": {
+      "published": "发布",
+      "under-review": "正在审核",
+      "accepted": "接受",
+      "doi": "DOI"
+    },
+    "list": {
+      "view": "查看",
+      "doiPrefix": "DOI:",
+      "requestPaper": "请求论文",
+      "showAbstract": "显示摘要",
+      "hideAbstract": "隐藏摘要",
+      "andConnector": "，和"
+    },
+    "ieee-ccnc-2026": {
+      "title": "消费者为中心的医学影像中联邦学习准确度与收敛性研究",
+      "abstract": "我们在分布式客户端训练的机器学习模型中研究了医学图像中的信噪比降低如何影响准确性和收敛性。通过使用九个受控信噪比水平降级的Medical MNIST子集，我们展示了适度噪声会导致准确率下降1.7至25.7个百分点，并且会将收敛延迟最多17轮通信。我们的研究结果强调了在反映通信引起的数据变异性数据集上基准测试联邦学习算法的重要性。"
+    },
+    "ieee-is-2026": {
+      "title": "IntelliFL框架：基于元认知优化联邦学习的应用设计与部署",
+      "abstract": "我们认为元认知应成为设计和部署联邦学习（FL）应用的指导原则。FL中的元认知特征，如监控与控制，允许其动态适应环境、客户端更新、增强用户交互并优化资源感知学习。我们引入了IntelliFL框架，这是首个通过提供机制和工具来探究执行和学习条件变化对FL性能和安全性的潜在影响，并据此选择或优化学习结构和过程的框架。我们在实践中展示了该框架的应用案例，说明了如何根据执行环境的变化（包括数据质量、网络状况或恶意攻击）动态调整或微调联邦学习超参数如模型聚合算法。"
+    },
+    "ijcnn-wcci-2026": {
+      "title": "IntelliFL：面向可信高效联邦学习应用的AI辅助设计框架",
+      "abstract": "尽管联邦学习（FL）通过保留数据本地化增强了客户端的安全性和隐私性，但这种去中心化的范式也暴露于各种恶意行为以及技术与可靠性问题，这些问题会降低数据质量、阻碍收敛并减少全局模型的准确性。考虑到这些不稳定因素对于FL设计至关重要，特别是在其实用且可靠的集成中。为应对这一需求，我们引入了InteFL，这是一个专为高效和安全的FL系统化设计与评估而构建的软件工具。InteFL提供了在多种条件下对FL性能进行基准测试的功能，包括静态和时间动态的对抗攻击，并支持配置和微调鲁棒聚合算法及其参数。作为现有FL工具的扩展，InteFL通过集成智能代理提高了工具的实用性。我们展示了几个用例，说明我们的工具如何支持寻找和调查更健壮的聚合技术以应对各种攻击模型，并且如何参数微调可以加速收敛并提高最终机器学习模型的准确性。"
+    },
+    "ieee-dsn-2026": {
+      "title": "IntelliFL框架：可信赖联邦学习的设计与基准测试工具",
+      "abstract": "我们介绍IntelliFL，这是一个专为系统设计和评估FL系统的可靠性和性能而打造的软件工具。IntelliFL提供了在包括静态和时变 adversarial 攻击等各种条件下benchmark FL性能的功能，并支持可配置的鲁棒聚合算法。该框架集成了智能控制机制，包括自动参数选择、改进的异常检测以及通过交互式AI代理实现的情境感知自适应。"
+    }
+  },
+  "highlights": {
+    "overrides": {
+      "ieee-is-2026": {
+        "title": "IntelliFL：元认知联邦学习框架"
+      },
+      "aware-ai-bioradio-2026": {
+        "description": "宇宙仪式：BioRadio 电磁肌电图手势驱动实时和弦引擎。构建了手势分类器、MIDI 引擎、GUI 音乐模式和 Zensical 文档站点。"
+      }
+    }
+  },
+  "contactForm": {
+    "emailLabel": "您的电子邮件",
+    "emailOptional": "(可选)",
+    "emailPlaceholder": "you{'@'}example.com",
+    "emailHelp": "包括如果希望收到回应",
+    "messageLabel": "消息",
+    "messagePlaceholder": "你好 AJ，我想跟你谈谈...",
+    "messageRequired": "*",
+    "sending": "发送中...",
+    "sendMessage": "发送消息",
+    "successHeading": "消息已发送！",
+    "successBody": "感谢您的来信。我会尽快回复您。",
+    "divider": "或直接发送电子邮件",
+    "clickToCopy": "(点击复制)",
+    "toastSuccess": "消息已发送！我会尽快回复你。",
+    "toastError": "发送失败。邮箱已复制到剪贴板！",
+    "copyEmailFallback": "邮件已复制：{email} - 请直接发送您的消息！"
+  },
+  "toast": {
+    "ariaLabel": "通知",
+    "dismiss": "取消通知"
+  },
+  "clipboard": {
+    "copied": "已复制到剪贴板！",
+    "failed": "复制到剪贴板失败",
+    "emailCopied": "邮件已复制：{email}"
+  }
+}

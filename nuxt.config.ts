@@ -35,7 +35,9 @@ export default defineNuxtConfig({
     baseUrl: 'https://ajbarea.github.io',
     locales: [
       { code: 'en', language: 'en', file: 'en.json', name: 'English' },
-      { code: 'es', language: 'es', file: 'es.json', name: 'Español' }
+      { code: 'es', language: 'es', file: 'es.json', name: 'Español' },
+      { code: 'ja', language: 'ja', file: 'ja.json', name: '日本語' },
+      { code: 'zh', language: 'zh-CN', file: 'zh.json', name: '中文' }
     ]
   },
 

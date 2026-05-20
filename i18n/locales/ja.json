@@ -1,0 +1,384 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "projects": "プロジェクト",
+    "resume": "履歴書",
+    "blog": "ブログ"
+  },
+  "lang": {
+    "select": "言語を選択"
+  },
+  "meta": {
+    "homeTitle": "AJ Barea | ソフトウェアエンジニア",
+    "homeDescription": "フルスタック開発、AI/ML、クラウドソリューションに特化したソフトウェアエンジニア。現在RITでソフトウェア工学の修士課程在籍中。",
+    "homeOgDescription": "ソフトウェアエンジニアリング、AI/ML、クラウドソリューションにおけるプロジェクトや研究、技術的な専門知識を紹介するポートフォリオ。",
+    "homeTwitterDescription": "プロジェクト、研究、技術的な専門知識を紹介するポートフォリオ。",
+    "resumeTitle": "履歴書 | AJ Barea",
+    "resumeDescription": "AJ Bareaの履歴書 — フルスタック開発、AI/ML、クラウドソリューションに精通したソフトウェアエンジニア。",
+    "resumeOgDescription": "ソフトウェアエンジニアリングの経験、研究、技術スキルを紹介する履歴書。",
+    "resumeTwitterDescription": "ソフトウェアエンジニアリングの経験、研究、技術スキルを紹介する履歴書。",
+    "projectsTitle": "プロジェクト | AJ Barea",
+    "projectsDescription": "AJ Bareaのソフトウェアプロジェクトのポートフォリオ。AI/MLアプリケーション、フルスタック開発、クラウドソリューション、研究成果を含みます。",
+    "projectsTwitterDescription": "AJ Bareaのソフトウェアプロジェクトのポートフォリオ。AI/MLアプリケーション、フルスタック開発、クラウドソリューションを含みます。"
+  },
+  "profile": {
+    "title": "ソフトウェアエンジニア",
+    "summary": "私は連合学習フレームワークとマルチエージェント開発システムを構築しています。私の研究は、信頼性のある分散ML、人間の監督下にあるAIエージェント、AI支援ソフトウェアの開発者体験の交差点に位置しています。",
+    "roles": [
+      "AI/ML研究者",
+      "フルスタック開発者",
+      "分散システムエンジニア",
+      "クラウドアーキテクト",
+      "バイオリン奏者",
+      "ハードコアゲーマー",
+      "オタク",
+      "お気に入りの息子"
+    ],
+    "credibilityChips": ["RIT GRA · Reznikグループ", "IEEE 2026論文 4本", "MS SWE · GPA 4.0"],
+    "researchInterests": [
+      "連合学習システム",
+      "ツールを使うエージェント型AI",
+      "分散MLのテスト手法",
+      "ML研究インフラの開発者体験",
+      "AI支援によるソフトウェア開発"
+    ]
+  },
+  "hero": {
+    "viewProjects": "プロジェクトを見る",
+    "latestPaper": "最新の論文",
+    "viewGalleryAria": "フォトギャラリーを見る",
+    "profileImageAlt": "{name}のプロフィール写真",
+    "profileInitialsAlt": "{name}のイニシャル",
+    "credentialsAria": "資格情報",
+    "copyEmailAria": "メールアドレスをコピー",
+    "socialAria": "ソーシャルメディアプロフィール"
+  },
+  "sections": {
+    "experience": "経験と教育",
+    "experienceAria": "タイムラインのエントリ",
+    "highlights": "2026年の活動ハイライト",
+    "expertise": "技術的専門知識",
+    "expertiseSkillsAria": "{category}のスキル",
+    "expertiseSkillDocAria": "{skill} - クリックでドキュメントを表示",
+    "expertiseTooltip": "ドキュメントを見る",
+    "skills": "技術スキル",
+    "contact": "お問い合わせ",
+    "contactLead": "ご質問やコラボのご相談があれば、メッセージをお送りください。すぐに返信いたします。"
+  },
+  "activity": {
+    "kind": {
+      "publication": "論文",
+      "hackathon": "ハッカソン",
+      "conference": "学会"
+    }
+  },
+  "skills": {
+    "categories": {
+      "languages": "言語とフレームワーク",
+      "cloud-devops": "クラウドとDevOps",
+      "ai-ml": "AIと機械学習",
+      "tools": "ツールとプラットフォーム"
+    }
+  },
+  "timeline": {
+    "labels": {
+      "current": "現在",
+      "incoming": "予定",
+      "skillsAria": "スキル"
+    },
+    "rit-phd-2026": {
+      "title": "博士号",
+      "subtitle": "コンピューティングと情報科学",
+      "description": "Leon Reznik博士の下でコンピューティングと情報科学の博士課程に在籍し、連合学習の研究を継続中。"
+    },
+    "ncsu-scads-2026": {
+      "title": "夏季研究員",
+      "subtitle": "SCADS · 応用データサイエンス夏季会議",
+      "description": "NC State LASのSCADS夏季研究員として2026年夏期に選出。"
+    },
+    "rit-gra": {
+      "title": "大学院研究助手",
+      "subtitle": "Leon Reznik博士の研究グループ",
+      "description": "IntelliFL連合学習フレームワークを80%以上のテストカバレッジ、React/FastAPIインターフェース、ビザンチン耐性の集約手法で強化。",
+      "bullets": [
+        "分散FLシステム（IntelliFLフレームワーク）向けに80%以上のコードカバレッジを達成する包括的なpytestテストスイートを設計",
+        "React + FastAPIによるWebインターフェースを構築し、研究者のオンボーディング時間と実験の再現性を改善",
+        "博士課程の学生と協力し、ビザンチン耐性手法（Krum、Bulyan、RFA、Trimmed Mean）や信頼ベースの連合学習アプローチなど、新しい集約戦略を迅速にプロトタイプ化",
+        "動的なデータセット汚染システムを実装し、連合訓練中の敵対的ロバスト性評価を実現",
+        "Transformerベースのモデルを統合し、医療、法律、金融分野のテキストデータセットで連合学習を実施",
+        "Python 3.9-3.11と複数のOS（Windows、macOS、Linux）にフレームワークの互換性を拡張",
+        "CIパイプラインと包括的なエラーハンドリングを確立し、研究プロトタイプを本番運用可能なシステムに変換"
+      ]
+    },
+    "rit-ta": {
+      "title": "ティーチングアシスタント",
+      "subtitle": "ソフトウェアアーキテクチャ",
+      "description": "学生にデザインパターン、アーキテクチャスタイル、品質属性を指導。講師不在時には1コマ完全担当。",
+      "bullets": [
+        "ソフトウェアデザインパターン、アーキテクチャスタイル、品質属性と戦術について学生を指導",
+        "リサイテーションとオフィスアワーを担当し、アーキテクチャ決定に関する技術的な指導を提供",
+        "講師不在時に1コマを完全に担当し、学生から好意的なフィードバックを獲得",
+        "厳格なソフトウェアエンジニアリングの実践を重視した詳細なフィードバックで課題を採点"
+      ]
+    },
+    "rit-ms": {
+      "title": "修士号",
+      "subtitle": "ソフトウェア工学",
+      "description": "GPA: 4.0/4.0。卒業研究: 連合学習実行フレームワークの強化（指導教員: Leon Reznik博士）。"
+    },
+    "lowes": {
+      "title": "ソフトウェアエンジニア（契約）",
+      "subtitle": "配送管理システム",
+      "description": "RDC全体で1日あたりのエラーログを15万件削減。フルスタックの自動化ツールを構築。オンボーディング時間を80%短縮。",
+      "bullets": [
+        "RDC全体で1日あたりのエラーログを15万件削減。バグの解決、ログ解析の最適化、システム性能の向上を実施",
+        "フルスタックアプリケーションを開発し、データベースクエリを効率化、SQLスクリプトを生成、サポートチケットの解決時間を短縮",
+        "SOPを作成し、新人エンジニアのオンボーディング時間を80%短縮",
+        "Tier 3サポートにおいて根本原因分析を実施。BMC SmartITに解決策を記録し、上司と協働",
+        "安全でテスト済みのコード更新を提供。バグ修正とシステム効率改善をJiraとConfluenceで追跡",
+        "アジャイルスプリントで活躍し、スタンドアップとレトロスペクティブに貢献"
+      ]
+    },
+    "usf-bs": {
+      "title": "学士号",
+      "subtitle": "コンピュータ工学",
+      "description": "GPA: 3.06/4.0。"
+    },
+    "phiquest": {
+      "title": "UX開発者（インターン）",
+      "subtitle": "開発チーム",
+      "description": "Webアプリケーションのワイヤーフレームを設計。Node.jsを使用してブロックチェーンベースの文書認証Chrome拡張機能を構築。",
+      "bullets": [
+        "Webアプリケーションのワイヤーフレームを設計。クロスファンクショナルなチームと協働し、実現可能でユーザーフレンドリーなソリューションを担保",
+        "Node.jsを使用してブロックチェーンベースの文書認証Chrome拡張機能を構築し、安全な検証を実現"
+      ]
+    },
+    "independent-ml": {
+      "title": "機械学習研究プロジェクト",
+      "bullets": [
+        "自律ロボットナビゲーションRL — Webotsシミュレータで状態の離散化、リプレイバッファ、PyTorchベースのハイパーパラメータ最適化を用いたQ学習およびDQNフレームワークを開発（YouTubeチュートリアルとして文書化）",
+        "連合学習セキュリティ — CLIPSルールベースのエキスパートシステム、PyTorchニューラルネットワーク、連合学習技術を組み合わせた評価システムを構築し、分散MLシステムのビザンチン障害耐性を評価",
+        "自然言語処理 — Hugging Face Transformers（BART）を使ったニュース要約システムを実装し、協調フィルタリング（scikit-surprise）によるパーソナライズド推薦を実現"
+      ]
+    }
+  },
+  "projects": {
+    "page": {
+      "heading": "プロジェクト",
+      "lead": "設計し、提供してきました。",
+      "filterAria": "種類でプロジェクトをフィルタ",
+      "filterAll": "すべて",
+      "linksAria": "プロジェクトリンク",
+      "demo": "デモ",
+      "docs": "ドキュメント",
+      "github": "GitHub",
+      "video": "ビデオ",
+      "demoAria": "{title}のデモを見る",
+      "docsAria": "{title}のドキュメントを見る",
+      "githubAria": "{title}のGitHubリポジトリを見る",
+      "videoAria": "{title}のビデオデモを見る",
+      "thumbnailAlt": "{title}のサムネイル",
+      "emptyState": "このカテゴリに該当するプロジェクトはありません。",
+      "viewAll": "すべてのプロジェクトを見る"
+    },
+    "types": {
+      "ai-ml": "AI/ML",
+      "full-stack": "フルスタック",
+      "robotics": "ロボティクス",
+      "cloud": "クラウド"
+    },
+    "kourai-khryseai": {
+      "title": "Kourai Khryseai",
+      "description": "インタラクティブなマルチエージェント開発システム。10人の専門エージェントが推論を共有し、ガイダンスを求め、ターミナル、pygame GUI（TTS付き）、Ren'Py製ビジュアルノベルの3つのインターフェースを横断してリアルタイムに反復します。"
+    },
+    "velocity-fl": {
+      "title": "VelocityFL",
+      "description": "Rust + Pythonによる連合学習オーケストレータ。論文ベースの集約戦略と、ラウンドレベルおよびデータパイプラインの攻撃シミュレーションを実装。"
+    },
+    "phalanx-fl": {
+      "title": "Phalanx-FL",
+      "description": "個人開発の連合学習実行・研究フレームワーク。設定可能な集約、ビザンチン障害耐性、敵対的攻撃シミュレーション、JSON駆動の実験を提供。"
+    },
+    "techne": {
+      "title": "Techne",
+      "description": "8つのClaude Codeスキルを単一の/pluginとしてインストール可能。ビルドの監査、CIノイズの抑制、ドキュメント／コードの乖離検知、姉妹リポジトリの同期維持を実現。"
+    },
+    "news-aggregator": {
+      "title": "AIニュースアグリゲーター",
+      "description": "NLPを用いたコンテンツ分類と要約を行うインテリジェントなニュース集約システム。"
+    },
+    "security-eval": {
+      "title": "MLセキュリティ評価システム",
+      "description": "機械学習モデルのセキュリティ脆弱性を評価するフレームワーク。"
+    },
+    "aws-image-translator": {
+      "title": "AWS画像翻訳",
+      "description": "AWSサービスを利用して画像からテキストを抽出・翻訳するサーバーレスアプリケーション。"
+    },
+    "robot-navigation-rl": {
+      "title": "強化学習によるロボットナビゲーション",
+      "description": "シミュレーション環境で自律ロボットのナビゲーションを行う強化学習エージェント。"
+    },
+    "intellifl": {
+      "title": "InteFL",
+      "description": "知的クライアント選択とプライバシー保護集約を備えた連合学習フレームワーク。"
+    },
+    "tbd-banking": {
+      "title": "TBD銀行アプリケーション",
+      "description": "口座作成、認証情報管理、取引追跡付き資金送金を提供する銀行アプリ。"
+    },
+    "thoughtcloud-social": {
+      "title": "ThoughtCloud Social",
+      "description": "思考を共有し、ネットワークを構築し、投稿や通知に参加するためのソーシャルプラットフォーム。"
+    },
+    "control-mobile-robots": {
+      "title": "移動ロボットの制御",
+      "description": "PythonとWebotsを用いた移動ロボットの制御システム。位置推定、ナビゲーション、センサ統合を扱う。"
+    },
+    "blockchain-explorer": {
+      "title": "ブロックチェーンエクスプローラー",
+      "description": "デジタル署名を改ざん不能な検証で認証するカスタムブロックチェーン。"
+    },
+    "expense-reimbursement": {
+      "title": "経費精算システム",
+      "description": "従業員とマネージャーのワークフローによる経費精算の提出と承認のシステム。"
+    },
+    "portfolio": {
+      "title": "ポートフォリオサイト",
+      "description": "このサイト！Nuxt 3で構築したモダンなポートフォリオ。プロジェクト、履歴書、ギャラリー、ブログを掲載。"
+    }
+  },
+  "resume": {
+    "viewToggleAria": "履歴書の表示オプション",
+    "downloadPdf": "PDFをダウンロード",
+    "downloadPdfShort": "PDF",
+    "downloadPdfAria": "{mode}履歴書をPDFとしてダウンロード",
+    "contentAria": "{mode}履歴書の内容",
+    "viewMode": {
+      "industry": "業界",
+      "research": "研究"
+    },
+    "sections": {
+      "researchInterests": "研究関心",
+      "professional": "職務経歴",
+      "research": "研究経歴",
+      "teaching": "教育経歴",
+      "publications": "論文",
+      "education": "学歴",
+      "honorsAwards": "栄誉と賞",
+      "skills": "技術スキル"
+    },
+    "experience": {
+      "projectPrefix": "プロジェクト:"
+    },
+    "education": {
+      "degreeIn": "{field}の{degree}",
+      "gpaLabel": "GPA",
+      "relevantCoursework": "関連科目",
+      "capstoneResearch": "卒業研究",
+      "advisor": "指導教員: {name}",
+      "downloadCertificate": "{title}の証明書をダウンロード",
+      "visitWebsite": "{title}のサイトを訪問"
+    }
+  },
+  "hackathons": {
+    "types": {
+      "solo": "ソロ",
+      "team": "チーム"
+    },
+    "hackerrank-orchestrate-2026": {
+      "description": "マルチドメイン対応のサポート triage エージェント。HackerRank、Claude、Visaのコーパス横断でチケットをルーティングし、コーパス参照に基づく応答、非同期バッチ処理、プロンプトインジェクション防御を実装。",
+      "result": "11位 / 1349"
+    },
+    "aware-ai-bioradio-2026": {
+      "description": "Cosmic Ritual: BioRadioのEMGジェスチャーがリアルタイムの和音エンジンを駆動。ジェスチャー分類器、MIDIエンジン（velocity sustain、ノンブロッキング再生、O(1)和音検索）、GUIミュージックモード、コズミックホラーをテーマにしたZensicalドキュメントサイトを担当。",
+      "result": "ベストAIモデル"
+    }
+  },
+  "conferences": {
+    "formats": {
+      "poster": "ポスター",
+      "oral": "口頭発表",
+      "workshop-paper": "ワークショップ論文",
+      "talk": "講演",
+      "demo": "デモ"
+    },
+    "ne-agents-day-2026": {
+      "title": "Kourai Khryseai: 透明性のあるヒューマン・オン・ザ・ループ型マルチエージェントソフトウェア開発",
+      "description": "マルチエージェントによるコーディングを、解釈可能性の問題として3つの柱で再構成。Monitor（OpenTelemetry / Jaeger / Prometheusによる可観測性）、Communicate（曖昧な要件についてエージェントが質問）、Control（意図的な復旧のための境界付き修復ループ）。MCP経由で専門エージェントにルーティングし、SQLiteで状態を共有するオーケストレータ Hephaestus を実演。"
+    },
+    "rit-aware-ai-poster-2026": {
+      "title": "マルチエージェントソフトウェア開発のためのナラティブインターフェース",
+      "description": "身体性、音声、Ren'Pyのビジュアルノベル的フレーミングが、マルチエージェントソフトウェアをユーザーが監督しリダイレクトする方法にどう影響するかを検証。Kourai Khryseai を支える3ホスト構成のインターフェース（ターミナルREPL、pygame GUI + TTS、Ren'Py VN）を裏付ける。"
+    }
+  },
+  "publications": {
+    "statuses": {
+      "published": "発行済",
+      "under-review": "審査中",
+      "accepted": "採択",
+      "doi": "DOI"
+    },
+    "list": {
+      "view": "表示",
+      "doiPrefix": "DOI:",
+      "requestPaper": "論文を請求",
+      "showAbstract": "概要を表示",
+      "hideAbstract": "概要を非表示",
+      "andConnector": "、"
+    },
+    "ieee-ccnc-2026": {
+      "title": "消費者向け医用画像における連合学習の精度と収束",
+      "abstract": "医用画像における信号対雑音比の低下が、分散クライアントで訓練された機械学習モデルの精度と収束に与える影響を調査します。SNRレベルを制御して劣化させた9種のMedical MNISTサブセットを用いて、適度なノイズが1.7〜25.7パーセントポイントの精度低下と最大17ラウンド分の収束遅延を引き起こすことを示します。本研究は、通信に起因するデータ変動を反映したデータセットでFLアルゴリズムをベンチマークすることの重要性を強調しています。"
+    },
+    "ieee-is-2026": {
+      "title": "IntelliFL フレームワーク: メタ認知による連合学習アプリケーションの設計と展開の最適化",
+      "abstract": "メタ認知は連合学習（FL）アプリケーションの設計と展開を導く原理であるべきだと主張します。FLにおけるモニタリングや制御といったメタ認知機能は、環境への動的な適応、クライアント更新、ユーザー対話の向上、リソースを考慮した学習の最適化を可能にします。本研究では、実行条件と学習条件の変化がFLの性能とセキュリティに及ぼす影響を調査し、その評価に基づいて学習構造とプロセスを選択または最適化するための仕組みとツールを提供する初のフレームワークとして IntelliFL を導入します。データ品質の変動、ネットワーク条件、敵対的攻撃といった実行環境の変化に対し、モデル集約アルゴリズムなどFLハイパーパラメータがどのように動的に適応・微調整され得るかを示すケーススタディを通じて、フレームワークの実適用例を実証します。"
+    },
+    "ijcnn-wcci-2026": {
+      "title": "InteFL: AI支援による信頼性と効率性を備えた連合学習アプリケーション設計のフレームワーク",
+      "abstract": "連合学習（FL）はデータをローカルに保持することでクライアントのセキュリティとプライバシーを向上させますが、その分散型の特性により、多様な悪意ある行動や、データ品質低下・収束阻害・グローバルモデル精度低下を招く技術的・信頼性上の問題にさらされます。これらの不安定化要因を考慮することは、堅牢で信頼できる実用アプリケーションへのFL統合に不可欠です。本研究では、効率的かつ安全なFLの体系的な設計と評価のために設計されたソフトウェアツール InteFL を導入します。InteFL は、静的および時間的に動的な敵対的攻撃を含む多様な条件下でFL性能をベンチマークする機能と、堅牢な集約アルゴリズムとそのパラメータの設定およびファインチューニング機能を提供します。既存のFLツールの拡張として構築された InteFL は、知的エージェントを組み込みツールの使いやすさを高めることで高い実用性を持ちます。本ツールが多様な攻撃モデルに対するレジリエントな集約手法の探索と調査をどのように支援し、パラメータのファインチューニングが収束を加速させ結果としての機械学習モデルの精度を改善するかを、複数のユースケースで提示します。"
+    },
+    "ieee-dsn-2026": {
+      "title": "IntelliFL フレームワーク: 信頼できる連合学習の設計とベンチマークツール",
+      "abstract": "FLシステムのディペンダビリティの体系的な設計と評価のために設計されたソフトウェアツール IntelliFL を紹介します。IntelliFL は、静的および時間的に動的な敵対的攻撃を含む多様な条件下でFL性能をベンチマークする機能を提供し、設定可能な堅牢集約アルゴリズムをサポートします。本フレームワークは、自動パラメータ選択、改善された異常検知、インタラクティブなAIエージェントを通じた文脈に応じた適応といった知的制御機構を統合しています。"
+    }
+  },
+  "highlights": {
+    "overrides": {
+      "ieee-is-2026": {
+        "title": "IntelliFL: メタ認知に基づく連合学習フレームワーク"
+      },
+      "aware-ai-bioradio-2026": {
+        "description": "Cosmic Ritual: BioRadioのEMGジェスチャーがリアルタイムの和音エンジンを駆動。ジェスチャー分類器、MIDIエンジン、GUIミュージックモード、Zensicalドキュメントサイトを構築。"
+      }
+    }
+  },
+  "contactForm": {
+    "emailLabel": "メールアドレス",
+    "emailOptional": "(任意)",
+    "emailPlaceholder": "you{'@'}example.com",
+    "emailHelp": "返信を希望する場合は入力してください",
+    "messageLabel": "メッセージ",
+    "messagePlaceholder": "こんにちはAJさん、ご相談したいことがあって...",
+    "messageRequired": "*",
+    "sending": "送信中...",
+    "sendMessage": "メッセージを送る",
+    "successHeading": "メッセージを送信しました！",
+    "successBody": "ご連絡ありがとうございます。すぐに返信いたします。",
+    "divider": "またはメールで直接ご連絡ください",
+    "clickToCopy": "(クリックでコピー)",
+    "toastSuccess": "メッセージを送信しました！すぐに返信いたします。",
+    "toastError": "送信に失敗しました。メールアドレスをクリップボードにコピーしました！",
+    "copyEmailFallback": "メールアドレスをコピーしました: {email} — 直接メッセージをお送りください！"
+  },
+  "toast": {
+    "ariaLabel": "通知",
+    "dismiss": "通知を閉じる"
+  },
+  "clipboard": {
+    "copied": "クリップボードにコピーしました！",
+    "failed": "クリップボードへのコピーに失敗しました",
+    "emailCopied": "メールアドレスをコピーしました: {email}"
+  }
+}
