@@ -204,49 +204,21 @@
       "title": "Techne",
       "description": "8つのClaude Codeスキルを単一の/pluginとしてインストール可能。ビルドの監査、CIノイズの抑制、ドキュメント／コードの乖離検知、姉妹リポジトリの同期維持を実現。"
     },
-    "news-aggregator": {
-      "title": "AIニュースアグリゲーター",
-      "description": "NLPを用いたコンテンツ分類と要約を行うインテリジェントなニュース集約システム。"
+    "intellifl": {
+      "title": "InteFL",
+      "description": "知的クライアント選択とプライバシー保護集約を備えた連合学習フレームワーク。"
     },
     "security-eval": {
       "title": "セキュリティ評価システム",
       "description": "Windows向けセキュリティ評価ツール。システムメトリクス（パッチ、ポート、ファイアウォール、ウイルス対策）を、Pythonルール、CLIPSエキスパートシステム、ニューラルネットワーク、または連合学習でスコアリング。"
     },
-    "aws-image-translator": {
-      "title": "AWS画像翻訳",
-      "description": "AWSサービスを利用して画像からテキストを抽出・翻訳するサーバーレスアプリケーション。"
-    },
     "robot-navigation-rl": {
       "title": "強化学習によるロボットナビゲーション",
       "description": "シミュレーション環境で自律ロボットのナビゲーションを行う強化学習エージェント。"
     },
-    "intellifl": {
-      "title": "InteFL",
-      "description": "知的クライアント選択とプライバシー保護集約を備えた連合学習フレームワーク。"
-    },
-    "tbd-banking": {
-      "title": "TBD銀行アプリケーション",
-      "description": "口座作成、認証情報管理、取引追跡付き資金送金を提供する銀行アプリ。"
-    },
-    "thoughtcloud-social": {
-      "title": "ThoughtCloud Social",
-      "description": "思考を共有し、ネットワークを構築し、投稿や通知に参加するためのソーシャルプラットフォーム。"
-    },
     "control-mobile-robots": {
       "title": "移動ロボットの制御",
       "description": "PythonとWebotsを用いた移動ロボットの制御システム。位置推定、ナビゲーション、センサ統合を扱う。"
-    },
-    "blockchain-explorer": {
-      "title": "ブロックチェーンエクスプローラー",
-      "description": "デジタル署名を改ざん不能な検証で認証するカスタムブロックチェーン。"
-    },
-    "expense-reimbursement": {
-      "title": "経費精算システム",
-      "description": "従業員とマネージャーのワークフローによる経費精算の提出と承認のシステム。"
-    },
-    "portfolio": {
-      "title": "ポートフォリオサイト",
-      "description": "このサイト！Nuxt 3で構築したモダンなポートフォリオ。プロジェクト、履歴書、ギャラリー、ブログを掲載。"
     }
   },
   "resume": {

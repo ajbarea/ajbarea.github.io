@@ -208,49 +208,21 @@
       "title": "Techne",
       "description": "八个 Claude Code 技能可作为单个 /plugin 安装：审核构建、抑制 CI 噪音、追踪文档/代码漂移、同步姐妹仓库。"
     },
-    "news-aggregator": {
-      "title": "AI新闻聚合器",
-      "description": "基于NLP的内容分类与摘要的智能新闻聚合系统"
+    "intellifl": {
+      "title": "InteFL",
+      "description": "联邦学习框架，具备智能客户端选择和隐私保护聚合功能。"
     },
     "security-eval": {
       "title": "安全评估系统",
       "description": "Windows 安全评估工具。通过 Python 规则、CLIPS 专家系统、神经网络或联邦学习，对系统指标（补丁、端口、防火墙、杀毒）进行评分。"
     },
-    "aws-image-translator": {
-      "title": "AWS 图像翻译器",
-      "description": "使用AWS服务实现的无服务器应用，用于从图片中提取并翻译文本。"
-    },
     "robot-navigation-rl": {
       "title": "基于RL的机器人导航",
       "description": "自主机器人在模拟环境中自主导航的强化学习代理"
     },
-    "intellifl": {
-      "title": "IntelliFL",
-      "description": "联邦学习框架，具备智能客户端选择和隐私保护聚合功能。"
-    },
-    "tbd-banking": {
-      "title": "待定银行应用",
-      "description": "银行业务应用，支持账户创建、凭证管理及资金转账，并具备交易追踪功能。"
-    },
-    "thoughtcloud-social": {
-      "title": "ThoughtCloud 社交",
-      "description": "社交平台，用于分享想法、建立网络以及互动和接收通知。"
-    },
     "control-mobile-robots": {
       "title": "移动机器人控制",
       "description": "使用Python和Webots的移动机器人控制系统，涵盖定位、导航和传感器集成。"
-    },
-    "blockchain-explorer": {
-      "title": "区块链浏览器",
-      "description": "用于身份验证数字签名的自定义区块链，具有防篡改验证功能。"
-    },
-    "expense-reimbursement": {
-      "title": "费用报销系统",
-      "description": "员工提交和经理审批的费用报销系统"
-    },
-    "portfolio": {
-      "title": "个人作品集网站",
-      "description": "这个网站！一个现代的 Nuxt 3 技术简历作品集，展示项目、简历、画廊和博客。"
     }
   },
   "resume": {

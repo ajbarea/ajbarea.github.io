@@ -204,49 +204,21 @@
       "title": "Techne",
       "description": "Ocho skills de Claude Code instalables como un único /plugin: auditar builds, reducir ruido de CI, detectar deriva entre docs y código, mantener repos hermanos sincronizados."
     },
-    "news-aggregator": {
-      "title": "Agregador de Noticias con IA",
-      "description": "Sistema inteligente de agregación de noticias que usa PLN para clasificación y resumen de contenido."
+    "intellifl": {
+      "title": "InteFL",
+      "description": "Framework de aprendizaje federado con selección inteligente de clientes y agregación que preserva la privacidad."
     },
     "security-eval": {
       "title": "Sistema de Evaluación de Seguridad",
       "description": "Herramienta de evaluación de seguridad para Windows que puntúa métricas del sistema (parches, puertos, firewall, antivirus) mediante reglas en Python, un sistema experto CLIPS, redes neuronales o aprendizaje federado."
     },
-    "aws-image-translator": {
-      "title": "Traductor de Imágenes en AWS",
-      "description": "Aplicación serverless para extraer y traducir texto de imágenes usando servicios de AWS."
-    },
     "robot-navigation-rl": {
       "title": "Navegación de Robots con RL",
       "description": "Agente de aprendizaje por refuerzo para navegación autónoma de robots en entornos simulados."
     },
-    "intellifl": {
-      "title": "InteFL",
-      "description": "Framework de aprendizaje federado con selección inteligente de clientes y agregación que preserva la privacidad."
-    },
-    "tbd-banking": {
-      "title": "Aplicación Bancaria TBD",
-      "description": "Aplicación bancaria que permite la creación de cuentas, gestión de credenciales y transferencias de fondos con seguimiento de transacciones."
-    },
-    "thoughtcloud-social": {
-      "title": "ThoughtCloud Social",
-      "description": "Plataforma social para compartir pensamientos, construir redes e interactuar con publicaciones y notificaciones."
-    },
     "control-mobile-robots": {
       "title": "Control de Robots Móviles",
       "description": "Sistemas de control de robots móviles usando Python y Webots, abarcando localización, navegación e integración de sensores."
-    },
-    "blockchain-explorer": {
-      "title": "Explorador de Blockchain",
-      "description": "Blockchain personalizado para autenticar firmas digitales con verificación a prueba de manipulación."
-    },
-    "expense-reimbursement": {
-      "title": "Sistema de Reembolso de Gastos",
-      "description": "Sistema para enviar y aprobar reembolsos de gastos con flujos de trabajo para empleados y gerentes."
-    },
-    "portfolio": {
-      "title": "Sitio Portafolio",
-      "description": "¡Este sitio! — un portafolio moderno en Nuxt 3 que muestra proyectos, currículum, galería y blog."
     }
   },
   "resume": {
