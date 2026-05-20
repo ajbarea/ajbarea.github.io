@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
+const localePath = useLocalePath()
 const slug = computed(() => route.params.slug as string)
 
 const { data: article } = await useAsyncData(`blog-${slug.value}`, () =>
@@ -81,7 +82,7 @@ function formatDate(dateString: string): string {
       <div class="max-w-4xl mx-auto">
         <nav class="mb-6 sm:mb-8" aria-label="Breadcrumb">
           <NuxtLink
-            to="/blog"
+            :to="localePath('/blog')"
             class="inline-flex items-center gap-2 min-h-[44px] text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus-visible:ring-2 focus-visible:ring-primary-500 rounded-lg px-2 -ml-2"
           >
             <svg
@@ -189,7 +190,7 @@ function formatDate(dateString: string): string {
               class="group bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
             >
               <NuxtLink
-                :to="`/blog/${relatedArticle.stem?.replace('articles/', '')}`"
+                :to="localePath(`/blog/${relatedArticle.stem?.replace('articles/', '')}`)"
                 class="block p-6"
               >
                 <h3
@@ -230,7 +231,7 @@ function formatDate(dateString: string): string {
           Sorry, the article you're looking for doesn't exist or has been moved.
         </p>
         <NuxtLink
-          to="/blog"
+          :to="localePath('/blog')"
           class="inline-flex items-center justify-center gap-2 min-h-[44px] px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
         >
           <svg

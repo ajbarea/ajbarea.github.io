@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const localePath = useLocalePath()
+
 useHead({
   title: '404 - Page Not Found | AJ Barea',
   meta: [
@@ -48,7 +50,7 @@ useHead({
         The page you're looking for doesn't exist or has been moved.
       </p>
       <NuxtLink
-        to="/"
+        :to="localePath('/')"
         class="inline-flex items-center justify-center gap-2 min-h-[44px] px-6 py-3 bg-sky-600 hover:bg-sky-700 text-white font-medium rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2"
       >
         <svg

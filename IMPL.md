@@ -221,6 +221,22 @@ Confirmed 2026-05-18 (AJ delegated; web-research-grounded):
 - **vue-i18n v10 compiles messages to AST.** `tm('foo.array')` returns AST nodes, not strings — `String(item)` yields `[object Object]`. Use `rt(item)` to resolve each entry. See `AuthorCard.vue` for the `resolveMessageArray` helper.
 - **`restructureDir: false` in @nuxtjs/i18n v10 doesn't behave as the v9 docs suggest.** Path resolution breaks; just use defaults (`restructureDir: 'i18n'`, `langDir: 'locales'`) and put files at `<root>/i18n/locales/`.
 - **`useHead` with `t()` must use function form** (`useHead(() => ({ ... }))`) for reactivity, not object form.
+- **`<NuxtLink to="/projects">` does NOT auto-localize in v10.** Plain `<NuxtLink>` keeps the unprefixed path even on `/es/`, breaking in-session locale continuity. Fix: import `useLocalePath()` in `<script setup>` and wrap every internal `to`: `:to="localePath('/projects')"`. Applied across `TheNavigation.vue`, `AuthorCard.vue`, `blog/index.vue`, `blog/[slug].vue`, `[...404].vue`.
+- **`<NuxtLinkLocale>` looks like the cleaner alternative but isn't auto-imported reliably** in our v10 setup; the rendered HTML showed it falling back to plain `<NuxtLink>` (paths uncorrected). `useLocalePath()` is the bulletproof pattern.
+- **`detectBrowserLanguage` with `redirectOn: 'no_prefix'` breaks the static prerender.** The locale context gets lost during SSG and every `/{lang}/*.html` renders as English. `redirectOn: 'root'` (the conservative option that only triggers detection on the literal `/`) doesn't have this problem and preserves prerender locale context.
+
+### Cross-session persistence (revised 2026-05-20)
+
+Original spec said "opt-in selector only, no auto-detect." In practice that meant the user's manual locale choice was lost the moment they closed the tab — annoying enough that AJ wanted the dark-mode-style persistence ("remember until changed").
+
+Current config: `detectBrowserLanguage: { useCookie: true, cookieKey: 'i18n_redirected', redirectOn: 'root', alwaysRedirect: false }`.
+
+Behavior:
+- Visit `/` for the first time → renders English (no cookie yet). Note: with `useCookie: true`, the module ALSO checks `Accept-Language` on first root visit, so Spanish-locale browsers WILL get redirected to `/es/` once. Mild departure from original spec but matches the "preferred language stays" UX AJ wanted.
+- Click "Español" in the selector → URL becomes `/es/...`, cookie written.
+- Navigate within `/es/` → all internal links use `localePath()` so they stay prefixed.
+- Close tab, reopen `/` → cookie says ES → redirected to `/es/`.
+- Open `/projects` directly → renders English regardless of cookie (URL wins; `redirectOn: 'root'` only applies to the literal root).
 
 ### Research basis (2026-05)
 

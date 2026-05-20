@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const localePath = useLocalePath()
+
 const { data: articles } = await useAsyncData('blog-articles', () =>
   queryCollection('blog').order('date', 'DESC').all()
 )
@@ -48,7 +50,10 @@ useHead({
           :key="article.stem"
           class="group bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
         >
-          <NuxtLink :to="`/blog/${article.stem?.replace('articles/', '')}`" class="block p-5">
+          <NuxtLink
+            :to="localePath(`/blog/${article.stem?.replace('articles/', '')}`)"
+            class="block p-5"
+          >
             <div class="flex flex-col sm:flex-row gap-4">
               <div
                 v-if="article.image"

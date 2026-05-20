@@ -31,7 +31,12 @@ export default defineNuxtConfig({
   i18n: {
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
-    detectBrowserLanguage: false,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+      alwaysRedirect: false
+    },
     baseUrl: 'https://ajbarea.github.io',
     locales: [
       { code: 'en', language: 'en', file: 'en.json', name: 'English' },

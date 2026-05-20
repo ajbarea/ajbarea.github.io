@@ -12,6 +12,7 @@ interface Props {
 defineProps<Props>()
 
 const { tm, rt } = useI18n()
+const localePath = useLocalePath()
 function resolveMessageArray(value: unknown): string[] {
   return Array.isArray(value) ? value.map((item) => rt(item)) : []
 }
@@ -52,7 +53,7 @@ function getSocialIcon(platform: string): string {
     <!-- Profile Image -->
     <figure class="flex-shrink-0">
       <NuxtLink
-        to="/gallery"
+        :to="localePath('/gallery')"
         class="block relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full overflow-hidden ring-4 ring-primary-100 dark:ring-primary-900 shadow-xl transition-transform duration-300 hover:scale-105 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
         :aria-label="$t('hero.viewGalleryAria')"
       >
@@ -119,7 +120,7 @@ function getSocialIcon(platform: string): string {
       <!-- Primary + secondary CTAs -->
       <div class="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-3 mb-6">
         <NuxtLink
-          to="/projects"
+          :to="localePath('/projects')"
           class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary-600 hover:bg-primary-700 text-white text-base font-bold shadow-sm hover:shadow-md transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
         >
           {{ $t('hero.viewProjects') }}
