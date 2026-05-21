@@ -108,17 +108,6 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    id: 'portfolio',
-    title: 'Portfolio Website',
-    technologies: ['Nuxt 4', 'Vue 3', 'TypeScript', 'Tailwind CSS', 'vue-i18n', 'Ollama'],
-    types: ['ai-ml', 'full-stack'],
-    thumbnailUrl:
-      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1767634496/portfolio_smiobu.png',
-    demoUrl: 'https://ajbarea.github.io/',
-    githubUrl: 'https://github.com/ajbarea/ajbarea.github.io',
-    featured: true
-  },
-  {
     id: 'orchestrate-triage',
     title: 'HackerRank Orchestrate Triage',
     technologies: ['Claude Opus 4.7', 'Python', 'Pydantic', 'Anthropic Message Batches API', 'uv'],

@@ -226,10 +226,6 @@
       "title": "Control de Robots Móviles",
       "description": "Sistemas de control de robots móviles usando Python y Webots, abarcando localización, navegación e integración de sensores."
     },
-    "portfolio": {
-      "title": "Sitio Portafolio",
-      "description": "Portafolio multilingüe en Nuxt 4 (EN/ES/JA/ZH) con SEO pre-renderizado, vistas duales de currículum (industria e investigación) y un pipeline local de traducción con Qwen vía Ollama."
-    },
     "orchestrate-triage": {
       "title": "HackerRank Orchestrate Triage",
       "description": "Agente de IA para clasificación de soporte multidominio sobre Claude Opus 4.7: caché de prompts, salida estructurada por tool-calls, defensa contra inyección de prompts y Anthropic Message Batches API. Hecho en solitario para HackerRank Orchestrate (mayo de 2026)."

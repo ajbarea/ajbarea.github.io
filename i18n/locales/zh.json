@@ -230,10 +230,6 @@
       "title": "移动机器人控制",
       "description": "使用Python和Webots的移动机器人控制系统，涵盖定位、导航和传感器集成。"
     },
-    "portfolio": {
-      "title": "作品集网站",
-      "description": "多语言 Nuxt 4 作品集（英语/西班牙语/日语/中文），具备预渲染 SEO、行业与研究双视图简历，以及基于 Qwen + Ollama 的本地翻译流水线。"
-    },
     "orchestrate-triage": {
       "title": "HackerRank Orchestrate Triage",
       "description": "基于 Claude Opus 4.7 的多领域支持分诊 AI 智能体：提示缓存、结构化工具调用输出、提示注入防御和 Anthropic Message Batches API。为 HackerRank Orchestrate（2026 年 5 月）独立构建。"
