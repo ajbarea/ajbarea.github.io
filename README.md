@@ -178,7 +178,19 @@ For full pre-push validation, `./lint.sh` runs format, lint, npm audit, unit tes
 
 ## Deployment
 
-Pushes to `master` trigger `.github/workflows/deploy.yml`, which runs `npm ci` and `npm run generate` on Node 24, then deploys `.output/public/` to GitHub Pages via the official Pages actions. The first run after a new locale lands prerenders the additional routes (16 per locale) automatically.
+Pushes to `main` trigger `.github/workflows/deploy.yml`, which runs `npm ci` and `npm run generate` on Node 24, then deploys `.output/public/` to GitHub Pages via the official Pages actions. The first run after a new locale lands prerenders the additional routes (16 per locale) automatically.
+
+---
+
+## Sister ecosystem
+
+Part of a family of repos exploring agentic AI and federated learning from complementary angles. ajbarea.github.io is the Visibility surface; the others occupy different roles.
+
+- **[kourai-khryseai](https://github.com/ajbarea/kourai-khryseai)** — Innovation. Multi-agent software-development forge: maidens-as-specialists over A2A, MCP sidecars, transparent human-on-the-loop.
+- **[phalanx-fl](https://github.com/ajbarea/phalanx-fl)** — Research. Federated-learning reference platform on Flower + Ray. Eight aggregation strategies with the attack vocabulary.
+- **[vFL](https://github.com/ajbarea/vFL)** — Performance. Same FL strategies as Rust kernels via PyO3 + FastMCP + Prefect Horizon.
+- **[ldqis](https://github.com/ajbarea/ldqis)** — Lab identity. Public website for the Laboratory of Data Quality and Intelligent Security at RIT.
+- **[techne](https://github.com/ajbarea/techne)** — Governance. Claude Code skills plugin: audits, lint/test gates, cross-repo drift detection.
 
 ---
 
