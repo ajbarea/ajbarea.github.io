@@ -190,7 +190,8 @@
       "ai-ml": "IA/ML",
       "federated-learning": "Aprendizaje Federado",
       "full-stack": "Full-Stack",
-      "robotics": "Robótica"
+      "robotics": "Robótica",
+      "hackathon": "Hackathon"
     },
     "kourai-khryseai": {
       "title": "Kourai Khryseai",
@@ -227,6 +228,18 @@
     "portfolio": {
       "title": "Sitio Portafolio",
       "description": "Portafolio multilingüe en Nuxt 4 (EN/ES/JA/ZH) con SEO pre-renderizado, vistas duales de currículum (industria e investigación) y un pipeline local de traducción con Qwen vía Ollama."
+    },
+    "orchestrate-triage": {
+      "title": "Orchestrate Triage",
+      "description": "Agente de IA para clasificación de soporte multidominio sobre Claude Opus 4.7: caché de prompts, salida estructurada por tool-calls, defensa contra inyección de prompts y Anthropic Message Batches API. Hecho en solitario para HackerRank Orchestrate (mayo de 2026)."
+    },
+    "bioradio-music": {
+      "title": "Música EMG a MIDI",
+      "description": "Sonificación en tiempo real de bioseñales: EMG/EEG del BioRadio se transmiten por Lab Streaming Layer y se mapean a notas MIDI para interpretación en vivo. Proyecto en equipo del AWARE-AI Spring Hackathon con Victor Lockwood (febrero de 2026)."
+    },
+    "blockchain-explorer": {
+      "title": "Blockchain Explorer",
+      "description": "Sistema privado de blockchain y panel de administración para la certificación de documentos de DocBridge.io: minería Proof-of-Work con SHA-256, explorador de transacciones, gestión de usuarios, Google OAuth 2.0 + JWT. Capstone de licenciatura (USF, mayo de 2022)."
     }
   },
   "resume": {
