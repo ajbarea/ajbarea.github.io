@@ -135,8 +135,6 @@ export interface Project {
   technologies: string[]
   types: ProjectType[]
   thumbnailUrl?: string
-  thumbnailUrlLight?: string
-  thumbnailUrlDark?: string
   demoUrl?: string
   docsUrl?: string
   githubUrl?: string

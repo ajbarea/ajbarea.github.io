@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import type { Project, ProjectType } from '~/types'
-import { useThemeStore } from '~/stores/theme'
 import ProjectModal from './ProjectModal.vue'
 
 interface Props {
@@ -10,17 +9,9 @@ interface Props {
 
 const props = defineProps<Props>()
 
-const themeStore = useThemeStore()
 const imageError = ref(false)
 const modalOpen = ref(false)
 const titleBtnRef = ref<HTMLButtonElement | null>(null)
-
-const displayThumbnail = computed(() => {
-  const variant = themeStore.isDark
-    ? props.project.thumbnailUrlDark
-    : props.project.thumbnailUrlLight
-  return variant ?? props.project.thumbnailUrl
-})
 
 function handleImageError() {
   imageError.value = true
@@ -74,8 +65,8 @@ function getTypeBadgeClasses(type: ProjectType): string {
       class="relative h-48 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 overflow-hidden"
     >
       <img
-        v-if="displayThumbnail && !imageError"
-        :src="displayThumbnail"
+        v-if="project.thumbnailUrl && !imageError"
+        :src="project.thumbnailUrl"
         :alt="$t('projects.page.thumbnailAlt', { title: $t('projects.' + project.id + '.title') })"
         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         loading="lazy"
