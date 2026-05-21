@@ -37,6 +37,9 @@ useHead(() => ({
     <!-- Timeline Section -->
     <HomeExperienceTimeline :entries="timelineEntries" />
 
+    <!-- Sister Ecosystem -->
+    <HomeSisterEcosystem />
+
     <!-- Selected Activity 2026 -->
     <HomeActivityHighlights />
 

@@ -63,7 +63,8 @@
     "expertiseTooltip": "Ver documentación",
     "skills": "Habilidades Técnicas",
     "contact": "Contáctame",
-    "contactLead": "¿Tienes una pregunta o quieres colaborar? Envíame un mensaje y te responderé pronto."
+    "contactLead": "¿Tienes una pregunta o quieres colaborar? Envíame un mensaje y te responderé pronto.",
+    "sisters": "El ecosistema hermano"
   },
   "activity": {
     "kind": {
@@ -375,5 +376,39 @@
     "copied": "¡Copiado al portapapeles!",
     "failed": "Falló la copia al portapapeles",
     "emailCopied": "Correo copiado: {email}"
+  },
+  "sisters": {
+    "lead": "Una familia coordinada de repositorios que explora la IA agéntica y el aprendizaje federado desde ángulos complementarios. Cada uno se invoca de forma independiente; juntos conforman un solo programa de investigación.",
+    "listAria": "Proyectos hermanos en el ecosistema",
+    "cardAria": "{name}, rol: {role}",
+    "roles": {
+      "innovation": "Innovación",
+      "research": "Investigación",
+      "performance": "Rendimiento",
+      "governance": "Gobernanza",
+      "lab-identity": "Identidad del laboratorio"
+    },
+    "items": {
+      "kourai-khryseai": {
+        "name": "Kourai Khryseai",
+        "description": "Fragua de desarrollo de software multiagente: doncellas-como-especialistas sobre A2A, sidecars MCP, humano en el bucle de forma transparente."
+      },
+      "phalanx-fl": {
+        "name": "Phalanx-FL",
+        "description": "Plataforma de referencia para aprendizaje federado sobre Flower y Ray. Ocho estrategias de agregación con el vocabulario de ataques."
+      },
+      "vfl": {
+        "name": "VelocityFL",
+        "description": "Las mismas estrategias FL como núcleos Rust vía PyO3 y FastMCP. Rendimiento y escala masiva."
+      },
+      "ldqis": {
+        "name": "LDQIS Lab",
+        "description": "Sitio web público del Laboratorio de Calidad de Datos y Seguridad Inteligente en RIT."
+      },
+      "techne": {
+        "name": "Techne",
+        "description": "Plugin de skills para Claude Code: auditorías, controles de lint y pruebas, detección de divergencias entre repos."
+      }
+    }
   }
 }

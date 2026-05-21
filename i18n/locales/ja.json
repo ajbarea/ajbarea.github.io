@@ -63,7 +63,8 @@
     "expertiseTooltip": "ドキュメントを見る",
     "skills": "技術スキル",
     "contact": "お問い合わせ",
-    "contactLead": "ご質問やコラボのご相談があれば、メッセージをお送りください。すぐに返信いたします。"
+    "contactLead": "ご質問やコラボのご相談があれば、メッセージをお送りください。すぐに返信いたします。",
+    "sisters": "姉妹エコシステム"
   },
   "activity": {
     "kind": {
@@ -375,5 +376,39 @@
     "copied": "クリップボードにコピーしました！",
     "failed": "クリップボードへのコピーに失敗しました",
     "emailCopied": "メールアドレスをコピーしました: {email}"
+  },
+  "sisters": {
+    "lead": "エージェント AI と連合学習を補完的な角度から探究する、調和の取れたリポジトリ群です。それぞれ独立して利用できますが、合わせて一つの研究プログラムを構成します。",
+    "listAria": "エコシステム内の姉妹プロジェクト",
+    "cardAria": "{name}、役割: {role}",
+    "roles": {
+      "innovation": "イノベーション",
+      "research": "リサーチ",
+      "performance": "パフォーマンス",
+      "governance": "ガバナンス",
+      "lab-identity": "ラボのアイデンティティ"
+    },
+    "items": {
+      "kourai-khryseai": {
+        "name": "Kourai Khryseai",
+        "description": "マルチエージェントによるソフトウェア開発の鍛冶場です。A2A 上の専門家としての乙女たち、MCP サイドカー、透明なヒューマン・オン・ザ・ループを採用しています。"
+      },
+      "phalanx-fl": {
+        "name": "Phalanx-FL",
+        "description": "Flower と Ray を用いた連合学習のリファレンスプラットフォームです。8 つの集約戦略と攻撃ボキャブラリを備えています。"
+      },
+      "vfl": {
+        "name": "VelocityFL",
+        "description": "同じ FL 戦略を PyO3 と FastMCP 経由の Rust カーネルとして実装しています。パフォーマンスと大規模スケールに特化しています。"
+      },
+      "ldqis": {
+        "name": "LDQIS Lab",
+        "description": "RIT の Laboratory of Data Quality and Intelligent Security の公式ウェブサイトです。"
+      },
+      "techne": {
+        "name": "Techne",
+        "description": "Claude Code 用のスキルプラグインです。ビルドの監査、lint とテストのゲート、リポジトリ間の差分検出を提供します。"
+      }
+    }
   }
 }

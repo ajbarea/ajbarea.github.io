@@ -63,7 +63,8 @@
     "expertiseTooltip": "View docs",
     "skills": "Technical Skills",
     "contact": "Get In Touch",
-    "contactLead": "Have a question or want to work together? Send me a message and I'll get back to you."
+    "contactLead": "Have a question or want to work together? Send me a message and I'll get back to you.",
+    "sisters": "The Sister Ecosystem"
   },
   "activity": {
     "kind": {
@@ -375,5 +376,39 @@
     "copied": "Copied to clipboard!",
     "failed": "Failed to copy to clipboard",
     "emailCopied": "Email copied: {email}"
+  },
+  "sisters": {
+    "lead": "A coordinated family of repos exploring agentic AI and federated learning from complementary angles. Each is independently invocable; together they form one research program.",
+    "listAria": "Sister projects in the ecosystem",
+    "cardAria": "{name}, role: {role}",
+    "roles": {
+      "innovation": "Innovation",
+      "research": "Research",
+      "performance": "Performance",
+      "governance": "Governance",
+      "lab-identity": "Lab identity"
+    },
+    "items": {
+      "kourai-khryseai": {
+        "name": "Kourai Khryseai",
+        "description": "Multi-agent software-development forge: maidens-as-specialists over A2A, MCP sidecars, transparent human-on-the-loop."
+      },
+      "phalanx-fl": {
+        "name": "Phalanx-FL",
+        "description": "Federated-learning reference platform on Flower and Ray. Eight aggregation strategies with the attack vocabulary."
+      },
+      "vfl": {
+        "name": "VelocityFL",
+        "description": "Same FL strategies as Rust kernels via PyO3 and FastMCP. Performance and crowd-scale speed lane."
+      },
+      "ldqis": {
+        "name": "LDQIS Lab",
+        "description": "Public website for the Laboratory of Data Quality and Intelligent Security at RIT."
+      },
+      "techne": {
+        "name": "Techne",
+        "description": "Claude Code skills plugin: audits, lint and test gates, cross-repo drift detection."
+      }
+    }
   }
 }

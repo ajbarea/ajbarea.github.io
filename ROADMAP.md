@@ -14,10 +14,10 @@ When a roadmap item ships, its scope block here is removed and a dated one-liner
 
 ## Cross-sister polish (2026-05-21)
 
-> Source: 2026-05-21 audit-of-audits review "Insights worth keeping". Mirror items live in the matching ROADMAP for each active sister. The portfolio is the natural home for ecosystem-narrative work since it's the aggregator surface.
+> Source: 2026-05-21 audit-of-audits review "Insights worth keeping". Mirror items live in the matching ROADMAP for each active sister. The portfolio is the natural home for ecosystem-narrative work since it's the aggregator surface. Both items shipped 2026-05-21; tracked here so the cross-sister mirror is legible.
 
-- **Ecosystem narrative on the homepage.** Today the projects page lists Kourai Khryseai / Phalanx-FL / VelocityFL / techne as a flat catalog with filter tags. The ecosystem framing (innovation / research / performance / governance / visibility roles, with the FL stack as a coherent research program) is only told _inside_ the LDQIS lab page (dataqualitylabs.com), not on the portfolio itself. Add a brief homepage block — between `HomeExperienceTimeline` and `HomeActivityHighlights` — that names the five active sisters and their roles. Content task, mostly.
-- **Reciprocal `## Sister ecosystem` blocks in sister READMEs.** The portfolio is the place where the story is told end-to-end; each sister's README should at minimum name the others with one-line links so a reader landing on any sister can navigate to the rest. Same item appears in each sister's ROADMAP under "Cross-sister polish."
+- ✅ **Ecosystem narrative on the homepage.** `HomeSisterEcosystem` lives between `HomeExperienceTimeline` and `HomeActivityHighlights`, names five active sisters with their ecosystem role (innovation / research / performance / governance / lab identity), and renders in all four locales (en / es / ja / zh). Data in `app/data/sisters.ts`; i18n keys under `sisters.*` + `sections.sisters`; 7 component tests. Shipped 2026-05-21.
+- ✅ **Reciprocal `## Sister ecosystem` blocks in sister READMEs.** Landed across all six sister READMEs as separate commits: kourai-khryseai 4b0a36c, phalanx-fl b1c325b44, vFL 697dca6, ldqis bcb1fb8, techne 5834431, ajbarea.github.io 6897117 (this repo). Each lists the other five with their role and one-line description.
 
 ---
 
@@ -39,6 +39,7 @@ When a roadmap item ships, its scope block here is removed and a dated one-liner
 
 One-line per item, newest first. Detail moves to git history when work lands.
 
+- 2026-05-21 — **Homepage `HomeSisterEcosystem` block + reciprocal `## Sister ecosystem` blocks across all six sister READMEs**
 - 2026-05-21 — **Hackathon tag + 3 new projects (orchestrate-triage, bioradio-music, blockchain-explorer)** [#10]
 - 2026-05-20 — **BS Computer Engineering coursework added to resume** [#9]
 - 2026-05-19 — **Clickable project cards open detail modal + slim card balance fixes** [#8]
