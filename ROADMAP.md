@@ -2,7 +2,7 @@
 
 Long-horizon plan for the portfolio. Session-by-session execution lives in [IMPL.md](IMPL.md). Most of the surface ships through `app/data/*.ts` content files; engineering work is the smaller share.
 
-When a roadmap item ships, its scope block here is removed and a dated one-liner lands under [Shipped](#shipped). What's *currently active* lives in IMPL.md.
+When a roadmap item ships, its scope block here is removed and a dated one-liner lands under [Shipped](#shipped). What's _currently active_ lives in IMPL.md.
 
 ---
 
@@ -15,7 +15,7 @@ When a roadmap item ships, its scope block here is removed and a dated one-liner
 
 > Source: 2026-05-21 audit-of-audits review "Insights worth keeping". Mirror items live in the matching ROADMAP for each active sister. The portfolio is the natural home for ecosystem-narrative work since it's the aggregator surface.
 
-- **Ecosystem narrative on the homepage.** Today the projects page lists Kourai Khryseai / Phalanx-FL / VelocityFL / techne as a flat catalog with filter tags. The ecosystem framing (innovation / research / performance / governance / visibility roles, with the FL stack as a coherent research program) is only told *inside* the LDQIS lab page (dataqualitylabs.com), not on the portfolio itself. Add a brief homepage block — between `HomeExperienceTimeline` and `HomeActivityHighlights` — that names the five active sisters and their roles. Content task, mostly.
+- **Ecosystem narrative on the homepage.** Today the projects page lists Kourai Khryseai / Phalanx-FL / VelocityFL / techne as a flat catalog with filter tags. The ecosystem framing (innovation / research / performance / governance / visibility roles, with the FL stack as a coherent research program) is only told _inside_ the LDQIS lab page (dataqualitylabs.com), not on the portfolio itself. Add a brief homepage block — between `HomeExperienceTimeline` and `HomeActivityHighlights` — that names the five active sisters and their roles. Content task, mostly.
 - **Reciprocal `## Sister ecosystem` blocks in sister READMEs.** The portfolio is the place where the story is told end-to-end; each sister's README should at minimum name the others with one-line links so a reader landing on any sister can navigate to the rest. Same item appears in each sister's ROADMAP under "Cross-sister polish."
 
 ---
