@@ -241,6 +241,10 @@
     "blockchain-explorer": {
       "title": "Blockchain Explorer",
       "description": "Sistema privado de blockchain y panel de administración para la certificación de documentos de DocBridge.io: minería Proof-of-Work con SHA-256, explorador de transacciones, gestión de usuarios, Google OAuth 2.0 + JWT. Capstone de licenciatura (USF, mayo de 2022)."
+    },
+    "ldqis": {
+      "title": "Sitio web del laboratorio LDQIS",
+      "description": "Sitio web público del Laboratorio de Calidad de Datos y Seguridad Inteligente en RIT. Reemplaza un sitio heredado de Flask + Bootstrap con una construcción ligera en Astro 5 + Tailwind 4; migración al dominio personalizado dataqualitylabs.com pendiente."
     }
   },
   "resume": {

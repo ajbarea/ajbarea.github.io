@@ -245,6 +245,10 @@
     "blockchain-explorer": {
       "title": "区块链浏览器",
       "description": "DocBridge.io 文档认证的私有区块链系统和管理仪表板：SHA-256 工作量证明挖矿、交易浏览器、用户管理、Google OAuth 2.0 + JWT。本科毕业设计（USF，2022 年 5 月）。"
+    },
+    "ldqis": {
+      "title": "LDQIS 实验室网站",
+      "description": "罗切斯特理工学院（RIT）数据质量与智能安全实验室（LDQIS）的公开网站。将传统的 Flask + Bootstrap 站点用 Astro 5 + Tailwind 4 重新构建；自定义域名 dataqualitylabs.com 的迁移待办。"
     }
   },
   "resume": {

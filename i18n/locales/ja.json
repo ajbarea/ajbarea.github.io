@@ -241,6 +241,10 @@
     "blockchain-explorer": {
       "title": "ブロックチェーンエクスプローラー",
       "description": "DocBridge.ioの文書認証のためのプライベートブロックチェーンシステムと管理ダッシュボード：SHA-256によるProof-of-Workマイニング、トランザクションエクスプローラー、ユーザー管理、Google OAuth 2.0 + JWT。USFの卒業研究（2022年5月）。"
+    },
+    "ldqis": {
+      "title": "LDQIS研究室ウェブサイト",
+      "description": "RITのデータ品質とインテリジェント・セキュリティ研究室（LDQIS）の公式ウェブサイト。レガシーなFlask + Bootstrapサイトを、Astro 5 + Tailwind 4でリーンに再構築。カスタムドメインdataqualitylabs.comへの移行は予定中。"
     }
   },
   "resume": {
