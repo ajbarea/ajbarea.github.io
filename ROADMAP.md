@@ -9,6 +9,7 @@ When a roadmap item ships, its scope block here is removed and a dated one-liner
 ## Polish
 
 - **Dark mode + accessibility audit.** Dark-mode classes are already wired into components (`dark:bg-purple-900/40` etc.); the toggle exposure and WCAG 2.1 AA contrast across components has not been verified end-to-end. Run axe-core against the homepage + projects + resume routes; add a Playwright assertion for color-contrast on the key text-on-background combinations so contrast regressions can't slip through.
+- **Light-mode thumbnail variants (pending asset upload).** `ProjectCard` renders a single `thumbnailUrl` for both themes today; existing Cloudinary assets are dark-native and look harsh under the light toggle. Path forward when light assets exist: extend `Project` in `app/types/index.ts` with `thumbnailUrlLight?: string`, consume `useThemeStore().isDark` in ProjectCard's computed thumbnail, fall back to `thumbnailUrl` when no variant is defined. Reverted commit `cc00cb5` carries the exact wiring + tests for reference; the Cloudinary `e_negate` transform was tried as a stopgap and empirically looked bad on screenshot-shaped images, so don't reach for it again. Asset-gated, not code-gated.
 - **Blog content (first post).** `app/pages/blog/index.vue` + `app/pages/blog/[slug].vue` are scaffolded; `articles/` is empty. The page surface is wired but no posts have been written. First post is a content task, not engineering — pick a topic when the session has runway.
 
 ## Cross-sister polish (2026-05-21)
