@@ -93,17 +93,17 @@
     "rit-phd-2026": {
       "title": "哲学博士",
       "subtitle": "计算机与信息科学",
-      "description": "在计算与信息科学博士学位课程中，继续与莱昂·雷尼克博士合作开展联邦学习研究。"
+      "description": "在 Leon Reznik 博士的指导下继续联合学习与代理 AI 研究，延续硕士毕业设计的 IntelliFL 研究方向。"
     },
     "ncsu-scads-2026": {
       "title": "暑期研究学者",
       "subtitle": "SCADS · 应用数据科学夏季会议",
-      "description": "被选为北卡州立大学文理学院SCADS夏季研究学者，时间为2026年夏天。"
+      "description": "为期八周的精英研究项目，将研究生与情报界和国家实验室人员配对，进行大规模 AI 评估。研究方向：在异构数据源上的代理 AI 编排。"
     },
     "rit-gra": {
       "title": "研究生研究员",
       "subtitle": "莱昂·雷兹尼克博士的研究小组",
-      "description": "增强IntelliFL联邦学习框架，实现80%以上的测试覆盖率、React/FastAPI接口以及拜占庭容错聚合方法。",
+      "description": "将 IntelliFL 测试覆盖率提升至 80% 以上。构建了 React + FastAPI 的联合实验管理界面。实现了拜占庭容错的聚合策略（Krum、Bulyan、RFA、Trimmed Mean）。",
       "bullets": [
         "为分布式FL系统（IntelliFL框架）设计了全面的pytest测试套件，代码覆盖率超过80%",
         "构建React + FastAPI Web界面，提高研究人员入职时间并增强实验可复现性",
@@ -117,7 +117,7 @@
     "rit-ta": {
       "title": "教学助理",
       "subtitle": "软件架构",
-      "description": "指导学生学习设计模式、架构风格和质量属性。在教师缺席时带领整个班级的课程。",
+      "description": "指导学生学习设计模式、架构风格和质量属性。在讲师缺席时讲授了一整节课。",
       "bullets": [
         "指导学生学习软件设计模式、架构风格、质量属性和策略",
         "带领诵读小组和办公室时间提供技术指导以决策架构",
@@ -128,12 +128,12 @@
     "rit-ms": {
       "title": "硕士学位",
       "subtitle": "软件工程",
-      "description": "GPA: 4.0/4.0。毕业设计：增强联邦学习执行框架（导师：莱昂·雷尼克博士）。"
+      "description": "GPA: 4.0/4.0。毕业设计：在 Leon Reznik 博士的指导下增强 IntelliFL 联合学习执行框架。"
     },
     "lowes": {
       "title": "软件工程师（合同工）",
       "subtitle": "分布管理系统",
-      "description": "减少RDC每日错误日志15万条。构建全栈自动化工具。将入职时间减少了80%。",
+      "description": "在 RDC 之间将每日错误日志减少了 15 万条。构建了全栈自动化工具。将新员工入职时间缩短了 80%。",
       "bullets": [
         "减少RDC每日错误日志15万条，通过解决bug、优化日志分析和提升系统性能",
         "开发了一个全栈应用，用于简化数据库查询并生成SQL脚本，从而减少支持工单的处理时间",
@@ -146,12 +146,12 @@
     "usf-bs": {
       "title": "学士学位",
       "subtitle": "计算机工程",
-      "description": "GPA: 3.06/4.0."
+      "description": "GPA: 3.06/4.0。本科毕业设计：PhiQuest blockchain-explorer 文档认证系统，与 Allen Cheng 和 Ethan Wuitschick 共同完成。"
     },
     "phiquest": {
       "title": "用户体验开发实习生",
       "subtitle": "开发团队",
-      "description": "为网络应用设计了线框图。使用Node.js构建了基于区块链的文档认证Chrome扩展。",
+      "description": "用 Node.js 构建了基于区块链的文档认证 Chrome 扩展程序。与跨职能团队设计了 Web 应用程序的线框图。",
       "bullets": [
         "为web应用设计线框图，并与跨功能团队合作，确保解决方案既可行又用户友好",
         "使用Node.js开发了一个基于区块链的文档认证Chrome扩展，实现安全验证"
@@ -163,7 +163,8 @@
         "自主机器人导航RL - 开发了在Webots模拟器中的Q学习和DQN框架，包含状态离散化、回放缓冲区以及基于PyTorch的超参数优化（通过YouTube教程文档记录）",
         "联邦学习安全 - 构建结合CLIPS基于规则的专家系统、PyTorch神经网络和联邦学习技术的评估系统，以评估分布式机器学习系统的拜占庭容错能力",
         "自然语言处理 - 使用 Hugging Face Transformers（BART）实现新闻摘要系统，并通过协同过滤（scikit-surprise）提供个性化推荐"
-      ]
+      ],
+      "description": "三个独立研究项目，探索了成为硕士课程重点的 FL 和代理 AI 方向：强化学习导航、联合学习安全和 NLP 摘要。"
     }
   },
   "projects": {
