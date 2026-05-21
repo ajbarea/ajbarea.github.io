@@ -34,8 +34,8 @@ export const hackathons: Hackathon[] = [
     ],
     links: {
       event: 'https://www.rit.edu/events/aware-ai-spring-hackathon-1',
-      repo: 'https://github.com/victor-lockwood/Hackathon-2026-Cosmic-Horror',
-      docs: 'https://victor-lockwood.github.io/Hackathon-2026-Cosmic-Horror/',
+      repo: 'https://github.com/ajbarea/bioradio-music',
+      docs: 'https://ajbarea.github.io/bioradio-music/',
       linkedin:
         'https://www.linkedin.com/posts/aj-barea_hackathon-appliedai-hci-share-7433372743804375040-QAOy'
     }

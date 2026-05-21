@@ -230,12 +230,12 @@
       "description": "Multilingual Nuxt 4 portfolio (EN/ES/JA/ZH) with prerendered SEO, dual industry/research resume views, and a local Qwen-via-Ollama translation pipeline."
     },
     "orchestrate-triage": {
-      "title": "Orchestrate Triage",
+      "title": "HackerRank Orchestrate Triage",
       "description": "Multi-domain support-triage AI agent on Claude Opus 4.7: prompt caching, structured tool-call output, prompt-injection defense, and Anthropic Message Batches API. Built solo for HackerRank Orchestrate (May 2026)."
     },
     "bioradio-music": {
       "title": "EMG-to-MIDI Music",
-      "description": "Real-time biosignal sonification: EMG/EEG from the BioRadio streams over Lab Streaming Layer and maps to MIDI notes for live performance. AWARE-AI Spring Hackathon team project with Victor Lockwood (Feb 2026)."
+      "description": "Real-time biosignal sonification: EMG/EEG from the BioRadio streams over Lab Streaming Layer and maps to MIDI notes for live performance. AWARE-AI Spring Hackathon team project with Victor Lockwood, Parth Kapur, Grant Bosworth, and Sophia Caruana (Feb 2026)."
     },
     "blockchain-explorer": {
       "title": "Blockchain Explorer",
