@@ -226,10 +226,6 @@
       "title": "Control of Mobile Robots",
       "description": "Mobile robot control systems using Python and Webots covering localization, navigation, and sensor integration."
     },
-    "portfolio": {
-      "title": "Portfolio Website",
-      "description": "Multilingual Nuxt 4 portfolio (EN/ES/JA/ZH) with prerendered SEO, dual industry/research resume views, and a local Qwen-via-Ollama translation pipeline."
-    },
     "orchestrate-triage": {
       "title": "HackerRank Orchestrate Triage",
       "description": "Multi-domain support-triage AI agent on Claude Opus 4.7: prompt caching, structured tool-call output, prompt-injection defense, and Anthropic Message Batches API. Built solo for HackerRank Orchestrate (May 2026)."
@@ -241,6 +237,10 @@
     "blockchain-explorer": {
       "title": "Blockchain Explorer",
       "description": "Private blockchain system and admin dashboard for DocBridge.io document certification: Proof-of-Work mining with SHA-256, transaction explorer, user management, Google OAuth 2.0 + JWT. Senior capstone (USF, May 2022)."
+    },
+    "ldqis": {
+      "title": "LDQIS Lab Website",
+      "description": "Public website for the Laboratory of Data Quality and Intelligent Security at RIT. Replaces a legacy Flask + Bootstrap site with a lean Astro 5 + Tailwind 4 build; custom domain handoff to dataqualitylabs.com pending."
     }
   },
   "resume": {

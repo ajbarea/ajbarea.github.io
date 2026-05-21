@@ -58,6 +58,16 @@ export const projects: Project[] = [
     featured: true
   },
   {
+    id: 'ldqis',
+    title: 'LDQIS Lab Website',
+    technologies: ['Astro 5', 'Tailwind 4', 'TypeScript', 'GitHub Pages'],
+    types: ['full-stack'],
+    thumbnailUrl: 'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779393712/ldqis_yz6hib.png',
+    demoUrl: 'https://ajbarea.github.io/ldqis/',
+    githubUrl: 'https://github.com/ajbarea/ldqis',
+    featured: true
+  },
+  {
     id: 'intellifl',
     title: 'InteFL',
     technologies: ['Python', 'PyTorch', 'FLOWER', 'Federated Learning', 'Docker'],
@@ -95,17 +105,6 @@ export const projects: Project[] = [
       'https://res.cloudinary.com/dumwa1w5x/image/upload/v1767634303/control-robots_mtf8fl.png',
     githubUrl: 'https://github.com/ajbarea/control-of-mobile-robots',
     youtubeUrl: 'https://www.youtube.com/playlist?list=PLmQVFU1FBDddYV_4IRW1zfXH6CAKuZjIM',
-    featured: true
-  },
-  {
-    id: 'portfolio',
-    title: 'Portfolio Website',
-    technologies: ['Nuxt 4', 'Vue 3', 'TypeScript', 'Tailwind CSS', 'vue-i18n', 'Ollama'],
-    types: ['ai-ml', 'full-stack'],
-    thumbnailUrl:
-      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1767634496/portfolio_smiobu.png',
-    demoUrl: 'https://ajbarea.github.io/',
-    githubUrl: 'https://github.com/ajbarea/ajbarea.github.io',
     featured: true
   },
   {
