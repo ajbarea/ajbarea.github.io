@@ -34,11 +34,7 @@
       "オタク",
       "お気に入りの息子"
     ],
-    "credibilityChips": [
-      "RIT GRA · Reznikグループ",
-      "IEEE 2026論文 4本",
-      "MS SWE · GPA 4.0"
-    ],
+    "credibilityChips": ["RIT GRA · Reznikグループ", "IEEE 2026論文 4本", "MS SWE · GPA 4.0"],
     "researchInterests": [
       "連合学習システム",
       "ツールを使うエージェント型AI",
