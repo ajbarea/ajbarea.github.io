@@ -89,17 +89,17 @@
     "rit-phd-2026": {
       "title": "Doctor of Philosophy",
       "subtitle": "Computing and Information Sciences",
-      "description": "PhD in Computing and Information Sciences continuing federated learning research with Dr. Leon Reznik."
+      "description": "Federated learning + agentic AI research continuing under Dr. Leon Reznik, extending the IntelliFL line from the MS capstone."
     },
     "ncsu-scads-2026": {
       "title": "Summer Research Scholar",
       "subtitle": "SCADS · Summer Conference on Applied Data Science",
-      "description": "Selected as a SCADS Summer Research Scholar at NC State LAS for summer 2026."
+      "description": "Eight-week selective research program pairing grad students with IC and national-lab personnel on at-scale AI evaluation. Working on agentic-AI orchestration over heterogeneous data sources."
     },
     "rit-gra": {
       "title": "Graduate Research Assistant",
       "subtitle": "Dr. Leon Reznik's Research Group",
-      "description": "Enhancing IntelliFL federated learning framework with 80%+ test coverage, React/FastAPI interface, and Byzantine-robust aggregation methods.",
+      "description": "Raised IntelliFL test coverage past 80%. Built the React + FastAPI surface for federated experiment management. Shipped Byzantine-robust aggregation strategies (Krum, Bulyan, RFA, Trimmed Mean).",
       "bullets": [
         "Designed comprehensive pytest testing suite achieving 80%+ code coverage for distributed FL systems (IntelliFL framework)",
         "Built React + FastAPI web interface improving researcher onboarding time and experimental reproducibility",
@@ -113,7 +113,7 @@
     "rit-ta": {
       "title": "Teaching Assistant",
       "subtitle": "Software Architecture",
-      "description": "Mentoring students in design patterns, architectural styles, and quality attributes. Led full class session during instructor absence.",
+      "description": "Mentored students through design patterns, architectural styles, and quality attributes. Led a full class session during the instructor's absence.",
       "bullets": [
         "Mentor students in software design patterns, architectural styles, quality attributes and tactics",
         "Lead recitation sections and office hours providing technical guidance on architecture decisions",
@@ -124,7 +124,7 @@
     "rit-ms": {
       "title": "Master of Science",
       "subtitle": "Software Engineering",
-      "description": "GPA: 4.0/4.0. Capstone: Enhancing Federated Learning Execution Framework (Advisor: Dr. Leon Reznik)."
+      "description": "GPA: 4.0/4.0. Capstone: enhanced the IntelliFL federated learning execution framework under Dr. Leon Reznik."
     },
     "lowes": {
       "title": "Software Engineer (Contract)",
@@ -142,12 +142,12 @@
     "usf-bs": {
       "title": "Bachelor of Science",
       "subtitle": "Computer Engineering",
-      "description": "GPA: 3.06/4.0."
+      "description": "GPA: 3.06/4.0. Senior capstone: the PhiQuest blockchain-explorer document-certification system, with Allen Cheng and Ethan Wuitschick."
     },
     "phiquest": {
       "title": "UX Developer (Internship)",
       "subtitle": "Development Team",
-      "description": "Designed wireframes for web apps. Built blockchain-based document authenticator Chrome extension using Node.js.",
+      "description": "Built a blockchain-based document-authenticator Chrome extension in Node.js. Wireframed web-app surfaces with cross-functional teams.",
       "bullets": [
         "Designed wireframes for web apps, collaborating with cross-functional teams to ensure feasible, user-friendly solutions",
         "Engineered a blockchain-based document authenticator Chrome extension using Node.js, enabling secure verification"
@@ -159,7 +159,8 @@
         "Autonomous Robot Navigation RL - Developed Q-learning and DQN framework in Webots simulator with state discretization, replay buffers, and PyTorch-based hyperparameter optimization (documented via YouTube tutorials)",
         "Federated Learning Security - Built evaluation system combining CLIPS rule-based expert systems, PyTorch neural networks, and federated learning techniques to assess Byzantine fault tolerance in distributed ML systems",
         "Natural Language Processing - Implemented news summarization system using Hugging Face Transformers (BART) with personalized recommendations via collaborative filtering (scikit-surprise)"
-      ]
+      ],
+      "description": "Three independent research projects exploring the FL + agentic AI directions that became the MS focus: reinforcement-learning navigation, federated-learning security, and NLP summarization."
     }
   },
   "projects": {

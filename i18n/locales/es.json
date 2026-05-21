@@ -89,17 +89,17 @@
     "rit-phd-2026": {
       "title": "Doctorado",
       "subtitle": "Ciencias de la Computación y la Información",
-      "description": "Doctorado en Ciencias de la Computación y la Información continuando la investigación en aprendizaje federado con el Dr. Leon Reznik."
+      "description": "Investigación en aprendizaje federado y IA con agentes que continúa con el Dr. Leon Reznik, extendiendo la línea IntelliFL del proyecto final de la maestría."
     },
     "ncsu-scads-2026": {
       "title": "Becario de Investigación de Verano",
       "subtitle": "SCADS · Conferencia de Verano sobre Ciencia de Datos Aplicada",
-      "description": "Seleccionado como SCADS Summer Research Scholar en NC State LAS para el verano de 2026."
+      "description": "Programa de investigación selectivo de ocho semanas que empareja a estudiantes de posgrado con personal de la comunidad de inteligencia y laboratorios nacionales en evaluación de IA a escala. Trabajando en orquestación de IA con agentes sobre fuentes de datos heterogéneas."
     },
     "rit-gra": {
       "title": "Asistente de Investigación de Posgrado",
       "subtitle": "Grupo de Investigación del Dr. Leon Reznik",
-      "description": "Mejorando el framework de aprendizaje federado IntelliFL con más del 80% de cobertura de pruebas, interfaz React/FastAPI y métodos de agregación robustos contra ataques bizantinos.",
+      "description": "Aumenté la cobertura de pruebas de IntelliFL por encima del 80%. Construí la interfaz React + FastAPI para la gestión de experimentos federados. Implementé estrategias de agregación robustas contra ataques bizantinos (Krum, Bulyan, RFA, Trimmed Mean).",
       "bullets": [
         "Diseñé una suite de pruebas pytest integral que alcanza más del 80% de cobertura de código para sistemas FL distribuidos (framework IntelliFL)",
         "Construí una interfaz web React + FastAPI que mejora el tiempo de incorporación de investigadores y la reproducibilidad experimental",
@@ -113,7 +113,7 @@
     "rit-ta": {
       "title": "Asistente de Cátedra",
       "subtitle": "Arquitectura de Software",
-      "description": "Mentoreo a estudiantes en patrones de diseño, estilos arquitectónicos y atributos de calidad. Lideré una sesión completa de clase durante la ausencia del instructor.",
+      "description": "Mentoreé a estudiantes en patrones de diseño, estilos arquitectónicos y atributos de calidad. Lideré una sesión completa de clase durante la ausencia del instructor.",
       "bullets": [
         "Mentoreo a estudiantes en patrones de diseño de software, estilos arquitectónicos, atributos de calidad y tácticas",
         "Lidero secciones de repaso y horas de oficina ofreciendo orientación técnica sobre decisiones arquitectónicas",
@@ -124,7 +124,7 @@
     "rit-ms": {
       "title": "Maestría en Ciencias",
       "subtitle": "Ingeniería de Software",
-      "description": "GPA: 4.0/4.0. Proyecto final: Mejorando el Framework de Ejecución de Aprendizaje Federado (Asesor: Dr. Leon Reznik)."
+      "description": "GPA: 4.0/4.0. Proyecto final: mejoré el framework de ejecución de aprendizaje federado IntelliFL bajo el Dr. Leon Reznik."
     },
     "lowes": {
       "title": "Ingeniero de Software (Contrato)",
@@ -142,12 +142,12 @@
     "usf-bs": {
       "title": "Licenciatura en Ciencias",
       "subtitle": "Ingeniería en Computación",
-      "description": "GPA: 3.06/4.0."
+      "description": "GPA: 3.06/4.0. Proyecto de licenciatura: el sistema de certificación de documentos PhiQuest blockchain-explorer, con Allen Cheng y Ethan Wuitschick."
     },
     "phiquest": {
       "title": "Desarrollador UX (Pasantía)",
       "subtitle": "Equipo de Desarrollo",
-      "description": "Diseñé wireframes para aplicaciones web. Construí una extensión de Chrome para autenticación de documentos basada en blockchain usando Node.js.",
+      "description": "Construí una extensión de Chrome de autenticación de documentos basada en blockchain con Node.js. Diseñé wireframes de aplicaciones web con equipos multifuncionales.",
       "bullets": [
         "Diseñé wireframes para aplicaciones web, colaborando con equipos multidisciplinarios para asegurar soluciones viables y centradas en el usuario",
         "Diseñé una extensión de Chrome autenticadora de documentos basada en blockchain usando Node.js, habilitando verificación segura"
@@ -159,7 +159,8 @@
         "Navegación Autónoma de Robots con RL — Desarrollé un framework de Q-learning y DQN en el simulador Webots con discretización de estados, replay buffers y optimización de hiperparámetros basada en PyTorch (documentado mediante tutoriales en YouTube)",
         "Seguridad en Aprendizaje Federado — Construí un sistema de evaluación que combina sistemas expertos basados en reglas CLIPS, redes neuronales en PyTorch y técnicas de aprendizaje federado para evaluar la tolerancia a fallos bizantinos en sistemas ML distribuidos",
         "Procesamiento de Lenguaje Natural — Implementé un sistema de resumen de noticias usando Hugging Face Transformers (BART) con recomendaciones personalizadas mediante filtrado colaborativo (scikit-surprise)"
-      ]
+      ],
+      "description": "Tres proyectos de investigación independientes que exploraron las direcciones de FL + IA con agentes que se convirtieron en el foco de la maestría: navegación con aprendizaje por refuerzo, seguridad en aprendizaje federado y resumen de PLN."
     }
   },
   "projects": {
