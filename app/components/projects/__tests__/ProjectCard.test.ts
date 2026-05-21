@@ -58,12 +58,64 @@ describe('ProjectCard', () => {
     expect(wrapper.text()).not.toContain('OpenTelemetry')
   })
 
-  it('does NOT render action buttons on the card (they live in the modal)', () => {
+  it('does NOT render full-label action buttons on the card (those live in the modal)', () => {
     const wrapper = makeWrapper()
-    // No Demo / Docs / GitHub / Video text on the card itself.
+    // The Demo / Docs / GitHub / Video text labels render only in the
+    // modal. The card carries compact icon-only indicator shortcuts
+    // (covered by the next test), which expose URLs via aria-label
+    // rather than visible text.
     expect(wrapper.text()).not.toContain('Demo')
     expect(wrapper.text()).not.toContain('Docs')
     expect(wrapper.text()).not.toContain('GitHub')
+  })
+
+  it('renders icon-only direct-link indicators on the thumbnail when URLs are present', () => {
+    const wrapper = makeWrapper()
+    const indicators = wrapper.findAll('a[aria-label]')
+    // mockProject has docsUrl + githubUrl, no youtubeUrl → exactly two indicators.
+    expect(indicators).toHaveLength(2)
+    const hrefs = indicators.map((i) => i.attributes('href'))
+    expect(hrefs).toContain('https://example.com/docs/')
+    expect(hrefs).toContain('https://github.com/example/kourai-khryseai')
+    indicators.forEach((i) => {
+      expect(i.attributes('target')).toBe('_blank')
+      expect(i.attributes('rel')).toContain('noopener')
+    })
+  })
+
+  it('renders ALL THREE indicators (docs, github, youtube) when all URLs are present', () => {
+    const wrapper = makeWrapper({
+      ...mockProject,
+      youtubeUrl: 'https://youtu.be/example'
+    })
+    const indicators = wrapper.findAll('a[aria-label]')
+    expect(indicators).toHaveLength(3)
+    const hrefs = indicators.map((i) => i.attributes('href'))
+    expect(hrefs).toContain('https://example.com/docs/')
+    expect(hrefs).toContain('https://github.com/example/kourai-khryseai')
+    expect(hrefs).toContain('https://youtu.be/example')
+  })
+
+  it('orders indicators docs → github → youtube', () => {
+    const wrapper = makeWrapper({
+      ...mockProject,
+      youtubeUrl: 'https://youtu.be/example'
+    })
+    const indicators = wrapper.findAll('a[aria-label]')
+    expect(indicators[0]!.attributes('href')).toBe('https://example.com/docs/')
+    expect(indicators[1]!.attributes('href')).toBe('https://github.com/example/kourai-khryseai')
+    expect(indicators[2]!.attributes('href')).toBe('https://youtu.be/example')
+  })
+
+  it('renders NO indicators when no URL is present', () => {
+    const wrapper = makeWrapper({
+      ...mockProject,
+      docsUrl: undefined,
+      githubUrl: undefined,
+      youtubeUrl: undefined
+    })
+    const indicators = wrapper.findAll('a[aria-label]')
+    expect(indicators).toHaveLength(0)
   })
 
   it('renders the title as a button (not a link) with aria-haspopup=dialog', () => {

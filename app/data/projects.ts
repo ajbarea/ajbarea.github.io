@@ -21,6 +21,7 @@ export const projects: Project[] = [
       'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779282973/kourai-khryseai_nrxqnu.webp',
     docsUrl: 'https://ajbarea.github.io/kourai-khryseai/',
     githubUrl: 'https://github.com/ajbarea/kourai-khryseai',
+    youtubeUrl: 'https://youtu.be/m5_-WdJdzL4',
     featured: true
   },
   {
@@ -43,6 +44,7 @@ export const projects: Project[] = [
       'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779282973/phalanx-fl_hlq7gn.webp',
     docsUrl: 'https://ajbarea.github.io/phalanx-fl/',
     githubUrl: 'https://github.com/ajbarea/phalanx-fl',
+    youtubeUrl: 'https://youtu.be/UtOHEHz2pWw',
     featured: true
   },
   {
@@ -63,6 +65,7 @@ export const projects: Project[] = [
     thumbnailUrl:
       'https://res.cloudinary.com/dumwa1w5x/image/upload/v1767633883/IntelliFL_r48xde.png',
     githubUrl: 'https://github.com/dmitrykoro/fl-execution-framework',
+    youtubeUrl: 'https://youtu.be/2Q3Fv6Df3gU',
     featured: true
   },
   {

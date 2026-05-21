@@ -97,6 +97,78 @@ function getTypeBadgeClasses(type: ProjectType): string {
           {{ $t('projects.types.' + type) }}
         </span>
       </div>
+
+      <!-- Direct-link indicators. These are tiny shortcut buttons sitting
+           above the title's ::after pseudo-content overlay (z-2 vs z-1) so
+           clicks on them open the URL instead of the modal. Visually
+           subdued (smaller than the type badges), icon-only so they read
+           as indicators not call-to-actions. Order matches intuitive
+           visitor priority: docs site (polished home) > github (source) >
+           youtube (demo). -->
+      <div class="absolute bottom-3 left-3 flex items-center gap-1.5 z-[2]">
+        <a
+          v-if="project.docsUrl"
+          :href="project.docsUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary-600/90 text-white hover:bg-primary-600 hover:scale-110 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+          :title="$t('projects.page.docsAria', { title: $t('projects.' + project.id + '.title') })"
+          :aria-label="
+            $t('projects.page.docsAria', { title: $t('projects.' + project.id + '.title') })
+          "
+        >
+          <svg
+            class="w-3.5 h-3.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            />
+          </svg>
+        </a>
+        <a
+          v-if="project.githubUrl"
+          :href="project.githubUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gray-900/80 text-white hover:bg-gray-900 hover:scale-110 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+          :title="
+            $t('projects.page.githubAria', { title: $t('projects.' + project.id + '.title') })
+          "
+          :aria-label="
+            $t('projects.page.githubAria', { title: $t('projects.' + project.id + '.title') })
+          "
+        >
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+            />
+          </svg>
+        </a>
+        <a
+          v-if="project.youtubeUrl"
+          :href="project.youtubeUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-red-600/90 text-white hover:bg-red-600 hover:scale-110 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
+          :title="$t('projects.page.videoAria', { title: $t('projects.' + project.id + '.title') })"
+          :aria-label="
+            $t('projects.page.videoAria', { title: $t('projects.' + project.id + '.title') })
+          "
+        >
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+            />
+          </svg>
+        </a>
+      </div>
     </div>
 
     <!-- Content (uniform height across cards now that tags + buttons live in modal) -->
