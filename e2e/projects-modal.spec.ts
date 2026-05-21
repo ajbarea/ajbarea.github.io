@@ -61,7 +61,10 @@ test.describe('Project detail modal', () => {
 
     // The outer wrapper carries the @click.self handler — click outside the
     // dialog box itself but still inside the fixed-inset container.
-    await page.locator('.fixed.inset-0.z-50').first().click({ position: { x: 10, y: 10 } })
+    await page
+      .locator('.fixed.inset-0.z-50')
+      .first()
+      .click({ position: { x: 10, y: 10 } })
     await expect(page.getByRole('dialog')).toBeHidden()
   })
 })

@@ -34,11 +34,7 @@
       "Otaku",
       "Favorite Son"
     ],
-    "credibilityChips": [
-      "RIT GRA · Reznik Group",
-      "4 IEEE 2026 Papers",
-      "MS SWE · 4.0 GPA"
-    ],
+    "credibilityChips": ["RIT GRA · Reznik Group", "4 IEEE 2026 Papers", "MS SWE · 4.0 GPA"],
     "researchInterests": [
       "Federated learning systems",
       "Agentic AI with tool use",

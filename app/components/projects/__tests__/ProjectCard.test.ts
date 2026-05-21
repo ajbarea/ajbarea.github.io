@@ -6,7 +6,15 @@ import type { Project } from '~/types'
 const mockProject: Project = {
   id: 'kourai-khryseai',
   title: 'Kourai Khryseai',
-  technologies: ['Python', 'A2A Protocol', 'MCP', 'OpenTelemetry', 'Jaeger', 'Prometheus', 'pygame'],
+  technologies: [
+    'Python',
+    'A2A Protocol',
+    'MCP',
+    'OpenTelemetry',
+    'Jaeger',
+    'Prometheus',
+    'pygame'
+  ],
   types: ['ai-ml', 'full-stack'],
   thumbnailUrl: 'https://example.com/thumb.webp',
   docsUrl: 'https://example.com/docs/',
