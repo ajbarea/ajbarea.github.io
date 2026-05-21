@@ -1,6 +1,8 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, beforeEach } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { createPinia, setActivePinia } from 'pinia'
 import ProjectCard from '../ProjectCard.vue'
+import { useThemeStore } from '~/stores/theme'
 import type { Project } from '~/types'
 
 const mockProject: Project = {
@@ -40,6 +42,10 @@ function makeWrapper(project: Project = mockProject) {
 }
 
 describe('ProjectCard', () => {
+  beforeEach(() => {
+    setActivePinia(createPinia())
+  })
+
   it('renders the project title from i18n', () => {
     const wrapper = makeWrapper()
     expect(wrapper.text()).toContain('Kourai Khryseai')
@@ -166,5 +172,31 @@ describe('ProjectCard', () => {
     // Image is gone; fallback svg path is rendered.
     expect(wrapper.find('img').exists()).toBe(false)
     expect(wrapper.find('svg').exists()).toBe(true)
+  })
+
+  it('uses thumbnailUrlLight in light mode when provided', () => {
+    const wrapper = makeWrapper({
+      ...mockProject,
+      thumbnailUrlLight: 'https://example.com/thumb-light.webp'
+    })
+    expect(wrapper.find('img').attributes('src')).toBe('https://example.com/thumb-light.webp')
+  })
+
+  it('uses thumbnailUrlDark in dark mode when provided', () => {
+    const themeStore = useThemeStore()
+    themeStore.resolvedTheme = 'dark'
+    const wrapper = makeWrapper({
+      ...mockProject,
+      thumbnailUrlDark: 'https://example.com/thumb-dark.webp'
+    })
+    expect(wrapper.find('img').attributes('src')).toBe('https://example.com/thumb-dark.webp')
+  })
+
+  it('falls back to thumbnailUrl when the matching theme variant is undefined', () => {
+    const themeStore = useThemeStore()
+    themeStore.resolvedTheme = 'dark'
+    // mockProject has thumbnailUrl but no thumbnailUrlDark — should fall back.
+    const wrapper = makeWrapper()
+    expect(wrapper.find('img').attributes('src')).toBe('https://example.com/thumb.webp')
   })
 })
