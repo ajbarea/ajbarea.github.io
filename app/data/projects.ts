@@ -113,7 +113,7 @@ export const projects: Project[] = [
     title: 'HackerRank Orchestrate Triage',
     technologies: ['Claude Opus 4.7', 'Python', 'Pydantic', 'Anthropic Message Batches API', 'uv'],
     types: ['ai-ml', 'hackathon'],
-    thumbnailUrl: 'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779378367/triage_oozdih.png',
+    thumbnailUrl: 'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779391916/triage_cxgfbo.png',
     docsUrl: 'https://ajbarea.github.io/orchestrate-triage/',
     githubUrl: 'https://github.com/ajbarea/orchestrate-triage'
   },
