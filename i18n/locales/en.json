@@ -179,7 +179,12 @@
       "videoAria": "Watch video demo for {title}",
       "thumbnailAlt": "{title} thumbnail",
       "emptyState": "No projects found for this category.",
-      "viewAll": "View all projects"
+      "viewAll": "View all projects",
+      "viewDetails": "View details",
+      "viewDetailsAria": "View details for {title}",
+      "closeModal": "Close",
+      "closeModalAria": "Close project details",
+      "technologiesHeading": "Technologies"
     },
     "types": {
       "ai-ml": "AI/ML",

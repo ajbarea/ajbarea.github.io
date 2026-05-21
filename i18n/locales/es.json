@@ -179,7 +179,12 @@
       "videoAria": "Ver demo en video de {title}",
       "thumbnailAlt": "Miniatura de {title}",
       "emptyState": "No se encontraron proyectos para esta categoría.",
-      "viewAll": "Ver todos los proyectos"
+      "viewAll": "Ver todos los proyectos",
+      "viewDetails": "Ver detalles",
+      "viewDetailsAria": "Ver detalles de {title}",
+      "closeModal": "Cerrar",
+      "closeModalAria": "Cerrar detalles del proyecto",
+      "technologiesHeading": "Tecnologías"
     },
     "types": {
       "ai-ml": "IA/ML",

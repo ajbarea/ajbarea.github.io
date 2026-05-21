@@ -82,7 +82,18 @@ export const education: Education[] = [
     location: 'Tampa, FL',
     graduationDate: 'May 2022',
     gpa: 3.06,
-    maxGpa: 4.0
+    maxGpa: 4.0,
+    capstoneResearch: {
+      title: 'Private Blockchain System for Document Certification',
+      advisor: 'Jeremy Ramos',
+      focus: [
+        'Private blockchain with Proof-of-Work mining and SHA-256 hashing',
+        'Document certification flow tied to user signatures',
+        'Admin dashboard with real-time blockchain metrics',
+        'Google OAuth 2.0 + JWT authentication for admin security',
+        'Node.js / Express backend with Sequelize ORM'
+      ]
+    }
   }
 ]
 

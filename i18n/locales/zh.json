@@ -183,7 +183,12 @@
       "videoAria": "观看{title}的视频演示",
       "thumbnailAlt": "{title}缩略图",
       "emptyState": "暂无该类别的项目。",
-      "viewAll": "查看所有项目"
+      "viewAll": "查看所有项目",
+      "viewDetails": "查看详情",
+      "viewDetailsAria": "查看 {title} 的详情",
+      "closeModal": "关闭",
+      "closeModalAria": "关闭项目详情",
+      "technologiesHeading": "技术栈"
     },
     "types": {
       "ai-ml": "AI/ML",
