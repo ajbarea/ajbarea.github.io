@@ -34,7 +34,11 @@
       "Otaku",
       "Favorite Son"
     ],
-    "credibilityChips": ["RIT GRA · Reznik Group", "4 IEEE 2026 Papers", "MS SWE · 4.0 GPA"],
+    "credibilityChips": [
+      "RIT GRA · Reznik Group",
+      "4 IEEE 2026 Papers",
+      "MS SWE · 4.0 GPA"
+    ],
     "researchInterests": [
       "Federated learning systems",
       "Agentic AI with tool use",
@@ -179,7 +183,12 @@
       "videoAria": "Watch video demo for {title}",
       "thumbnailAlt": "{title} thumbnail",
       "emptyState": "No projects found for this category.",
-      "viewAll": "View all projects"
+      "viewAll": "View all projects",
+      "viewDetails": "View details",
+      "viewDetailsAria": "View details for {title}",
+      "closeModal": "Close",
+      "closeModalAria": "Close project details",
+      "technologiesHeading": "Technologies"
     },
     "types": {
       "ai-ml": "AI/ML",

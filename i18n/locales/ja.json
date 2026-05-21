@@ -34,7 +34,11 @@
       "オタク",
       "お気に入りの息子"
     ],
-    "credibilityChips": ["RIT GRA · Reznikグループ", "IEEE 2026論文 4本", "MS SWE · GPA 4.0"],
+    "credibilityChips": [
+      "RIT GRA · Reznikグループ",
+      "IEEE 2026論文 4本",
+      "MS SWE · GPA 4.0"
+    ],
     "researchInterests": [
       "連合学習システム",
       "ツールを使うエージェント型AI",
@@ -179,7 +183,12 @@
       "videoAria": "{title}のビデオデモを見る",
       "thumbnailAlt": "{title}のサムネイル",
       "emptyState": "このカテゴリに該当するプロジェクトはありません。",
-      "viewAll": "すべてのプロジェクトを見る"
+      "viewAll": "すべてのプロジェクトを見る",
+      "viewDetails": "詳細を見る",
+      "viewDetailsAria": "{title}の詳細を見る",
+      "closeModal": "閉じる",
+      "closeModalAria": "プロジェクトの詳細を閉じる",
+      "technologiesHeading": "技術"
     },
     "types": {
       "ai-ml": "AI/ML",
