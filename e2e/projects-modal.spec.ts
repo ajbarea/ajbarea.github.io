@@ -59,12 +59,11 @@ test.describe('Project detail modal', () => {
     await page.locator('button.project-card__title').first().click()
     await expect(page.getByRole('dialog')).toBeVisible()
 
-    // The outer wrapper carries the @click.self handler — click outside the
-    // dialog box itself but still inside the fixed-inset container.
-    await page
-      .locator('.fixed.inset-0.z-50')
-      .first()
-      .click({ position: { x: 10, y: 10 } })
+    // The backdrop carries its own @click handler. Use force to bypass
+    // Playwright's pointer-events occlusion check — the backdrop sits at
+    // z-60 above the sticky nav (z-50), but Playwright's hit-test is
+    // conservative when there are overlapping fixed elements on the page.
+    await page.locator('[data-test="modal-backdrop"]').click({ force: true })
     await expect(page.getByRole('dialog')).toBeHidden()
   })
 })

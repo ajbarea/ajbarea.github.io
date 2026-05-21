@@ -110,9 +110,11 @@ describe('ProjectModal', () => {
 
   it('emits update:open=false when the backdrop is clicked', async () => {
     const wrapper = makeWrapper({ project: mockProject, open: true })
-    // The outermost click-target div in the modal carries .self click handler.
-    const outer = wrapper.find('.fixed.inset-0.z-50')
-    await outer.trigger('click')
+    // The backdrop carries its own @click handler (the parent's .self
+    // wouldn't fire on backdrop clicks since the backdrop is a child).
+    const backdrop = wrapper.find('[data-test="modal-backdrop"]')
+    expect(backdrop.exists()).toBe(true)
+    await backdrop.trigger('click')
     expect(wrapper.emitted('update:open')).toEqual([[false]])
   })
 })

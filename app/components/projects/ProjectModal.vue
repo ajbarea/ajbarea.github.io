@@ -109,13 +109,26 @@ watch(
       leave-from-class="opacity-100"
       leave-to-class="opacity-0"
     >
+      <!-- z-[60] sits above the sticky navigation (z-50) so the dialog and
+           its backdrop receive pointer events; without this, clicks near
+           the top of the viewport hit the nav instead of the modal. -->
       <div
         v-if="open && project"
-        class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
+        class="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6"
         @click.self="close"
       >
-        <!-- Backdrop -->
-        <div class="absolute inset-0 bg-gray-900/70 backdrop-blur-sm" aria-hidden="true" />
+        <!-- Backdrop. The click handler is attached HERE (not via @click.self
+             on the parent) because the parent's .self predicate doesn't fire
+             when a child element is the event target — the backdrop being
+             a sibling of the dialog absorbs clicks before .self can apply.
+             Keeping .self on the parent too so clicks in the flex padding
+             gap (where neither backdrop nor dialog covers) also dismiss. -->
+        <div
+          data-test="modal-backdrop"
+          class="absolute inset-0 bg-gray-900/70 backdrop-blur-sm"
+          aria-hidden="true"
+          @click="close"
+        />
 
         <!-- Dialog -->
         <div
