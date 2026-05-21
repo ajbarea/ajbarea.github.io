@@ -59,11 +59,15 @@ test.describe('Project detail modal', () => {
     await page.locator('button.project-card__title').first().click()
     await expect(page.getByRole('dialog')).toBeVisible()
 
-    // The backdrop carries its own @click handler. Use force to bypass
-    // Playwright's pointer-events occlusion check — the backdrop sits at
-    // z-60 above the sticky nav (z-50), but Playwright's hit-test is
-    // conservative when there are overlapping fixed elements on the page.
-    await page.locator('[data-test="modal-backdrop"]').click({ force: true })
+    // Click in the corner of the backdrop, NOT its center. The backdrop
+    // covers the full viewport (inset-0), so its center coincides with
+    // the dialog box — `force: true` without `position:` would dispatch
+    // the click at the center, landing on the dialog (no close handler)
+    // instead of the backdrop. Position (10, 10) is the top-left corner,
+    // guaranteed to be backdrop-only since the dialog is max-w-2xl
+    // centered. Modal sits at z-[60] above the sticky nav (z-50) so the
+    // hit-test resolves to the backdrop cleanly without needing force.
+    await page.locator('[data-test="modal-backdrop"]').click({ position: { x: 10, y: 10 } })
     await expect(page.getByRole('dialog')).toBeHidden()
   })
 })
