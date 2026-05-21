@@ -234,12 +234,12 @@
       "description": "多语言 Nuxt 4 作品集（英语/西班牙语/日语/中文），具备预渲染 SEO、行业与研究双视图简历，以及基于 Qwen + Ollama 的本地翻译流水线。"
     },
     "orchestrate-triage": {
-      "title": "Orchestrate Triage",
+      "title": "HackerRank Orchestrate Triage",
       "description": "基于 Claude Opus 4.7 的多领域支持分诊 AI 智能体：提示缓存、结构化工具调用输出、提示注入防御和 Anthropic Message Batches API。为 HackerRank Orchestrate（2026 年 5 月）独立构建。"
     },
     "bioradio-music": {
       "title": "EMG 到 MIDI 音乐",
-      "description": "实时生物信号声化：来自 BioRadio 的 EMG/EEG 通过 Lab Streaming Layer 流式传输并映射到 MIDI 音符以进行现场表演。AWARE-AI 春季黑客马拉松团队项目，与 Victor Lockwood 合作（2026 年 2 月）。"
+      "description": "实时生物信号声化：来自 BioRadio 的 EMG/EEG 通过 Lab Streaming Layer 流式传输并映射到 MIDI 音符以进行现场表演。AWARE-AI 春季黑客马拉松团队项目，与 Victor Lockwood、Parth Kapur、Grant Bosworth 和 Sophia Caruana 合作（2026 年 2 月）。"
     },
     "blockchain-explorer": {
       "title": "区块链浏览器",

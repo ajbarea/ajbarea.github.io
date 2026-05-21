@@ -110,9 +110,11 @@ export const projects: Project[] = [
   },
   {
     id: 'orchestrate-triage',
-    title: 'Orchestrate Triage',
+    title: 'HackerRank Orchestrate Triage',
     technologies: ['Claude Opus 4.7', 'Python', 'Pydantic', 'Anthropic Message Batches API', 'uv'],
     types: ['ai-ml', 'hackathon'],
+    thumbnailUrl:
+      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779378367/triage_oozdih.png',
     docsUrl: 'https://ajbarea.github.io/orchestrate-triage/',
     githubUrl: 'https://github.com/ajbarea/orchestrate-triage'
   },
@@ -121,14 +123,18 @@ export const projects: Project[] = [
     title: 'EMG-to-MIDI Music',
     technologies: ['Python', 'BioRadio (EMG/EEG)', 'Lab Streaming Layer', 'MIDI', 'Zensical'],
     types: ['ai-ml', 'hackathon'],
-    docsUrl: 'https://victor-lockwood.github.io/Hackathon-2026-Cosmic-Horror/',
-    githubUrl: 'https://github.com/victor-lockwood/Hackathon-2026-Cosmic-Horror'
+    thumbnailUrl:
+      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779376928/bioradio_raazmn.png',
+    docsUrl: 'https://ajbarea.github.io/bioradio-music/',
+    githubUrl: 'https://github.com/ajbarea/bioradio-music'
   },
   {
     id: 'blockchain-explorer',
     title: 'Blockchain Explorer',
     technologies: ['JavaScript', 'Node.js', 'Express', 'Sequelize', 'Google OAuth 2.0', 'JWT'],
     types: ['full-stack'],
+    thumbnailUrl:
+      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779376367/blockchain_p5glwx.png',
     githubUrl: 'https://github.com/ajbarea/blockchain-explorer',
     youtubeUrl: 'https://www.youtube.com/playlist?list=PLmQVFU1FBDdc3XyzoCp5NDFkoY5kzW3bT'
   }
