@@ -107,6 +107,30 @@ export const projects: Project[] = [
     demoUrl: 'https://ajbarea.github.io/',
     githubUrl: 'https://github.com/ajbarea/ajbarea.github.io',
     featured: true
+  },
+  {
+    id: 'orchestrate-triage',
+    title: 'Orchestrate Triage',
+    technologies: ['Claude Opus 4.7', 'Python', 'Pydantic', 'Anthropic Message Batches API', 'uv'],
+    types: ['ai-ml', 'hackathon'],
+    docsUrl: 'https://ajbarea.github.io/orchestrate-triage/',
+    githubUrl: 'https://github.com/ajbarea/orchestrate-triage'
+  },
+  {
+    id: 'bioradio-music',
+    title: 'EMG-to-MIDI Music',
+    technologies: ['Python', 'BioRadio (EMG/EEG)', 'Lab Streaming Layer', 'MIDI', 'Zensical'],
+    types: ['ai-ml', 'hackathon'],
+    docsUrl: 'https://victor-lockwood.github.io/Hackathon-2026-Cosmic-Horror/',
+    githubUrl: 'https://github.com/victor-lockwood/Hackathon-2026-Cosmic-Horror'
+  },
+  {
+    id: 'blockchain-explorer',
+    title: 'Blockchain Explorer',
+    technologies: ['JavaScript', 'Node.js', 'Express', 'Sequelize', 'Google OAuth 2.0', 'JWT'],
+    types: ['full-stack'],
+    githubUrl: 'https://github.com/ajbarea/blockchain-explorer',
+    youtubeUrl: 'https://www.youtube.com/playlist?list=PLmQVFU1FBDdc3XyzoCp5NDFkoY5kzW3bT'
   }
 ]
 
@@ -116,5 +140,6 @@ export const projectsByType = {
   'ai-ml': projects.filter((p) => p.types.includes('ai-ml')),
   'federated-learning': projects.filter((p) => p.types.includes('federated-learning')),
   'full-stack': projects.filter((p) => p.types.includes('full-stack')),
-  robotics: projects.filter((p) => p.types.includes('robotics'))
+  robotics: projects.filter((p) => p.types.includes('robotics')),
+  hackathon: projects.filter((p) => p.types.includes('hackathon'))
 }

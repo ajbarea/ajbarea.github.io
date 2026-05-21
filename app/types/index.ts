@@ -127,7 +127,7 @@ export interface SkillCategory {
 }
 
 // Project
-export type ProjectType = 'ai-ml' | 'federated-learning' | 'full-stack' | 'robotics'
+export type ProjectType = 'ai-ml' | 'federated-learning' | 'full-stack' | 'robotics' | 'hackathon'
 
 export interface Project {
   id: string

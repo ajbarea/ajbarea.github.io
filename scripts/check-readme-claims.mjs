@@ -59,7 +59,8 @@ if (!galleryLine) {
     'ai-ml': 'AI/ML',
     'federated-learning': 'Federated Learning',
     'full-stack': 'Full-Stack',
-    robotics: 'Robotics'
+    robotics: 'Robotics',
+    hackathon: 'Hackathon'
   }
   for (const slug of categorySlugs) {
     const label = slugToLabel[slug]

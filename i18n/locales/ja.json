@@ -190,7 +190,8 @@
       "ai-ml": "AI/ML",
       "federated-learning": "連合学習",
       "full-stack": "フルスタック",
-      "robotics": "ロボティクス"
+      "robotics": "ロボティクス",
+      "hackathon": "ハッカソン"
     },
     "kourai-khryseai": {
       "title": "Kourai Khryseai",
@@ -227,6 +228,18 @@
     "portfolio": {
       "title": "ポートフォリオサイト",
       "description": "多言語対応のNuxt 4ポートフォリオ（EN/ES/JA/ZH）。プリレンダリング済みSEO、業界向け・研究向けの二種類の履歴書ビュー、Qwen × Ollamaによるローカル翻訳パイプラインを搭載。"
+    },
+    "orchestrate-triage": {
+      "title": "Orchestrate Triage",
+      "description": "Claude Opus 4.7上のマルチドメイン サポートトリアージAIエージェント。プロンプトキャッシング、構造化ツール呼び出し出力、プロンプトインジェクション対策、Anthropic Message Batches APIを採用。HackerRank Orchestrate（2026年5月）にソロで参加。"
+    },
+    "bioradio-music": {
+      "title": "EMGからMIDIへの音楽",
+      "description": "リアルタイム生体信号ソニフィケーション：BioRadioからのEMG/EEGをLab Streaming Layer経由でストリーミングし、ライブ演奏用のMIDIノートにマッピング。AWARE-AI Spring Hackathonのチームプロジェクト（Victor Lockwoodとの共同、2026年2月）。"
+    },
+    "blockchain-explorer": {
+      "title": "ブロックチェーンエクスプローラー",
+      "description": "DocBridge.ioの文書認証のためのプライベートブロックチェーンシステムと管理ダッシュボード：SHA-256によるProof-of-Workマイニング、トランザクションエクスプローラー、ユーザー管理、Google OAuth 2.0 + JWT。USFの卒業研究（2022年5月）。"
     }
   },
   "resume": {

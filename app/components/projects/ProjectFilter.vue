@@ -27,7 +27,8 @@ const filterOptions: FilterOption[] = [
   { value: 'ai-ml', labelKey: 'projects.types.ai-ml' },
   { value: 'federated-learning', labelKey: 'projects.types.federated-learning' },
   { value: 'full-stack', labelKey: 'projects.types.full-stack' },
-  { value: 'robotics', labelKey: 'projects.types.robotics' }
+  { value: 'robotics', labelKey: 'projects.types.robotics' },
+  { value: 'hackathon', labelKey: 'projects.types.hackathon' }
 ]
 
 const labeledOptions = computed(() =>
