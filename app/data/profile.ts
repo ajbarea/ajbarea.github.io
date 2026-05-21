@@ -83,6 +83,15 @@ export const education: Education[] = [
     graduationDate: 'May 2022',
     gpa: 3.06,
     maxGpa: 4.0,
+    relevantCoursework: [
+      'Data Structures',
+      'Object-Oriented Software Design',
+      'Analysis of Algorithms',
+      'Software Engineering',
+      'Operating Systems',
+      'Computer System Design',
+      'Probability and Statistics for Engineers'
+    ],
     capstoneResearch: {
       title: 'Private Blockchain System for Document Certification',
       advisor: 'Jeremy Ramos',
