@@ -87,7 +87,7 @@ useHead({
                 <p class="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">
                   {{ article.description }}
                 </p>
-                <div class="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-500">
+                <div class="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
                   <span>{{ article.author }}</span>
                   <span>•</span>
                   <time :datetime="article.date">{{

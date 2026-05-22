@@ -92,7 +92,7 @@ function getTypeColor(type: string): string {
             {{ $t('timeline.' + entry.id + '.subtitle') }} · {{ entry.organization }}
           </p>
         </div>
-        <time class="text-xs sm:text-sm text-gray-500 dark:text-gray-500 whitespace-nowrap">
+        <time class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">
           {{ entry.timeframe }}
         </time>
       </div>
