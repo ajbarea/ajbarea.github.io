@@ -16,50 +16,56 @@ tooling changes.
 
 ## audit
 
-No `make` wrapper today — audit drives npm scripts directly, in dependency order:
+Audit drives the wrapper `make` targets, which mirror `.github/workflows/ci.yml`:
 
 ### Phase 1 — Setup
 
-1. `npm ci` — clean install from `package-lock.json`. **Required before lint/test** — Nuxt's `postinstall` runs `nuxt prepare` which generates `.nuxt/` type stubs that ESLint and TypeScript depend on.
+1. `make check-env` — confirm `node` + `npm` are on PATH.
+2. `make setup` — `npm ci` clean install from `package-lock.json`. **Required before lint/test** — Nuxt's `postinstall` runs `nuxt prepare` which generates `.nuxt/` type stubs that ESLint and TypeScript depend on.
 
 ### Phase 2 — Fix (one-way door)
 
-2. `npm run format` — `prettier --write .`
-3. `npm run lint -- --fix` — `eslint . --fix` (no auto-target in package.json today; pass the flag inline)
+3. `make fix` — `prettier --write .` + `eslint . --fix`.
 
 ### Phase 3 — Granular lint
 
-4. `npm run format:check` — `prettier --check .`
-5. `npm run lint:check` — `eslint .`
+4. `make lint` — `prettier --check .` + `eslint .` + `node scripts/check-readme-claims.mjs` (fragile-claims gate).
 
 ### Phase 4 — Granular test
 
-6. `npm run test:unit` — `vitest` (component / composable / store tests)
-7. `npm run test:e2e` — `playwright test`. **Side-effectful**: spawns Chromium, needs `npx playwright install` first run. Skip when running headless / WSL2 without graphical support.
+5. `make test-unit` — `vitest --run` (component / composable / store tests).
+6. `make test-e2e` — `playwright test`. **Side-effectful**: spawns Chromium, needs `npx playwright install` first run. Skip when running headless / WSL2 without graphical support.
+7. `make test` — combined unit + e2e.
 
 ### Phase 5 — End-to-end gates
 
-8. `npm run generate` — `nuxt generate` static-site build. The "is it deployable" probe. Renders all 64 prerendered routes (16 per locale).
-9. `node scripts/audit.mjs` — local Playwright sweep against `npm run dev` at `:3000`: screenshots × 3 viewports × 2 color schemes, console / network capture, axe accessibility scan, focus-order check, lightweight performance metrics. Writes to `/tmp/audit/`.
-10. `node scripts/audit-prod.mjs` — same shape against the production-build preview at `:4000`. Catches differences between dev and generated output.
+8. `make build` — `npm run generate` (`nuxt generate` static-site build). The "is it deployable" probe.
+9. `make validate` — `lint + test-unit + build`. Fast pre-push gate.
+10. `make ci` — `setup + lint + test + build`. Mirrors ci.yml end-to-end.
+11. `make audit` — `npm audit` (informational only; exits 0 even on findings).
 
-Fast audit = `npm ci → format:check → lint:check → test:unit → generate`. Five commands.
+Local audit extras (not wired into Makefile because they expect a running dev server):
 
-Stop-early phase: Phase 1 (`npm ci`). If install fails, abort — every downstream step depends on it.
+- `node scripts/audit.mjs` — local Playwright sweep against `npm run dev` at `:3000`: screenshots × 3 viewports × 2 color schemes, console / network capture, axe accessibility scan, focus-order check, lightweight performance metrics. Writes to `/tmp/audit/`.
+- `node scripts/audit-prod.mjs` — same shape against the production-build preview at `:4000`. Catches differences between dev and generated output.
+
+Fast audit = `make setup → make validate`. Stop-early phase: `check-env` / `setup`; `npm ci` failure blocks the rest.
 
 Do-not-run targets (long-running, interactive, or external-state):
 
-- `npm run dev` (interactive dev server)
-- `npm run preview` (interactive preview server)
+- `make dev` (interactive Nuxt dev server)
+- `make preview` (interactive preview server)
 - Anything spawning Ollama (`scripts/auto-translate.mjs` runs Qwen2.5-7B locally — expects `ollama serve` and the model pulled)
 
 ## ci_audit
 
 Referenced configs a CI failure can trace to:
 
+- `Makefile` (canonical wrapper-target pipeline)
 - `package.json` (scripts, deps, engines if any)
 - `nuxt.config.ts` (i18n, content, image, SSG output)
-- `.github/workflows/deploy.yml` (the single workflow)
+- `.github/workflows/ci.yml` (lint + unit + build-check + e2e matrix)
+- `.github/workflows/deploy.yml` (push-on-main GitHub Pages deploy)
 - `.npmrc`, `tsconfig.json`, `eslint.config.*`, `prettier` config (in `.prettierrc`)
 
 Tool error markers (extend the default grep set):
