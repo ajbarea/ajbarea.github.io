@@ -33,6 +33,7 @@ Observed during portfolio Phase 3 (2026-05-20):
 `detectBrowserLanguage: { useCookie: true, cookieKey: 'i18n_redirected', redirectOn: 'root', alwaysRedirect: false }`.
 
 Behavior:
+
 - First visit to `/` → renders EN. With `useCookie: true`, the module also checks `Accept-Language` on first root visit, so Spanish-locale browsers will be redirected to `/es/` once. Mild departure from the original "no auto-detect" spec but matches the "preferred language stays" UX.
 - Click "Español" → `/es/...` URL + cookie written.
 - Internal `<NuxtLink>` uses `localePath()` so navigation stays prefixed.
