@@ -8,12 +8,20 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "prepare": "husky",
     "test:unit": "vitest",
     "test:e2e": "playwright test",
     "lint": "eslint .",
     "lint:check": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,jsx,tsx,mjs,cjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css,html,yml,yaml}": "prettier --write"
   },
   "dependencies": {
     "@nuxt/content": "^3.10.0",
@@ -45,7 +53,9 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "exif-parser": "^0.1.12",
+    "husky": "^9.1.7",
     "jsdom": "^26.0.0",
+    "lint-staged": "^17.0.5",
     "prettier": "^3.7.4",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18",
