@@ -47,10 +47,10 @@ function close() {
   emit('update:open', false)
 }
 
-// Hand-rolled focus trap. @vueuse/integrations would give us useFocusTrap
-// out of the box, but it pulls in focus-trap + tabbable as deps for a
-// portfolio site that only needs the contract for one dialog. Cheaper to
-// keep ownership: enumerate focusables inside the dialog on Tab, cycle.
+// Hand-rolled focus trap. @vueuse/integrations exposes useFocusTrap natively
+// but pulls in focus-trap + tabbable as deps for a portfolio site that only
+// needs the contract for one dialog. Cheaper to keep ownership: enumerate
+// focusables inside the dialog on Tab, cycle.
 const FOCUSABLE_SELECTOR = [
   'a[href]',
   'button:not([disabled])',
