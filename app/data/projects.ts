@@ -6,13 +6,15 @@ export const projects: Project[] = [
     title: 'Kourai Khryseai',
     technologies: [
       'Python',
+      'Claude',
       'A2A Protocol',
       'MCP',
+      'RealtimeTTS',
       'OpenTelemetry',
       'Jaeger',
       'Prometheus',
       'SQLite',
-      'pygame',
+      'pygame-ce',
       "Ren'Py",
       'uv'
     ],
@@ -27,7 +29,18 @@ export const projects: Project[] = [
   {
     id: 'velocity-fl',
     title: 'VelocityFL',
-    technologies: ['Rust', 'Python', 'Typer', 'maturin', 'Zensical', 'uv'],
+    technologies: [
+      'Rust',
+      'Python',
+      'PyTorch',
+      'HuggingFace',
+      'FastMCP',
+      'Prefab UI',
+      'Typer',
+      'maturin',
+      'Zensical',
+      'uv'
+    ],
     types: ['ai-ml', 'federated-learning'],
     thumbnailUrl:
       'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779282974/velocity-fl_dukewt.webp',
