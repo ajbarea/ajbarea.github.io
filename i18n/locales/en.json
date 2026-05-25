@@ -366,7 +366,9 @@
     "clickToCopy": "(click to copy)",
     "toastSuccess": "Message sent! I'll get back to you soon.",
     "toastError": "Failed to send. Email copied to clipboard!",
-    "copyEmailFallback": "Email copied: {email} - Please send your message directly!"
+    "copyEmailFallback": "Email copied: {email} - Please send your message directly!",
+    "errorMessageRequired": "Please enter a message before sending.",
+    "errorEmailInvalid": "Enter a valid email, or leave it blank."
   },
   "toast": {
     "ariaLabel": "Notifications",

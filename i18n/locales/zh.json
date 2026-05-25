@@ -370,7 +370,9 @@
     "clickToCopy": "(点击复制)",
     "toastSuccess": "消息已发送！我会尽快回复你。",
     "toastError": "发送失败。邮箱已复制到剪贴板！",
-    "copyEmailFallback": "邮件已复制：{email} - 请直接发送您的消息！"
+    "copyEmailFallback": "邮件已复制：{email} - 请直接发送您的消息！",
+    "errorMessageRequired": "发送前请填写留言。",
+    "errorEmailInvalid": "请输入有效的邮箱，或留空。"
   },
   "toast": {
     "ariaLabel": "通知",

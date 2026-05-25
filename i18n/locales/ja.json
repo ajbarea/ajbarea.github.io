@@ -366,7 +366,9 @@
     "clickToCopy": "(クリックでコピー)",
     "toastSuccess": "メッセージを送信しました！すぐに返信いたします。",
     "toastError": "送信に失敗しました。メールアドレスをクリップボードにコピーしました！",
-    "copyEmailFallback": "メールアドレスをコピーしました: {email} — 直接メッセージをお送りください！"
+    "copyEmailFallback": "メールアドレスをコピーしました: {email} — 直接メッセージをお送りください！",
+    "errorMessageRequired": "送信する前にメッセージを入力してください。",
+    "errorEmailInvalid": "有効なメールアドレスを入力するか、空欄のままにしてください。"
   },
   "toast": {
     "ariaLabel": "通知",
