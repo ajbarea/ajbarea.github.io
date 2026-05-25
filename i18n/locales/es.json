@@ -378,7 +378,7 @@
     "emailCopied": "Correo copiado: {email}"
   },
   "sisters": {
-    "lead": "Una familia coordinada de repositorios que explora la IA agéntica y el aprendizaje federado desde ángulos complementarios. Cada uno se invoca de forma independiente; juntos conforman un solo programa de investigación.",
+    "lead": "Una familia coordinada de repositorios que explora la IA agéntica y el aprendizaje federado desde ángulos complementarios. Cada uno se invoca de forma independiente.",
     "listAria": "Proyectos hermanos en el ecosistema",
     "cardAria": "{name}, rol: {role}",
     "roles": {
@@ -386,7 +386,8 @@
       "research": "Investigación",
       "performance": "Rendimiento",
       "governance": "Gobernanza",
-      "lab-identity": "Identidad del laboratorio"
+      "lab-identity": "Identidad del laboratorio",
+      "applied": "Aplicado"
     },
     "items": {
       "kourai-khryseai": {
@@ -408,6 +409,10 @@
       "techne": {
         "name": "Techne",
         "description": "Plugin de skills para Claude Code: auditorías, controles de lint y pruebas, detección de divergencias entre repos."
+      },
+      "orchestrate-triage": {
+        "name": "Orchestrate Triage",
+        "description": "Triaje de incidencias con agentes sobre Claude Opus y la API Message Batches de Anthropic: clasifica, prioriza y enruta los reportes entrantes a escala de lote."
       }
     }
   }

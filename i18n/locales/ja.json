@@ -378,7 +378,7 @@
     "emailCopied": "メールアドレスをコピーしました: {email}"
   },
   "sisters": {
-    "lead": "エージェント AI と連合学習を補完的な角度から探究する、調和の取れたリポジトリ群です。それぞれ独立して利用できますが、合わせて一つの研究プログラムを構成します。",
+    "lead": "エージェント AI と連合学習を補完的な角度から探究する、調和の取れたリポジトリ群です。それぞれ独立して利用できます。",
     "listAria": "エコシステム内の姉妹プロジェクト",
     "cardAria": "{name}、役割: {role}",
     "roles": {
@@ -386,7 +386,8 @@
       "research": "リサーチ",
       "performance": "パフォーマンス",
       "governance": "ガバナンス",
-      "lab-identity": "ラボのアイデンティティ"
+      "lab-identity": "ラボのアイデンティティ",
+      "applied": "応用"
     },
     "items": {
       "kourai-khryseai": {
@@ -408,6 +409,10 @@
       "techne": {
         "name": "Techne",
         "description": "Claude Code 用のスキルプラグインです。ビルドの監査、lint とテストのゲート、リポジトリ間の差分検出を提供します。"
+      },
+      "orchestrate-triage": {
+        "name": "Orchestrate Triage",
+        "description": "Claude Opus と Anthropic Message Batches API を用いたエージェント型の問題トリアージ。受信したレポートをバッチ規模で分類・優先順位付け・振り分けします。"
       }
     }
   }
