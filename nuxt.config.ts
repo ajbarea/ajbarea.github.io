@@ -25,8 +25,24 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/content',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    // research(2026-05): @nuxtjs/sitemap (v8) + @nuxtjs/robots (v6) — the Nuxt
+    // SEO discoverability modules. Sitemap auto-integrates with @nuxtjs/i18n
+    // (emits hreflang xhtml:link alternates) and auto-includes prerendered
+    // routes, replacing the hand-maintained public/sitemap.xml that had gone
+    // stale (5 of 46 routes, no localized URLs, lastmod frozen 2025-12-15).
+    // Listed after i18n per docs. Source: https://nuxtseo.com/docs/sitemap/guides/i18n
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots'
   ],
+
+  // Canonical site URL for nuxt-site-config (read by the sitemap + robots
+  // modules to build absolute <loc> URLs and the robots Sitemap directive).
+  // Matches the i18n baseUrl below; this is a GitHub Pages user site at root.
+  site: {
+    url: 'https://ajbarea.github.io',
+    name: 'AJ Barea'
+  },
 
   i18n: {
     defaultLocale: 'en',
