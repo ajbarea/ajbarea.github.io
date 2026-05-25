@@ -366,7 +366,9 @@
     "clickToCopy": "(haz clic para copiar)",
     "toastSuccess": "¡Mensaje enviado! Te responderé pronto.",
     "toastError": "Falló el envío. ¡Correo copiado al portapapeles!",
-    "copyEmailFallback": "Correo copiado: {email} — ¡por favor envíame tu mensaje directamente!"
+    "copyEmailFallback": "Correo copiado: {email} — ¡por favor envíame tu mensaje directamente!",
+    "errorMessageRequired": "Escribe un mensaje antes de enviar.",
+    "errorEmailInvalid": "Introduce un correo válido o déjalo en blanco."
   },
   "toast": {
     "ariaLabel": "Notificaciones",
