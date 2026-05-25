@@ -200,7 +200,7 @@
       "description": "インタラクティブなマルチエージェント開発システム。10人の専門エージェントが推論を共有し、ガイダンスを求め、ターミナル、pygame GUI（TTS付き）、Ren'Py製ビジュアルノベルの3つのインターフェースを横断してリアルタイムに反復します。"
     },
     "velocity-fl": {
-      "title": "VelocityFL",
+      "title": "Velocity-FL",
       "description": "Rust + Pythonによる連合学習オーケストレータ。論文ベースの集約戦略と、ラウンドレベルおよびデータパイプラインの攻撃シミュレーションを実装。"
     },
     "phalanx-fl": {
@@ -401,7 +401,7 @@
         "description": "Flower と Ray を用いた連合学習のリファレンスプラットフォームです。8 つの集約戦略と攻撃ボキャブラリを備えています。"
       },
       "vfl": {
-        "name": "VelocityFL",
+        "name": "Velocity-FL",
         "description": "同じ FL 戦略を PyO3 と FastMCP 経由の Rust カーネルとして実装しています。パフォーマンスと大規模スケールに特化しています。"
       },
       "ldqis": {

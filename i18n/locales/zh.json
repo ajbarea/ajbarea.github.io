@@ -204,7 +204,7 @@
       "description": "交互式多代理开发系统：十个专门的代理流式传输其推理过程，请求指导，并在终端、pygame GUI 与 TTS 以及一个 Ren'Py 视频小说中实时迭代。"
     },
     "velocity-fl": {
-      "title": "VelocityFL",
+      "title": "Velocity-FL",
       "description": "Rust + Python 联邦学习调度器，包含论文引用的聚合策略和轮次级/数据管道攻击模拟。"
     },
     "phalanx-fl": {
@@ -405,7 +405,7 @@
         "description": "基于 Flower 与 Ray 的联邦学习参考平台。提供八种聚合策略以及攻击词汇表。"
       },
       "vfl": {
-        "name": "VelocityFL",
+        "name": "Velocity-FL",
         "description": "同样的 FL 策略，通过 PyO3 和 FastMCP 实现为 Rust 内核。专注于性能与大规模并发。"
       },
       "ldqis": {

@@ -200,7 +200,7 @@
       "description": "Sistema interactivo de desarrollo multi-agente: diez agentes especializados transmiten su razonamiento, piden orientación e iteran en vivo en terminal, GUI pygame con TTS y una novela visual Ren'Py."
     },
     "velocity-fl": {
-      "title": "VelocityFL",
+      "title": "Velocity-FL",
       "description": "Orquestador de aprendizaje federado en Rust + Python con estrategias de agregación citadas en artículos y simulaciones de ataques a nivel de ronda y de pipeline de datos."
     },
     "phalanx-fl": {
@@ -401,7 +401,7 @@
         "description": "Plataforma de referencia para aprendizaje federado sobre Flower y Ray. Ocho estrategias de agregación con el vocabulario de ataques."
       },
       "vfl": {
-        "name": "VelocityFL",
+        "name": "Velocity-FL",
         "description": "Las mismas estrategias FL como núcleos Rust vía PyO3 y FastMCP. Rendimiento y escala masiva."
       },
       "ldqis": {
