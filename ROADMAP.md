@@ -27,8 +27,12 @@ When a roadmap item ships, its scope block here is removed and a dated one-liner
 - **YAGNI-refactored.** The portfolio's framework substrate (Nuxt 4, Vue 3, Tailwind 4, Pinia, Nuxt Content, @nuxtjs/i18n) evolves faster than this site does. Before hand-rolling a feature, check whether the framework already ships the primitive — and conversely, don't avoid shape decisions waiting on capability you can already see arriving (the auto-translate pipeline using local Qwen2.5 over Ollama is the working example). Cross-sister mirror.
 - **Stale-assumption audit.** Whenever Nuxt, Vue, Tailwind, or one of the Nitro / Vite plugins ships a major version, audit which workarounds in `app/` exist to compensate for a now-closed gap. The `@nuxtjs/i18n` v10 AST gotcha (`tm()` returning `[object Object]`), the `<NuxtLink>` non-localizing pattern, the `restructureDir` v9-vs-v10 mismatch — all are scaffolding that should unwind when upstream clears the friction. Cross-sister mirror.
 
+- **Sitemap + robots are generated, not static.** `@nuxtjs/sitemap` (i18n-aware — emits `xhtml:link` hreflang alternates across en/es/ja/zh) and `@nuxtjs/robots` own `/sitemap_index.xml` and `/robots.txt`, auto-built from the prerendered routes. The old hand-maintained `public/sitemap.xml` (5 stale routes, `lastmod` frozen 2025-12-15) + `public/robots.txt` were deleted 2026-05-25 (now 44 live URLs). Don't re-add static files under `public/` with those names — they'd shadow the generated output and silently rot. research(2026-05): chose the two discoverability modules over the `@nuxtjs/seo` umbrella (which also bundles og-image/satori, link-checker, schema-org) to keep the build surface focused.
+
 ---
 
 ## Shipped
 
 Detail lives in git history (`git log`) and the live code. This log is pruned once work is durably shipped.
+
+- 2026-05-25 — **Generated sitemap + robots (i18n-aware).** Replaced the stale static `public/sitemap.xml` (5 routes) with `@nuxtjs/sitemap@8` + `@nuxtjs/robots@6`. `/sitemap_index.xml` now covers all 44 prerendered en/es/ja/zh routes with hreflang alternates; `robots.txt` is generated with the `Sitemap:` directive. e2e guard in `e2e/sitemap.spec.ts`.
