@@ -1,10 +1,8 @@
 <div align="center">
 
-# ajbarea.github.io
+# Multilingual Nuxt Portfolio
 
-### AJ Barea's Portfolio
-
-_A multilingual Nuxt 4 portfolio with prerendered SEO, dual industry/research resume views, and a local-LLM translation pipeline._
+_A multilingual Nuxt 4 portfolio with prerendered SEO, dual industry/research resume views, and a local-LLM translation pipeline — fork it and make it your own._
 
 [![Nuxt](https://img.shields.io/badge/Nuxt-4.2-00DC82?style=flat-square&logo=nuxt&logoColor=white)](https://nuxt.com)
 [![Vue](https://img.shields.io/badge/Vue-3.5-4FC08D?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org)
@@ -13,7 +11,7 @@ _A multilingual Nuxt 4 portfolio with prerendered SEO, dual industry/research re
 [![Deploy](https://github.com/ajbarea/ajbarea.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/ajbarea/ajbarea.github.io/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
-**Live: [ajbarea.github.io](https://ajbarea.github.io/)**
+**Live demo: [ajbarea.github.io](https://ajbarea.github.io/)**
 **Languages: English · Español · 日本語 · 中文**
 
 </div>
@@ -22,9 +20,9 @@ _A multilingual Nuxt 4 portfolio with prerendered SEO, dual industry/research re
 
 ## What is this?
 
-The personal portfolio of AJ Barea, software engineer, federated-learning researcher at RIT, and incoming PhD student in Computing and Information Sciences. The site ships in four languages with prerendered hreflang SEO, a filterable project gallery, dual industry/research resume views, a Nuxt Content-backed blog, and a contact form with clipboard fallback.
+A multilingual Nuxt 4 portfolio you can fork and make your own: four languages with prerendered `hreflang` SEO, a filterable project gallery, dual industry/research resume views, a Nuxt Content-backed blog, and a contact form with clipboard fallback. The live demo is [ajbarea.github.io](https://ajbarea.github.io/).
 
-The full content surface (~280 strings) lives in `i18n/locales/*.json`. Adding a new language is a one-line config edit plus a translation file.
+The full content surface (~280 strings) lives in `i18n/locales/*.json`, and structured data (profile, projects, timeline, publications, …) in `app/data/`. Swapping in your own content is mostly editing those files; adding a new language is a one-line config edit plus a translation file.
 
 ---
 
@@ -90,6 +88,17 @@ npm run preview     # serve the built site locally
 ### 4. Optional: contact form
 
 Set `NUXT_PUBLIC_WEB3FORMS_KEY` in `.env` to enable real form submissions. Without it the form falls back to copying the email address to clipboard.
+
+---
+
+## Make it yours
+
+Fork the repo, then edit content — no framework changes needed:
+
+- **Profile, projects, experience, publications** — `app/data/*.ts` (typed; the gallery, resume, and Recent Activity all read from here).
+- **All visible copy** — `i18n/locales/en.json` is canonical; translate the others by hand or with `scripts/auto-translate.mjs`.
+- **Images** — swap the Cloudinary URLs in `app/data/*` for your own CDN or files under `public/`.
+- **Deploy** — push to `main`; GitHub Actions builds and publishes to GitHub Pages.
 
 ---
 
@@ -179,18 +188,6 @@ For full pre-push validation, `./lint.sh` runs format, lint, npm audit, unit tes
 ## Deployment
 
 Pushes to `main` trigger `.github/workflows/deploy.yml`, which runs `npm ci` and `npm run generate` on Node 24, then deploys `.output/public/` to GitHub Pages via the official Pages actions. The first run after a new locale lands prerenders the additional routes (16 per locale) automatically.
-
----
-
-## Sister ecosystem
-
-Part of a family of repos exploring agentic AI and federated learning from complementary angles. ajbarea.github.io is the Visibility surface; the others occupy different roles.
-
-- **[kourai-khryseai](https://github.com/ajbarea/kourai-khryseai)** — Innovation. Multi-agent software-development forge: maidens-as-specialists over A2A, MCP sidecars, transparent human-on-the-loop.
-- **[phalanx-fl](https://github.com/ajbarea/phalanx-fl)** — Research. Federated-learning reference platform on Flower + Ray. Eight aggregation strategies with the attack vocabulary.
-- **[vFL](https://github.com/ajbarea/vFL)** — Performance. Same FL strategies as Rust kernels via PyO3 + FastMCP + Prefect Horizon.
-- **[ldqis](https://github.com/ajbarea/ldqis)** — Lab identity. Public website for the Laboratory of Data Quality and Intelligent Security at RIT.
-- **[techne](https://github.com/ajbarea/techne)** — Governance. Claude Code skills plugin: audits, lint/test gates, cross-repo drift detection.
 
 ---
 
