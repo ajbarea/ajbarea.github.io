@@ -18,7 +18,7 @@ export const sisters: Sister[] = [
   {
     id: 'vfl',
     role: 'performance',
-    url: 'https://github.com/ajbarea/vFL'
+    url: 'https://github.com/ajbarea/velocity-fl'
   },
   {
     id: 'ldqis',

@@ -44,8 +44,8 @@ export const projects: Project[] = [
     types: ['ai-ml', 'federated-learning'],
     thumbnailUrl:
       'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779282974/velocity-fl_dukewt.webp',
-    docsUrl: 'https://ajbarea.github.io/vFL/',
-    githubUrl: 'https://github.com/ajbarea/vFL',
+    docsUrl: 'https://ajbarea.github.io/velocity-fl/',
+    githubUrl: 'https://github.com/ajbarea/velocity-fl',
     featured: true
   },
   {
