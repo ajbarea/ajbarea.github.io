@@ -1,6 +1,6 @@
 export interface Sister {
   id: string
-  role: 'innovation' | 'research' | 'performance' | 'governance' | 'lab-identity'
+  role: 'innovation' | 'research' | 'performance' | 'governance' | 'lab-identity' | 'applied'
   url: string
 }
 
@@ -29,5 +29,10 @@ export const sisters: Sister[] = [
     id: 'techne',
     role: 'governance',
     url: 'https://github.com/ajbarea/techne'
+  },
+  {
+    id: 'orchestrate-triage',
+    role: 'applied',
+    url: 'https://github.com/ajbarea/orchestrate-triage'
   }
 ]

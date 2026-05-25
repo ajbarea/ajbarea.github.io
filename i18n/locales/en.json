@@ -378,7 +378,7 @@
     "emailCopied": "Email copied: {email}"
   },
   "sisters": {
-    "lead": "A coordinated family of repos exploring agentic AI and federated learning from complementary angles. Each is independently invocable; together they form one research program.",
+    "lead": "A coordinated family of repos exploring agentic AI and federated learning from complementary angles. Each is independently invocable.",
     "listAria": "Sister projects in the ecosystem",
     "cardAria": "{name}, role: {role}",
     "roles": {
@@ -386,7 +386,8 @@
       "research": "Research",
       "performance": "Performance",
       "governance": "Governance",
-      "lab-identity": "Lab identity"
+      "lab-identity": "Lab identity",
+      "applied": "Applied"
     },
     "items": {
       "kourai-khryseai": {
@@ -408,6 +409,10 @@
       "techne": {
         "name": "Techne",
         "description": "Claude Code skills plugin: audits, lint and test gates, cross-repo drift detection."
+      },
+      "orchestrate-triage": {
+        "name": "Orchestrate Triage",
+        "description": "Agentic issue triage on Claude Opus and the Anthropic Message Batches API: classifies, prioritizes, and routes incoming reports at batch scale."
       }
     }
   }

@@ -27,6 +27,7 @@ describe('SisterEcosystem', () => {
     expect(wrapper.text()).toContain('VelocityFL')
     expect(wrapper.text()).toContain('LDQIS Lab')
     expect(wrapper.text()).toContain('Techne')
+    expect(wrapper.text()).toContain('Orchestrate Triage')
   })
 
   it('renders the role badge with localized label', () => {
@@ -37,6 +38,7 @@ describe('SisterEcosystem', () => {
     expect(text).toContain('Performance')
     expect(text).toContain('Governance')
     expect(text).toContain('Lab identity')
+    expect(text).toContain('Applied')
   })
 
   it('links open in a new tab with security attributes', () => {
