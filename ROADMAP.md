@@ -33,6 +33,8 @@ When a roadmap item ships, its scope block here is removed and a dated one-liner
 
 One-line per item, newest first. Detail moves to git history when work lands.
 
+- 2026-05-25 — **npm audit → 0 vulnerabilities**. Patched 3 advisories via non-breaking lockfile bumps: js-cookie 3.0.5→3.0.7 (high, cookie-attribute injection; dev-only via `@vue/test-utils`→`js-beautify`) and ws 8.18.3→8.20.1 via engine.io-client 6.6.5 (moderate; dev-only via `@nuxt/content` socket.io). All dev/build-tooling transitive deps in a static site — nil runtime exposure, but free to clear.
+- 2026-05-25 — **Dev-tooling major upgrades** — ESLint 9→10 (flat config already in place, lints clean), @nuxt/test-utils 3→4 (vitest 4 prereq; tests use `@vue/test-utils` mounts not Nuxt composables, so the v4 `beforeAll` breaker doesn't apply), shiki 3→4 (deduped the vestigial direct dep to match `@nuxt/content`'s 4.x), vue-router 4→5 (the router Nuxt 4.4 expects; no breaking changes for v4 users). Each verified lint + 51 tests + 94-route `nuxt generate`. Also gitignored the v4-generated `.nuxtrc`.
 - 2026-05-25 — **Dependabot dependency automation** (npm + github-actions; canonical fleet shape, techne `templates/dependabot.yml.example`). Automates the action-pin bumps previously hand-synced across sisters in a wave.
 - 2026-05-21 — **Dark mode + accessibility audit** (axe-core scan in both color schemes across 5 routes; 3 real AA contrast violations fixed in-flight; per-PR theme-toggle smoke spec)
 - 2026-05-21 — **Homepage `HomeSisterEcosystem` block + reciprocal `## Sister ecosystem` blocks across all six sister READMEs**
