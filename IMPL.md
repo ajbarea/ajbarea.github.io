@@ -25,7 +25,7 @@ Add an i18n sub-mode to the existing `techne:docs-site` skill: detect missing `.
 Observed during portfolio Phase 3 (2026-05-20):
 
 - **ES** — `--fresh` draft surfaced no improvements worth cherry-picking; hand-authored ES stays canonical.
-- **ZH** — ~15 surgical fixes on top of the draft produced shippable `zh.json` (proper-noun preservation for Techne / VelocityFL / Phalanx-FL, word-order fixes like `失败发送→发送失败`).
+- **ZH** — ~15 surgical fixes on top of the draft produced shippable `zh.json` (proper-noun preservation for Techne / Velocity-FL / Phalanx-FL, word-order fixes like `失败发送→发送失败`).
 - **JA — not shippable as-is.** Qwen mixed CJK scripts (e.g. `每日→毎日`), leaked Vietnamese vocab tokens (`với`, `hướng`, `sớm`), echoed the system prompt back (`desu-masu形式`), and produced broken transliterations (`リsumei`, `ギブハブ`, `キャストピーン`). Roughly half the strings rewritten by hand. For Phase 4 (higher volume), JA needs either Qwen3 Swallow 8B (GGUF conversion required, not in Ollama default library), DeepL one-time, or a native-speaker review pass.
 
 ## Cross-session persistence (current portfolio config)

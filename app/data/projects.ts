@@ -28,7 +28,7 @@ export const projects: Project[] = [
   },
   {
     id: 'velocity-fl',
-    title: 'VelocityFL',
+    title: 'Velocity-FL',
     technologies: [
       'Rust',
       'Python',

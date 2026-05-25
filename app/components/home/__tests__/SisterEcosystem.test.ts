@@ -24,7 +24,7 @@ describe('SisterEcosystem', () => {
     }
     expect(wrapper.text()).toContain('Kourai Khryseai')
     expect(wrapper.text()).toContain('Phalanx-FL')
-    expect(wrapper.text()).toContain('VelocityFL')
+    expect(wrapper.text()).toContain('Velocity-FL')
     expect(wrapper.text()).toContain('LDQIS Lab')
     expect(wrapper.text()).toContain('Techne')
     expect(wrapper.text()).toContain('Orchestrate Triage')

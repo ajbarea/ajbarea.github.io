@@ -200,7 +200,7 @@
       "description": "Interactive multi-agent development system: ten specialized agents stream their reasoning, ask for guidance, and iterate live across terminal, pygame GUI with TTS, and a Ren'Py visual novel."
     },
     "velocity-fl": {
-      "title": "VelocityFL",
+      "title": "Velocity-FL",
       "description": "Rust + Python federated learning orchestrator with paper-cited aggregation strategies and round-level / data-pipeline attack simulations."
     },
     "phalanx-fl": {
@@ -401,7 +401,7 @@
         "description": "Federated-learning reference platform on Flower and Ray. Eight aggregation strategies with the attack vocabulary."
       },
       "vfl": {
-        "name": "VelocityFL",
+        "name": "Velocity-FL",
         "description": "Same FL strategies as Rust kernels via PyO3 and FastMCP. Performance and crowd-scale speed lane."
       },
       "ldqis": {
