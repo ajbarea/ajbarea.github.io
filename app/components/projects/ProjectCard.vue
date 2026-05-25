@@ -114,6 +114,18 @@ function getTypeBadgeClasses(type: ProjectType): string {
         </svg>
       </div>
 
+      <!-- Light-mode gallery frame: a hairline inset border + gentle inner shadow
+           so the dark-native thumbnail reads as a deliberate framed screen rather
+           than a heavy block on the light card. Near-invisible in dark mode (the
+           image blends into the dark surface as before). aria-hidden +
+           pointer-events-none so the card-title click overlay still works.
+           research(2026-05): 2026 light/dark card practice frames images as
+           gallery pieces and uses a 1px inset border to delineate the image edge. -->
+      <div
+        class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-900/10 shadow-[inset_0_1px_10px_rgba(15,23,42,0.12)] dark:ring-white/5 dark:shadow-none"
+        aria-hidden="true"
+      />
+
       <!-- Project Type Badges -->
       <div class="absolute top-3 right-3 flex flex-wrap justify-end gap-1.5">
         <span
