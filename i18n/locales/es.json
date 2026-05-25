@@ -56,7 +56,7 @@
   "sections": {
     "experience": "Experiencia y Educación",
     "experienceAria": "Entradas de la línea de tiempo",
-    "highlights": "Actividad Destacada 2026",
+    "highlights": "Actividad reciente",
     "expertise": "Experiencia Técnica",
     "expertiseSkillsAria": "Habilidades de {category}",
     "expertiseSkillDocAria": "{skill} — Haz clic para ver la documentación",
@@ -64,7 +64,7 @@
     "skills": "Habilidades Técnicas",
     "contact": "Contáctame",
     "contactLead": "¿Tienes una pregunta o quieres colaborar? Envíame un mensaje y te responderé pronto.",
-    "sisters": "El ecosistema hermano"
+    "sisters": "Ecosistema de investigación"
   },
   "activity": {
     "kind": {
