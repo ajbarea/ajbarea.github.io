@@ -38,7 +38,7 @@
     "photoswipe": "^5.4.4",
     "photoswipe-dynamic-caption-plugin": "^1.2.7",
     "pinia": "^3.0.4",
-    "shiki": "^3.20.0",
+    "shiki": "^4.1.0",
     "vue": "^3.5.25",
     "vue-router": "^4.6.4"
   },
