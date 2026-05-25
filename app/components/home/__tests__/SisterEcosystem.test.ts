@@ -6,7 +6,7 @@ import { sisters } from '~/data/sisters'
 describe('SisterEcosystem', () => {
   it('renders the section heading and lead paragraph', () => {
     const wrapper = mount(SisterEcosystem)
-    expect(wrapper.find('#sisters-heading').text()).toBe('The Sister Ecosystem')
+    expect(wrapper.find('#sisters-heading').text()).toBe('Research Ecosystem')
     expect(wrapper.text()).toContain('A coordinated family of repos')
   })
 

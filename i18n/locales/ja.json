@@ -56,7 +56,7 @@
   "sections": {
     "experience": "経験と教育",
     "experienceAria": "タイムラインのエントリ",
-    "highlights": "2026年の活動ハイライト",
+    "highlights": "最近の活動",
     "expertise": "技術的専門知識",
     "expertiseSkillsAria": "{category}のスキル",
     "expertiseSkillDocAria": "{skill} - クリックでドキュメントを表示",
@@ -64,7 +64,7 @@
     "skills": "技術スキル",
     "contact": "お問い合わせ",
     "contactLead": "ご質問やコラボのご相談があれば、メッセージをお送りください。すぐに返信いたします。",
-    "sisters": "姉妹エコシステム"
+    "sisters": "研究エコシステム"
   },
   "activity": {
     "kind": {

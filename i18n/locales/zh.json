@@ -60,7 +60,7 @@
   "sections": {
     "experience": "经验与教育",
     "experienceAria": "时间轴条目",
-    "highlights": "选中的活动 2026",
+    "highlights": "近期活动",
     "expertise": "技术专长",
     "expertiseSkillsAria": "{category}技能",
     "expertiseSkillDocAria": "{skill} - 点击查看文档",
@@ -68,7 +68,7 @@
     "skills": "技术技能",
     "contact": "联系我们",
     "contactLead": "有疑问或想合作？给我发消息，我会回复你。",
-    "sisters": "姊妹生态系统"
+    "sisters": "研究生态系统"
   },
   "activity": {
     "kind": {

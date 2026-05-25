@@ -56,7 +56,7 @@
   "sections": {
     "experience": "Experience & Education",
     "experienceAria": "Timeline entries",
-    "highlights": "Selected Activity 2026",
+    "highlights": "Recent Activity",
     "expertise": "Technical Expertise",
     "expertiseSkillsAria": "{category} skills",
     "expertiseSkillDocAria": "{skill} - Click to view documentation",
@@ -64,7 +64,7 @@
     "skills": "Technical Skills",
     "contact": "Get In Touch",
     "contactLead": "Have a question or want to work together? Send me a message and I'll get back to you.",
-    "sisters": "The Sister Ecosystem"
+    "sisters": "Research Ecosystem"
   },
   "activity": {
     "kind": {
