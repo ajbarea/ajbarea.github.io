@@ -167,4 +167,17 @@ describe('ProjectCard', () => {
     expect(wrapper.find('img').exists()).toBe(false)
     expect(wrapper.find('svg').exists()).toBe(true)
   })
+
+  it('shows a skeleton until the thumbnail loads, then fades the image in', async () => {
+    const wrapper = makeWrapper()
+    // Before load: skeleton visible, image transparent.
+    expect(wrapper.find('[data-test="thumb-skeleton"]').exists()).toBe(true)
+    expect(wrapper.find('img').classes()).toContain('opacity-0')
+
+    await wrapper.find('img').trigger('load')
+
+    // After load: skeleton gone, image shown.
+    expect(wrapper.find('[data-test="thumb-skeleton"]').exists()).toBe(false)
+    expect(wrapper.find('img').classes()).toContain('opacity-100')
+  })
 })

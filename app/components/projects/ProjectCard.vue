@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import type { Project, ProjectType } from '~/types'
 import ProjectModal from './ProjectModal.vue'
 
@@ -10,12 +10,27 @@ interface Props {
 const props = defineProps<Props>()
 
 const imageError = ref(false)
+const imageLoaded = ref(false)
+const imgRef = ref<HTMLImageElement | null>(null)
 const modalOpen = ref(false)
 const titleBtnRef = ref<HTMLButtonElement | null>(null)
 
 function handleImageError() {
   imageError.value = true
 }
+
+function handleImageLoad() {
+  imageLoaded.value = true
+}
+
+// A cached or above-the-fold thumbnail can finish loading before hydration, so
+// its `load` event never reaches the handler — reflect the already-complete
+// state on mount so the image isn't left stuck at opacity-0.
+onMounted(() => {
+  if (imgRef.value?.complete && imgRef.value.naturalWidth > 0) {
+    imageLoaded.value = true
+  }
+})
 
 function openModal() {
   modalOpen.value = true
@@ -64,12 +79,22 @@ function getTypeBadgeClasses(type: ProjectType): string {
     <div
       class="relative h-48 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 overflow-hidden"
     >
+      <!-- Skeleton shimmer while the lazy thumbnail loads (mirrors the gallery). -->
+      <div
+        v-if="project.thumbnailUrl && !imageLoaded && !imageError"
+        data-test="thumb-skeleton"
+        class="absolute inset-0 animate-pulse bg-gray-200 motion-reduce:animate-none dark:bg-gray-700"
+        aria-hidden="true"
+      />
       <img
         v-if="project.thumbnailUrl && !imageError"
+        ref="imgRef"
         :src="project.thumbnailUrl"
         :alt="$t('projects.page.thumbnailAlt', { title: $t('projects.' + project.id + '.title') })"
-        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        class="h-full w-full object-cover transition-[opacity,transform] duration-300 group-hover:scale-105 motion-reduce:transition-none"
+        :class="imageLoaded ? 'opacity-100' : 'opacity-0'"
         loading="lazy"
+        @load="handleImageLoad"
         @error="handleImageError"
       />
       <div v-else class="w-full h-full flex items-center justify-center">
