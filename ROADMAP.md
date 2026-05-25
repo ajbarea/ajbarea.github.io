@@ -16,7 +16,6 @@ When a roadmap item ships, its scope block here is removed and a dated one-liner
 ## Future / unprioritized backlog
 
 - **Per-project page enrichment.** The 2026-05-21 PR (#10) added clickable cards opening detail modals + filter tags including Hackathon. Per-project pages exist for the FL stack via Zensical docs sites; the portfolio's own per-project detail layer could be richer (papers-tied, screenshots, links to docs sites). Lower priority than the polish items above.
-- **Activity feed RSS / Atom.** `app/components/home/ActivityHighlights.vue` reads publications + hackathons + conferences and renders them; an RSS/Atom feed from the same data sources would let readers subscribe without periodically returning. Small generator at build-time.
 
 ---
 
@@ -35,4 +34,5 @@ When a roadmap item ships, its scope block here is removed and a dated one-liner
 
 Detail lives in git history (`git log`) and the live code. This log is pruned once work is durably shipped.
 
+- 2026-05-25 — **RSS + Atom activity feed.** The discoverability sibling to the sitemap, for humans: prerendered `/rss.xml` (RSS 2.0) + `/atom.xml` aggregate publications + hackathons + conferences via the `feed` package. Titles/descriptions resolve from `en.json` inside the Nitro route (no `useI18n()` server-side) through a pure, unit-tested builder (`app/utils/activity-feed.ts`, 8 Vitest cases); feed-autodiscovery `<link rel="alternate">` tags sit in the head; e2e guard in `e2e/feed.spec.ts`. research(2026-05): server route + `feed` pkg is the idiomatic Nuxt approach; emit RSS 2.0 (broadest reader support) + Atom (the "support both" recommendation).
 - 2026-05-25 — **Generated sitemap + robots (i18n-aware).** Replaced the stale static `public/sitemap.xml` (5 routes) with `@nuxtjs/sitemap@8` + `@nuxtjs/robots@6`. `/sitemap_index.xml` now covers all 44 prerendered en/es/ja/zh routes with hreflang alternates; `robots.txt` is generated with the `Sitemap:` directive. e2e guard in `e2e/sitemap.spec.ts`.
