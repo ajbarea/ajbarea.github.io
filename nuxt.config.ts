@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/', '/projects', '/gallery', '/resume', '/blog'],
+      routes: ['/', '/projects', '/gallery', '/resume', '/blog', '/rss.xml', '/atom.xml'],
       crawlLinks: true
     }
   },
@@ -111,6 +111,19 @@ export default defineNuxtConfig({
         {
           rel: 'stylesheet',
           href: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css'
+        },
+        // Feed autodiscovery — readers + browsers pick these up from the head.
+        {
+          rel: 'alternate',
+          type: 'application/rss+xml',
+          title: 'AJ Barea · Research & Activity',
+          href: 'https://ajbarea.github.io/rss.xml'
+        },
+        {
+          rel: 'alternate',
+          type: 'application/atom+xml',
+          title: 'AJ Barea · Research & Activity',
+          href: 'https://ajbarea.github.io/atom.xml'
         }
       ]
     }
