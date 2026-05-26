@@ -86,7 +86,7 @@ export const projects: Project[] = [
   },
   {
     id: 'intellifl',
-    title: 'IntelliFL',
+    title: 'InteFL',
     technologies: ['Python', 'PyTorch', 'FLOWER', 'Federated Learning', 'Docker'],
     types: ['ai-ml', 'federated-learning'],
     thumbnailUrl: '/images/projects/intellifl.webp',
