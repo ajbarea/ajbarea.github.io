@@ -3,7 +3,7 @@ import type { Profile, Education, HonorAward } from '~/types'
 export const profile: Profile = {
   name: 'AJ Barea',
   title: 'Software Engineer',
-  profileImage: 'https://res.cloudinary.com/dumwa1w5x/image/upload/q_auto,f_auto/profile_ubnllm',
+  profileImage: '/images/profile/profile.webp',
   contact: {
     email: 'ajbareaa@gmail.com',
     phone: '(727) 262-7305',

@@ -2,14 +2,13 @@ import type { GalleryImage } from '~/types'
 
 /**
  * Gallery images data
- * Images are served from Cloudinary CDN with automatic optimization
- * cloudinaryId is the public ID assigned by Cloudinary during upload
- * Research: https://console.cloudinary.com/app
+ * Files live in `public/images/gallery/` and are served by GitHub Pages.
+ * To add an image: drop the WebP into that folder and add an entry below.
  */
 export const galleryImages: GalleryImage[] = [
   {
     id: 'alex',
-    cloudinaryId: 'alex_cbazpf',
+    src: '/images/gallery/alex.webp',
     width: 640,
     height: 480,
     alt: 'With Cope',
@@ -18,7 +17,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'art',
-    cloudinaryId: 'art_ijfe8w',
+    src: '/images/gallery/art.webp',
     width: 960,
     height: 960,
     alt: "Brooke's artwork",
@@ -27,7 +26,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'band',
-    cloudinaryId: 'band_cwojac',
+    src: '/images/gallery/band.webp',
     width: 640,
     height: 640,
     alt: 'The Goat House',
@@ -36,7 +35,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'band1',
-    cloudinaryId: 'band1_rukaur',
+    src: '/images/gallery/band1.webp',
     width: 600,
     height: 450,
     alt: "Neptune's Lounge show",
@@ -46,7 +45,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'band2',
-    cloudinaryId: 'band2_tyauza',
+    src: '/images/gallery/band2.webp',
     width: 1106,
     height: 800,
     alt: 'Band promo shoot: Jack, Alex, Jason, and AJ',
@@ -55,7 +54,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'blizzcon',
-    cloudinaryId: 'blizzcon_fj7auv',
+    src: '/images/gallery/blizzcon.webp',
     width: 2048,
     height: 1152,
     alt: 'Valeera (World of Warcraft) cosplay',
@@ -64,7 +63,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'cod-esports',
-    cloudinaryId: 'cod-esports_hdaolu',
+    src: '/images/gallery/cod-esports.webp',
     width: 1440,
     height: 2872,
     alt: 'Call of Duty esports',
@@ -73,7 +72,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'brandnew',
-    cloudinaryId: 'brandnew_bl8gbs',
+    src: '/images/gallery/brandnew.webp',
     width: 960,
     height: 1280,
     alt: 'Brand New fan',
@@ -82,7 +81,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'brooke',
-    cloudinaryId: 'brooke_dh69pn',
+    src: '/images/gallery/brooke.webp',
     width: 1536,
     height: 2048,
     alt: 'With Brooke',
@@ -91,7 +90,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'christina',
-    cloudinaryId: 'christina_icrweu',
+    src: '/images/gallery/christina.webp',
     width: 480,
     height: 640,
     alt: 'Silly selfie with Christina eating food',
@@ -100,7 +99,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'con2',
-    cloudinaryId: 'con2_u3wftt',
+    src: '/images/gallery/con2.webp',
     width: 1810,
     height: 1890,
     alt: 'San (Princess Mononoke) cosplay',
@@ -109,7 +108,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'con3',
-    cloudinaryId: 'con3_vmsiui',
+    src: '/images/gallery/con3.webp',
     width: 1520,
     height: 1889,
     alt: 'Bulma (Dragon Ball Z) cosplay',
@@ -118,7 +117,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'con4',
-    cloudinaryId: 'con4_qjyyvf',
+    src: '/images/gallery/con4.webp',
     width: 1364,
     height: 1890,
     alt: 'Ochaco Uraraka (My Hero Academia) cosplay',
@@ -127,7 +126,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'con5',
-    cloudinaryId: 'con5_eatmzj',
+    src: '/images/gallery/con5.webp',
     width: 1793,
     height: 1486,
     alt: 'Lightning and Serah (Final Fantasy XIII) cosplay',
@@ -136,7 +135,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'con6',
-    cloudinaryId: 'con6_emihbp',
+    src: '/images/gallery/con6.webp',
     width: 1677,
     height: 1889,
     alt: 'Raphtalia (The Rising of the Shield Hero) cosplay',
@@ -145,7 +144,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'con7',
-    cloudinaryId: 'con7_m9qpad',
+    src: '/images/gallery/con7.webp',
     width: 1810,
     height: 1490,
     alt: 'Illumi and Hisoka (Hunter x Hunter) cosplay',
@@ -154,7 +153,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'fabian',
-    cloudinaryId: 'fabian_jowtgo',
+    src: '/images/gallery/fabian.webp',
     width: 453,
     height: 301,
     alt: 'With Fabian, 9th grade',
@@ -163,7 +162,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'face1',
-    cloudinaryId: 'face1_lkxhtx',
+    src: '/images/gallery/face1.webp',
     width: 720,
     height: 960,
     alt: 'Mirror selfie',
@@ -172,7 +171,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'face2',
-    cloudinaryId: 'face2_hdu6si',
+    src: '/images/gallery/face2.webp',
     width: 568,
     height: 960,
     alt: 'Mirror selfie',
@@ -181,7 +180,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'face3',
-    cloudinaryId: 'face3_xyd7sb',
+    src: '/images/gallery/face3.webp',
     width: 720,
     height: 405,
     alt: 'Boston, Massachusetts',
@@ -190,7 +189,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'face4',
-    cloudinaryId: 'face4_b0osir',
+    src: '/images/gallery/face4.webp',
     width: 768,
     height: 1024,
     alt: 'Popeyes run',
@@ -199,7 +198,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'fam',
-    cloudinaryId: 'fam_ebffjt',
+    src: '/images/gallery/fam.webp',
     width: 720,
     height: 960,
     alt: 'Family portrait',
@@ -208,7 +207,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'fam2',
-    cloudinaryId: 'fam2_rbyxsl',
+    src: '/images/gallery/fam2.webp',
     width: 3088,
     height: 2320,
     alt: 'Family dinner',
@@ -217,7 +216,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'games',
-    cloudinaryId: 'games_ef5uts',
+    src: '/images/gallery/games.webp',
     width: 717,
     height: 960,
     alt: 'Game Boy collection',
@@ -226,7 +225,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'muzzies',
-    cloudinaryId: 'muzzies_wrfudl',
+    src: '/images/gallery/muzzies.webp',
     width: 960,
     height: 717,
     alt: 'Muzzies deli',
@@ -235,7 +234,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'tori',
-    cloudinaryId: 'tori_lzo0e1',
+    src: '/images/gallery/tori.webp',
     width: 480,
     height: 640,
     alt: 'With Tori',
@@ -244,7 +243,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'tori2',
-    cloudinaryId: 'tori2_nbdj8h',
+    src: '/images/gallery/tori2.webp',
     width: 480,
     height: 640,
     alt: 'With Tori',
@@ -253,7 +252,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'uncle',
-    cloudinaryId: 'uncle_morda8',
+    src: '/images/gallery/uncle.webp',
     width: 720,
     height: 960,
     alt: 'Holding newborn',
@@ -262,7 +261,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'vote',
-    cloudinaryId: 'vote_hdqimk',
+    src: '/images/gallery/vote.webp',
     width: 540,
     height: 960,
     alt: 'I Voted sticker',
@@ -271,7 +270,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'vote1',
-    cloudinaryId: 'vote1_wsnidg',
+    src: '/images/gallery/vote1.webp',
     width: 895,
     height: 894,
     alt: 'I Voted sticker',
@@ -280,7 +279,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'youth',
-    cloudinaryId: 'youth_x7hjkw',
+    src: '/images/gallery/youth.webp',
     width: 741,
     height: 564,
     alt: 'Childhood photo',
@@ -290,7 +289,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'jens-wedding-party',
-    cloudinaryId: 'jens-wedding-party_xj1oun',
+    src: '/images/gallery/jens-wedding-party.webp',
     width: 2000,
     height: 1334,
     alt: "Jens's wedding",
@@ -299,7 +298,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'marmot-watching',
-    cloudinaryId: 'marmot-watching_udsqxa',
+    src: '/images/gallery/marmot-watching.webp',
     width: 2000,
     height: 946,
     alt: 'Marmot at Mount Rainier',
@@ -308,7 +307,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-panorama',
-    cloudinaryId: 'rainier-panorama_kfuhuc',
+    src: '/images/gallery/rainier-panorama.webp',
     width: 2000,
     height: 946,
     alt: 'Mount Rainier panorama',
@@ -317,7 +316,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-hike',
-    cloudinaryId: 'rainier-hike_li5jii',
+    src: '/images/gallery/rainier-hike.webp',
     width: 2000,
     height: 1500,
     alt: 'Hiking at Paradise',
@@ -326,7 +325,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-friends',
-    cloudinaryId: 'rainier-friends_a6srrr',
+    src: '/images/gallery/rainier-friends.webp',
     width: 2000,
     height: 1500,
     alt: 'Hiking at Paradise',
@@ -335,7 +334,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'tatoosh-range',
-    cloudinaryId: 'tatoosh-range_lhaexd',
+    src: '/images/gallery/tatoosh-range.webp',
     width: 2000,
     height: 946,
     alt: 'Tatoosh Range',
@@ -344,7 +343,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-glaciers',
-    cloudinaryId: 'rainier-glaciers_pz1vdh',
+    src: '/images/gallery/rainier-glaciers.webp',
     width: 2000,
     height: 948,
     alt: 'Rainier glaciers',
@@ -353,7 +352,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-selfie',
-    cloudinaryId: 'rainier-selfie_kq1jao',
+    src: '/images/gallery/rainier-selfie.webp',
     width: 2000,
     height: 948,
     alt: 'Rainier selfie',
@@ -362,7 +361,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-trail',
-    cloudinaryId: 'rainier-trail_hfxdpq',
+    src: '/images/gallery/rainier-trail.webp',
     width: 2000,
     height: 946,
     alt: 'On the trail',
@@ -371,7 +370,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'cascade-vista',
-    cloudinaryId: 'cascade-vista_gmr2v1',
+    src: '/images/gallery/cascade-vista.webp',
     width: 2000,
     height: 946,
     alt: 'Cascade Range vista',
@@ -380,7 +379,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-ridge',
-    cloudinaryId: 'rainier-ridge_d64qmg',
+    src: '/images/gallery/rainier-ridge.webp',
     width: 2000,
     height: 1500,
     alt: 'Rocky ridge selfie',
@@ -389,7 +388,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-summit',
-    cloudinaryId: 'rainier-summit_ecn5pf',
+    src: '/images/gallery/rainier-summit.webp',
     width: 2000,
     height: 946,
     alt: 'Summit rest',
@@ -398,7 +397,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-group',
-    cloudinaryId: 'rainier-group_imqmdt',
+    src: '/images/gallery/rainier-group.webp',
     width: 2000,
     height: 1500,
     alt: 'Group on the rocks',
@@ -408,7 +407,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'paradise-valley',
-    cloudinaryId: 'paradise-valley_wabbcj',
+    src: '/images/gallery/paradise-valley.webp',
     width: 2000,
     height: 946,
     alt: 'Paradise valley',
@@ -417,7 +416,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'paradise-descent',
-    cloudinaryId: 'paradise-descent_oisbub',
+    src: '/images/gallery/paradise-descent.webp',
     width: 2000,
     height: 946,
     alt: 'Trail descent',
@@ -426,7 +425,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-meadow',
-    cloudinaryId: 'rainier-meadow_cwzc9x',
+    src: '/images/gallery/rainier-meadow.webp',
     width: 2000,
     height: 946,
     alt: 'Alpine meadow',
@@ -435,7 +434,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'paradise-meadow',
-    cloudinaryId: 'paradise-meadow_hh1qrz',
+    src: '/images/gallery/paradise-meadow.webp',
     width: 2000,
     height: 946,
     alt: 'Meadow hike',
@@ -444,7 +443,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'jens-wedding-break',
-    cloudinaryId: 'jens-wedding-break_wbuddz',
+    src: '/images/gallery/jens-wedding-break.webp',
     width: 934,
     height: 1245,
     alt: 'Wedding setup break',
@@ -454,7 +453,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'jens-wedding-toast',
-    cloudinaryId: 'jens-wedding-toast_kc1rng',
+    src: '/images/gallery/jens-wedding-toast.webp',
     width: 2000,
     height: 1334,
     alt: 'Groomsmen toast',
@@ -463,7 +462,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'wedding-group-toast',
-    cloudinaryId: 'wedding-group-toast_l5kl9g',
+    src: '/images/gallery/wedding-group-toast.webp',
     width: 2000,
     height: 1334,
     alt: 'Wedding toast',
@@ -472,7 +471,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'wedding-reception-dinner',
-    cloudinaryId: 'wedding-reception-dinner_afytut',
+    src: '/images/gallery/wedding-reception-dinner.webp',
     width: 2000,
     height: 1334,
     alt: 'Reception dinner',
@@ -481,7 +480,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'wedding-poolside-night',
-    cloudinaryId: 'wedding-poolside-night_bp2hnq',
+    src: '/images/gallery/wedding-poolside-night.webp',
     width: 2000,
     height: 1334,
     alt: 'Poolside reception',
@@ -490,7 +489,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'jens-groomsmen',
-    cloudinaryId: 'jens-groomsmen_hyxjqc',
+    src: '/images/gallery/jens-groomsmen.webp',
     width: 2000,
     height: 1334,
     alt: 'The groomsmen',
@@ -499,7 +498,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'wedding-boys-table',
-    cloudinaryId: 'wedding-boys-table_twyulr',
+    src: '/images/gallery/wedding-boys-table.webp',
     width: 2000,
     height: 1506,
     alt: 'Wedding boys table',
@@ -508,7 +507,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'wedding-groom-prep',
-    cloudinaryId: 'wedding-groom-prep_f5yrlc',
+    src: '/images/gallery/wedding-groom-prep.webp',
     width: 1500,
     height: 2000,
     alt: 'Groom prep',
@@ -517,7 +516,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'wedding-getting-dressed',
-    cloudinaryId: 'wedding-getting-dressed_i8s9wz',
+    src: '/images/gallery/wedding-getting-dressed.webp',
     width: 1500,
     height: 2000,
     alt: 'Getting dressed',
@@ -526,7 +525,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-tatoosh-trail',
-    cloudinaryId: 'rainier-tatoosh-trail_xmxyhk',
+    src: '/images/gallery/rainier-tatoosh-trail.webp',
     width: 1500,
     height: 2000,
     alt: 'Tatoosh trail view',
@@ -535,7 +534,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-trail-duo',
-    cloudinaryId: 'rainier-trail-duo_j9ixld',
+    src: '/images/gallery/rainier-trail-duo.webp',
     width: 1500,
     height: 2000,
     alt: 'Trail duo',
@@ -544,7 +543,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-snow-break',
-    cloudinaryId: 'rainier-snow-break_ovosoa',
+    src: '/images/gallery/rainier-snow-break.webp',
     width: 1500,
     height: 2000,
     alt: 'Snow break',
@@ -553,7 +552,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-couple-selfie',
-    cloudinaryId: 'rainier-couple-selfie_tteou5',
+    src: '/images/gallery/rainier-couple-selfie.webp',
     width: 1500,
     height: 2000,
     alt: 'Couple selfie',
@@ -562,7 +561,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-summit-couple',
-    cloudinaryId: 'rainier-summit-couple_ap1nih',
+    src: '/images/gallery/rainier-summit-couple.webp',
     width: 1500,
     height: 2000,
     alt: 'Summit selfie',
@@ -571,7 +570,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-stream',
-    cloudinaryId: 'rainier-stream_ojzhan',
+    src: '/images/gallery/rainier-stream.webp',
     width: 1500,
     height: 2000,
     alt: 'Mountain stream',
@@ -580,7 +579,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-group-trail',
-    cloudinaryId: 'rainier-group-trail_qgh4mf',
+    src: '/images/gallery/rainier-group-trail.webp',
     width: 2000,
     height: 1500,
     alt: 'Trail group selfie',
@@ -589,7 +588,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-group-mountain',
-    cloudinaryId: 'rainier-group-mountain_y0szpb',
+    src: '/images/gallery/rainier-group-mountain.webp',
     width: 2000,
     height: 1500,
     alt: 'Group at Paradise',
@@ -598,7 +597,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-summit-pano',
-    cloudinaryId: 'rainier-summit-pano_qm9kj9',
+    src: '/images/gallery/rainier-summit-pano.webp',
     width: 2000,
     height: 613,
     alt: 'Summit panorama',
@@ -607,7 +606,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rainier-glacier-approach',
-    cloudinaryId: 'rainier-glacier-approach_thskxh',
+    src: '/images/gallery/rainier-glacier-approach.webp',
     width: 2000,
     height: 1500,
     alt: 'Glacier approach',
@@ -616,7 +615,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'patio-drinks',
-    cloudinaryId: 'patio-drinks_aznxzk',
+    src: '/images/gallery/patio-drinks.webp',
     width: 1500,
     height: 2000,
     alt: 'Patio drinks',
@@ -625,7 +624,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'road-trip-car',
-    cloudinaryId: 'road-trip-car_wo61sb',
+    src: '/images/gallery/road-trip-car.webp',
     width: 2000,
     height: 1500,
     alt: 'Road trip selfie',
@@ -634,7 +633,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'escape-room-fun',
-    cloudinaryId: 'escape-room-fun_gqngwc',
+    src: '/images/gallery/escape-room-fun.webp',
     width: 2000,
     height: 1500,
     alt: 'Escape room',
@@ -643,7 +642,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'korean-bbq-spread',
-    cloudinaryId: 'korean-bbq-spread_exwifw',
+    src: '/images/gallery/korean-bbq-spread.webp',
     width: 1500,
     height: 2000,
     alt: 'Korean BBQ',
@@ -652,7 +651,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'seattle-rooftop-sunset',
-    cloudinaryId: 'seattle-rooftop-sunset_mikowt',
+    src: '/images/gallery/seattle-rooftop-sunset.webp',
     width: 2000,
     height: 1500,
     alt: 'Rooftop sunset',
@@ -661,7 +660,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'deck-gathering',
-    cloudinaryId: 'deck-gathering_sxrxyq',
+    src: '/images/gallery/deck-gathering.webp',
     width: 2000,
     height: 1500,
     alt: 'Deck hangout',
@@ -670,7 +669,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'korean-bbq-dinner',
-    cloudinaryId: 'korean-bbq-dinner_jv0ixu',
+    src: '/images/gallery/korean-bbq-dinner.webp',
     width: 2000,
     height: 1500,
     alt: 'Korean BBQ dinner',
@@ -679,7 +678,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'brunch-spread',
-    cloudinaryId: 'brunch-spread_katfcm',
+    src: '/images/gallery/brunch-spread.webp',
     width: 2000,
     height: 1500,
     alt: 'Brunch',
@@ -688,7 +687,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'living-room-hangout',
-    cloudinaryId: 'living-room-hangout_supk2j',
+    src: '/images/gallery/living-room-hangout.webp',
     width: 2000,
     height: 1414,
     alt: 'Living room hangout',
@@ -697,7 +696,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'rooftop-dinner',
-    cloudinaryId: 'rooftop-dinner_a8bxmg',
+    src: '/images/gallery/rooftop-dinner.webp',
     width: 2000,
     height: 1506,
     alt: 'Rooftop dinner',
@@ -706,7 +705,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'sunset-photographer',
-    cloudinaryId: 'sunset-photographer_eoh5pu',
+    src: '/images/gallery/sunset-photographer.webp',
     width: 1506,
     height: 2000,
     alt: 'Sunset photographer',
@@ -715,7 +714,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'seattle-sculpture',
-    cloudinaryId: 'seattle-sculpture_mxqwiv',
+    src: '/images/gallery/seattle-sculpture.webp',
     width: 1500,
     height: 2000,
     alt: 'Seattle art',
@@ -724,7 +723,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'pfp-2024',
-    cloudinaryId: 'pfp-2024_ergu7t',
+    src: '/images/gallery/pfp-2024.webp',
     width: 1333,
     height: 2000,
     alt: 'Profile photo 2024',
@@ -733,7 +732,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 'pfp-2025',
-    cloudinaryId: 'pfp-2025_qdtqen',
+    src: '/images/gallery/pfp-2025.webp',
     width: 1334,
     height: 2000,
     alt: 'Profile photo 2025',

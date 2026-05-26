@@ -8,7 +8,7 @@ tags:
   - resources
   - interview
   - learn
-image: https://res.cloudinary.com/dumwa1w5x/image/upload/v1767626641/upskill_ovchzg.png
+image: /images/blog/upskill.webp
 draft: false
 ---
 

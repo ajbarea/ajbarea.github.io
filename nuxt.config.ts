@@ -62,10 +62,10 @@ export default defineNuxtConfig({
     ]
   },
 
+  // Default IPX provider — serves local `public/images/` and generates
+  // responsive WebP/AVIF variants at `nuxt generate` time. No external CDN.
   image: {
-    cloudinary: {
-      baseURL: 'https://res.cloudinary.com/dumwa1w5x/image/upload/'
-    }
+    format: ['webp']
   },
 
   vite: {
@@ -103,7 +103,6 @@ export default defineNuxtConfig({
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'preconnect', href: 'https://res.cloudinary.com' },
         {
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap'

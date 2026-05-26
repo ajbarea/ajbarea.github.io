@@ -7,7 +7,7 @@ tags:
   - federated learning
   - edge computing
   - optimization
-image: https://res.cloudinary.com/dumwa1w5x/image/upload/v1767628163/paper01_e0enws.png
+image: /images/blog/paper01.webp
 draft: false
 ---
 

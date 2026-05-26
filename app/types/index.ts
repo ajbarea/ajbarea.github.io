@@ -220,7 +220,8 @@ export interface TimelineEntry {
 // Gallery Image
 export interface GalleryImage {
   id: string
-  cloudinaryId: string
+  /** Path under `public/` — e.g. `/images/gallery/foo.webp`. */
+  src: string
   width: number
   height: number
   alt: string

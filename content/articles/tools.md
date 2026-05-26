@@ -7,7 +7,7 @@ tags:
   - vscode
   - productivity
   - tools
-image: https://res.cloudinary.com/dumwa1w5x/image/upload/v1767627147/tools_pclm7n.png
+image: /images/blog/tools.webp
 draft: false
 ---
 

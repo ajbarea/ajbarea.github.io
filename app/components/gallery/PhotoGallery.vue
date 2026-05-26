@@ -15,36 +15,6 @@ const props = withDefaults(defineProps<Props>(), {
   galleryId: 'photo-gallery'
 })
 
-// Cloudinary base URL
-const CLOUDINARY_BASE = 'https://res.cloudinary.com/dumwa1w5x/image/upload'
-
-/**
- * Generate Cloudinary URL with transformations
- * @param cloudinaryId - The public ID from Cloudinary
- * @param transforms - Optional transformation string (e.g., 'w_400,c_fill,q_auto,f_auto')
- */
-const getCloudinaryUrl = (cloudinaryId: string, transforms?: string): string => {
-  if (transforms) {
-    return `${CLOUDINARY_BASE}/${transforms}/${cloudinaryId}`
-  }
-  return `${CLOUDINARY_BASE}/${cloudinaryId}`
-}
-
-/**
- * Get thumbnail URL with automatic optimization
- * Uses 400px width, fill crop, auto quality and format
- */
-const getThumbnailUrl = (image: GalleryImage): string => {
-  return getCloudinaryUrl(image.cloudinaryId, 'w_400,c_fill,q_auto,f_auto')
-}
-
-/**
- * Get full-size URL with auto quality and format
- */
-const getFullUrl = (image: GalleryImage): string => {
-  return getCloudinaryUrl(image.cloudinaryId, 'q_auto,f_auto')
-}
-
 const emit = defineEmits<{
   imageLoad: [id: string]
   imageError: [id: string]
@@ -191,7 +161,7 @@ onUnmounted(() => {
       :style="{ '--stagger-delay': `${Math.min(index * 30, 600)}ms` }"
     >
       <a
-        :href="getFullUrl(image)"
+        :href="image.src"
         :data-pswp-width="image.width"
         :data-pswp-height="image.height"
         :data-pswp-caption="buildCaptionHtml(image)"
@@ -208,12 +178,14 @@ onUnmounted(() => {
           aria-hidden="true"
         />
 
-        <!-- Thumbnail image with lazy loading and staggered fade-in -->
-        <img
-          :src="getThumbnailUrl(image)"
+        <!-- Thumbnail: @nuxt/image emits a responsive <img srcset> from the
+             local file. Build step generates 400/800/1200px WebP variants. -->
+        <NuxtImg
+          :src="image.src"
           :alt="image.alt"
           :width="image.width"
           :height="image.height"
+          sizes="sm:50vw md:33vw lg:25vw xl:20vw"
           loading="lazy"
           class="gallery-image w-full h-auto rounded-lg transition-transform duration-300 group-hover:scale-105"
           :class="{

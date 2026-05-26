@@ -17,7 +17,7 @@ useHead(() => ({
     { property: 'og:description', content: t('meta.homeOgDescription') },
     {
       property: 'og:image',
-      content: 'https://res.cloudinary.com/dumwa1w5x/image/upload/q_auto,f_auto/portfolio_ujli4t'
+      content: 'https://ajbarea.github.io/images/profile/profile.webp'
     },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },

@@ -21,20 +21,23 @@ useHead(
       return { title: 'Article Not Found | AJ Barea' }
     }
 
+    // Article image is a relative path so it renders correctly in dev/prod;
+    // OG and JSON-LD need absolute URLs, so we prefix the site origin here.
+    const SITE_ORIGIN = 'https://ajbarea.github.io'
+    const FALLBACK_IMAGE = `${SITE_ORIGIN}/images/profile/profile.webp`
+    const absoluteImage = article.value.image
+      ? `${SITE_ORIGIN}${article.value.image}`
+      : FALLBACK_IMAGE
+
     return {
       title: `${article.value.title} | AJ Barea`,
       meta: [
         { name: 'description', content: article.value.description },
         { property: 'og:title', content: article.value.title },
         { property: 'og:description', content: article.value.description },
-        { property: 'og:url', content: `https://ajbarea.github.io/blog/${slug.value}` },
+        { property: 'og:url', content: `${SITE_ORIGIN}/blog/${slug.value}` },
         { property: 'og:type', content: 'article' },
-        {
-          property: 'og:image',
-          content:
-            article.value.image ||
-            'https://res.cloudinary.com/dumwa1w5x/image/upload/q_auto,f_auto/portfolio_ujli4t'
-        },
+        { property: 'og:image', content: absoluteImage },
         { property: 'article:published_time', content: article.value.date },
         { property: 'article:author', content: article.value.author },
         { name: 'twitter:card', content: 'summary_large_image' },
@@ -49,7 +52,7 @@ useHead(
             '@type': 'Article',
             headline: article.value.title,
             description: article.value.description,
-            image: article.value.image,
+            image: absoluteImage,
             datePublished: article.value.date,
             author: {
               '@type': 'Person',

@@ -7,7 +7,7 @@ tags:
   - IntelliFL
   - adaptive AI
   - networks
-image: https://res.cloudinary.com/dumwa1w5x/image/upload/v1767628161/paper02_vj3kvk.png
+image: /images/blog/paper02.webp
 draft: false
 ---
 

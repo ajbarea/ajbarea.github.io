@@ -7,7 +7,7 @@ tags:
   - simulation
   - performance
   - research
-image: https://res.cloudinary.com/dumwa1w5x/image/upload/v1767628162/paper03_ikgpew.png
+image: /images/blog/paper03.webp
 draft: false
 ---
 

@@ -19,8 +19,7 @@ export const projects: Project[] = [
       'uv'
     ],
     types: ['ai-ml', 'full-stack'],
-    thumbnailUrl:
-      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779282973/kourai-khryseai_nrxqnu.webp',
+    thumbnailUrl: '/images/projects/kourai-khryseai.webp',
     docsUrl: 'https://ajbarea.github.io/kourai-khryseai/',
     githubUrl: 'https://github.com/ajbarea/kourai-khryseai',
     youtubeUrl: 'https://youtu.be/m5_-WdJdzL4',
@@ -42,8 +41,7 @@ export const projects: Project[] = [
       'uv'
     ],
     types: ['ai-ml', 'federated-learning'],
-    thumbnailUrl:
-      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779282974/velocity-fl_dukewt.webp',
+    thumbnailUrl: '/images/projects/velocity-fl.webp',
     docsUrl: 'https://ajbarea.github.io/velocity-fl/',
     githubUrl: 'https://github.com/ajbarea/velocity-fl',
     featured: true
@@ -53,8 +51,7 @@ export const projects: Project[] = [
     title: 'Phalanx-FL',
     technologies: ['Python', 'Flower', 'Docker', 'Redis', 'Celery', 'uv'],
     types: ['ai-ml', 'federated-learning'],
-    thumbnailUrl:
-      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779282973/phalanx-fl_hlq7gn.webp',
+    thumbnailUrl: '/images/projects/phalanx-fl.webp',
     docsUrl: 'https://ajbarea.github.io/phalanx-fl/',
     githubUrl: 'https://github.com/ajbarea/phalanx-fl',
     youtubeUrl: 'https://youtu.be/UtOHEHz2pWw',
@@ -65,8 +62,7 @@ export const projects: Project[] = [
     title: 'Techne',
     technologies: ['Claude Code', 'Python', 'TOML', 'Bash'],
     types: ['ai-ml'],
-    thumbnailUrl:
-      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779282974/techne_m0vadx.webp',
+    thumbnailUrl: '/images/projects/techne.webp',
     githubUrl: 'https://github.com/ajbarea/techne',
     featured: true
   },
@@ -75,7 +71,7 @@ export const projects: Project[] = [
     title: 'LDQIS Lab Website',
     technologies: ['Astro 5', 'Tailwind 4', 'TypeScript', 'GitHub Pages'],
     types: ['full-stack'],
-    thumbnailUrl: 'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779393712/ldqis_yz6hib.png',
+    thumbnailUrl: '/images/projects/ldqis.webp',
     demoUrl: 'https://ajbarea.github.io/ldqis/',
     githubUrl: 'https://github.com/ajbarea/ldqis',
     featured: true
@@ -85,8 +81,7 @@ export const projects: Project[] = [
     title: 'InteFL',
     technologies: ['Python', 'PyTorch', 'FLOWER', 'Federated Learning', 'Docker'],
     types: ['ai-ml', 'federated-learning'],
-    thumbnailUrl:
-      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1767633883/IntelliFL_r48xde.png',
+    thumbnailUrl: '/images/projects/intellifl.webp',
     githubUrl: 'https://github.com/dmitrykoro/fl-execution-framework',
     youtubeUrl: 'https://youtu.be/2Q3Fv6Df3gU',
     featured: true
@@ -96,7 +91,7 @@ export const projects: Project[] = [
     title: 'Security Evaluation System',
     technologies: ['Python', 'FastAPI', 'CLIPS', 'PyTorch', 'Next.js'],
     types: ['ai-ml', 'federated-learning', 'full-stack'],
-    thumbnailUrl: 'https://res.cloudinary.com/dumwa1w5x/image/upload/v1767632723/ses_mfbacm.png',
+    thumbnailUrl: '/images/projects/ses.webp',
     githubUrl: 'https://github.com/ajbarea/ses',
     featured: true
   },
@@ -105,7 +100,7 @@ export const projects: Project[] = [
     title: 'Robot Navigation with RL',
     technologies: ['Python', 'PyTorch', 'Webots', 'Reinforcement Learning', 'OpenAI Gym'],
     types: ['ai-ml', 'robotics'],
-    thumbnailUrl: 'https://res.cloudinary.com/dumwa1w5x/image/upload/v1767633039/robot_mesprt.png',
+    thumbnailUrl: '/images/projects/robot.webp',
     githubUrl: 'https://github.com/ajbarea/goal-seeker-ai',
     featured: true
   },
@@ -114,8 +109,7 @@ export const projects: Project[] = [
     title: 'Control of Mobile Robots',
     technologies: ['Python', 'Webots', 'Robotics', 'Localization', 'Path Planning'],
     types: ['robotics'],
-    thumbnailUrl:
-      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1767634303/control-robots_mtf8fl.png',
+    thumbnailUrl: '/images/projects/control-robots.webp',
     githubUrl: 'https://github.com/ajbarea/control-of-mobile-robots',
     youtubeUrl: 'https://www.youtube.com/playlist?list=PLmQVFU1FBDddYV_4IRW1zfXH6CAKuZjIM',
     featured: true
@@ -125,7 +119,7 @@ export const projects: Project[] = [
     title: 'HackerRank Orchestrate Triage',
     technologies: ['Claude Opus 4.7', 'Python', 'Pydantic', 'Anthropic Message Batches API', 'uv'],
     types: ['ai-ml', 'hackathon'],
-    thumbnailUrl: 'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779391916/triage_cxgfbo.png',
+    thumbnailUrl: '/images/projects/triage.webp',
     docsUrl: 'https://ajbarea.github.io/orchestrate-triage/',
     githubUrl: 'https://github.com/ajbarea/orchestrate-triage'
   },
@@ -134,8 +128,7 @@ export const projects: Project[] = [
     title: 'EMG-to-MIDI Music',
     technologies: ['Python', 'BioRadio (EMG/EEG)', 'Lab Streaming Layer', 'MIDI', 'Zensical'],
     types: ['ai-ml', 'hackathon'],
-    thumbnailUrl:
-      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779376928/bioradio_raazmn.png',
+    thumbnailUrl: '/images/projects/bioradio.webp',
     docsUrl: 'https://ajbarea.github.io/bioradio-music/',
     githubUrl: 'https://github.com/ajbarea/bioradio-music'
   },
@@ -144,8 +137,7 @@ export const projects: Project[] = [
     title: 'Blockchain Explorer',
     technologies: ['JavaScript', 'Node.js', 'Express', 'Sequelize', 'Google OAuth 2.0', 'JWT'],
     types: ['full-stack'],
-    thumbnailUrl:
-      'https://res.cloudinary.com/dumwa1w5x/image/upload/v1779376367/blockchain_p5glwx.png',
+    thumbnailUrl: '/images/projects/blockchain.webp',
     githubUrl: 'https://github.com/ajbarea/blockchain-explorer',
     youtubeUrl: 'https://www.youtube.com/playlist?list=PLmQVFU1FBDdc3XyzoCp5NDFkoY5kzW3bT'
   }
