@@ -47,6 +47,15 @@ export const projects: Project[] = [
     featured: true
   },
   {
+    id: 'security-eval',
+    title: 'Security Evaluation System',
+    technologies: ['Python', 'FastAPI', 'CLIPS', 'PyTorch', 'Next.js'],
+    types: ['ai-ml', 'federated-learning', 'full-stack'],
+    thumbnailUrl: '/images/projects/ses.webp',
+    githubUrl: 'https://github.com/ajbarea/ses',
+    featured: true
+  },
+  {
     id: 'phalanx-fl',
     title: 'Phalanx-FL',
     technologies: ['Python', 'Flower', 'Docker', 'Redis', 'Celery', 'uv'],
@@ -67,13 +76,12 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    id: 'ldqis',
-    title: 'LDQIS Lab Website',
-    technologies: ['Astro 5', 'Tailwind 4', 'TypeScript', 'GitHub Pages'],
-    types: ['full-stack'],
-    thumbnailUrl: '/images/projects/ldqis.webp',
-    demoUrl: 'https://ajbarea.github.io/ldqis/',
-    githubUrl: 'https://github.com/ajbarea/ldqis',
+    id: 'robot-navigation-rl',
+    title: 'Robot Navigation with RL',
+    technologies: ['Python', 'PyTorch', 'Webots', 'Reinforcement Learning', 'OpenAI Gym'],
+    types: ['ai-ml', 'robotics'],
+    thumbnailUrl: '/images/projects/robot.webp',
+    githubUrl: 'https://github.com/ajbarea/goal-seeker-ai',
     featured: true
   },
   {
@@ -87,21 +95,13 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    id: 'security-eval',
-    title: 'Security Evaluation System',
-    technologies: ['Python', 'FastAPI', 'CLIPS', 'PyTorch', 'Next.js'],
-    types: ['ai-ml', 'federated-learning', 'full-stack'],
-    thumbnailUrl: '/images/projects/ses.webp',
-    githubUrl: 'https://github.com/ajbarea/ses',
-    featured: true
-  },
-  {
-    id: 'robot-navigation-rl',
-    title: 'Robot Navigation with RL',
-    technologies: ['Python', 'PyTorch', 'Webots', 'Reinforcement Learning', 'OpenAI Gym'],
-    types: ['ai-ml', 'robotics'],
-    thumbnailUrl: '/images/projects/robot.webp',
-    githubUrl: 'https://github.com/ajbarea/goal-seeker-ai',
+    id: 'ldqis',
+    title: 'LDQIS Lab Website',
+    technologies: ['Astro 5', 'Tailwind 4', 'TypeScript', 'GitHub Pages'],
+    types: ['full-stack'],
+    thumbnailUrl: '/images/projects/ldqis.webp',
+    demoUrl: 'https://ajbarea.github.io/ldqis/',
+    githubUrl: 'https://github.com/ajbarea/ldqis',
     featured: true
   },
   {
