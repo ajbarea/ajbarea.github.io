@@ -51,7 +51,7 @@ The full content surface (~280 strings) lives in `i18n/locales/*.json`, and stru
 | Language      | [TypeScript](https://www.typescriptlang.org/) (strict)                                           |
 | i18n          | [@nuxtjs/i18n v10](https://i18n.nuxtjs.org/) with `prefix_except_default` strategy               |
 | Content       | [@nuxt/content](https://content.nuxt.com/) for the blog                                          |
-| Images        | [@nuxt/image](https://image.nuxt.com/) over [Cloudinary](https://cloudinary.com/)                |
+| Images        | [@nuxt/image](https://image.nuxt.com/) (IPX, local images)                                       |
 | Gallery       | [PhotoSwipe v5](https://photoswipe.com/) with dynamic captions                                   |
 | State         | [Pinia](https://pinia.vuejs.org/)                                                                |
 | Forms         | [Web3Forms](https://web3forms.com/)                                                              |
@@ -200,8 +200,8 @@ Pushes to `main` trigger `.github/workflows/deploy.yml`, which runs `npm ci` and
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://res.cloudinary.com/dumwa1w5x/image/upload/q_auto,f_auto,e_negate/v1779302138/brand_gwqy8l.png">
-  <img src="https://res.cloudinary.com/dumwa1w5x/image/upload/q_auto,f_auto/v1779302138/brand_gwqy8l.png" alt="" height="16" />
+  <source media="(prefers-color-scheme: dark)" srcset="public/images/brand-white.png">
+  <img src="public/images/brand.png" alt="" height="16" />
 </picture>&nbsp;&nbsp;2026 <a href="https://ajbarea.github.io/">AJ Barea</a>
 
 </div>
