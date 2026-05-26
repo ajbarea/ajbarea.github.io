@@ -37,10 +37,6 @@ Screenshot*.png
 # AJ working-doc convention: COMMITS.md is always local
 COMMITS.md
 
-# Project thumbnails composited locally and uploaded to Cloudinary; the source
-# webp files live under design-assets/ and are not tracked here.
-public/images/projects/
-
 # Translation drafts emitted by scripts/auto-translate.mjs; promote to {lang}.json
 # (and register the locale in nuxt.config.ts) when satisfied with the QA pass.
 i18n/locales/*.draft.json

@@ -178,15 +178,15 @@ onUnmounted(() => {
           aria-hidden="true"
         />
 
-        <!-- Thumbnail: @nuxt/image emits a responsive <img srcset> from the
-             local file. Build step generates 400/800/1200px WebP variants. -->
-        <NuxtImg
+        <!-- Thumbnail: pre-optimized WebP served directly. Static hosting (GitHub
+             Pages) has no IPX server, so a plain <img> avoids /_ipx/ 404s. -->
+        <img
           :src="image.src"
           :alt="image.alt"
           :width="image.width"
           :height="image.height"
-          sizes="sm:50vw md:33vw lg:25vw xl:20vw"
           loading="lazy"
+          decoding="async"
           class="gallery-image w-full h-auto rounded-lg transition-transform duration-300 group-hover:scale-105"
           :class="{
             'opacity-0': !isImageLoaded(image.id) && !hasImageError(image.id),
