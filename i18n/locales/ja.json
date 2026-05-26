@@ -228,7 +228,7 @@
       "description": "PythonとWebotsを用いた移動ロボットの制御システム。位置推定、ナビゲーション、センサ統合を扱う。"
     },
     "orchestrate-triage": {
-      "title": "HackerRank Orchestrate Triage",
+      "title": "Orchestrate Triage",
       "description": "Claude Opus 4.7上のマルチドメイン サポートトリアージAIエージェント。プロンプトキャッシング、構造化ツール呼び出し出力、プロンプトインジェクション対策、Anthropic Message Batches APIを採用。HackerRank Orchestrate（2026年5月）にソロで参加。"
     },
     "bioradio-music": {

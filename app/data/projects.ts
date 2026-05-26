@@ -116,7 +116,7 @@ export const projects: Project[] = [
   },
   {
     id: 'orchestrate-triage',
-    title: 'HackerRank Orchestrate Triage',
+    title: 'Orchestrate Triage',
     technologies: ['Claude Opus 4.7', 'Python', 'Pydantic', 'Anthropic Message Batches API', 'uv'],
     types: ['ai-ml', 'hackathon'],
     thumbnailUrl: '/images/projects/triage.webp',

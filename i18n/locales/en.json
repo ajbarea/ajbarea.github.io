@@ -228,7 +228,7 @@
       "description": "Mobile robot control systems using Python and Webots covering localization, navigation, and sensor integration."
     },
     "orchestrate-triage": {
-      "title": "HackerRank Orchestrate Triage",
+      "title": "Orchestrate Triage",
       "description": "Multi-domain support-triage AI agent on Claude Opus 4.7: prompt caching, structured tool-call output, prompt-injection defense, and Anthropic Message Batches API. Built solo for HackerRank Orchestrate (May 2026)."
     },
     "bioradio-music": {

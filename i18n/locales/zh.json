@@ -232,7 +232,7 @@
       "description": "使用Python和Webots的移动机器人控制系统，涵盖定位、导航和传感器集成。"
     },
     "orchestrate-triage": {
-      "title": "HackerRank Orchestrate Triage",
+      "title": "Orchestrate Triage",
       "description": "基于 Claude Opus 4.7 的多领域支持分诊 AI 智能体：提示缓存、结构化工具调用输出、提示注入防御和 Anthropic Message Batches API。为 HackerRank Orchestrate（2026 年 5 月）独立构建。"
     },
     "bioradio-music": {
