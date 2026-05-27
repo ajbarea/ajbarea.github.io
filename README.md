@@ -4,7 +4,7 @@
 
 _A multilingual Nuxt 4 portfolio with prerendered SEO, dual industry/research resume views, and a local-LLM translation pipeline — fork it and make it your own._
 
-[![Nuxt](https://img.shields.io/badge/Nuxt-4.2-00DC82?style=flat-square&logo=nuxt&logoColor=white)](https://nuxt.com)
+[![Nuxt](https://img.shields.io/badge/Nuxt-4.4-00DC82?style=flat-square&logo=nuxt&logoColor=white)](https://nuxt.com)
 [![Vue](https://img.shields.io/badge/Vue-3.5-4FC08D?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind](https://img.shields.io/badge/Tailwind-v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
@@ -32,7 +32,7 @@ The full content surface (~280 strings) lives in `i18n/locales/*.json`, and stru
 - **Project gallery:** 12 curated projects, filterable by AI/ML, Federated Learning, Full-Stack, Robotics, Hackathon
 - **Dual resume views:** toggle between Industry and Research with separate experience streams
 - **Blog:** Nuxt Content with code highlighting
-- **Photo gallery:** PhotoSwipe lightbox over Cloudinary CDN
+- **Photo gallery:** PhotoSwipe lightbox over local WebP images
 - **Contact form:** Web3Forms backend with clipboard-copy fallback when no API key is set
 - **Dark mode:** system-aware with manual toggle
 - **64 prerendered routes:** 16 per locale via static-site generation
@@ -51,7 +51,7 @@ The full content surface (~280 strings) lives in `i18n/locales/*.json`, and stru
 | Language      | [TypeScript](https://www.typescriptlang.org/) (strict)                                           |
 | i18n          | [@nuxtjs/i18n v10](https://i18n.nuxtjs.org/) with `prefix_except_default` strategy               |
 | Content       | [@nuxt/content](https://content.nuxt.com/) for the blog                                          |
-| Images        | [@nuxt/image](https://image.nuxt.com/) (IPX, local images)                                       |
+| Images        | Local WebP under `public/images/`, served static (no CDN)                                        |
 | Gallery       | [PhotoSwipe v5](https://photoswipe.com/) with dynamic captions                                   |
 | State         | [Pinia](https://pinia.vuejs.org/)                                                                |
 | Forms         | [Web3Forms](https://web3forms.com/)                                                              |
@@ -97,7 +97,7 @@ Fork the repo, then edit content — no framework changes needed:
 
 - **Profile, projects, experience, publications** — `app/data/*.ts` (typed; the gallery, resume, and Recent Activity all read from here).
 - **All visible copy** — `i18n/locales/en.json` is canonical; translate the others by hand or with `scripts/auto-translate.mjs`.
-- **Images** — swap the Cloudinary URLs in `app/data/*` for your own CDN or files under `public/`.
+- **Images** — swap the image paths in `app/data/*`; files live under `public/images/`.
 - **Deploy** — push to `main`; GitHub Actions builds and publishes to GitHub Pages.
 
 ---
@@ -124,7 +124,7 @@ ajbarea.github.io/
 ├── public/                     # static assets, PDFs, favicons
 ├── scripts/                    # audit, hero-card composition, auto-translate
 ├── e2e/                        # Playwright specs
-├── nuxt.config.ts              # i18n locales, image CDN, SEO base URL
+├── nuxt.config.ts              # i18n locales, image format, SEO base URL
 └── IMPL.md                     # implementation spec (language-selector phases)
 ```
 
