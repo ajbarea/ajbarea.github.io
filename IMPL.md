@@ -5,10 +5,13 @@ Cross-property feature: visible language selector on the portfolio and every Zen
 ## Status
 
 - **Portfolio (Nuxt)** — Phase 1-3 shipped. EN canonical, ES hand-authored, JA/ZH drafted via Qwen2.5-7B-Instruct then QA-passed. 64 routes prerender; hreflang + og:locale + canonical emit correctly for each variant.
-- **Zensical sites (techne / kourai / vFL / phalanx-fl)** — Phase 4 not yet started.
-- **`techne:docs-site` i18n sub-mode** — Phase 5 not yet started.
+- **Zensical sites (techne / kourai / vFL / phalanx-fl)** — Phase 4 **declined 2026-05-27 (AJ)**: dev-tool docs have no non-English audience and no way to verify translation accuracy. Revisit only on an audience signal (non-English analytics traffic).
+- **`techne:docs-site` i18n sub-mode** — Phase 5 **declined** (it only existed to serve Phase 4).
 
 ## Phase 4 — Zensical sites
+
+> **Declined 2026-05-27** (see Status above). Kept as reference only, if a non-English
+> audience ever materializes.
 
 - Use `mkdocs-static-i18n` (free, MIT). Co-locate translations: `index.en.md`, `index.es.md`, `index.ja.md`, `index.zh.md`.
 - Material's native `theme.alternate` config drives the dropdown — no custom component needed.
@@ -17,6 +20,8 @@ Cross-property feature: visible language selector on the portfolio and every Zen
 - JA quality is the known weak spot (see Caveats below); plan for native-speaker review or DeepL one-time for the docs volume.
 
 ## Phase 5 — Extend `techne:docs-site`
+
+> **Declined 2026-05-27** (it only existed to serve Phase 4).
 
 Add an i18n sub-mode to the existing `techne:docs-site` skill: detect missing `.<lang>.md` files, run Qwen via Ollama to generate drafts (Argos fallback), queue them for review. Single command across all sister Zensical sites.
 
