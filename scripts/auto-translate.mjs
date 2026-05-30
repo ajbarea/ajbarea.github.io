@@ -3,13 +3,16 @@
 // Usage:
 //   node scripts/auto-translate.mjs --target {es|ja|zh}
 //   node scripts/auto-translate.mjs --target es --fresh   # ignore existing draft, retranslate everything
-// Outputs i18n/locales/{target}.draft.json. Resumable: re-running fills in missing keys only.
+// Outputs i18n/locales/{target}.draft.json plus a {target}.hashes.json source-hash map.
+// Incremental: re-running fills in missing keys AND re-translates any key whose English
+// source changed (detected via the hash map); unchanged keys are reused untouched.
 // To verify an existing locale, run --fresh and diff against the committed file.
 
 import { readFile, writeFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { createHash } from 'node:crypto'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const LOCALES = resolve(ROOT, 'i18n/locales')
@@ -76,7 +79,35 @@ function validate(source, target) {
   return null
 }
 
+// 16-hex SHA-256 over the source string (mirrors velocity-fl's config_fingerprint width).
+function sha(s) {
+  return createHash('sha256').update(s, 'utf8').digest('hex').slice(0, 16)
+}
+
+// Mirror the source structure, replacing each leaf string with the hash of its source.
+// Written to {target}.hashes.json so the next run can tell which English strings changed.
+function hashTree(source) {
+  if (Array.isArray(source)) return source.map(hashTree)
+  if (source !== null && typeof source === 'object') {
+    const out = {}
+    for (const key of Object.keys(source)) out[key] = hashTree(source[key])
+    return out
+  }
+  if (typeof source === 'string') return sha(source)
+  return source
+}
+
+// Reuse an existing translation only when it exists AND the English source that
+// produced it is unchanged. With no hash map yet (legacy/bootstrap run) we trust
+// the existing draft so we never discard good translations on the upgrade run.
+function shouldReuse({ existingValue, existingHash, sourceString, haveHashes }) {
+  if (existingValue == null) return false
+  if (!haveHashes) return true
+  return existingHash === sha(sourceString)
+}
+
 const failures = []
+let haveHashes = false
 
 async function translate(source, targetLang, path) {
   let lastResult = null
@@ -109,14 +140,22 @@ function shortPreview(s) {
   return flat.length < s.length ? `${flat}...` : flat
 }
 
-async function walk(source, existing, targetLang, path) {
+async function walk(source, existing, existingHashes, targetLang, path) {
   if (Array.isArray(source)) {
     const out = []
     for (let i = 0; i < source.length; i++) {
       const childPath = `${path}[${i}]`
       const existingItem = Array.isArray(existing) ? existing[i] : undefined
+      const existingItemHash = Array.isArray(existingHashes) ? existingHashes[i] : undefined
       if (typeof source[i] === 'string') {
-        if (existingItem != null) {
+        if (
+          shouldReuse({
+            existingValue: existingItem,
+            existingHash: existingItemHash,
+            sourceString: source[i],
+            haveHashes
+          })
+        ) {
           out.push(existingItem)
         } else {
           const result = await translate(source[i], targetLang, childPath)
@@ -124,7 +163,7 @@ async function walk(source, existing, targetLang, path) {
           out.push(result)
         }
       } else {
-        out.push(await walk(source[i], existingItem, targetLang, childPath))
+        out.push(await walk(source[i], existingItem, existingItemHash, targetLang, childPath))
       }
     }
     return out
@@ -133,12 +172,26 @@ async function walk(source, existing, targetLang, path) {
     const out = {}
     for (const key of Object.keys(source)) {
       const childPath = path ? `${path}.${key}` : key
-      out[key] = await walk(source[key], existing?.[key], targetLang, childPath)
+      out[key] = await walk(
+        source[key],
+        existing?.[key],
+        existingHashes?.[key],
+        targetLang,
+        childPath
+      )
     }
     return out
   }
   if (typeof source === 'string') {
-    if (existing != null) return existing
+    if (
+      shouldReuse({
+        existingValue: existing,
+        existingHash: existingHashes,
+        sourceString: source,
+        haveHashes
+      })
+    )
+      return existing
     const result = await translate(source, targetLang, path)
     console.log(`  ${path} → ${shortPreview(result)}`)
     return result
@@ -178,21 +231,35 @@ async function main() {
 
   const source = JSON.parse(await readFile(resolve(LOCALES, 'en.json'), 'utf8'))
   const draftPath = resolve(LOCALES, `${target}.draft.json`)
+  const hashPath = resolve(LOCALES, `${target}.hashes.json`)
   let existing = null
+  let existingHashes = null
   if (!fresh && existsSync(draftPath)) {
     existing = JSON.parse(await readFile(draftPath, 'utf8'))
-    console.log(`Resuming from ${target}.draft.json (filling missing keys only)`)
+    if (existsSync(hashPath)) {
+      existingHashes = JSON.parse(await readFile(hashPath, 'utf8'))
+      haveHashes = true
+      console.log(
+        `Resuming from ${target}.draft.json (re-translating only missing keys + keys whose English source changed)`
+      )
+    } else {
+      console.log(
+        `Resuming from ${target}.draft.json (no ${target}.hashes.json yet — reusing every present key and writing the hash map so future runs detect source edits)`
+      )
+    }
   } else if (fresh) {
     console.log(`--fresh: ignoring any existing ${target}.draft.json`)
   }
 
   console.log(`Translating en → ${LANG_NAMES[target]} via ${MODEL}\n`)
   const start = Date.now()
-  const out = await walk(source, existing, target, '')
+  const out = await walk(source, existing, existingHashes, target, '')
   const elapsedSec = ((Date.now() - start) / 1000).toFixed(1)
 
   await writeFile(draftPath, JSON.stringify(out, null, 2) + '\n', 'utf8')
+  await writeFile(hashPath, JSON.stringify(hashTree(source), null, 2) + '\n', 'utf8')
   console.log(`\nWrote ${draftPath}`)
+  console.log(`Wrote ${hashPath}`)
   console.log(`Elapsed: ${elapsedSec}s`)
 
   if (failures.length > 0) {
@@ -214,7 +281,14 @@ async function main() {
   }
 }
 
-main().catch((err) => {
-  console.error(`\n${err.stack || err.message}`)
-  process.exit(1)
-})
+const invokedDirectly =
+  process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)
+
+if (invokedDirectly) {
+  main().catch((err) => {
+    console.error(`\n${err.stack || err.message}`)
+    process.exit(1)
+  })
+}
+
+export { sha, hashTree, shouldReuse, walk, validate, placeholders }
