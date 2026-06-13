@@ -99,7 +99,11 @@
     "ncsu-scads-2026": {
       "title": "暑期研究学者",
       "subtitle": "SCADS · 应用数据科学夏季会议",
-      "description": "为期八周的精英研究项目，将研究生与情报界和国家实验室人员配对，进行大规模 AI 评估。研究方向：在异构数据源上的代理 AI 编排。"
+      "description": "为期八周的精英研究项目，将研究生与情报界和国家实验室人员配对，进行大规模 AI 评估。研究方向：在异构数据源上的代理 AI 编排。",
+      "bullets": [
+        "构建并开源了 Ariadne：一个基于 Claude Agent SDK 的智能体式意义建构原型，将单个实体的证据贯穿图（Neo4j）、关系型和文本存储进行追溯，汇聚成一份带引用的分析笔记。",
+        "在采用前将每项架构决策都基于当前最佳实践研究，并通过 OpenTelemetry 与 Jaeger 对智能体的工具调用进行追踪。"
+      ]
     },
     "rit-gra": {
       "title": "研究生研究员",
@@ -198,6 +202,10 @@
       "full-stack": "全栈",
       "robotics": "机器人学",
       "hackathon": "黑客马拉松"
+    },
+    "ariadne": {
+      "title": "Ariadne",
+      "description": "一个 AI 编程智能体，将单个实体的证据贯穿图、关系型和文本存储进行追溯，汇聚成一份带引用的分析笔记。基于 Claude Agent SDK 构建。"
     },
     "kourai-khryseai": {
       "title": "Kourai Khryseai",

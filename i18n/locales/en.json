@@ -95,7 +95,11 @@
     "ncsu-scads-2026": {
       "title": "Summer Research Scholar",
       "subtitle": "SCADS · Summer Conference on Applied Data Science",
-      "description": "Eight-week selective research program pairing grad students with IC and national-lab personnel on at-scale AI evaluation. Working on agentic-AI orchestration over heterogeneous data sources."
+      "description": "Eight-week selective research program pairing grad students with IC and national-lab personnel on at-scale AI evaluation. Working on agentic-AI orchestration over heterogeneous data sources.",
+      "bullets": [
+        "Built and open-sourced Ariadne, an agentic sensemaking prototype on the Claude Agent SDK that traces a single entity's evidence across graph (Neo4j), relational, and text stores into a cited analytic note.",
+        "Grounded each architectural decision in current best-practice research before adoption, with OpenTelemetry and Jaeger tracing across the agent's tool calls."
+      ]
     },
     "rit-gra": {
       "title": "Graduate Research Assistant",
@@ -194,6 +198,10 @@
       "full-stack": "Full-Stack",
       "robotics": "Robotics",
       "hackathon": "Hackathon"
+    },
+    "ariadne": {
+      "title": "Ariadne",
+      "description": "An AI coding agent that traces one entity's evidence across graph, relational, and text stores into a single cited analytic note. Built on the Claude Agent SDK."
     },
     "kourai-khryseai": {
       "title": "Kourai Khryseai",

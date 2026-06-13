@@ -2,6 +2,25 @@ import type { Project } from '~/types'
 
 export const projects: Project[] = [
   {
+    id: 'ariadne',
+    title: 'Ariadne',
+    technologies: [
+      'Python',
+      'Claude Agent SDK',
+      'MCP',
+      'Neo4j',
+      'Postgres',
+      'OpenTelemetry',
+      'Jaeger',
+      'uv'
+    ],
+    types: ['ai-ml'],
+    thumbnailUrl: '/images/projects/ariadne.webp',
+    docsUrl: 'https://ajbarea.github.io/ariadne/',
+    githubUrl: 'https://github.com/ajbarea/ariadne',
+    featured: true
+  },
+  {
     id: 'kourai-khryseai',
     title: 'Kourai Khryseai',
     technologies: [
