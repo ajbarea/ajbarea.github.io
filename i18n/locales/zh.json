@@ -49,6 +49,8 @@
   },
   "hero": {
     "viewProjects": "查看项目",
+    "resume": "简历",
+    "resumeAria": "下载 AJ Barea 的研究简历（PDF）",
     "latestPaper": "最新论文",
     "viewGalleryAria": "查看照片画廊",
     "profileImageAlt": "{name}的个人照片",

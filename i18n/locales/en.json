@@ -45,6 +45,8 @@
   },
   "hero": {
     "viewProjects": "View Projects",
+    "resume": "Resume",
+    "resumeAria": "Download AJ Barea's research resume (PDF)",
     "latestPaper": "Latest paper",
     "viewGalleryAria": "View photo gallery",
     "profileImageAlt": "Profile photo of {name}",

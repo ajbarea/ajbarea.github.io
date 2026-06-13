@@ -126,6 +126,28 @@ function getSocialIcon(platform: string): string {
           {{ $t('hero.viewProjects') }}
         </NuxtLink>
         <a
+          href="/documents/AJ_Barea_Research_Resume.pdf"
+          download
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary-600 text-primary-600 dark:text-primary-400 dark:border-primary-500 text-base font-bold hover:bg-primary-50 dark:hover:bg-primary-900/20 shadow-sm hover:shadow-md transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
+          :aria-label="$t('hero.resumeAria')"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 11l5 5 5-5M12 4v12"
+            />
+          </svg>
+          {{ $t('hero.resume') }}
+        </a>
+        <a
           href="https://ieeexplore.ieee.org/document/11366920/"
           target="_blank"
           rel="noopener noreferrer"

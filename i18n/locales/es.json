@@ -45,6 +45,8 @@
   },
   "hero": {
     "viewProjects": "Ver Proyectos",
+    "resume": "Currículum",
+    "resumeAria": "Descargar el currículum de investigación de AJ Barea (PDF)",
     "latestPaper": "Último artículo",
     "viewGalleryAria": "Ver galería de fotos",
     "profileImageAlt": "Foto de perfil de {name}",

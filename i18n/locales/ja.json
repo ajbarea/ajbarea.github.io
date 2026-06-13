@@ -45,6 +45,8 @@
   },
   "hero": {
     "viewProjects": "プロジェクトを見る",
+    "resume": "履歴書",
+    "resumeAria": "AJ Bareaの研究用履歴書（PDF）をダウンロード",
     "latestPaper": "最新の論文",
     "viewGalleryAria": "フォトギャラリーを見る",
     "profileImageAlt": "{name}のプロフィール写真",
