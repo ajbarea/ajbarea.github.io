@@ -207,7 +207,7 @@
     },
     "ariadne": {
       "title": "Ariadne",
-      "description": "一个 AI 编程智能体，将单个实体的证据贯穿图、关系型和文本存储进行追溯，汇聚成一份带引用的分析笔记。基于 Claude Agent SDK 构建。"
+      "description": "一个 AI 智能体，将单个实体的证据贯穿图、关系型和文本存储进行追溯，汇聚成一份带引用的分析笔记。基于 Claude Agent SDK 构建。"
     },
     "kourai-khryseai": {
       "title": "Kourai Khryseai",

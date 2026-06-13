@@ -203,7 +203,7 @@
     },
     "ariadne": {
       "title": "Ariadne",
-      "description": "Un agente de IA de programación que rastrea la evidencia de una entidad a través de almacenes de grafos, relacionales y de texto, hasta convertirla en una única nota analítica con citas. Construido sobre el Claude Agent SDK."
+      "description": "Un agente de IA que rastrea la evidencia de una sola entidad a través de almacenes de grafos, relacionales y de texto, hasta convertirla en una nota analítica con citas. Construido sobre el Claude Agent SDK."
     },
     "kourai-khryseai": {
       "title": "Kourai Khryseai",

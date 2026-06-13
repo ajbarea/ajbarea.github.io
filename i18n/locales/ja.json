@@ -203,7 +203,7 @@
     },
     "ariadne": {
       "title": "Ariadne",
-      "description": "単一エンティティの証拠をグラフ・リレーショナル・テキストの各ストアにまたがって追跡し、引用付きの分析ノートにまとめるAIコーディングエージェント。Claude Agent SDK上に構築。"
+      "description": "単一エンティティの証拠をグラフ・リレーショナル・テキストの各ストアにまたがって追跡し、引用付きの分析ノートにまとめるAIエージェント。Claude Agent SDK上に構築。"
     },
     "kourai-khryseai": {
       "title": "Kourai Khryseai",

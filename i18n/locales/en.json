@@ -203,7 +203,7 @@
     },
     "ariadne": {
       "title": "Ariadne",
-      "description": "An AI coding agent that traces one entity's evidence across graph, relational, and text stores into a single cited analytic note. Built on the Claude Agent SDK."
+      "description": "An AI agent that traces a single entity's evidence across graph, relational, and text stores into a cited analytic note. Built on the Claude Agent SDK."
     },
     "kourai-khryseai": {
       "title": "Kourai Khryseai",
