@@ -34,14 +34,14 @@
     "@vueuse/core": "^14.3.0",
     "@vueuse/nuxt": "^14.3.0",
     "better-sqlite3": "^12.10.0",
-    "dompurify": "^3.4.7",
+    "dompurify": "^3.4.8",
     "eslint": "^10.4.1",
     "feed": "^5.2.1",
-    "nuxt": "^4.4.6",
+    "nuxt": "^4.4.7",
     "photoswipe": "^5.4.4",
     "photoswipe-dynamic-caption-plugin": "^1.2.7",
     "pinia": "^3.0.4",
-    "shiki": "^4.1.0",
+    "shiki": "^4.2.0",
     "vue": "^3.5.35",
     "vue-router": "^5.1.0"
   },
@@ -52,7 +52,7 @@
     "@tailwindcss/postcss": "^4.3.0",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.3.0",
-    "@vue/test-utils": "^2.4.10",
+    "@vue/test-utils": "^2.4.11",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.6",
     "exif-parser": "^0.1.12",
@@ -62,6 +62,6 @@
     "prettier": "^3.8.3",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18",
-    "vitest": "^4.1.7"
+    "vitest": "^4.1.8"
   }
 }
