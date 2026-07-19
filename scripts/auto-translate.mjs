@@ -209,7 +209,7 @@ async function pingOllama() {
       throw new Error(`model ${MODEL} not pulled. Run: ollama pull ${MODEL}`)
     }
   } catch (err) {
-    throw new Error(`Ollama not reachable at ${OLLAMA_HOST}: ${err.message}`)
+    throw new Error(`Ollama not reachable at ${OLLAMA_HOST}: ${err.message}`, { cause: err })
   }
 }
 
