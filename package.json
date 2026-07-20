@@ -36,7 +36,7 @@
     "better-sqlite3": "^12.11.1",
     "dompurify": "^3.4.11",
     "eslint": "^10.6.0",
-    "feed": "^5.2.1",
+    "feed": "^6.0.0",
     "nuxt": "^4.4.8",
     "photoswipe": "^5.4.4",
     "photoswipe-dynamic-caption-plugin": "^1.2.7",
