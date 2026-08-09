@@ -63,5 +63,8 @@
     "sharp": "^0.35.3",
     "tailwindcss": "^4.1.18",
     "vitest": "^4.1.10"
+  },
+  "overrides": {
+    "nostics": "^1.2.0"
   }
 }
