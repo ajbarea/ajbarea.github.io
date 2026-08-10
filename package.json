@@ -33,7 +33,7 @@
     "@pinia/nuxt": "^0.11.3",
     "@vueuse/core": "^14.4.0",
     "@vueuse/nuxt": "^14.4.0",
-    "better-sqlite3": "^12.11.1",
+    "better-sqlite3": "^13.0.2",
     "dompurify": "^3.4.12",
     "eslint": "^10.8.0",
     "feed": "^6.0.0",
