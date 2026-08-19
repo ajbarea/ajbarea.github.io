@@ -8,7 +8,8 @@ export const profile: Profile = {
     email: 'ajbareaa@gmail.com',
     phone: '(727) 262-7305',
     github: 'ajbarea',
-    youtube: '@ajbarea'
+    youtube: '@ajbarea',
+    orcid: '0009-0001-7938-2376'
   },
   socialLinks: [
     {
@@ -28,6 +29,13 @@ export const profile: Profile = {
       url: 'https://youtube.com/@ajbarea',
       icon: 'youtube',
       label: 'YouTube'
+    },
+    {
+      platform: 'orcid',
+      url: 'https://orcid.org/0009-0001-7938-2376',
+      icon: 'orcid',
+      label: 'ORCID iD',
+      rel: 'me noopener noreferrer'
     },
     {
       platform: 'email',

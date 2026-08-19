@@ -192,10 +192,11 @@ function getSocialIcon(platform: string): string {
             :href="link.url"
             :aria-label="link.label"
             target="_blank"
-            rel="noopener noreferrer"
+            :rel="link.rel ?? 'noopener noreferrer'"
             class="min-w-[44px] min-h-[44px] p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 hover:scale-110 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
           >
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <UiOrcidIcon v-if="link.platform === 'orcid'" variant="mono" class="w-5 h-5" />
+            <svg v-else class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path :d="getSocialIcon(link.icon)" />
             </svg>
           </a>

@@ -126,6 +126,18 @@ function downloadResume(type: 'industry' | 'research') {
             </svg>
             {{ profile.contact.youtube }}
           </a>
+          <template v-if="profile.contact.orcid">
+            <span class="hidden sm:inline text-gray-300 dark:text-gray-600">|</span>
+            <a
+              :href="`https://orcid.org/${profile.contact.orcid}`"
+              target="_blank"
+              rel="me noopener noreferrer"
+              class="flex items-center gap-1 hover:text-primary-600 dark:hover:text-primary-400"
+            >
+              <UiOrcidIcon class="w-4 h-4" />
+              https://orcid.org/{{ profile.contact.orcid }}
+            </a>
+          </template>
         </div>
       </header>
 
