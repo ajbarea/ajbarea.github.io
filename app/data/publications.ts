@@ -2,26 +2,6 @@ import type { Publication, Presentation } from '~/types'
 
 export const publications: Publication[] = [
   {
-    id: 'ieee-ccnc-2026',
-    authors: [
-      'Dmitrii Korobeinikov',
-      'Sergei Chuprov',
-      'Raman Zatsarenko',
-      'Arnaldo Barea',
-      'Leon Reznik'
-    ],
-    venue: 'IEEE Consumer Communications & Networking Conference (CCNC)',
-    year: 2026,
-    status: 'under-review',
-    keywords: [
-      'Federated Learning',
-      'Medical Imaging',
-      'Data Quality',
-      'Signal-to-Noise Ratio',
-      'Model Convergence'
-    ]
-  },
-  {
     id: 'ieee-is-2026',
     authors: [
       'Dmitrii Korobeinikov',
@@ -30,9 +10,9 @@ export const publications: Publication[] = [
       'Arnaldo Barea',
       'Leon Reznik'
     ],
-    venue: 'IEEE Intelligent Systems (PrePrints)',
+    venue: 'IEEE Intelligent Systems',
     year: 2026,
-    status: 'accepted',
+    status: 'published',
     doi: '10.1109/MIS.2026.3658072',
     url: 'https://ieeexplore.ieee.org/document/11366920/',
     keywords: [
@@ -67,23 +47,18 @@ export const publications: Publication[] = [
     ]
   },
   {
-    id: 'ieee-dsn-2026',
-    authors: [
-      'Dmitrii Korobeinikov',
-      'Raman Zatsarenko',
-      'Sergei Chuprov',
-      'Arnaldo Barea',
-      'Leon Reznik'
-    ],
-    venue: 'IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)',
+    id: 'kourai-ne-agents-day-2026',
+    authors: ['Arnaldo Barea'],
+    venue: 'North-East AI Agents Day Workshop, Jane Street, New York, NY',
     year: 2026,
-    status: 'under-review',
+    status: 'accepted',
+    url: 'https://openreview.net/forum?id=jdD8sORLLY',
     keywords: [
-      'Federated Learning',
-      'Dependability',
-      'Adversarial Attacks',
-      'Benchmarking',
-      'Byzantine Robustness'
+      'AI Agents',
+      'Multi-Agent Systems',
+      'Software Engineering',
+      'Human-in-the-Loop',
+      'Observability'
     ]
   }
 ]
