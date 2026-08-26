@@ -26,17 +26,6 @@
     "titleIndustry": "Ingeniero de Software · Sistemas de ML Distribuido",
     "titleResearch": "Doctorando · Aprendizaje Federado e IA con Agentes",
     "summary": "Construyo frameworks de aprendizaje federado y sistemas de desarrollo multi-agente. Mi investigación se sitúa en la intersección entre ML distribuido confiable, agentes de IA con supervisión humana y experiencia de desarrollador para software asistido por IA.",
-    "roles": [
-      "Investigador de IA/ML",
-      "Desarrollador Full-Stack",
-      "Ingeniero de Sistemas Distribuidos",
-      "Arquitecto Cloud",
-      "Violinista",
-      "Gamer Empedernido",
-      "Otaku",
-      "Hijo Favorito"
-    ],
-    "credibilityChips": ["RIT GRA · Grupo Reznik", "4 Artículos IEEE 2026", "MS SWE · GPA 4.0"],
     "researchInterests": [
       "Sistemas de aprendizaje federado",
       "IA con agentes y uso de herramientas",
@@ -53,7 +42,6 @@
     "viewGalleryAria": "Ver galería de fotos",
     "profileImageAlt": "Foto de perfil de {name}",
     "profileInitialsAlt": "Iniciales de {name}",
-    "credentialsAria": "Credenciales",
     "copyEmailAria": "Copiar dirección de correo electrónico",
     "socialAria": "Perfiles en redes sociales"
   },
@@ -66,8 +54,8 @@
     "expertiseSkillDocAria": "{skill} — Haz clic para ver la documentación",
     "expertiseTooltip": "Ver documentación",
     "skills": "Habilidades Técnicas",
-    "contact": "Contáctame",
-    "contactLead": "¿Tienes una pregunta o quieres colaborar? Envíame un mensaje y te responderé pronto.",
+    "contact": "Contacto",
+    "contactLead": "El correo electrónico es la forma más rápida de contactarme.",
     "sisters": "Ecosistema de investigación"
   },
   "activity": {

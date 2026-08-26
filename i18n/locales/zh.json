@@ -26,21 +26,6 @@
     "titleIndustry": "软件工程师 · 分布式机器学习系统",
     "titleResearch": "博士研究生 · 联合学习与代理 AI",
     "summary": "我构建联邦学习框架和多代理开发系统。我的研究位于可信赖分布式机器学习、人类在环AI代理以及AI辅助软件开发人员体验的交叉点。",
-    "roles": [
-      "人工智能/机器学习研究员",
-      "全栈开发工程师",
-      "分布式系统工程师",
-      "云架构师",
-      "小提琴手",
-      "硬核玩家",
-      "御宅族",
-      "最爱的儿子"
-    ],
-    "credibilityChips": [
-      "RIT GRA · Reznik 研究组",
-      "IEEE 2026 论文 4 篇",
-      "软件工程硕士 · GPA 4.0"
-    ],
     "researchInterests": [
       "联邦学习系统",
       "代理型AI与工具使用",
@@ -57,7 +42,6 @@
     "viewGalleryAria": "查看照片画廊",
     "profileImageAlt": "{name}的个人照片",
     "profileInitialsAlt": "{name} 首字母",
-    "credentialsAria": "资质",
     "copyEmailAria": "复制电子邮件地址",
     "socialAria": "社交媒体资料"
   },
@@ -70,8 +54,8 @@
     "expertiseSkillDocAria": "{skill} - 点击查看文档",
     "expertiseTooltip": "查看文档",
     "skills": "技术技能",
-    "contact": "联系我们",
-    "contactLead": "有疑问或想合作？给我发消息，我会回复你。",
+    "contact": "联系方式",
+    "contactLead": "电子邮件是联系我最快的方式。",
     "sisters": "研究生态系统"
   },
   "activity": {

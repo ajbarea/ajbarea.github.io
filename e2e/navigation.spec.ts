@@ -36,14 +36,14 @@ test.describe('Navigation', () => {
     await expect(page.locator('#main-content')).toBeVisible()
   })
 
-  test('should navigate to Blog page', async ({ page }) => {
+  test('withdraws /blog: no nav link, and the route lands on home', async ({ page }) => {
+    // The articles were placeholder drafts, so the section is unpublished
+    // rather than merely hidden. Both halves matter: a nav link that is gone
+    // while the route still serves would leave the content indexable.
+    await expect(page.locator('nav a[href="/blog"]')).toHaveCount(0)
+
     await page.goto('/blog')
-
-    // Verify page loads with correct title
-    await expect(page).toHaveTitle(/Blog.*AJ Barea/)
-
-    // Verify main content is visible
-    await expect(page.locator('#main-content')).toBeVisible()
+    await expect(page).toHaveURL(/\/$/)
   })
 
   test('should navigate between routes using navigation links', async ({ page }) => {
@@ -60,11 +60,6 @@ test.describe('Navigation', () => {
     await page.click('nav a[href="/resume"]')
     await expect(page).toHaveURL(/\/resume/)
     await expect(page).toHaveTitle(/Resume/)
-
-    // Navigate to Blog via nav link
-    await page.click('nav a[href="/blog"]')
-    await expect(page).toHaveURL(/\/blog/)
-    await expect(page).toHaveTitle(/Blog/)
 
     // Navigate back to Home via nav link
     await page.click('nav a[href="/"]')

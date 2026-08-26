@@ -3,13 +3,6 @@ import { mount } from '@vue/test-utils'
 import AuthorCard from '../AuthorCard.vue'
 import type { Profile } from '~/types'
 
-// Mock TextScroller component to avoid animation complexity in tests
-const TextScrollerStub = {
-  name: 'TextScroller',
-  props: ['texts'],
-  template: '<span>{{ texts[0] }}</span>'
-}
-
 // Mock NuxtLink to avoid router dependency in unit tests
 const NuxtLinkStub = {
   name: 'NuxtLink',
@@ -54,7 +47,7 @@ describe('AuthorCard', () => {
     const wrapper = mount(AuthorCard, {
       props: { profile: mockProfile },
       global: {
-        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub }
+        stubs: { NuxtLink: NuxtLinkStub }
       }
     })
 
@@ -65,7 +58,7 @@ describe('AuthorCard', () => {
     const wrapper = mount(AuthorCard, {
       props: { profile: mockProfile },
       global: {
-        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub }
+        stubs: { NuxtLink: NuxtLinkStub }
       }
     })
 
@@ -76,7 +69,7 @@ describe('AuthorCard', () => {
     const wrapper = mount(AuthorCard, {
       props: { profile: mockProfile },
       global: {
-        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub }
+        stubs: { NuxtLink: NuxtLinkStub }
       }
     })
 
@@ -91,7 +84,7 @@ describe('AuthorCard', () => {
     const wrapper = mount(AuthorCard, {
       props: { profile: mockProfile },
       global: {
-        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub }
+        stubs: { NuxtLink: NuxtLinkStub }
       }
     })
 
@@ -104,7 +97,7 @@ describe('AuthorCard', () => {
     const wrapper = mount(AuthorCard, {
       props: { profile: mockProfile },
       global: {
-        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub }
+        stubs: { NuxtLink: NuxtLinkStub }
       }
     })
 
@@ -119,7 +112,7 @@ describe('AuthorCard', () => {
     const wrapper = mount(AuthorCard, {
       props: { profile: mockProfile },
       global: {
-        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub }
+        stubs: { NuxtLink: NuxtLinkStub }
       }
     })
 
@@ -135,7 +128,7 @@ describe('AuthorCard', () => {
     const wrapper = mount(AuthorCard, {
       props: { profile: mockProfile },
       global: {
-        stubs: { TextScroller: TextScrollerStub, NuxtLink: NuxtLinkStub }
+        stubs: { NuxtLink: NuxtLinkStub }
       }
     })
 

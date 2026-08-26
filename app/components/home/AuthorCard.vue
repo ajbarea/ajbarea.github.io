@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 
 import type { Profile } from '~/types'
-import TextScroller from './TextScroller.vue'
 import { useClipboard } from '~/composables/useClipboard'
 
 interface Props {
@@ -11,14 +10,7 @@ interface Props {
 
 defineProps<Props>()
 
-const { tm, rt } = useI18n()
 const localePath = useLocalePath()
-function resolveMessageArray(value: unknown): string[] {
-  return Array.isArray(value) ? value.map((item) => rt(item)) : []
-}
-const roles = computed(() => resolveMessageArray(tm('profile.roles')))
-const credibilityChips = computed(() => resolveMessageArray(tm('profile.credibilityChips')))
-
 const imageError = ref(false)
 const clipboard = useClipboard()
 
@@ -49,12 +41,18 @@ function getSocialIcon(platform: string): string {
 </script>
 
 <template>
-  <article class="flex flex-col md:flex-row items-center gap-6 sm:gap-8 p-4 sm:p-6 md:p-8">
-    <!-- Profile Image -->
-    <figure class="flex-shrink-0">
+  <!--
+    Typography carries the hierarchy here, not colour. The credential chips and
+    the rotating job-title animation were doing the work a sentence should do,
+    and a reader skimming for "what does this person actually research" had to
+    decode three pills to find out. Fluid clamp() sizing replaces the four
+    breakpoint steps the heading used to carry.
+  -->
+  <article class="flex flex-col md:flex-row md:items-start gap-8 md:gap-12 py-6 sm:py-10">
+    <figure class="flex-shrink-0 mx-auto md:mx-0">
       <NuxtLink
         :to="localePath('/gallery')"
-        class="block relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full overflow-hidden ring-4 ring-primary-100 dark:ring-primary-900 shadow-xl transition-transform duration-300 hover:scale-105 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
+        class="block relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden transition-opacity duration-200 hover:opacity-90 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
         :aria-label="$t('hero.viewGalleryAria')"
       >
         <img
@@ -71,7 +69,7 @@ function getSocialIcon(platform: string): string {
           role="img"
           :aria-label="$t('hero.profileInitialsAlt', { name: profile.name })"
         >
-          <span class="text-4xl sm:text-5xl font-bold text-white" aria-hidden="true">
+          <span class="text-3xl font-semibold text-white" aria-hidden="true">
             {{
               profile.name
                 .split(' ')
@@ -83,104 +81,59 @@ function getSocialIcon(platform: string): string {
       </NuxtLink>
     </figure>
 
-    <!-- Profile Info -->
-    <div class="flex-1 text-center md:text-left">
-      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
+    <div class="flex-1 min-w-0 text-center md:text-left">
+      <h1
+        class="text-[clamp(2.25rem,6vw,3.75rem)] leading-[1.05] font-semibold tracking-tight text-gray-900 dark:text-white mb-3"
+      >
         {{ profile.name }}
       </h1>
 
-      <div
-        class="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4 min-h-[2rem]"
-        aria-live="polite"
-      >
-        <TextScroller :texts="roles" />
-      </div>
-
-      <ul
-        v-if="credibilityChips.length > 0"
-        class="flex flex-wrap justify-center md:justify-start gap-2 mb-4"
-        role="list"
-        :aria-label="$t('hero.credentialsAria')"
-      >
-        <li
-          v-for="chip in credibilityChips"
-          :key="chip"
-          class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 ring-1 ring-inset ring-gray-200 dark:ring-gray-700"
-        >
-          {{ chip }}
-        </li>
-      </ul>
+      <p class="text-base sm:text-lg text-primary-600 dark:text-primary-400 mb-5">
+        {{ $t('profile.titleResearch') }}
+      </p>
 
       <p
-        class="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-2xl mb-6 leading-relaxed"
+        class="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-[60ch] mx-auto md:mx-0 leading-relaxed mb-8"
       >
         {{ $t('profile.summary') }}
       </p>
 
-      <!-- Primary + secondary CTAs -->
-      <div class="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-3 mb-6">
+      <div
+        class="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-3 mb-8 text-sm sm:text-base"
+      >
         <NuxtLink
           :to="localePath('/projects')"
-          class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary-600 hover:bg-primary-700 text-white text-base font-bold shadow-sm hover:shadow-md transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
+          class="font-medium text-gray-900 dark:text-white underline decoration-primary-500 decoration-2 underline-offset-[6px] hover:decoration-primary-700 dark:hover:decoration-primary-300 transition-colors focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-sm"
         >
           {{ $t('hero.viewProjects') }}
         </NuxtLink>
         <a
           href="/documents/AJ_Barea_Research_Resume.pdf"
           download
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary-600 text-primary-600 dark:text-primary-400 dark:border-primary-500 text-base font-bold hover:bg-primary-50 dark:hover:bg-primary-900/20 shadow-sm hover:shadow-md transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
+          class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-sm"
           :aria-label="$t('hero.resumeAria')"
         >
-          <svg
-            class="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 11l5 5 5-5M12 4v12"
-            />
-          </svg>
           {{ $t('hero.resume') }}
         </a>
         <a
-          href="https://ieeexplore.ieee.org/document/11366920/"
+          href="https://doi.org/10.1109/MIS.2026.3658072"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-1 text-sm font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded"
+          class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-sm"
         >
           {{ $t('hero.latestPaper') }}
-          <svg
-            class="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
-          </svg>
         </a>
       </div>
 
-      <!-- Social Links -->
       <nav
-        class="flex items-center justify-center md:justify-start gap-3 sm:gap-4"
+        class="flex items-center justify-center md:justify-start gap-5"
         :aria-label="$t('hero.socialAria')"
       >
         <template v-for="link in profile.socialLinks" :key="link.platform">
           <button
             v-if="link.platform === 'email'"
             :aria-label="$t('hero.copyEmailAria')"
-            class="min-w-[44px] min-h-[44px] p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 hover:scale-110 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900 cursor-pointer"
+            class="text-gray-400 dark:text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-sm cursor-pointer"
             @click="handleEmailClick($event, profile.contact.email)"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -193,7 +146,7 @@ function getSocialIcon(platform: string): string {
             :aria-label="link.label"
             target="_blank"
             :rel="link.rel ?? 'noopener noreferrer'"
-            class="min-w-[44px] min-h-[44px] p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 hover:scale-110 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
+            class="text-gray-400 dark:text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-sm"
           >
             <UiOrcidIcon v-if="link.platform === 'orcid'" variant="mono" class="w-5 h-5" />
             <svg v-else class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

@@ -23,7 +23,6 @@ const ROUTES_TO_SCAN: ReadonlyArray<{ name: string; path: string }> = [
   { name: 'home', path: '/' },
   { name: 'projects', path: '/projects' },
   { name: 'resume', path: '/resume' },
-  { name: 'blog index', path: '/blog' },
   { name: 'gallery', path: '/gallery' }
 ]
 

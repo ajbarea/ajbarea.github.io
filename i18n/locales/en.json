@@ -26,17 +26,6 @@
     "titleIndustry": "Software Engineer · Distributed ML Systems",
     "titleResearch": "PhD Student · Federated Learning and Agentic AI",
     "summary": "I build federated learning frameworks and multi-agent development systems. My research sits at the intersection of trustworthy distributed ML, human-on-the-loop AI agents, and developer experience for AI-assisted software.",
-    "roles": [
-      "AI/ML Researcher",
-      "Full-Stack Developer",
-      "Distributed Systems Engineer",
-      "Cloud Architect",
-      "Violinist",
-      "Hardcore Gamer",
-      "Otaku",
-      "Favorite Son"
-    ],
-    "credibilityChips": ["RIT GRA · Reznik Group", "4 IEEE 2026 Papers", "MS SWE · 4.0 GPA"],
     "researchInterests": [
       "Federated learning systems",
       "Agentic AI with tool use",
@@ -53,7 +42,6 @@
     "viewGalleryAria": "View photo gallery",
     "profileImageAlt": "Profile photo of {name}",
     "profileInitialsAlt": "{name} initials",
-    "credentialsAria": "Credentials",
     "copyEmailAria": "Copy email address",
     "socialAria": "Social media profiles"
   },
@@ -66,8 +54,8 @@
     "expertiseSkillDocAria": "{skill} - Click to view documentation",
     "expertiseTooltip": "View docs",
     "skills": "Technical Skills",
-    "contact": "Get In Touch",
-    "contactLead": "Have a question or want to work together? Send me a message and I'll get back to you.",
+    "contact": "Contact",
+    "contactLead": "Email is the fastest way to reach me.",
     "sisters": "Research Ecosystem"
   },
   "activity": {

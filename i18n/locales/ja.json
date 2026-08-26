@@ -26,17 +26,6 @@
     "titleIndustry": "ソフトウェアエンジニア · 分散MLシステム",
     "titleResearch": "博士課程学生 · 連合学習とエージェント型AI",
     "summary": "私は連合学習フレームワークとマルチエージェント開発システムを構築しています。私の研究は、信頼性のある分散ML、人間の監督下にあるAIエージェント、AI支援ソフトウェアの開発者体験の交差点に位置しています。",
-    "roles": [
-      "AI/ML研究者",
-      "フルスタック開発者",
-      "分散システムエンジニア",
-      "クラウドアーキテクト",
-      "バイオリン奏者",
-      "ハードコアゲーマー",
-      "オタク",
-      "お気に入りの息子"
-    ],
-    "credibilityChips": ["RIT GRA · Reznikグループ", "IEEE 2026論文 4本", "MS SWE · GPA 4.0"],
     "researchInterests": [
       "連合学習システム",
       "ツールを使うエージェント型AI",
@@ -53,7 +42,6 @@
     "viewGalleryAria": "フォトギャラリーを見る",
     "profileImageAlt": "{name}のプロフィール写真",
     "profileInitialsAlt": "{name}のイニシャル",
-    "credentialsAria": "資格情報",
     "copyEmailAria": "メールアドレスをコピー",
     "socialAria": "ソーシャルメディアプロフィール"
   },
@@ -66,8 +54,8 @@
     "expertiseSkillDocAria": "{skill} - クリックでドキュメントを表示",
     "expertiseTooltip": "ドキュメントを見る",
     "skills": "技術スキル",
-    "contact": "お問い合わせ",
-    "contactLead": "ご質問やコラボのご相談があれば、メッセージをお送りください。すぐに返信いたします。",
+    "contact": "連絡先",
+    "contactLead": "メールが最も早い連絡方法です。",
     "sisters": "研究エコシステム"
   },
   "activity": {

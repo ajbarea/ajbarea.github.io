@@ -20,7 +20,7 @@ _A multilingual Nuxt 4 portfolio with prerendered SEO, dual industry/research re
 
 ## What is this?
 
-A multilingual Nuxt 4 portfolio you can fork and make your own: four languages with prerendered `hreflang` SEO, a filterable project gallery, dual industry/research resume views, a Nuxt Content-backed blog, and a contact form with clipboard fallback. The live demo is [ajbarea.github.io](https://ajbarea.github.io/).
+A multilingual Nuxt 4 portfolio you can fork and make your own: four languages with prerendered `hreflang` SEO, a filterable project gallery, and dual industry/research resume views. The live demo is [ajbarea.github.io](https://ajbarea.github.io/).
 
 The full content surface (~280 strings) lives in `i18n/locales/*.json`, and structured data (profile, projects, timeline, publications, …) in `app/data/`. Swapping in your own content is mostly editing those files; adding a new language is a one-line config edit plus a translation file.
 
@@ -31,9 +31,8 @@ The full content surface (~280 strings) lives in `i18n/locales/*.json`, and stru
 - **Four locales:** English (canonical), Spanish (hand-authored), Japanese, Simplified Chinese
 - **Project gallery:** 13 curated projects, filterable by AI/ML, Federated Learning, Full-Stack, Robotics, Hackathon
 - **Dual resume views:** toggle between Industry and Research with separate experience streams
-- **Blog:** Nuxt Content with code highlighting
 - **Photo gallery:** PhotoSwipe lightbox over local WebP images
-- **Contact form:** Web3Forms backend with clipboard-copy fallback when no API key is set
+- **Contact:** email with click-to-copy, no form and no third-party relay
 - **Dark mode:** system-aware with manual toggle
 - **64 prerendered routes:** 16 per locale via static-site generation
 - **SEO:** `hreflang` on every page, self-pointing canonicals, `og:locale` alternates
@@ -50,11 +49,10 @@ The full content surface (~280 strings) lives in `i18n/locales/*.json`, and stru
 | UI            | [Vue 3](https://vuejs.org) + [Tailwind CSS v4](https://tailwindcss.com)                          |
 | Language      | [TypeScript](https://www.typescriptlang.org/) (strict)                                           |
 | i18n          | [@nuxtjs/i18n v10](https://i18n.nuxtjs.org/) with `prefix_except_default` strategy               |
-| Content       | [@nuxt/content](https://content.nuxt.com/) for the blog                                          |
+| Content       | [@nuxt/content](https://content.nuxt.com/), wired but unused while /blog is withdrawn            |
 | Images        | Local WebP under `public/images/`, served static (no CDN)                                        |
 | Gallery       | [PhotoSwipe v5](https://photoswipe.com/) with dynamic captions                                   |
 | State         | [Pinia](https://pinia.vuejs.org/)                                                                |
-| Forms         | [Web3Forms](https://web3forms.com/)                                                              |
 | Translation   | Local [Qwen2.5-7B-Instruct](https://ollama.com/library/qwen2.5) via [Ollama](https://ollama.com) |
 | Testing       | [Vitest](https://vitest.dev/) (unit) + [Playwright](https://playwright.dev/) (e2e)               |
 | Lint / format | [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)                                 |
@@ -85,10 +83,6 @@ npm run generate    # static-site generation → .output/public/
 npm run preview     # serve the built site locally
 ```
 
-### 4. Optional: contact form
-
-Set `NUXT_PUBLIC_WEB3FORMS_KEY` in `.env` to enable real form submissions. Without it the form falls back to copying the email address to clipboard.
-
 ---
 
 ## Make it yours
@@ -116,10 +110,10 @@ ajbarea.github.io/
 │   │   └── ui/                 # ContactForm, ToastContainer
 │   ├── composables/            # useTypewriter, useClipboard, useToast
 │   ├── data/                   # profile, projects, timeline, publications, hackathons, conferences, workshops, highlights
-│   ├── pages/                  # index, projects, resume, blog, gallery
+│   ├── pages/                  # index, projects, resume, gallery (blog withdrawn)
 │   ├── stores/                 # Pinia stores
 │   └── types/                  # TypeScript interfaces
-├── content/articles/           # Nuxt Content blog markdown
+├── content/articles/           # placeholder drafts; /blog is not built or indexed
 ├── i18n/locales/               # en.json, es.json, ja.json, zh.json
 ├── public/                     # static assets, PDFs, favicons
 ├── scripts/                    # audit, hero-card composition, auto-translate

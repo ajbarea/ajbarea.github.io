@@ -131,7 +131,7 @@ describe('ExperienceTimeline', () => {
     expect(wrapper.find('h2').text()).toBe('Experience & Education')
   })
 
-  it('renders skill tags for entries', () => {
+  it('renders entry skills as one delimited line, not a row of tags', () => {
     const firstEntry = mockEntries[0]
     if (!firstEntry) throw new Error('Mock entry not found')
 
@@ -142,10 +142,9 @@ describe('ExperienceTimeline', () => {
       }
     })
 
-    const skillTags = wrapper.findAll('ul[aria-label="Skills"] li')
-    expect(skillTags).toHaveLength(3)
-    expect(skillTags.at(0)?.text()).toBe('TypeScript')
-    expect(skillTags.at(1)?.text()).toBe('Vue')
-    expect(skillTags.at(2)?.text()).toBe('AWS')
+    expect(wrapper.findAll('ul[aria-label="Skills"] li')).toHaveLength(0)
+
+    const skills = wrapper.get('[aria-label="Skills"]')
+    expect(skills.text()).toBe('TypeScript · Vue · AWS')
   })
 })

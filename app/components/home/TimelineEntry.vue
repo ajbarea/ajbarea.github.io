@@ -101,20 +101,18 @@ function getTypeColor(type: string): string {
         {{ $t('timeline.' + entry.id + '.description') }}
       </p>
 
-      <!-- Skill tags -->
-      <ul
+      <!--
+        The skills were a row of pills under every entry, four to six each, and
+        with nine entries that was most of the page's visual noise for text the
+        description already carries. Set as one quiet line instead.
+      -->
+      <p
         v-if="entry.skills && entry.skills.length > 0"
-        class="flex flex-wrap gap-1.5 sm:gap-2"
+        class="text-xs text-gray-500 dark:text-gray-500"
         :aria-label="$t('timeline.labels.skillsAria')"
       >
-        <li
-          v-for="skill in entry.skills"
-          :key="skill"
-          class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
-        >
-          {{ skill }}
-        </li>
-      </ul>
+        {{ entry.skills.join(' · ') }}
+      </p>
     </div>
   </article>
 </template>

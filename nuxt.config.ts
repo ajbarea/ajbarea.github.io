@@ -116,6 +116,19 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
+      // Runs before first paint. Without it the dark class only lands after
+      // hydration, and because the layout animates background colour over 200ms
+      // while text colour switches instantly, a dark-mode visitor gets a flash
+      // of white text on a white background on every page load. The theme store
+      // still owns changes after this; this only settles the first frame.
+      script: [
+        {
+          innerHTML:
+            "try{var t=localStorage.getItem('theme')||'system';var d=t==='dark'||(t==='system'&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d);document.documentElement.style.colorScheme=d?'dark':'light'}catch(e){}",
+          tagPosition: 'head',
+          tagPriority: 'critical'
+        }
+      ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
@@ -148,12 +161,5 @@ export default defineNuxtConfig({
 
   typescript: {
     strict: true
-  },
-
-  runtimeConfig: {
-    public: {
-      // Get your free key at https://web3forms.com
-      web3formsKey: process.env.NUXT_PUBLIC_WEB3FORMS_KEY || ''
-    }
   }
 })
