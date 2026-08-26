@@ -317,7 +317,7 @@
       "title": "Kourai Khryseai: 透明的人机交互多代理软件开发",
       "description": "将多代理编程重新定义为可解释性问题，通过三大支柱：监控（使用OpenTelemetry / Jaeger / Prometheus可观测性），沟通（代理请求对模糊要求的澄清），以及控制（有界修复循环以实现故意恢复）。展示了Hephaestus，一个调度器通过MCP路由至专业代理，并共享SQLite状态。"
     },
-    "rit-aware-ai-poster-2026": {
+    "rit-chai-poster-2026": {
       "title": "多代理软件开发的叙事界面",
       "description": "考察身体感、声音和Ren'Py视觉小说框架如何影响用户监督和重定向多代理软件。阐述Kourai Khryseai背后所采用的三主机界面架构（终端REPL、pygame GUI配TTS、Ren'Py VN）。"
     }

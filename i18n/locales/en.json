@@ -313,7 +313,7 @@
       "title": "Kourai Khryseai: Transparent Human-on-the-Loop Multi-Agent Software Development",
       "description": "Reframes multi-agent coding as an interpretability problem via three pillars: Monitor (OpenTelemetry / Jaeger / Prometheus observability), Communicate (agents request clarification on ambiguous requirements), and Control (bounded repair loops for deliberate recovery). Demonstrates Hephaestus, an orchestrator routing to specialist agents over MCP with shared SQLite state."
     },
-    "rit-aware-ai-poster-2026": {
+    "rit-chai-poster-2026": {
       "title": "Narrative Interfaces for Multi-Agent Software Development",
       "description": "Examines how embodiment, voice, and Ren'Py visual-novel framing affect how users supervise and redirect multi-agent software. Justifies the three-host interface architecture (terminal REPL, pygame GUI with TTS, Ren'Py VN) underlying Kourai Khryseai."
     }

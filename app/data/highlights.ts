@@ -13,5 +13,5 @@ export const activityHighlightRefs: HighlightRef[] = [
   { kind: 'conference', id: 'ne-agents-day-2026' },
   { kind: 'publication', id: 'ijcnn-wcci-2026' },
   { kind: 'hackathon', id: 'aware-ai-bioradio-2026' },
-  { kind: 'conference', id: 'rit-aware-ai-poster-2026' }
+  { kind: 'conference', id: 'rit-chai-poster-2026' }
 ]

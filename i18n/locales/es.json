@@ -313,7 +313,7 @@
       "title": "Kourai Khryseai: Desarrollo Transparente de Software Multi-Agente con Supervisión Humana",
       "description": "Replantea la programación multi-agente como un problema de interpretabilidad mediante tres pilares: Monitor (observabilidad con OpenTelemetry / Jaeger / Prometheus), Comunicar (los agentes piden aclaración sobre requisitos ambiguos) y Controlar (ciclos de reparación acotados para una recuperación deliberada). Demuestra Hephaestus, un orquestador que enruta a agentes especialistas sobre MCP con estado compartido en SQLite."
     },
-    "rit-aware-ai-poster-2026": {
+    "rit-chai-poster-2026": {
       "title": "Interfaces Narrativas para el Desarrollo de Software Multi-Agente",
       "description": "Examina cómo la encarnación, la voz y el marco de novela visual Ren'Py afectan la forma en que los usuarios supervisan y redirigen software multi-agente. Justifica la arquitectura de interfaz de tres hosts (REPL en terminal, GUI pygame con TTS, VN en Ren'Py) que sustenta Kourai Khryseai."
     }

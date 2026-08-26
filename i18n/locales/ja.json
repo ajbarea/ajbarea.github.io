@@ -313,7 +313,7 @@
       "title": "Kourai Khryseai: 透明性のあるヒューマン・オン・ザ・ループ型マルチエージェントソフトウェア開発",
       "description": "マルチエージェントによるコーディングを、解釈可能性の問題として3つの柱で再構成。Monitor（OpenTelemetry / Jaeger / Prometheusによる可観測性）、Communicate（曖昧な要件についてエージェントが質問）、Control（意図的な復旧のための境界付き修復ループ）。MCP経由で専門エージェントにルーティングし、SQLiteで状態を共有するオーケストレータ Hephaestus を実演。"
     },
-    "rit-aware-ai-poster-2026": {
+    "rit-chai-poster-2026": {
       "title": "マルチエージェントソフトウェア開発のためのナラティブインターフェース",
       "description": "身体性、音声、Ren'Pyのビジュアルノベル的フレーミングが、マルチエージェントソフトウェアをユーザーが監督しリダイレクトする方法にどう影響するかを検証。Kourai Khryseai を支える3ホスト構成のインターフェース（ターミナルREPL、pygame GUI + TTS、Ren'Py VN）を裏付ける。"
     }
