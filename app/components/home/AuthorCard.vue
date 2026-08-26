@@ -133,7 +133,7 @@ function getSocialIcon(platform: string): string {
           <button
             v-if="link.platform === 'email'"
             :aria-label="$t('hero.copyEmailAria')"
-            class="text-gray-400 dark:text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-sm cursor-pointer"
+            class="text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-sm cursor-pointer"
             @click="handleEmailClick($event, profile.contact.email)"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -146,7 +146,7 @@ function getSocialIcon(platform: string): string {
             :aria-label="link.label"
             target="_blank"
             :rel="link.rel ?? 'noopener noreferrer'"
-            class="text-gray-400 dark:text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-sm"
+            class="text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-sm"
           >
             <UiOrcidIcon v-if="link.platform === 'orcid'" variant="mono" class="w-5 h-5" />
             <svg v-else class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

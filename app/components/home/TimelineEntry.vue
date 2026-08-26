@@ -108,7 +108,7 @@ function getTypeColor(type: string): string {
       -->
       <p
         v-if="entry.skills && entry.skills.length > 0"
-        class="text-xs text-gray-500 dark:text-gray-500"
+        class="text-xs text-gray-500 dark:text-gray-400"
         :aria-label="$t('timeline.labels.skillsAria')"
       >
         {{ entry.skills.join(' · ') }}

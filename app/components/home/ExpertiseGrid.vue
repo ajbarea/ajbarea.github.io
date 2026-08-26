@@ -27,7 +27,7 @@ defineProps<Props>()
     <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6">
       <div v-for="category in categories" :key="category.id">
         <dt
-          class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-500 mb-1.5"
+          class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1.5"
         >
           {{ $t('skills.categories.' + category.id) }}
         </dt>
