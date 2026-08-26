@@ -349,7 +349,7 @@
   "highlights": {
     "overrides": {
       "ieee-is-2026": {
-        "title": "IntelliFL: メタ認知に基づく連合学習フレームワーク"
+        "title": "InteFL: メタ認知に基づく連合学習フレームワーク"
       },
       "aware-ai-bioradio-2026": {
         "description": "Cosmic Ritual: BioRadioのEMGジェスチャーがリアルタイムの和音エンジンを駆動。ジェスチャー分類器、MIDIエンジン、GUIミュージックモード、Zensicalドキュメントサイトを構築。"

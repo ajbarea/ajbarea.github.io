@@ -349,7 +349,7 @@
   "highlights": {
     "overrides": {
       "ieee-is-2026": {
-        "title": "IntelliFL: Metacognitive Federated Learning Framework"
+        "title": "InteFL: Metacognitive Federated Learning Framework"
       },
       "aware-ai-bioradio-2026": {
         "description": "Cosmic Ritual: BioRadio EMG gestures drive a real-time chord engine. Built the gesture classifier, MIDI engine, GUI music mode, and Zensical docs site."

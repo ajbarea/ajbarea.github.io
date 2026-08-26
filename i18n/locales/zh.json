@@ -353,7 +353,7 @@
   "highlights": {
     "overrides": {
       "ieee-is-2026": {
-        "title": "IntelliFL：元认知联邦学习框架"
+        "title": "InteFL：元认知联邦学习框架"
       },
       "aware-ai-bioradio-2026": {
         "description": "宇宙仪式：BioRadio 电磁肌电图手势驱动实时和弦引擎。构建了手势分类器、MIDI 引擎、GUI 音乐模式和 Zensical 文档站点。"
