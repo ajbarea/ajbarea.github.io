@@ -97,7 +97,7 @@
     "ncsu-scads-2026": {
       "title": "Becario de Investigación de Verano",
       "subtitle": "SCADS · Conferencia de Verano sobre Ciencia de Datos Aplicada",
-      "description": "Programa de investigación selectivo de ocho semanas que empareja a estudiantes de posgrado con personal de la comunidad de inteligencia y laboratorios nacionales en evaluación de IA a escala. Trabajando en orquestación de IA con agentes sobre fuentes de datos heterogéneas.",
+      "description": "Programa de investigación selectivo de ocho semanas que empareja a estudiantes de posgrado con personal de la comunidad de inteligencia y laboratorios nacionales en evaluación de IA a escala. Trabajé en orquestación de IA con agentes sobre fuentes de datos heterogéneas.",
       "bullets": [
         "Desarrollé y publiqué como código abierto Ariadne, un prototipo de sensemaking con agentes sobre el Claude Agent SDK que rastrea la evidencia de una entidad a través de almacenes de grafos (Neo4j), relacionales y de texto hasta convertirla en una nota analítica con citas.",
         "Fundamenté cada decisión de arquitectura en investigación de mejores prácticas actuales antes de adoptarla, con trazas de OpenTelemetry y Jaeger a través de las llamadas a herramientas del agente."

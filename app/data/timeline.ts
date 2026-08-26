@@ -51,7 +51,7 @@ export const researchExperience: ResearchExperience[] = [
     startDate: 'May 2026',
     endDate: 'Aug 2026',
     bullets: [],
-    isCurrent: true
+    isCurrent: false
   },
   {
     id: 'rit-gra',
@@ -116,8 +116,7 @@ const unsortedEntries: TimelineEntry[] = [
       'PhD in Computing and Information Sciences continuing federated learning research with Dr. Leon Reznik.',
     skills: ['Federated Learning', 'Distributed ML', 'Agentic AI', 'Research'],
     icon: 'education',
-    isCurrent: false,
-    isIncoming: true,
+    isCurrent: true,
     sortDate: '2026-08-15'
   },
   {
@@ -130,7 +129,7 @@ const unsortedEntries: TimelineEntry[] = [
     description: 'Selected as a SCADS Summer Research Scholar at NC State LAS for summer 2026.',
     skills: ['Applied Data Science', 'SCADS'],
     icon: 'research',
-    isCurrent: true,
+    isCurrent: false,
     sortDate: '2026-05-01'
   },
   {
