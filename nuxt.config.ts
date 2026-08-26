@@ -9,14 +9,24 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/', '/projects', '/gallery', '/resume', '/blog', '/rss.xml', '/atom.xml'],
+      // /blog is deliberately absent: the articles are placeholder drafts AJ did
+      // not write, so the section is withdrawn rather than shipped. Restore this
+      // route, the nav link, and the sitemap exclude together when real posts land.
+      routes: ['/', '/projects', '/gallery', '/resume', '/rss.xml', '/atom.xml'],
       crawlLinks: true
     }
   },
 
   routeRules: {
     '/portfolio': { redirect: '/' },
-    '/portfolio/**': { redirect: '/' }
+    '/portfolio/**': { redirect: '/' },
+    // Dropping /blog from the prerender list is not enough: @nuxt/content
+    // discovers the routes and builds them anyway. Redirecting also gives the
+    // 24 URLs already indexed across four locales somewhere to land.
+    '/blog': { redirect: '/' },
+    '/blog/**': { redirect: '/' },
+    '/*/blog': { redirect: '/' },
+    '/*/blog/**': { redirect: '/' }
   },
 
   modules: [
@@ -42,6 +52,12 @@ export default defineNuxtConfig({
   site: {
     url: 'https://ajbarea.github.io',
     name: 'AJ Barea'
+  },
+
+  // Hiding the nav link does not unpublish anything: the sitemap is what search
+  // engines read, and it was advertising 24 blog URLs across four locales.
+  sitemap: {
+    exclude: ['/blog', '/blog/**', '/*/blog', '/*/blog/**']
   },
 
   i18n: {

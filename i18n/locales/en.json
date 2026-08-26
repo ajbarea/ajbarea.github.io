@@ -23,6 +23,8 @@
   },
   "profile": {
     "title": "Software Engineer",
+    "titleIndustry": "Software Engineer · Distributed ML Systems",
+    "titleResearch": "PhD Student · Federated Learning and Agentic AI",
     "summary": "I build federated learning frameworks and multi-agent development systems. My research sits at the intersection of trustworthy distributed ML, human-on-the-loop AI agents, and developer experience for AI-assisted software.",
     "roles": [
       "AI/ML Researcher",

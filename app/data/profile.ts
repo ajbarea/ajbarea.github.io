@@ -6,7 +6,6 @@ export const profile: Profile = {
   profileImage: '/images/profile/profile.webp',
   contact: {
     email: 'ajbareaa@gmail.com',
-    phone: '(727) 262-7305',
     github: 'ajbarea',
     youtube: '@ajbarea',
     orcid: '0009-0001-7938-2376'

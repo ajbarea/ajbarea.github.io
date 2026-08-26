@@ -23,6 +23,8 @@
   },
   "profile": {
     "title": "Ingeniero de Software",
+    "titleIndustry": "Ingeniero de Software · Sistemas de ML Distribuido",
+    "titleResearch": "Doctorando · Aprendizaje Federado e IA con Agentes",
     "summary": "Construyo frameworks de aprendizaje federado y sistemas de desarrollo multi-agente. Mi investigación se sitúa en la intersección entre ML distribuido confiable, agentes de IA con supervisión humana y experiencia de desarrollador para software asistido por IA.",
     "roles": [
       "Investigador de IA/ML",

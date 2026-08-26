@@ -16,6 +16,13 @@ function copyEmail() {
   clipboard.copyEmail(profile.contact.email)
 }
 
+// The Industry/Research toggle is defeated by one shared headline: "Software
+// Engineer" sitting above Research Interests and a research scholarship reads as
+// the wrong person. Each view names its own identity.
+const headline = computed(() =>
+  resumeStore.isResearchView ? t('profile.titleResearch') : t('profile.titleIndustry')
+)
+
 const researchInterests = computed<string[]>(() => {
   const raw = tm('profile.researchInterests')
   return Array.isArray(raw) ? raw.map((item) => rt(item)) : []
@@ -59,7 +66,7 @@ function downloadResume(type: 'industry' | 'research') {
           {{ profile.name }}
         </h1>
         <p class="text-lg text-primary-600 dark:text-primary-400 mb-3 print:text-base">
-          {{ profile.title }}
+          {{ headline }}
         </p>
 
         <!-- Contact Info -->
@@ -82,21 +89,6 @@ function downloadResume(type: 'industry' | 'research') {
             </svg>
             {{ profile.contact.email }}
           </button>
-          <span class="hidden sm:inline text-gray-300 dark:text-gray-600">|</span>
-          <a
-            :href="`tel:${profile.contact.phone.replace(/[^0-9+]/g, '')}`"
-            class="flex items-center gap-1 hover:text-primary-600 dark:hover:text-primary-400"
-          >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-              />
-            </svg>
-            {{ profile.contact.phone }}
-          </a>
           <span class="hidden sm:inline text-gray-300 dark:text-gray-600">|</span>
           <a
             :href="`https://github.com/${profile.contact.github}`"
