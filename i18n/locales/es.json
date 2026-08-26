@@ -378,15 +378,7 @@
   "sisters": {
     "lead": "Una familia coordinada de repositorios que explora la IA agéntica y el aprendizaje federado desde ángulos complementarios. Cada uno se invoca de forma independiente.",
     "listAria": "Proyectos hermanos en el ecosistema",
-    "cardAria": "{name}, rol: {role}",
-    "roles": {
-      "innovation": "Innovación",
-      "research": "Investigación",
-      "performance": "Rendimiento",
-      "governance": "Gobernanza",
-      "lab-identity": "Identidad del laboratorio",
-      "applied": "Aplicado"
-    },
+    "cardAria": "{name}, se abre en GitHub",
     "items": {
       "kourai-khryseai": {
         "name": "Kourai Khryseai",
@@ -395,6 +387,10 @@
       "phalanx-fl": {
         "name": "Phalanx-FL",
         "description": "Plataforma de referencia para aprendizaje federado sobre Flower y Ray. Ocho estrategias de agregación con el vocabulario de ataques."
+      },
+      "pharos": {
+        "name": "Pharos",
+        "description": "Banco de pruebas de personalización federada con datos sintéticos etiquetados por seguridad. Mide el coste de un límite personal/compartido y cuánto se filtra."
       },
       "vfl": {
         "name": "Velocity-FL",

@@ -30,15 +30,22 @@ describe('SisterEcosystem', () => {
     expect(wrapper.text()).toContain('Orchestrate Triage')
   })
 
-  it('renders the role badge with localized label', () => {
+  it('renders no role badges: the label was one vague noun per repo', () => {
+    // Asserted on the badge markup, not on page text. The words themselves
+    // legitimately appear in descriptions -- Velocity-FL's says "Performance
+    // and crowd-scale speed lane" -- so a substring match over wrapper.text()
+    // fails for the wrong reason.
+    const wrapper = mount(SisterEcosystem)
+    expect(wrapper.findAll('li a span.rounded-full')).toHaveLength(0)
+    expect(wrapper.html()).not.toContain('bg-purple-100')
+  })
+
+  it('lists every repo the portfolio deposit claims, Pharos included', () => {
     const wrapper = mount(SisterEcosystem)
     const text = wrapper.text()
-    expect(text).toContain('Innovation')
-    expect(text).toContain('Research')
-    expect(text).toContain('Performance')
-    expect(text).toContain('Governance')
-    expect(text).toContain('Lab identity')
-    expect(text).toContain('Applied')
+    for (const name of ['Kourai Khryseai', 'Phalanx-FL', 'Pharos', 'Velocity-FL']) {
+      expect(text).toContain(name)
+    }
   })
 
   it('links open in a new tab with security attributes', () => {
@@ -56,12 +63,14 @@ describe('SisterEcosystem', () => {
     expect(section.attributes('aria-labelledby')).toBe('sisters-heading')
   })
 
-  it('each card has an aria-label naming sister and role', () => {
+  it('each card has an aria-label naming the sister', () => {
     const wrapper = mount(SisterEcosystem)
     const links = wrapper.findAll('li a')
+    expect(links.length).toBeGreaterThan(0)
     for (const link of links) {
       const aria = link.attributes('aria-label') ?? ''
-      expect(aria).toMatch(/role:/)
+      expect(aria).not.toMatch(/role:/)
+      expect(aria).toMatch(/opens on GitHub$/)
     }
   })
 })

@@ -378,15 +378,7 @@
   "sisters": {
     "lead": "一个协调一致的代码仓库家族，从互补的角度探索智能体 AI 和联邦学习。每个仓库都可以独立调用。",
     "listAria": "生态系统中的姊妹项目",
-    "cardAria": "{name}，角色：{role}",
-    "roles": {
-      "innovation": "创新",
-      "research": "研究",
-      "performance": "性能",
-      "governance": "治理",
-      "lab-identity": "实验室身份",
-      "applied": "应用"
-    },
+    "cardAria": "{name}，在 GitHub 中打开",
     "items": {
       "kourai-khryseai": {
         "name": "Kourai Khryseai",
@@ -395,6 +387,10 @@
       "phalanx-fl": {
         "name": "Phalanx-FL",
         "description": "基于 Flower 与 Ray 的联邦学习参考平台。提供八种聚合策略以及攻击词汇表。"
+      },
+      "pharos": {
+        "name": "Pharos",
+        "description": "带安全标签合成数据的联合个性化测试平台，测量个人与共享边界的代价及泄漏程度。"
       },
       "vfl": {
         "name": "Velocity-FL",

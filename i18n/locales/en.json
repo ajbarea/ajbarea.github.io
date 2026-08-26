@@ -378,15 +378,7 @@
   "sisters": {
     "lead": "A coordinated family of repos exploring agentic AI and federated learning from complementary angles. Each is independently invocable.",
     "listAria": "Sister projects in the ecosystem",
-    "cardAria": "{name}, role: {role}",
-    "roles": {
-      "innovation": "Innovation",
-      "research": "Research",
-      "performance": "Performance",
-      "governance": "Governance",
-      "lab-identity": "Lab identity",
-      "applied": "Applied"
-    },
+    "cardAria": "{name}, opens on GitHub",
     "items": {
       "kourai-khryseai": {
         "name": "Kourai Khryseai",
@@ -395,6 +387,10 @@
       "phalanx-fl": {
         "name": "Phalanx-FL",
         "description": "Federated-learning reference platform on Flower and Ray. Eight aggregation strategies with the attack vocabulary."
+      },
+      "pharos": {
+        "name": "Pharos",
+        "description": "Federated personalization testbed with security-labeled synthetic data. Measures what a personal/shared boundary costs and how much leaks past it."
       },
       "vfl": {
         "name": "Velocity-FL",

@@ -378,15 +378,7 @@
   "sisters": {
     "lead": "エージェント AI と連合学習を補完的な角度から探究する、調和の取れたリポジトリ群です。それぞれ独立して利用できます。",
     "listAria": "エコシステム内の姉妹プロジェクト",
-    "cardAria": "{name}、役割: {role}",
-    "roles": {
-      "innovation": "イノベーション",
-      "research": "リサーチ",
-      "performance": "パフォーマンス",
-      "governance": "ガバナンス",
-      "lab-identity": "ラボのアイデンティティ",
-      "applied": "応用"
-    },
+    "cardAria": "{name}、GitHubで開く",
     "items": {
       "kourai-khryseai": {
         "name": "Kourai Khryseai",
@@ -395,6 +387,10 @@
       "phalanx-fl": {
         "name": "Phalanx-FL",
         "description": "Flower と Ray を用いた連合学習のリファレンスプラットフォームです。8 つの集約戦略と攻撃ボキャブラリを備えています。"
+      },
+      "pharos": {
+        "name": "Pharos",
+        "description": "セキュリティラベル付き合成データによる連合パーソナライゼーション検証環境。個人と共有の境界のコストと漏洩量を測定します。"
       },
       "vfl": {
         "name": "Velocity-FL",
