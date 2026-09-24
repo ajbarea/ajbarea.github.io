@@ -38,6 +38,9 @@ jobs:
         # current fragile-claim registry.
         run: node scripts/check-readme-claims.mjs
 
+      - name: No retired project names
+        run: node scripts/check-retired-names.mjs
+
   test-unit:
     name: Vitest (unit)
     runs-on: ubuntu-latest

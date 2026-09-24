@@ -1,21 +1,21 @@
 ---
-title: 'IntelliFL: An Adaptive Framework for Dynamic Edge Networks'
+title: 'InteFL: An Adaptive Framework for Dynamic Edge Networks'
 description: A new framework that adapts to the volatile nature of edge networks for robust model training.
 date: 2025-12-20
 author: AJ Barea
 tags:
-  - IntelliFL
+  - InteFL
   - adaptive AI
   - networks
 image: /images/blog/paper02.webp
 draft: false
 ---
 
-Deploying AI on the edge isn't "set it and forget it." Network conditions change by the second. A static configuration for Federated Learning usually fails because it cannot adapt to these fluctuations. This led to the development of **IntelliFL**.
+Deploying AI on the edge isn't "set it and forget it." Network conditions change by the second. A static configuration for Federated Learning usually fails because it cannot adapt to these fluctuations. This led to the development of **InteFL**.
 
 #### Adaptive Control
 
-IntelliFL is designed to be robust against the unpredictability of MEC systems. Rather than using fixed hyperparameters, it dynamically adjusts three key levers during the training process:
+InteFL is designed to be robust against the unpredictability of MEC systems. Rather than using fixed hyperparameters, it dynamically adjusts three key levers during the training process:
 
 - **Local Batch Size:** Tuning how much data is processed at once based on available memory.
 - **Local Epochs:** Deciding how many training passes a device performs before syncing.
@@ -44,4 +44,4 @@ def optimize_round(clients):
 
 — Stephen Hawking
 
-By allowing the system to reconfigure itself in real-time, IntelliFL prevents stragglers from holding back the global model, ensuring consistent performance even in volatile environments.
+By allowing the system to reconfigure itself in real-time, InteFL prevents stragglers from holding back the global model, ensuring consistent performance even in volatile environments.
