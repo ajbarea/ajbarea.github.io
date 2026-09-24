@@ -61,7 +61,7 @@ export const researchExperience: ResearchExperience[] = [
     startDate: 'May 2025',
     endDate: 'Present',
     bullets: [
-      'Designed comprehensive pytest testing suite achieving 80%+ code coverage for distributed FL systems (IntelliFL framework)',
+      'Designed comprehensive pytest testing suite achieving 80%+ code coverage for distributed FL systems (InteFL framework)',
       'Built React + FastAPI web interface improving researcher onboarding time and experimental reproducibility',
       'Collaborated with PhD students to rapidly prototype novel aggregation strategies including Byzantine-robust methods (Krum, Bulyan, RFA, Trimmed Mean) and trust-based federated learning approaches',
       'Implemented dynamic dataset poisoning system enabling adversarial robustness evaluation during federated training',
@@ -140,7 +140,7 @@ const unsortedEntries: TimelineEntry[] = [
     organization: 'Rochester Institute of Technology',
     timeframe: 'May 2025 – Present',
     description:
-      'Enhancing IntelliFL federated learning framework with 80%+ test coverage, React/FastAPI interface, and Byzantine-robust aggregation methods.',
+      'Enhancing InteFL federated learning framework with 80%+ test coverage, React/FastAPI interface, and Byzantine-robust aggregation methods.',
     skills: ['Federated Learning', 'PyTorch', 'React', 'FastAPI', 'Python'],
     icon: 'research',
     isCurrent: true,

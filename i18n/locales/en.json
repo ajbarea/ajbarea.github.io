@@ -82,7 +82,7 @@
     "rit-phd-2026": {
       "title": "Doctor of Philosophy",
       "subtitle": "Computing and Information Sciences",
-      "description": "Federated learning + agentic AI research continuing under Dr. Leon Reznik, extending the IntelliFL line from the MS capstone."
+      "description": "Federated learning + agentic AI research continuing under Dr. Leon Reznik, extending the InteFL line from the MS capstone."
     },
     "ncsu-scads-2026": {
       "title": "Summer Research Scholar",
@@ -96,9 +96,9 @@
     "rit-gra": {
       "title": "Graduate Research Assistant",
       "subtitle": "Dr. Leon Reznik's Research Group",
-      "description": "Raised IntelliFL test coverage past 80%. Built the React + FastAPI surface for federated experiment management. Shipped Byzantine-robust aggregation strategies (Krum, Bulyan, RFA, Trimmed Mean).",
+      "description": "Raised InteFL test coverage past 80%. Built the React + FastAPI surface for federated experiment management. Shipped Byzantine-robust aggregation strategies (Krum, Bulyan, RFA, Trimmed Mean).",
       "bullets": [
-        "Designed comprehensive pytest testing suite achieving 80%+ code coverage for distributed FL systems (IntelliFL framework)",
+        "Designed comprehensive pytest testing suite achieving 80%+ code coverage for distributed FL systems (InteFL framework)",
         "Built React + FastAPI web interface improving researcher onboarding time and experimental reproducibility",
         "Collaborated with PhD students to rapidly prototype novel aggregation strategies including Byzantine-robust methods (Krum, Bulyan, RFA, Trimmed Mean) and trust-based federated learning approaches",
         "Implemented dynamic dataset poisoning system enabling adversarial robustness evaluation during federated training",
@@ -121,7 +121,7 @@
     "rit-ms": {
       "title": "Master of Science",
       "subtitle": "Software Engineering",
-      "description": "GPA: 4.0/4.0. Capstone: enhanced the IntelliFL federated learning execution framework under Dr. Leon Reznik."
+      "description": "GPA: 4.0/4.0. Capstone: enhanced the InteFL federated learning execution framework under Dr. Leon Reznik."
     },
     "lowes": {
       "title": "Software Engineer (Contract)",
@@ -325,7 +325,7 @@
     },
     "ieee-is-2026": {
       "title": "InteFL Framework: Optimizing Federated Learning With Metacognition for Application Design and Deployment",
-      "abstract": "We argue that metacognition should be the guiding principle for designing and deployment of Federated Learning (FL) applications. The metacognitive features in FL, such as monitoring and control, allow for the dynamic adaptation to the environment, client updates, enhanced user interaction, and optimized resource-aware learning. We introduce IntelliFL, the first framework that facilitates designing metacognitive FL systems by providing mechanisms and tools to investigate how possible changes in execution and learning conditions impact FL performance and security, and then to choose or optimize the learning structure and process based on their evaluation. We demonstrate the framework application in practice on the cases showing how the choice of FL hyperparameters such as model aggregation algorithms can be dynamically adapted or fine-tuned in response to changing execution environment, including data quality variations, network conditions, or adversarial attacks."
+      "abstract": "We argue that metacognition should be the guiding principle for designing and deployment of Federated Learning (FL) applications. The metacognitive features in FL, such as monitoring and control, allow for the dynamic adaptation to the environment, client updates, enhanced user interaction, and optimized resource-aware learning. We introduce InteFL, the first framework that facilitates designing metacognitive FL systems by providing mechanisms and tools to investigate how possible changes in execution and learning conditions impact FL performance and security, and then to choose or optimize the learning structure and process based on their evaluation. We demonstrate the framework application in practice on the cases showing how the choice of FL hyperparameters such as model aggregation algorithms can be dynamically adapted or fine-tuned in response to changing execution environment, including data quality variations, network conditions, or adversarial attacks."
     },
     "ijcnn-wcci-2026": {
       "title": "InteFL: Framework for AI-Assisted Design of Trustworthy and Efficient Federated Learning Applications",

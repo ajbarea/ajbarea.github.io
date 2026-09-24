@@ -33,7 +33,7 @@ STRICT OUTPUT RULES:
 1. Reply with ONLY the translated string. No commentary, no quotes wrapping your answer, no preamble like "The translation is:".
 2. Preserve all placeholders like {name}, {title}, {category}, {mode} EXACTLY. Never translate the words inside braces.
 3. Preserve the special vue-i18n escape {'@'} EXACTLY (it renders as a literal @ symbol).
-4. Preserve proper nouns: AJ Barea, RIT, IEEE, NC State, HackerRank, Claude, IntelliFL, PyTorch, Federated Learning, Kourai Khryseai, BioRadio, MCP, SQLite, OpenTelemetry, Jaeger, Prometheus, etc.
+4. Preserve proper nouns: AJ Barea, RIT, IEEE, NC State, HackerRank, Claude, InteFL, PyTorch, Federated Learning, Kourai Khryseai, BioRadio, MCP, SQLite, OpenTelemetry, Jaeger, Prometheus, etc.
 5. Preserve initialisms (MS, PhD, GPA, RDC, SOP, SQL, CI, FL, AI, ML, NLP, RL, DQN, MIDI, EMG, EEG, GUI, CLI, REPL, VN, TTS) unless the target language has an established native form.
 6. If the source is a single word or short label, the output must be a single word or short label of equivalent register (button text stays button text).
 7. Punctuation and capitalization: follow the target language's conventions, not English's.`

@@ -11,13 +11,13 @@ image: /images/blog/paper03.webp
 draft: false
 ---
 
-Theoretical frameworks are great, but the real test is simulation. In validating the IntelliFL framework, we compared it against standard approaches like `FedAvg` to see if the complexity of dynamic tuning actually pays off.
+Theoretical frameworks are great, but the real test is simulation. In validating the InteFL framework, we compared it against standard approaches like `FedAvg` to see if the complexity of dynamic tuning actually pays off.
 
 #### The Results
 
 The extensive simulations highlighted a clear advantage in convergence speed and final accuracy. The self-optimizing nature of the network meant it could handle "stragglers" (slow devices) without stalling the entire training round.
 
-- **Convergence:** IntelliFL reaches target accuracy significantly faster than static baselines.
+- **Convergence:** InteFL reaches target accuracy significantly faster than static baselines.
 - **Robustness:** The system maintains high accuracy even when a percentage of clients experience severe bandwidth drops.
 
 #### Key Takeaways

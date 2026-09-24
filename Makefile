@@ -19,10 +19,11 @@ fix:                    ## Prettier --write + eslint --fix
 	@npm run format
 	@npm run lint -- --fix
 
-lint:                   ## Prettier --check + eslint + README claims assertion
+lint:                   ## Prettier --check + eslint + README claims + retired-name assertions
 	@npm run format:check
 	@npm run lint:check
 	@node scripts/check-readme-claims.mjs
+	@node scripts/check-retired-names.mjs
 
 test-unit:              ## Vitest unit tests (single-run, no watch)
 	@npm run test:unit -- --run
