@@ -34,7 +34,7 @@
     "@vueuse/core": "^14.4.0",
     "@vueuse/nuxt": "^14.4.0",
     "better-sqlite3": "^13.0.3",
-    "dompurify": "^3.4.15",
+    "dompurify": "^3.4.16",
     "eslint": "^10.10.0",
     "feed": "^6.0.0",
     "nuxt": "^4.5.2",
