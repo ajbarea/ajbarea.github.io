@@ -24,7 +24,7 @@
     "*.{json,md,css,html,yml,yaml}": "prettier --write"
   },
   "dependencies": {
-    "@nuxt/content": "^3.16.0",
+    "@nuxt/content": "^3.16.1",
     "@nuxt/eslint": "^1.17.0",
     "@nuxt/image": "^2.1.0",
     "@nuxtjs/i18n": "^10.6.0",
@@ -58,11 +58,11 @@
     "exif-parser": "^0.1.12",
     "husky": "^9.1.7",
     "jsdom": "^30.1.1",
-    "lint-staged": "^17.5.1",
+    "lint-staged": "^17.6.0",
     "prettier": "^3.9.9",
     "sharp": "^0.35.4",
     "tailwindcss": "^4.1.18",
-    "vitest": "^5.0.1"
+    "vitest": "^5.0.2"
   },
   "overrides": {
     "nostics": "^1.2.0"
