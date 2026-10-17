@@ -119,8 +119,8 @@ export const projects: Project[] = [
     technologies: ['Astro 5', 'Tailwind 4', 'TypeScript', 'GitHub Pages'],
     types: ['full-stack'],
     thumbnailUrl: '/images/projects/ldqis.webp',
-    demoUrl: 'https://ajbarea.github.io/ldqis/',
-    githubUrl: 'https://github.com/ajbarea/ldqis',
+    demoUrl: 'https://dataqualitylabs.com/',
+    githubUrl: 'https://github.com/ldqis/ldqis',
     featured: true
   },
   {
