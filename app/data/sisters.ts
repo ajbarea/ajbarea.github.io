@@ -26,7 +26,7 @@ export const sisters: Sister[] = [
   },
   {
     id: 'ldqis',
-    url: 'https://github.com/ajbarea/ldqis'
+    url: 'https://github.com/ldqis/ldqis'
   },
   {
     id: 'techne',
