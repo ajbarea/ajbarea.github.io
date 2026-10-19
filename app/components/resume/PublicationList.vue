@@ -9,7 +9,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  highlightAuthor: 'Arnaldo Barea',
+  highlightAuthor: 'AJ Barea',
   contactEmail: 'ajbareaa@gmail.com'
 })
 
