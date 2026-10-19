@@ -7,7 +7,7 @@ export const publications: Publication[] = [
       'Dmitrii Korobeinikov',
       'Raman Zatsarenko',
       'Sergei Chuprov',
-      'Arnaldo Barea',
+      'AJ Barea',
       'Leon Reznik'
     ],
     venue: 'IEEE Intelligent Systems',
@@ -27,7 +27,7 @@ export const publications: Publication[] = [
     id: 'ijcnn-wcci-2026',
     authors: [
       'Dmitrii Korobeinikov',
-      'Arnaldo Barea',
+      'AJ Barea',
       'Leon Reznik',
       'Raman Zatsarenko',
       'Sergei Chuprov',
@@ -48,7 +48,7 @@ export const publications: Publication[] = [
   },
   {
     id: 'kourai-ne-agents-day-2026',
-    authors: ['Arnaldo Barea'],
+    authors: ['AJ Barea'],
     venue: 'North-East AI Agents Day Workshop, Jane Street, New York, NY',
     year: 2026,
     status: 'accepted',
