@@ -35,8 +35,9 @@ export const publications: Publication[] = [
     ],
     venue: 'IJCNN 2026 (IEEE WCCI, Maastricht)',
     year: 2026,
-    status: 'accepted',
-    url: 'https://attend.ieee.org/wcci-2026/',
+    status: 'published',
+    doi: '10.1109/IJCNN69854.2026.11730045',
+    url: 'https://ieeexplore.ieee.org/document/11730045/',
     keywords: [
       'Federated Learning',
       'AI-Assisted Design',
