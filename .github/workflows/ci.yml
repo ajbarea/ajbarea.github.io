@@ -106,8 +106,8 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
-      # Build first — playwright.config.ts webServer runs `npx nuxt preview`
-      # which needs a generated build to exist.
+      # Build first: playwright.config.ts webServer runs `npm run preview`,
+      # which serves the generated .output/public.
       - name: Generate static site
         run: npm run generate
 
