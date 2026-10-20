@@ -101,6 +101,8 @@ function handleEmailClick() {
               </svg>
               <!-- ORCID -->
               <UiOrcidIcon v-else-if="link.platform === 'orcid'" variant="mono" class="w-5 h-5" />
+              <!-- Google Scholar -->
+              <UiScholarIcon v-else-if="link.platform === 'scholar'" class="w-5 h-5" />
             </a>
           </template>
         </nav>

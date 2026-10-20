@@ -8,7 +8,8 @@ export const profile: Profile = {
     email: 'ajbareaa@gmail.com',
     github: 'ajbarea',
     youtube: '@ajbarea',
-    orcid: '0009-0001-7938-2376'
+    orcid: '0009-0001-7938-2376',
+    scholar: 'YT5d1FkAAAAJ'
   },
   socialLinks: [
     {
@@ -34,6 +35,13 @@ export const profile: Profile = {
       url: 'https://orcid.org/0009-0001-7938-2376',
       icon: 'orcid',
       label: 'ORCID iD',
+      rel: 'me noopener noreferrer'
+    },
+    {
+      platform: 'scholar',
+      url: 'https://scholar.google.com/citations?user=YT5d1FkAAAAJ',
+      icon: 'scholar',
+      label: 'Google Scholar',
       rel: 'me noopener noreferrer'
     },
     {

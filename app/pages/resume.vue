@@ -130,6 +130,18 @@ function downloadResume(type: 'industry' | 'research') {
               https://orcid.org/{{ profile.contact.orcid }}
             </a>
           </template>
+          <template v-if="profile.contact.scholar">
+            <span class="hidden sm:inline text-gray-300 dark:text-gray-600">|</span>
+            <a
+              :href="`https://scholar.google.com/citations?user=${profile.contact.scholar}`"
+              target="_blank"
+              rel="me noopener noreferrer"
+              class="flex items-center gap-1 hover:text-primary-600 dark:hover:text-primary-400"
+            >
+              <UiScholarIcon class="w-4 h-4" />
+              Google Scholar
+            </a>
+          </template>
         </div>
       </header>
 
