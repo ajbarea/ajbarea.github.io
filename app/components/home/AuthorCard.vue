@@ -149,6 +149,7 @@ function getSocialIcon(platform: string): string {
             class="text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-sm"
           >
             <UiOrcidIcon v-if="link.platform === 'orcid'" variant="mono" class="w-5 h-5" />
+            <UiScholarIcon v-else-if="link.platform === 'scholar'" class="w-5 h-5" />
             <svg v-else class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path :d="getSocialIcon(link.icon)" />
             </svg>

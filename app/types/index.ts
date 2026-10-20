@@ -6,11 +6,12 @@ export interface ContactInfo {
   linkedin?: string
   youtube: string
   orcid?: string
+  scholar?: string
 }
 
 // Social Links
 export interface SocialLink {
-  platform: 'github' | 'linkedin' | 'youtube' | 'email' | 'twitter' | 'orcid'
+  platform: 'github' | 'linkedin' | 'youtube' | 'email' | 'twitter' | 'orcid' | 'scholar'
   url: string
   icon: string
   label: string
