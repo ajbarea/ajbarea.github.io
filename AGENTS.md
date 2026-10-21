@@ -4,7 +4,7 @@ AJ Barea's portfolio at https://ajbarea.github.io/: a Nuxt 4 static site in four
 
 ## Commands
 
-`make help` lists every target. Run `make setup` in each checkout or worktree, then `make validate` (lint, unit tests, build) before a PR. `make lint` includes the README claims and retired-name checks. `make dev`, `make preview` and `make test-e2e` start servers or browsers; run them only when needed.
+`make help` lists every target. Run `make setup` in each checkout or worktree, then `make validate` (lint, unit tests, build) before a PR. `make lint` includes the README claims and retired-name checks. `make dev`, `make preview` and `make test-e2e` start servers or browsers; run them only when needed. `make test-e2e` reuses any server already on port 3000 (another worktree's, or `make dev`), so check the port is free first.
 
 ## Rules
 
