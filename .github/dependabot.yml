@@ -17,6 +17,10 @@ updates:
       prefix: 'chore(deps)'
       include: 'scope'
     groups:
+      # Nuxt SEO modules release in lockstep (one shared nuxt-site-config), majors
+      # included; listed first because a dependency joins the first group it matches.
+      nuxt-seo:
+        patterns: ['@nuxtjs/sitemap', '@nuxtjs/robots', 'nuxt-site-config*', 'nuxtseo-*']
       npm:
         patterns: ['*']
         update-types: ['minor', 'patch']
