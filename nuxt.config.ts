@@ -23,10 +23,13 @@ export default defineNuxtConfig({
     // Dropping /blog from the prerender list is not enough: @nuxt/content
     // discovers the routes and builds them anyway. Redirecting also gives the
     // 24 URLs already indexed across four locales somewhere to land.
-    '/blog': { redirect: '/' },
-    '/blog/**': { redirect: '/' },
-    '/*/blog': { redirect: '/' },
-    '/*/blog/**': { redirect: '/' }
+    // Locales spelled out: nitro prerenders a `/*/blog` key as a literal `*/` directory.
+    ...Object.fromEntries(
+      ['', '/es', '/ja', '/zh'].flatMap((prefix) => [
+        [`${prefix}/blog`, { redirect: '/' }],
+        [`${prefix}/blog/**`, { redirect: '/' }]
+      ])
+    )
   },
 
   modules: [

@@ -73,5 +73,10 @@
     "serve": {
       "compression": "1.8.2"
     }
+  },
+  "allowScripts": {
+    "better-sqlite3": true,
+    "esbuild": true,
+    "unrs-resolver": true
   }
 }
