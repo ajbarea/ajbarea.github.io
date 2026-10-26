@@ -6,7 +6,8 @@
     "blog": "ブログ"
   },
   "lang": {
-    "select": "言語を選択"
+    "select": "言語を選択",
+    "selectCurrent": "{language}、言語を選択"
   },
   "meta": {
     "homeTitle": "AJ Barea · ソフトウェアエンジニア",
@@ -378,7 +379,7 @@
   "sisters": {
     "lead": "エージェント AI と連合学習を補完的な角度から探究する、調和の取れたリポジトリ群です。それぞれ独立して利用できます。",
     "listAria": "エコシステム内の姉妹プロジェクト",
-    "cardAria": "{name}、GitHubで開く",
+    "opensOnGitHub": "（GitHubで開く）",
     "items": {
       "kourai-khryseai": {
         "name": "Kourai Khryseai",

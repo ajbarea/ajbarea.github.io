@@ -63,14 +63,16 @@ describe('SisterEcosystem', () => {
     expect(section.attributes('aria-labelledby')).toBe('sisters-heading')
   })
 
-  it('each card has an aria-label naming the sister', () => {
+  it('each card link is named by its visible title plus the GitHub cue (WCAG 2.5.3)', () => {
+    // An aria-label that drops visible text fails axe's label-content-name-mismatch;
+    // the link wraps only the heading, so its name stays short and contains it.
     const wrapper = mount(SisterEcosystem)
-    const links = wrapper.findAll('li a')
-    expect(links.length).toBeGreaterThan(0)
+    const links = wrapper.findAll('li h3 a')
+    expect(links).toHaveLength(sisters.length)
     for (const link of links) {
-      const aria = link.attributes('aria-label') ?? ''
-      expect(aria).not.toMatch(/role:/)
-      expect(aria).toMatch(/opens on GitHub$/)
+      expect(link.attributes('aria-label')).toBeUndefined()
+      expect(link.find('.sr-only').text()).toBe('(opens on GitHub)')
+      expect(link.text()).toMatch(/\S.* \(opens on GitHub\)$/)
     }
   })
 })
