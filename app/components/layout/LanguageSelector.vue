@@ -49,7 +49,7 @@ onBeforeUnmount(() => {
       class="min-w-[44px] min-h-[44px] px-2.5 py-2 rounded-lg flex items-center gap-1.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
       :aria-expanded="isOpen"
       aria-haspopup="listbox"
-      :aria-label="$t('lang.select')"
+      :aria-label="$t('lang.selectCurrent', { language: currentLabel })"
       @click.stop="toggleOpen"
     >
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

@@ -6,7 +6,8 @@
     "blog": "Blog"
   },
   "lang": {
-    "select": "Select language"
+    "select": "Select language",
+    "selectCurrent": "{language}, select language"
   },
   "meta": {
     "homeTitle": "AJ Barea · Software Engineer",
@@ -378,7 +379,7 @@
   "sisters": {
     "lead": "A coordinated family of repos exploring agentic AI and federated learning from complementary angles. Each is independently invocable.",
     "listAria": "Sister projects in the ecosystem",
-    "cardAria": "{name}, opens on GitHub",
+    "opensOnGitHub": "(opens on GitHub)",
     "items": {
       "kourai-khryseai": {
         "name": "Kourai Khryseai",

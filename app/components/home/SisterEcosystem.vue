@@ -18,21 +18,25 @@ import { sisters } from '~/data/sisters'
       role="list"
       :aria-label="$t('sisters.listAria')"
     >
-      <li v-for="sister in sisters" :key="sister.id" class="list-none">
-        <a
-          :href="sister.url"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex h-full flex-col bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md hover:border-primary-200 dark:hover:border-primary-700 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
-          :aria-label="$t('sisters.cardAria', { name: $t('sisters.items.' + sister.id + '.name') })"
-        >
-          <h3 class="text-base font-semibold text-gray-900 dark:text-white mb-1">
+      <li
+        v-for="sister in sisters"
+        :key="sister.id"
+        class="relative flex h-full flex-col list-none bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md hover:border-primary-200 dark:hover:border-primary-700 transition-all duration-200"
+      >
+        <h3 class="text-base font-semibold text-gray-900 dark:text-white mb-1">
+          <a
+            :href="sister.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="after:absolute after:inset-0 after:rounded-lg focus:outline-none focus-visible:after:ring-2 focus-visible:after:ring-primary-500 focus-visible:after:ring-offset-2 dark:focus-visible:after:ring-offset-gray-900"
+          >
             {{ $t('sisters.items.' + sister.id + '.name') }}
-          </h3>
-          <p class="text-sm text-gray-600 dark:text-gray-300">
-            {{ $t('sisters.items.' + sister.id + '.description') }}
-          </p>
-        </a>
+            <span class="sr-only">{{ $t('sisters.opensOnGitHub') }}</span>
+          </a>
+        </h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300">
+          {{ $t('sisters.items.' + sister.id + '.description') }}
+        </p>
       </li>
     </ul>
   </section>
