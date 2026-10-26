@@ -6,7 +6,8 @@
     "blog": "博客"
   },
   "lang": {
-    "select": "选择语言"
+    "select": "选择语言",
+    "selectCurrent": "{language}，选择语言"
   },
   "meta": {
     "homeTitle": "AJ Barea · 软件工程师",
@@ -378,7 +379,7 @@
   "sisters": {
     "lead": "一个协调一致的代码仓库家族，从互补的角度探索智能体 AI 和联邦学习。每个仓库都可以独立调用。",
     "listAria": "生态系统中的姊妹项目",
-    "cardAria": "{name}，在 GitHub 中打开",
+    "opensOnGitHub": "（在 GitHub 中打开）",
     "items": {
       "kourai-khryseai": {
         "name": "Kourai Khryseai",
