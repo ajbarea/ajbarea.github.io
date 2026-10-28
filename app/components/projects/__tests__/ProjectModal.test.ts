@@ -69,7 +69,7 @@ describe('ProjectModal', () => {
     expect(title.text()).toBe('Kourai Khryseai')
   })
 
-  it('shows the cover at the top and each screenshot in its own section', () => {
+  it('shows each screenshot in its own section, apart from the cover', () => {
     const shots = ['/images/projects/screenshots/a.webp', '/images/projects/screenshots/b.webp']
     const wrapper = makeWrapper({ project: { ...mockProject, screenshots: shots }, open: true })
     const section = wrapper.find('[data-test="project-screenshots"]')

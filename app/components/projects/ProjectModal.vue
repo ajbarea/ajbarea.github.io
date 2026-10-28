@@ -232,7 +232,7 @@ watch(
                   :key="src"
                   :href="src"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   class="block rounded-xl overflow-hidden ring-1 ring-gray-900/10 dark:ring-white/10 focus-visible:ring-2 focus-visible:ring-primary-500"
                   :aria-label="
                     $t('projects.page.screenshotOpenAria', {

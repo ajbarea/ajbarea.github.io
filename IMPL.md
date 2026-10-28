@@ -2,7 +2,7 @@
 
 ## Now (2026-10-28)
 
-Portfolio review against CV #14, done: site copy matches the CV in en/es/ja/zh (#125), gallery photos no longer go blank after a long scroll (#126), and all 13 project thumbnails are real screenshots (#127, 1600x900 webp, same file names). Nothing in flight.
+Portfolio review against CV #14, done: site copy matches the CV in en/es/ja/zh (#125), gallery photos no longer go blank after a long scroll (#126). Cards show the illustrated covers (`public/images/projects/*.webp`); the real captures from #127 (1600x900) live in `public/images/projects/screenshots/` and show in each project's modal under "See it running" (#134).
 
 Open questions for AJ: whether the robot-navigation DQN/PyTorch claim (CV, resume page) belongs to goal-seeker-ai, which is tabular Q-learning; whether the Phalanx-FL card keeps its video of the old framework UI.
 
