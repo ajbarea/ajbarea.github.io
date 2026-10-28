@@ -187,7 +187,7 @@
       "docsAria": "查看{title}文档",
       "githubAria": "查看 {title} 的 GitHub 仓库",
       "videoAria": "观看{title}的视频演示",
-      "thumbnailAlt": "{title}缩略图",
+      "thumbnailAlt": "{title}截图",
       "emptyState": "暂无该类别的项目。",
       "viewAll": "查看所有项目",
       "viewDetails": "查看详情",
