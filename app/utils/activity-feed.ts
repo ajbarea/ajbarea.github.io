@@ -66,12 +66,14 @@ export function buildActivityItems(input: BuildActivityItemsInput): ActivityFeed
   const items: ActivityFeedItem[] = []
 
   for (const p of publications) {
+    // A work with no year yet (in preparation) has no date to place it in the feed.
+    if (p.year === undefined) continue
     const msg = messages.publications?.[p.id]
     items.push({
       id: `${base}/#${p.id}`,
       title: msg?.title ?? p.id,
-      link: p.url ?? `${base}/#publications`,
-      description: msg?.abstract ?? '',
+      link: p.url ?? (p.doi ? `https://doi.org/${p.doi}` : `${base}/#publications`),
+      description: msg?.abstract ?? p.venue,
       date: parseActivityDate(p.year),
       category: 'publication'
     })

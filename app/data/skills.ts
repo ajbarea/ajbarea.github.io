@@ -18,6 +18,7 @@ export const skills: Skill[] = [
   },
   { name: 'C++', category: 'languages', icon: 'cplusplus', docUrl: 'https://cplusplus.com' },
   { name: 'C', category: 'languages', icon: 'c', docUrl: 'https://en.cppreference.com/w/c' },
+  { name: 'Rust', category: 'languages', icon: 'rust', docUrl: 'https://doc.rust-lang.org/' },
   {
     name: 'SQL',
     category: 'languages',
@@ -31,6 +32,18 @@ export const skills: Skill[] = [
     category: 'languages',
     icon: 'spring',
     docUrl: 'https://spring.io/projects/spring-boot'
+  },
+  {
+    name: 'FastAPI',
+    category: 'languages',
+    icon: 'fastapi',
+    docUrl: 'https://fastapi.tiangolo.com/'
+  },
+  {
+    name: 'Node.js',
+    category: 'languages',
+    icon: 'nodejs',
+    docUrl: 'https://nodejs.org/docs/latest/api/'
   },
 
   // Cloud/DevOps
@@ -76,6 +89,24 @@ export const skills: Skill[] = [
     icon: 'amazonwebservices',
     docUrl: 'https://aws.amazon.com/cognito/'
   },
+  {
+    name: 'AWS Rekognition',
+    category: 'cloud-devops',
+    icon: 'amazonwebservices',
+    docUrl: 'https://aws.amazon.com/rekognition/'
+  },
+  {
+    name: 'AWS Comprehend',
+    category: 'cloud-devops',
+    icon: 'amazonwebservices',
+    docUrl: 'https://aws.amazon.com/comprehend/'
+  },
+  {
+    name: 'AWS Translate',
+    category: 'cloud-devops',
+    icon: 'amazonwebservices',
+    docUrl: 'https://aws.amazon.com/translate/'
+  },
   { name: 'Docker', category: 'cloud-devops', icon: 'docker', docUrl: 'https://docs.docker.com' },
   {
     name: 'Terraform',
@@ -89,6 +120,7 @@ export const skills: Skill[] = [
     icon: 'github',
     docUrl: 'https://docs.github.com/en/actions'
   },
+  { name: 'Slurm', category: 'cloud-devops', docUrl: 'https://slurm.schedmd.com/' },
 
   // AI/ML
   { name: 'PyTorch', category: 'ai-ml', icon: 'pytorch', docUrl: 'https://pytorch.org' },
@@ -104,9 +136,23 @@ export const skills: Skill[] = [
     icon: 'scikitlearn',
     docUrl: 'https://scikit-learn.org'
   },
-  { name: 'FLOWER', category: 'ai-ml', icon: 'python', docUrl: 'https://flower.ai' },
+  { name: 'PEFT (LoRA)', category: 'ai-ml', docUrl: 'https://huggingface.co/docs/peft' },
+  { name: 'Flower', category: 'ai-ml', icon: 'python', docUrl: 'https://flower.ai' },
+  { name: 'Federated Learning', category: 'ai-ml', docUrl: 'https://flower.ai/docs/' },
   { name: 'Webots', category: 'ai-ml', icon: 'robot', docUrl: 'https://cyberbotics.com' },
   { name: 'Reinforcement Learning', category: 'ai-ml', docUrl: 'https://spinningup.openai.com' },
+  {
+    name: 'Claude Agent SDK',
+    category: 'ai-ml',
+    icon: 'claude',
+    docUrl: 'https://code.claude.com/docs/en/agent-sdk/overview'
+  },
+  {
+    name: 'Model Context Protocol (MCP)',
+    category: 'ai-ml',
+    docUrl: 'https://modelcontextprotocol.io/'
+  },
+  { name: 'A2A Protocol', category: 'ai-ml', docUrl: 'https://a2a-protocol.org/' },
 
   // Tools
   { name: 'Git', category: 'tools', icon: 'git', docUrl: 'https://git-scm.com' },
@@ -125,7 +171,25 @@ export const skills: Skill[] = [
   },
   { name: 'Bitbucket', category: 'tools', icon: 'bitbucket', docUrl: 'https://bitbucket.org' },
   { name: 'VS Code', category: 'tools', icon: 'vscode', docUrl: 'https://code.visualstudio.com' },
-  { name: 'pytest', category: 'tools', icon: 'pytest', docUrl: 'https://pytest.org' }
+  { name: 'pytest', category: 'tools', icon: 'pytest', docUrl: 'https://pytest.org' },
+  {
+    name: 'OpenTelemetry',
+    category: 'tools',
+    icon: 'opentelemetry',
+    docUrl: 'https://opentelemetry.io/docs/'
+  },
+  {
+    name: 'Jaeger',
+    category: 'tools',
+    icon: 'jaegertracing',
+    docUrl: 'https://www.jaegertracing.io/docs/'
+  },
+  {
+    name: 'Prometheus',
+    category: 'tools',
+    icon: 'prometheus',
+    docUrl: 'https://prometheus.io/docs/'
+  }
 ]
 
 export const skillCategories: SkillCategory[] = [

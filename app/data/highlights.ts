@@ -8,6 +8,9 @@ export interface HighlightRef {
 export const activityHighlightRefs: HighlightRef[] = [
   // Interleaved by kind so the badge colors alternate (publication / hackathon /
   // conference) down the column instead of clustering two-of-each.
+  { kind: 'publication', id: 'scads-tr-makesense-2026' },
+  { kind: 'hackathon', id: 'aware-ai-fall-2026' },
+  { kind: 'conference', id: 'rocissa-2026' },
   { kind: 'publication', id: 'ieee-is-2026' },
   { kind: 'hackathon', id: 'hackerrank-orchestrate-2026' },
   { kind: 'conference', id: 'ne-agents-day-2026' },

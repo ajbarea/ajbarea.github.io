@@ -104,6 +104,27 @@ describe('buildActivityItems', () => {
     )
   })
 
+  it('links the DOI and describes by venue when a publication has no url or abstract', () => {
+    const [item] = buildActivityItems({
+      messages: {},
+      publications: [
+        {
+          id: 'pub-doi',
+          authors: ['Z'],
+          venue: 'Zenodo',
+          year: 2026,
+          status: 'published',
+          doi: '10.5281/zenodo.1'
+        }
+      ],
+      hackathons: [],
+      conferences: [],
+      siteUrl: 'https://site.test'
+    })
+    expect(item?.link).toBe('https://doi.org/10.5281/zenodo.1')
+    expect(item?.description).toBe('Zenodo')
+  })
+
   it('sorts items newest-first by date', () => {
     const times = items.map((i) => i.date.getTime())
     expect(times).toEqual([...times].sort((a, b) => b - a))
@@ -111,5 +132,20 @@ describe('buildActivityItems', () => {
 
   it('builds stable guids anchored under the site URL', () => {
     expect(items.find((i) => i.id.endsWith('conf-a'))?.id).toBe('https://site.test/#conf-a')
+  })
+
+  it('leaves out a publication with no year, which has no date to sort by', () => {
+    const withUndated = buildActivityItems({
+      messages,
+      publications: [
+        ...publications,
+        { id: 'pub-undated', authors: ['Z'], venue: 'V3', status: 'in-preparation' }
+      ],
+      hackathons,
+      conferences,
+      siteUrl: 'https://site.test'
+    })
+    expect(withUndated).toHaveLength(4)
+    expect(withUndated.some((i) => i.id.endsWith('pub-undated'))).toBe(false)
   })
 })

@@ -9,12 +9,12 @@ import type {
 export const professionalExperience: ProfessionalExperience[] = [
   {
     id: 'lowes',
-    title: 'Software Engineer',
+    title: 'Software Engineer (Contract)',
     company: "Lowe's Home Improvement",
     location: 'Remote, US',
     startDate: 'Feb 2023',
     endDate: 'Aug 2024',
-    type: 'full-time',
+    type: 'contract',
     department: 'Application Development Support - Distribution Management Systems',
     bullets: [
       'Cut daily error logs by 150,000 across RDCs by resolving bugs, optimizing log analysis, and enhancing system performance',
@@ -44,30 +44,49 @@ export const professionalExperience: ProfessionalExperience[] = [
 
 export const researchExperience: ResearchExperience[] = [
   {
+    id: 'rit-fa-doctoral',
+    title: 'Doctoral Researcher',
+    institution: 'Rochester Institute of Technology',
+    project: 'Federated Agents',
+    startDate: 'Aug 2026',
+    endDate: 'Present',
+    bullets: [
+      "Leading a research direction on coding agents that learn each organization's conventions and pool what generalizes, while each organization decides what may leave",
+      'Designed a pre-registered test of whether learned house style transfers at the project or the organization boundary, written up as a Stage 1 registered report in preparation for MSR 2027',
+      "Built sphragis, an open study harness that collects public code review from Gerrit and GitHub under each host's terms, pseudonymizes it at ingestion, seals the test window by hash, and trains and scores LoRA adapters on Slurm GPU clusters",
+      'Built a source-attribution measurement of whether the shared/private adapter splits in the federated personalization literature reveal the source organization in the half they transmit'
+    ],
+    isCurrent: true
+  },
+  {
     id: 'ncsu-scads-2026',
     title: 'Summer Research Scholar',
     institution: 'NC State University · Laboratory for Analytic Sciences (LAS)',
     project: 'SCADS (Summer Conference on Applied Data Science)',
     startDate: 'May 2026',
     endDate: 'Aug 2026',
-    bullets: [],
+    bullets: [
+      'Selected for a competitive summer research cohort applying data science to analytic sensemaking problems',
+      "Prototyped an agentic sensemaking system on the Claude Agent SDK, tracing an entity's evidence across graph, relational, and text stores into a cited analytic note",
+      'Built a governed MCP orchestration platform for agentic analytic workflows, cutting a measured policy-leak rate from 75% to 0% under a deterministic red-team evaluation battery',
+      'Delivered a motion-first object tracking pipeline for camouflaged targets in video, benchmarked end to end against published state-of-the-art methods',
+      'Instrumented agent and pipeline runs so multi-step reasoning could be inspected, replayed, and evaluated rather than treated as a black box'
+    ],
     isCurrent: false
   },
   {
     id: 'rit-gra',
     title: 'Graduate Research Assistant',
-    institution: 'Rochester Institute of Technology',
-    project: "Federated Learning Framework Enhancement - Dr. Leon Reznik's Research Group",
+    institution:
+      'Laboratory of Data Quality and Intelligent Security (LDQIS), Rochester Institute of Technology',
+    advisor: 'Dr. Leon Reznik',
     startDate: 'May 2025',
     endDate: 'Present',
     bullets: [
-      'Designed comprehensive pytest testing suite achieving 80%+ code coverage for distributed FL systems (InteFL framework)',
-      'Built React + FastAPI web interface improving researcher onboarding time and experimental reproducibility',
-      'Collaborated with PhD students to rapidly prototype novel aggregation strategies including Byzantine-robust methods (Krum, Bulyan, RFA, Trimmed Mean) and trust-based federated learning approaches',
-      'Implemented dynamic dataset poisoning system enabling adversarial robustness evaluation during federated training',
-      'Integrated transformer-based models for federated learning on text datasets spanning medical, legal, and financial domains',
-      'Extended framework compatibility across Python 3.9-3.11 and multiple operating systems (Windows, macOS, Linux)',
-      'Established CI pipeline and comprehensive error handling, transforming research prototype into production-ready system'
+      "Designed a pytest suite reaching 80%+ coverage, run in GitHub Actions CI, for InteFL, the lab's distributed federated learning framework, converting a research prototype into a dependable, reproducible platform",
+      'Built attack and defense tooling for InteFL: per-strategy schedules that start, stop, and stack label-flipping and Gaussian-noise poisoning by round, a multi-token sequence replacement attack, before/after snapshots of what each attack changed, and the FreqFed robust aggregation strategy',
+      "Added Hugging Face dataset loaders for financial, legal, and biomedical text (including MEDAL) for transformer experiments, and let InteFL's experiment-planning AI agent run on Claude, any OpenAI-compatible vendor, or local Ollama and vLLM models",
+      "Built the lab's new website (Astro, Tailwind, git-backed CMS) to replace its legacy Flask site"
     ],
     isCurrent: true
   },
@@ -97,7 +116,7 @@ export const teachingExperience: TeachingExperience[] = [
     bullets: [
       'Mentor students in software design patterns, architectural styles, quality attributes and tactics',
       'Lead recitation sections and office hours providing technical guidance on architecture decisions',
-      'Taught full class session during instructor absence, receiving positive student feedback',
+      "Taught a full class session during the instructor's absence",
       'Grade assignments with detailed feedback emphasizing rigorous software engineering practices'
     ]
   }
@@ -113,8 +132,8 @@ const unsortedEntries: TimelineEntry[] = [
     organization: 'Rochester Institute of Technology',
     timeframe: 'Aug 2026 – Present',
     description:
-      'PhD in Computing and Information Sciences continuing federated learning research with Dr. Leon Reznik.',
-    skills: ['Federated Learning', 'Distributed ML', 'Agentic AI', 'Research'],
+      "Research on coding agents that learn each organization's conventions and pool what generalizes, while each organization decides what may leave. Advised by Dr. Leon Reznik as an NSF AWARE-AI National Research Traineeship (NRT) trainee in the AI Software track.",
+    skills: ['Federated Learning', 'Agentic AI', 'Code Review', 'LoRA'],
     icon: 'education',
     isCurrent: true,
     sortDate: '2026-08-15'
@@ -126,8 +145,9 @@ const unsortedEntries: TimelineEntry[] = [
     subtitle: 'SCADS · Summer Conference on Applied Data Science',
     organization: 'NC State · Laboratory for Analytic Sciences',
     timeframe: 'May 2026 – Aug 2026',
-    description: 'Selected as a SCADS Summer Research Scholar at NC State LAS for summer 2026.',
-    skills: ['Applied Data Science', 'SCADS'],
+    description:
+      'Selected for a competitive summer research cohort applying data science to analytic sensemaking problems. Built agentic sensemaking and governed MCP orchestration prototypes and a motion-first tracking pipeline for camouflaged targets in video.',
+    skills: ['Claude Agent SDK', 'MCP', 'Agentic AI', 'Video Object Tracking'],
     icon: 'research',
     isCurrent: false,
     sortDate: '2026-05-01'
@@ -136,12 +156,12 @@ const unsortedEntries: TimelineEntry[] = [
     id: 'rit-gra',
     type: 'research' as TimelineEntryType,
     title: 'Graduate Research Assistant',
-    subtitle: "Dr. Leon Reznik's Research Group",
+    subtitle: 'Laboratory of Data Quality and Intelligent Security (LDQIS)',
     organization: 'Rochester Institute of Technology',
     timeframe: 'May 2025 – Present',
     description:
-      'Enhancing InteFL federated learning framework with 80%+ test coverage, React/FastAPI interface, and Byzantine-robust aggregation methods.',
-    skills: ['Federated Learning', 'PyTorch', 'React', 'FastAPI', 'Python'],
+      "Built InteFL's pytest suite (80%+ coverage, run in GitHub Actions CI), its attack and defense tooling, and its Hugging Face text-dataset loaders. Built the lab's new website.",
+    skills: ['Federated Learning', 'pytest', 'GitHub Actions', 'Hugging Face', 'Astro'],
     icon: 'research',
     isCurrent: true,
     sortDate: '2025-05-01'

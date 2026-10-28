@@ -10,29 +10,31 @@
     "selectCurrent": "{language}，选择语言"
   },
   "meta": {
-    "homeTitle": "AJ Barea · 软件工程师",
-    "homeDescription": "软件工程师，专注于全栈开发、AI/ML和云解决方案。目前在RIT完成软件工程硕士学位。",
-    "homeOgDescription": "展示软件工程、AI/ML 和云解决方案领域项目、研究和技术专长的作品集。",
+    "homeTitle": "AJ Barea · 计算机与信息科学博士研究生",
+    "homeDescription": "AJ Barea 是罗切斯特理工学院（RIT）计算机与信息科学专业的博士研究生，研究方向包括联邦学习、代理式 AI 与编程智能体，以及科研软件。",
+    "homeOgDescription": "AJ Barea 的项目、论文与科研软件。他是 RIT 的博士研究生，研究联邦学习与代理式 AI。",
     "homeTwitterDescription": "展示项目、研究和技术专长的个人作品集。",
     "resumeTitle": "简历 · AJ Barea",
-    "resumeDescription": "AJ Barea的专业简历 - 软件工程师，擅长全栈开发、AI/ML和云解决方案。",
-    "resumeOgDescription": "专业简历，展示软件工程经验、研究和技术技能。",
-    "resumeTwitterDescription": "展示软件工程经验、研究和技术技能的专业简历。",
+    "resumeDescription": "AJ Barea 的简历：RIT 计算机与信息科学博士研究生，研究联邦学习、代理式 AI 与编程智能体，并有软件工程师的业界经验。",
+    "resumeOgDescription": "研究版与业界版简历，涵盖联邦学习与代理式 AI 研究、论文、软件工程经验和技术技能。",
+    "resumeTwitterDescription": "研究版与业界版简历，涵盖联邦学习与代理式 AI 研究、论文、软件工程经验和技术技能。",
     "projectsTitle": "项目 · AJ Barea",
-    "projectsDescription": "探索AJ Barea的软件项目组合，包括AI/ML应用、全栈开发、云解决方案和研究工作。",
-    "projectsTwitterDescription": "探索AJ Barea的软件项目组合，包括AI/ML应用、全栈开发和云解决方案。"
+    "projectsDescription": "RIT 博士研究生 AJ Barea 的项目：联邦学习框架、代理式 AI 与编程智能体系统、科研软件以及全栈开发。",
+    "projectsTwitterDescription": "RIT 博士研究生 AJ Barea 的联邦学习框架、代理式 AI 系统与科研软件。"
   },
   "profile": {
-    "title": "软件工程师",
-    "titleIndustry": "软件工程师 · 分布式机器学习系统",
+    "title": "博士研究生",
+    "titleIndustry": "博士研究生 · 分布式机器学习系统",
     "titleResearch": "博士研究生 · 联合学习与代理 AI",
     "summary": "我构建联邦学习框架和多代理开发系统。我的研究位于可信赖分布式机器学习、人类在环AI代理以及AI辅助软件开发人员体验的交叉点。",
     "researchInterests": [
-      "联邦学习系统",
-      "代理型AI与工具使用",
-      "分布式机器学习的测试方法学",
-      "机器学习研究基础设施的开发体验",
-      "AI辅助软件开发"
+      "面向联邦与分布式机器学习系统的软件工程",
+      "具备工具使用与人类监督的代理式 AI",
+      "机器学习研究的测试、可观测性与可复现性基础设施",
+      "基于人类生成数据的可信、隐私保护学习",
+      "共享模型更新会泄露其来源的哪些信息",
+      "关于代码评审的实证软件工程",
+      "AI 研究工具的开发者体验"
     ]
   },
   "hero": {
@@ -83,29 +85,38 @@
     "rit-phd-2026": {
       "title": "哲学博士",
       "subtitle": "计算机与信息科学",
-      "description": "在 Leon Reznik 博士的指导下继续联合学习与代理 AI 研究，延续硕士毕业设计的 InteFL 研究方向。"
+      "description": "研究能够学习各组织惯例并汇集可泛化部分的编程智能体，同时由各组织决定哪些内容可以外传。导师为 Leon Reznik 博士；NSF AWARE-AI 国家研究培训计划（NRT）AI Software 方向学员。"
+    },
+    "rit-fa-doctoral": {
+      "title": "博士研究员",
+      "bullets": [
+        "主导一个研究方向：编程智能体学习各组织的惯例并汇集可泛化的部分，同时由各组织决定哪些内容可以外传",
+        "设计了一项预注册检验，考察学到的组织风格（house style）是在项目边界还是组织边界上迁移，并撰写为面向 MSR 2027、正在准备中的第一阶段注册报告",
+        "构建了 sphragis：一个开放的研究工具链，按各托管平台的条款从 Gerrit 和 GitHub 收集公开的代码评审，在导入时进行假名化，以哈希封存测试窗口，并在 Slurm GPU 集群上训练和评估 LoRA 适配器",
+        "构建了来源归因测量，检验联邦个性化文献中的共享/私有适配器划分是否会在其传输的那一半中暴露来源组织"
+      ]
     },
     "ncsu-scads-2026": {
       "title": "暑期研究学者",
       "subtitle": "SCADS · 应用数据科学夏季会议",
-      "description": "为期八周的精英研究项目，将研究生与情报界和国家实验室人员配对，进行大规模 AI 评估。研究方向：在异构数据源上的代理 AI 编排。",
+      "description": "入选竞争激烈的暑期研究项目，将数据科学应用于分析性意义建构问题。构建了代理式意义建构原型、受治理的 MCP 编排原型，以及以运动为先、追踪视频中伪装目标的流水线。",
       "bullets": [
-        "构建并开源了 Ariadne：一个基于 Claude Agent SDK 的智能体式意义建构原型，将单个实体的证据贯穿图（Neo4j）、关系型和文本存储进行追溯，汇聚成一份带引用的分析笔记。",
-        "在采用前将每项架构决策都基于当前最佳实践研究，并通过 OpenTelemetry 与 Jaeger 对智能体的工具调用进行追踪。"
+        "入选竞争激烈的暑期研究项目，将数据科学应用于分析性意义建构问题",
+        "基于 Claude Agent SDK 构建了代理式意义建构系统原型，跨图、关系型和文本存储追溯实体的证据，汇总为带引用的分析笔记",
+        "为代理式分析工作流构建受治理的 MCP 编排平台，在确定性红队评估集上将测得的策略泄露率从 75% 降至 0%",
+        "交付了以运动为先的视频伪装目标追踪流水线，并与已发表的最先进方法进行端到端对比",
+        "为智能体与流水线的运行加入观测埋点，使多步推理可以被检查、重放和评估，而不是被当作黑箱"
       ]
     },
     "rit-gra": {
       "title": "研究生研究员",
-      "subtitle": "莱昂·雷兹尼克博士的研究小组",
-      "description": "将 InteFL 测试覆盖率提升至 80% 以上。构建了 React + FastAPI 的联合实验管理界面。实现了拜占庭容错的聚合策略（Krum、Bulyan、RFA、Trimmed Mean）。",
+      "subtitle": "数据质量与智能安全实验室（LDQIS）",
+      "description": "为 InteFL 构建了 pytest 测试套件（覆盖率 80% 以上，在 GitHub Actions CI 中运行）、攻击与防御工具，以及 Hugging Face 文本数据集加载器，并构建了实验室的新网站。",
       "bullets": [
-        "为分布式FL系统（InteFL框架）设计了全面的pytest测试套件，代码覆盖率超过80%",
-        "构建React + FastAPI Web界面，提高研究人员入职时间并增强实验可复现性",
-        "与博士生合作快速原型设计了新颖的聚合策略，包括拜占庭容错方法（Krum、Bulyan、RFA、截断平均）和基于信任的联邦学习方法",
-        "实施了动态数据集污染系统，能够在联邦训练期间评估对抗鲁棒性",
-        "集成基于变压器的模型在医疗、法律和金融领域的联邦学习文本数据集上",
-        "跨Python 3.9-3.11版本及多种操作系统（Windows、macOS、Linux）的框架兼容性",
-        "建立完善的CI管道和全面的错误处理，将研究原型转化为生产级系统"
+        "为实验室的分布式联邦学习框架 InteFL 设计了覆盖率 80% 以上、在 GitHub Actions CI 中运行的 pytest 测试套件，将研究原型转变为可靠、可复现的平台",
+        "为 InteFL 构建攻击与防御工具：按策略配置的调度，可按轮次启动、停止并叠加标签翻转与高斯噪声投毒；多 token 序列替换攻击；记录每次攻击改动内容的前后快照；以及 FreqFed 鲁棒聚合策略",
+        "为 Transformer 实验添加了金融、法律和生物医学文本（含 MEDAL）的 Hugging Face 数据集加载器，并使 InteFL 的实验规划 AI 智能体可在 Claude、任何兼容 OpenAI 的供应商或本地 Ollama 与 vLLM 模型上运行",
+        "构建了实验室的新网站（Astro、Tailwind、基于 git 的 CMS），取代其旧的 Flask 网站"
       ]
     },
     "rit-ta": {
@@ -115,7 +126,7 @@
       "bullets": [
         "指导学生学习软件设计模式、架构风格、质量属性和策略",
         "带领诵读小组和办公室时间提供技术指导以决策架构",
-        "在教师缺席时讲完整堂课，获得学生积极反馈",
+        "在教师缺席时讲授一整堂课",
         "使用详细反馈评估作业，强调严格的软件工程实践"
       ]
     },
@@ -125,7 +136,7 @@
       "description": "GPA: 4.0/4.0。毕业设计：在 Leon Reznik 博士的指导下增强 InteFL 联合学习执行框架。"
     },
     "lowes": {
-      "title": "软件工程师（合同工）",
+      "title": "软件工程师（合同制）",
       "subtitle": "分布管理系统",
       "description": "在 RDC 之间将每日错误日志减少了 15 万条。构建了全栈自动化工具。将新员工入职时间缩短了 80%。",
       "bullets": [
@@ -206,15 +217,15 @@
     },
     "phalanx-fl": {
       "title": "Phalanx-FL",
-      "description": "单独联邦学习执行与研究框架：可配置聚合、拜占庭容错、对抗攻击模拟、JSON驱动实验。"
+      "description": "基于最新 Flower 应用模型的联邦 LoRA 微调测试平台，为每一轮和每个客户端输出 OpenTelemetry 追踪与指标。"
     },
     "techne": {
       "title": "Techne",
-      "description": "八个 Claude Code 技能可作为单个 /plugin 安装：审核构建、抑制 CI 噪音、追踪文档/代码漂移、同步姐妹仓库。"
+      "description": "Claude Code 插件市场，提供用于仓库维护、对抗式代码评审、LaTeX 与幻灯片构建，以及对照 arXiv 和 Crossref 验证参考文献的智能体工作流。"
     },
     "intellifl": {
       "title": "InteFL",
-      "description": "联邦学习框架，具备智能客户端选择和隐私保护聚合功能。"
+      "description": "联邦学习框架，用于在静态与动态对抗攻击下配置、基准测试和比较联邦学习策略，支持可插拔的鲁棒聚合，并配有实验规划 AI 智能体。"
     },
     "security-eval": {
       "title": "安全评估系统",
@@ -222,7 +233,7 @@
     },
     "robot-navigation-rl": {
       "title": "基于RL的机器人导航",
-      "description": "自主机器人在模拟环境中自主导航的强化学习代理"
+      "description": "在 Webots 模拟器中学习到达目标并避开障碍物的 Q-learning 智能体，具备随距离自适应的电机控制与奖励塑形。"
     },
     "control-mobile-robots": {
       "title": "移动机器人控制",
@@ -242,7 +253,7 @@
     },
     "ldqis": {
       "title": "LDQIS 实验室网站",
-      "description": "罗切斯特理工学院（RIT）数据质量与智能安全实验室（LDQIS）的公开网站。将传统的 Flask + Bootstrap 站点用 Astro 5 + Tailwind 4 重新构建；自定义域名 dataqualitylabs.com 的迁移待办。"
+      "description": "罗切斯特理工学院（RIT）数据质量与智能安全实验室（LDQIS）的公开网站，已在 dataqualitylabs.com 上线。基于 Astro 与 Tailwind 构建并配有基于 git 的 CMS，取代了实验室旧的 Flask + Bootstrap 网站。"
     }
   },
   "resume": {
@@ -266,14 +277,19 @@
       "skills": "技术技能"
     },
     "experience": {
-      "projectPrefix": "项目:"
+      "projectPrefix": "项目:",
+      "types": {
+        "full-time": "全职",
+        "contract": "合同制",
+        "internship": "实习"
+      }
     },
     "education": {
       "degreeIn": "{field}{degree}",
       "gpaLabel": "GPA",
       "relevantCoursework": "相关课程",
       "capstoneResearch": "毕业研究",
-      "advisor": "顾问: {name}",
+      "advisor": "导师: {name}",
       "downloadCertificate": "下载{title}证书",
       "visitWebsite": "访问{title}网站"
     }
@@ -283,8 +299,12 @@
       "solo": "单人模式",
       "team": "团队"
     },
+    "aware-ai-fall-2026": {
+      "description": "Myo Lever Controller：用一只前臂驾驶模拟的 Clearpath Jackal。Myo 臂环的运动传感器设定速度和转向，针对每位驾驶者训练的 EMG 分类器把有意的握拳识别为刹车。负责编写杠杆控制器、TCN 研究和演示文稿生成器。",
+      "result": "最佳展示奖"
+    },
     "hackerrank-orchestrate-2026": {
-      "description": "多领域支持-分类代理：跨HackerRank、Claude和Visa语料库路由工单，使用基于语料库的响应、异步批量处理及提示注入防护。",
+      "description": "多领域支持-分类代理：跨HackerRank、Claude和Visa语料库路由工单，使用基于语料库的响应、通过 Message Batches API 进行批量处理及提示注入防护。",
       "result": "排名第 11 / 1349"
     },
     "aware-ai-bioradio-2026": {
@@ -300,6 +320,14 @@
       "talk": "演讲",
       "demo": "演示"
     },
+    "rocissa-2026": {
+      "title": "面向现实世界的联邦学习：兼顾隐私、安全与成本，无需取舍",
+      "description": "与 Dmitrii Korobeinikov 和 Leon Reznik 合作的演讲，介绍一套联邦学习应用的决策框架：能够检测并应对攻击，在安全开销与模型性能之间取得平衡，并适应不断变化的条件。"
+    },
+    "fa-talk-rit-2026": {
+      "title": "Federated Agents：在代码不外流的前提下学习各公司内部规则的编程智能体",
+      "description": "在 RIT 的演讲，主题是学习各组织惯例并汇集可泛化部分、同时由各组织决定哪些内容可以外传的编程智能体。"
+    },
     "ne-agents-day-2026": {
       "title": "Kourai Khryseai: 透明的人机交互多代理软件开发",
       "description": "将多代理编程重新定义为可解释性问题，通过三大支柱：监控（使用OpenTelemetry / Jaeger / Prometheus可观测性），沟通（代理请求对模糊要求的澄清），以及控制（有界修复循环以实现故意恢复）。展示了Hephaestus，一个调度器通过MCP路由至专业代理，并共享SQLite状态。"
@@ -314,6 +342,7 @@
       "published": "发布",
       "under-review": "正在审核",
       "accepted": "接受",
+      "in-preparation": "准备中",
       "doi": "DOI"
     },
     "list": {
@@ -335,6 +364,24 @@
     "kourai-ne-agents-day-2026": {
       "title": "Kourai Khryseai：透明的人在环上多智能体软件开发",
       "abstract": "Kourai 是一个透明的多智能体软件工程系统，实时呈现各专家智能体之间的协同过程，并使用户始终处于控制环路之中。"
+    },
+    "scads-tr-makesense-2026": {
+      "title": "makesense：面向多源情报意义建构的受治理离线界面"
+    },
+    "scads-tr-video-motion-2026": {
+      "title": "video-motion：以运动为先、达到野外可部署速度的视频伪装目标分割"
+    },
+    "iaai-27-makesense": {
+      "title": "makesense：面向情报分析、基于异构数据存储的受治理代理式意义建构"
+    },
+    "msr-2027-house-style": {
+      "title": "组织会在代码评审中留下可学习的组织风格吗？"
+    },
+    "zenodo-techne-2026": {
+      "title": "techne：面向仓库、文档与参考文献的 Claude Code 插件市场"
+    },
+    "zenodo-keryx-2026": {
+      "title": "keryx：让 Claude Code 开口说话"
     }
   },
   "highlights": {
@@ -344,6 +391,9 @@
       },
       "aware-ai-bioradio-2026": {
         "description": "宇宙仪式：BioRadio 电磁肌电图手势驱动实时和弦引擎。构建了手势分类器、MIDI 引擎、GUI 音乐模式和 Zensical 文档站点。"
+      },
+      "scads-tr-makesense-2026": {
+        "description": "一个 Model Context Protocol 服务器：由智能体框架提出查询，服务器负责执行策略、运行只读连接器操作、记录来源，并生成带引用的报告。"
       }
     }
   },
@@ -387,7 +437,7 @@
       },
       "phalanx-fl": {
         "name": "Phalanx-FL",
-        "description": "基于 Flower 与 Ray 的联邦学习参考平台。提供八种聚合策略以及攻击词汇表。"
+        "description": "基于最新 Flower 版本的联邦 LoRA 微调测试平台，为每一轮和每个客户端输出 OpenTelemetry 追踪与指标。"
       },
       "pharos": {
         "name": "Pharos",
@@ -395,7 +445,7 @@
       },
       "vfl": {
         "name": "Velocity-FL",
-        "description": "同样的 FL 策略，通过 PyO3 和 FastMCP 实现为 Rust 内核。专注于性能与大规模并发。"
+        "description": "联邦学习研究工具包：Rust 内核、Python 绑定（maturin）、支持 PyTorch 与 Hugging Face 模型，并提供 MCP 服务器接口。"
       },
       "ldqis": {
         "name": "LDQIS Lab",
@@ -403,7 +453,7 @@
       },
       "techne": {
         "name": "Techne",
-        "description": "Claude Code 技能插件：构建审计、lint 与测试网关、跨仓库漂移检测。"
+        "description": "Claude Code 插件市场：仓库维护、对抗式代码评审、LaTeX 与幻灯片构建，以及参考文献验证。"
       },
       "orchestrate-triage": {
         "name": "Orchestrate Triage",

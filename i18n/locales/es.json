@@ -10,29 +10,31 @@
     "selectCurrent": "{language}, seleccionar idioma"
   },
   "meta": {
-    "homeTitle": "AJ Barea · Ingeniero de Software",
-    "homeDescription": "Ingeniero de Software especializado en desarrollo full-stack, IA/ML y soluciones en la nube. Actualmente cursando la maestría en Ingeniería de Software en RIT.",
-    "homeOgDescription": "Portafolio que muestra proyectos, investigación y experiencia técnica en ingeniería de software, IA/ML y soluciones en la nube.",
+    "homeTitle": "AJ Barea · Doctorando en Ciencias de la Computación y la Información",
+    "homeDescription": "AJ Barea es doctorando en Ciencias de la Computación y la Información en el Rochester Institute of Technology. Trabaja en aprendizaje federado, IA con agentes, agentes de programación y software de investigación.",
+    "homeOgDescription": "Proyectos, publicaciones y software de investigación de AJ Barea, doctorando en RIT que trabaja en aprendizaje federado e IA con agentes.",
     "homeTwitterDescription": "Portafolio que muestra proyectos, investigación y experiencia técnica.",
     "resumeTitle": "Currículum · AJ Barea",
-    "resumeDescription": "Currículum profesional de AJ Barea — Ingeniero de Software con experiencia en desarrollo full-stack, IA/ML y soluciones en la nube.",
-    "resumeOgDescription": "Currículum profesional que muestra experiencia en ingeniería de software, investigación y habilidades técnicas.",
-    "resumeTwitterDescription": "Currículum profesional que muestra experiencia en ingeniería de software, investigación y habilidades técnicas.",
+    "resumeDescription": "Currículum de AJ Barea: doctorando en Ciencias de la Computación y la Información en RIT que investiga aprendizaje federado, IA con agentes y agentes de programación, con experiencia en la industria como ingeniero de software.",
+    "resumeOgDescription": "Currículums de investigación y de industria: investigación en aprendizaje federado e IA con agentes, publicaciones, experiencia en ingeniería de software y habilidades técnicas.",
+    "resumeTwitterDescription": "Currículums de investigación y de industria: investigación en aprendizaje federado e IA con agentes, publicaciones, experiencia en ingeniería de software y habilidades técnicas.",
     "projectsTitle": "Proyectos · AJ Barea",
-    "projectsDescription": "Explora el portafolio de proyectos de software de AJ Barea, incluyendo aplicaciones de IA/ML, desarrollo full-stack, soluciones en la nube y trabajo de investigación.",
-    "projectsTwitterDescription": "Explora el portafolio de proyectos de software de AJ Barea, incluyendo aplicaciones de IA/ML, desarrollo full-stack y soluciones en la nube."
+    "projectsDescription": "Proyectos de AJ Barea, doctorando en RIT: frameworks de aprendizaje federado, sistemas de IA con agentes y de agentes de programación, software de investigación y desarrollo full-stack.",
+    "projectsTwitterDescription": "Frameworks de aprendizaje federado, sistemas de IA con agentes y software de investigación de AJ Barea, doctorando en RIT."
   },
   "profile": {
-    "title": "Ingeniero de Software",
-    "titleIndustry": "Ingeniero de Software · Sistemas de ML Distribuido",
+    "title": "Doctorando",
+    "titleIndustry": "Doctorando · Sistemas de ML Distribuido",
     "titleResearch": "Doctorando · Aprendizaje Federado e IA con Agentes",
     "summary": "Construyo frameworks de aprendizaje federado y sistemas de desarrollo multi-agente. Mi investigación se sitúa en la intersección entre ML distribuido confiable, agentes de IA con supervisión humana y experiencia de desarrollador para software asistido por IA.",
     "researchInterests": [
-      "Sistemas de aprendizaje federado",
-      "IA con agentes y uso de herramientas",
-      "Metodologías de pruebas para ML distribuido",
-      "Experiencia de desarrollador en infraestructura de investigación en ML",
-      "Desarrollo de software asistido por IA"
+      "Ingeniería de software para sistemas de ML federados y distribuidos",
+      "IA con agentes que usan herramientas bajo supervisión humana",
+      "Infraestructura de pruebas, observabilidad y reproducibilidad para la investigación en ML",
+      "Aprendizaje confiable y respetuoso de la privacidad a partir de datos generados por personas",
+      "Lo que las actualizaciones de modelo compartidas revelan sobre su origen",
+      "Ingeniería de software empírica sobre revisión de código",
+      "Experiencia de desarrollador en herramientas de investigación en IA"
     ]
   },
   "hero": {
@@ -83,29 +85,38 @@
     "rit-phd-2026": {
       "title": "Doctorado",
       "subtitle": "Ciencias de la Computación y la Información",
-      "description": "Investigación en aprendizaje federado y IA con agentes que continúa con el Dr. Leon Reznik, extendiendo la línea InteFL del proyecto final de la maestría."
+      "description": "Investigación sobre agentes de programación que aprenden las convenciones de cada organización y comparten lo que se generaliza, mientras cada organización decide qué puede salir. Bajo la dirección del Dr. Leon Reznik, como becario de la NSF AWARE-AI National Research Traineeship (NRT) en la línea AI Software."
+    },
+    "rit-fa-doctoral": {
+      "title": "Investigador Doctoral",
+      "bullets": [
+        "Dirijo una línea de investigación sobre agentes de programación que aprenden las convenciones de cada organización y comparten lo que se generaliza, mientras cada organización decide qué puede salir",
+        "Diseñé una prueba prerregistrada de si el estilo propio aprendido de una organización se transfiere en la frontera del proyecto o de la organización, redactada como un informe registrado de Etapa 1 en preparación para MSR 2027",
+        "Construí sphragis, un arnés de estudio abierto que recopila revisiones de código públicas de Gerrit y GitHub según los términos de cada plataforma, las seudonimiza al ingerirlas, sella la ventana de prueba mediante hash y entrena y evalúa adaptadores LoRA en clústeres de GPU con Slurm",
+        "Construí una medición de atribución de origen que comprueba si las divisiones de adaptadores compartidos/privados de la literatura de personalización federada revelan la organización de origen en la mitad que transmiten"
+      ]
     },
     "ncsu-scads-2026": {
       "title": "Becario de Investigación de Verano",
       "subtitle": "SCADS · Conferencia de Verano sobre Ciencia de Datos Aplicada",
-      "description": "Programa de investigación selectivo de ocho semanas que empareja a estudiantes de posgrado con personal de la comunidad de inteligencia y laboratorios nacionales en evaluación de IA a escala. Trabajé en orquestación de IA con agentes sobre fuentes de datos heterogéneas.",
+      "description": "Seleccionado para una cohorte competitiva de investigación de verano que aplica la ciencia de datos a problemas de sensemaking analítico. Construí prototipos de sensemaking con agentes y de orquestación MCP gobernada, y un pipeline de seguimiento basado en movimiento para objetivos camuflados en video.",
       "bullets": [
-        "Desarrollé y publiqué como código abierto Ariadne, un prototipo de sensemaking con agentes sobre el Claude Agent SDK que rastrea la evidencia de una entidad a través de almacenes de grafos (Neo4j), relacionales y de texto hasta convertirla en una nota analítica con citas.",
-        "Fundamenté cada decisión de arquitectura en investigación de mejores prácticas actuales antes de adoptarla, con trazas de OpenTelemetry y Jaeger a través de las llamadas a herramientas del agente."
+        "Seleccionado para una cohorte competitiva de investigación de verano que aplica la ciencia de datos a problemas de sensemaking analítico",
+        "Prototipé un sistema de sensemaking con agentes sobre el Claude Agent SDK que rastrea la evidencia de una entidad a través de almacenes de grafos, relacionales y de texto hasta una nota analítica con citas",
+        "Construí una plataforma gobernada de orquestación MCP para flujos de trabajo analíticos con agentes, que redujo una tasa medida de fuga de políticas del 75% al 0% en una batería determinista de evaluación red-team",
+        "Entregué un pipeline de seguimiento de objetos basado en movimiento para objetivos camuflados en video, comparado de extremo a extremo con métodos publicados del estado del arte",
+        "Instrumenté las ejecuciones de agentes y pipelines para que el razonamiento de varios pasos pudiera inspeccionarse, reproducirse y evaluarse en lugar de tratarse como una caja negra"
       ]
     },
     "rit-gra": {
       "title": "Asistente de Investigación de Posgrado",
-      "subtitle": "Grupo de Investigación del Dr. Leon Reznik",
-      "description": "Aumenté la cobertura de pruebas de InteFL por encima del 80%. Construí la interfaz React + FastAPI para la gestión de experimentos federados. Implementé estrategias de agregación robustas contra ataques bizantinos (Krum, Bulyan, RFA, Trimmed Mean).",
+      "subtitle": "Laboratorio de Calidad de Datos y Seguridad Inteligente (LDQIS)",
+      "description": "Construí la suite de pytest de InteFL (más del 80% de cobertura, ejecutada en GitHub Actions CI), sus herramientas de ataque y defensa y sus cargadores de conjuntos de datos de texto de Hugging Face. Construí el nuevo sitio web del laboratorio.",
       "bullets": [
-        "Diseñé una suite de pruebas pytest integral que alcanza más del 80% de cobertura de código para sistemas FL distribuidos (framework InteFL)",
-        "Construí una interfaz web React + FastAPI que mejora el tiempo de incorporación de investigadores y la reproducibilidad experimental",
-        "Colaboré con estudiantes de doctorado para prototipar rápidamente nuevas estrategias de agregación, incluyendo métodos robustos contra ataques bizantinos (Krum, Bulyan, RFA, Trimmed Mean) y enfoques de aprendizaje federado basados en confianza",
-        "Implementé un sistema dinámico de envenenamiento de datasets que permite evaluar la robustez adversarial durante el entrenamiento federado",
-        "Integré modelos basados en transformers para aprendizaje federado sobre datasets de texto en dominios médico, legal y financiero",
-        "Extendí la compatibilidad del framework a Python 3.9-3.11 y múltiples sistemas operativos (Windows, macOS, Linux)",
-        "Establecí un pipeline de CI y manejo integral de errores, convirtiendo un prototipo de investigación en un sistema listo para producción"
+        "Diseñé una suite de pytest con más del 80% de cobertura, ejecutada en GitHub Actions CI, para InteFL, el framework distribuido de aprendizaje federado del laboratorio, convirtiendo un prototipo de investigación en una plataforma fiable y reproducible",
+        "Construí herramientas de ataque y defensa para InteFL: calendarios por estrategia que inician, detienen y combinan por ronda el envenenamiento por inversión de etiquetas y por ruido gaussiano, un ataque de reemplazo de secuencias de varios tokens, instantáneas del antes y el después de lo que cambió cada ataque, y la estrategia de agregación robusta FreqFed",
+        "Añadí cargadores de conjuntos de datos de Hugging Face para textos financieros, legales y biomédicos (incluido MEDAL) para experimentos con transformers, y permití que el agente de IA de InteFL que planifica experimentos funcione con Claude, cualquier proveedor compatible con OpenAI o modelos locales de Ollama y vLLM",
+        "Construí el nuevo sitio web del laboratorio (Astro, Tailwind, CMS respaldado por git) para reemplazar su antiguo sitio en Flask"
       ]
     },
     "rit-ta": {
@@ -115,7 +126,7 @@
       "bullets": [
         "Mentoreo a estudiantes en patrones de diseño de software, estilos arquitectónicos, atributos de calidad y tácticas",
         "Lidero secciones de repaso y horas de oficina ofreciendo orientación técnica sobre decisiones arquitectónicas",
-        "Enseñé una sesión completa de clase durante la ausencia del instructor, recibiendo retroalimentación positiva de los estudiantes",
+        "Impartí una sesión completa de clase durante la ausencia del instructor",
         "Califico tareas con retroalimentación detallada, enfatizando prácticas rigurosas de ingeniería de software"
       ]
     },
@@ -206,15 +217,15 @@
     },
     "phalanx-fl": {
       "title": "Phalanx-FL",
-      "description": "Framework solo de ejecución e investigación en aprendizaje federado: agregación configurable, tolerancia a fallos bizantinos, simulación de ataques adversariales y experimentos definidos en JSON."
+      "description": "Banco de pruebas de ajuste fino LoRA federado sobre el modelo de aplicación actual de Flower, con trazas y métricas de OpenTelemetry para cada ronda y cada cliente."
     },
     "techne": {
       "title": "Techne",
-      "description": "Ocho skills de Claude Code instalables como un único /plugin: auditar builds, reducir ruido de CI, detectar deriva entre docs y código, mantener repos hermanos sincronizados."
+      "description": "Marketplace de plugins para Claude Code con flujos de trabajo de agentes para el mantenimiento de repositorios, la revisión de código adversarial, la compilación de LaTeX y diapositivas, y la verificación de bibliografías contra arXiv y Crossref."
     },
     "intellifl": {
       "title": "InteFL",
-      "description": "Framework de aprendizaje federado con selección inteligente de clientes y agregación que preserva la privacidad."
+      "description": "Framework de aprendizaje federado para configurar, evaluar y comparar estrategias de FL bajo ataques adversariales estáticos y dinámicos, con agregación robusta intercambiable y un agente de IA que planifica experimentos."
     },
     "security-eval": {
       "title": "Sistema de Evaluación de Seguridad",
@@ -222,7 +233,7 @@
     },
     "robot-navigation-rl": {
       "title": "Navegación de Robots con RL",
-      "description": "Agente de aprendizaje por refuerzo para navegación autónoma de robots en entornos simulados."
+      "description": "Agente de Q-learning que aprende a alcanzar objetivos y evitar obstáculos en el simulador Webots, con control de motores adaptado a la distancia y modelado de recompensas."
     },
     "control-mobile-robots": {
       "title": "Control de Robots Móviles",
@@ -242,7 +253,7 @@
     },
     "ldqis": {
       "title": "Sitio web del laboratorio LDQIS",
-      "description": "Sitio web público del Laboratorio de Calidad de Datos y Seguridad Inteligente en RIT. Reemplaza un sitio heredado de Flask + Bootstrap con una construcción ligera en Astro 5 + Tailwind 4; migración al dominio personalizado dataqualitylabs.com pendiente."
+      "description": "Sitio web público del Laboratorio de Calidad de Datos y Seguridad Inteligente en RIT, disponible en dataqualitylabs.com. Una construcción en Astro y Tailwind con un CMS respaldado por git reemplaza el antiguo sitio Flask + Bootstrap del laboratorio."
     }
   },
   "resume": {
@@ -266,7 +277,12 @@
       "skills": "Habilidades Técnicas"
     },
     "experience": {
-      "projectPrefix": "Proyecto:"
+      "projectPrefix": "Proyecto:",
+      "types": {
+        "full-time": "Tiempo completo",
+        "contract": "Por contrato",
+        "internship": "Prácticas"
+      }
     },
     "education": {
       "degreeIn": "{degree} en {field}",
@@ -283,8 +299,12 @@
       "solo": "Individual",
       "team": "Equipo"
     },
+    "aware-ai-fall-2026": {
+      "description": "Myo Lever Controller: conduce un Clearpath Jackal simulado con un solo antebrazo. El sensor de movimiento del brazalete Myo fija la velocidad y la dirección, y un clasificador EMG entrenado para cada conductor interpreta un puño deliberado como freno. Escribí el controlador de palanca, el estudio con TCN y el generador de la presentación.",
+      "result": "Mejor Presentación"
+    },
     "hackerrank-orchestrate-2026": {
-      "description": "Agente multi-dominio para triaje de soporte: enruta tickets a través de los corpus de HackerRank, Claude y Visa con respuestas fundamentadas en el corpus, procesamiento por lotes asíncrono y defensa contra inyección de prompts.",
+      "description": "Agente multi-dominio para triaje de soporte: enruta tickets a través de los corpus de HackerRank, Claude y Visa con respuestas fundamentadas en el corpus, procesamiento por lotes con la Message Batches API y defensa contra inyección de prompts.",
       "result": "Puesto 11 / 1349"
     },
     "aware-ai-bioradio-2026": {
@@ -300,6 +320,14 @@
       "talk": "Charla",
       "demo": "Demo"
     },
+    "rocissa-2026": {
+      "title": "Aprendizaje federado para el mundo real: privacidad, seguridad y costo, sin concesiones",
+      "description": "Charla con Dmitrii Korobeinikov y Leon Reznik sobre un marco de decisión para aplicaciones de aprendizaje federado que detectan y responden a ataques, equilibran el costo de la seguridad con el rendimiento del modelo y se adaptan a condiciones cambiantes."
+    },
+    "fa-talk-rit-2026": {
+      "title": "Federated Agents: agentes de programación que aprenden las reglas internas de cada empresa sin que su código salga",
+      "description": "Charla en RIT sobre agentes de programación que aprenden las convenciones de cada organización y comparten lo que se generaliza, mientras cada organización decide qué puede salir."
+    },
     "ne-agents-day-2026": {
       "title": "Kourai Khryseai: Desarrollo Transparente de Software Multi-Agente con Supervisión Humana",
       "description": "Replantea la programación multi-agente como un problema de interpretabilidad mediante tres pilares: Monitor (observabilidad con OpenTelemetry / Jaeger / Prometheus), Comunicar (los agentes piden aclaración sobre requisitos ambiguos) y Controlar (ciclos de reparación acotados para una recuperación deliberada). Demuestra Hephaestus, un orquestador que enruta a agentes especialistas sobre MCP con estado compartido en SQLite."
@@ -314,6 +342,7 @@
       "published": "Publicado",
       "under-review": "En Revisión",
       "accepted": "Aceptado",
+      "in-preparation": "En Preparación",
       "doi": "DOI"
     },
     "list": {
@@ -335,6 +364,24 @@
     "kourai-ne-agents-day-2026": {
       "title": "Kourai Khryseai: Desarrollo de Software Multiagente Transparente con Supervisión Humana",
       "abstract": "Kourai es un sistema transparente de ingeniería de software multiagente que transmite en tiempo real la coordinación entre agentes especialistas y mantiene al usuario dentro del ciclo de control."
+    },
+    "scads-tr-makesense-2026": {
+      "title": "makesense: una interfaz offline gobernada para el sensemaking de inteligencia multifuente"
+    },
+    "scads-tr-video-motion-2026": {
+      "title": "video-motion: segmentación de objetos camuflados en video basada en el movimiento a velocidad desplegable en campo"
+    },
+    "iaai-27-makesense": {
+      "title": "makesense: sensemaking gobernado con agentes sobre almacenes de datos heterogéneos para el análisis de inteligencia"
+    },
+    "msr-2027-house-style": {
+      "title": "¿Dejan las organizaciones un estilo propio aprendible en la revisión de código?"
+    },
+    "zenodo-techne-2026": {
+      "title": "techne: un marketplace de plugins de Claude Code para repositorios, documentos y bibliografías"
+    },
+    "zenodo-keryx-2026": {
+      "title": "keryx: le da voz a Claude Code"
     }
   },
   "highlights": {
@@ -344,6 +391,9 @@
       },
       "aware-ai-bioradio-2026": {
         "description": "Cosmic Ritual: gestos EMG de BioRadio impulsan un motor de acordes en tiempo real. Construí el clasificador de gestos, el motor MIDI, el modo musical con GUI y el sitio de docs Zensical."
+      },
+      "scads-tr-makesense-2026": {
+        "description": "Un servidor Model Context Protocol que permite a un entorno de agentes proponer consultas mientras el servidor aplica las políticas, ejecuta operaciones de conectores de solo lectura, registra la procedencia y genera informes con citas."
       }
     }
   },
@@ -387,7 +437,7 @@
       },
       "phalanx-fl": {
         "name": "Phalanx-FL",
-        "description": "Plataforma de referencia para aprendizaje federado sobre Flower y Ray. Ocho estrategias de agregación con el vocabulario de ataques."
+        "description": "Banco de pruebas de ajuste fino LoRA federado sobre la versión actual de Flower, con trazas y métricas de OpenTelemetry para cada ronda y cliente."
       },
       "pharos": {
         "name": "Pharos",
@@ -395,7 +445,7 @@
       },
       "vfl": {
         "name": "Velocity-FL",
-        "description": "Las mismas estrategias FL como núcleos Rust vía PyO3 y FastMCP. Rendimiento y escala masiva."
+        "description": "Kit de herramientas de investigación en aprendizaje federado con núcleo en Rust, bindings de Python (maturin), soporte para modelos de PyTorch y Hugging Face, e interfaz de servidor MCP."
       },
       "ldqis": {
         "name": "LDQIS Lab",
@@ -403,7 +453,7 @@
       },
       "techne": {
         "name": "Techne",
-        "description": "Plugin de skills para Claude Code: auditorías, controles de lint y pruebas, detección de divergencias entre repos."
+        "description": "Marketplace de plugins para Claude Code: mantenimiento de repositorios, revisión de código adversarial, compilación de LaTeX y diapositivas, y verificación de bibliografías."
       },
       "orchestrate-triage": {
         "name": "Orchestrate Triage",

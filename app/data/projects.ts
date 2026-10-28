@@ -77,7 +77,15 @@ export const projects: Project[] = [
   {
     id: 'phalanx-fl',
     title: 'Phalanx-FL',
-    technologies: ['Python', 'Flower', 'Docker', 'Redis', 'Celery', 'uv'],
+    technologies: [
+      'Python',
+      'Flower',
+      'PyTorch',
+      'Hugging Face PEFT',
+      'OpenTelemetry',
+      'Jaeger',
+      'uv'
+    ],
     types: ['ai-ml', 'federated-learning'],
     thumbnailUrl: '/images/projects/phalanx-fl.webp',
     docsUrl: 'https://ajbarea.github.io/phalanx-fl/',
@@ -91,13 +99,14 @@ export const projects: Project[] = [
     technologies: ['Claude Code', 'Python', 'TOML', 'Bash'],
     types: ['ai-ml'],
     thumbnailUrl: '/images/projects/techne.webp',
+    docsUrl: 'https://ajbarea.github.io/techne/',
     githubUrl: 'https://github.com/ajbarea/techne',
     featured: true
   },
   {
     id: 'robot-navigation-rl',
     title: 'Robot Navigation with RL',
-    technologies: ['Python', 'PyTorch', 'Webots', 'Reinforcement Learning', 'OpenAI Gym'],
+    technologies: ['Python', 'NumPy', 'Matplotlib', 'Webots', 'Q-learning'],
     types: ['ai-ml', 'robotics'],
     thumbnailUrl: '/images/projects/robot.webp',
     githubUrl: 'https://github.com/ajbarea/goal-seeker-ai',
@@ -106,7 +115,7 @@ export const projects: Project[] = [
   {
     id: 'intellifl',
     title: 'InteFL',
-    technologies: ['Python', 'PyTorch', 'FLOWER', 'Federated Learning', 'Docker'],
+    technologies: ['Python', 'PyTorch', 'Flower', 'Federated Learning'],
     types: ['ai-ml', 'federated-learning'],
     thumbnailUrl: '/images/projects/intellifl.webp',
     githubUrl: 'https://github.com/dmitrykoro/fl-execution-framework',
@@ -116,7 +125,7 @@ export const projects: Project[] = [
   {
     id: 'ldqis',
     title: 'LDQIS Lab Website',
-    technologies: ['Astro 5', 'Tailwind 4', 'TypeScript', 'GitHub Pages'],
+    technologies: ['Astro', 'Tailwind 4', 'Sveltia CMS', 'TypeScript', 'GitHub Pages'],
     types: ['full-stack'],
     thumbnailUrl: '/images/projects/ldqis.webp',
     demoUrl: 'https://dataqualitylabs.com/',

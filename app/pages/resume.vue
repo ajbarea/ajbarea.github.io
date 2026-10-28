@@ -16,9 +16,8 @@ function copyEmail() {
   clipboard.copyEmail(profile.contact.email)
 }
 
-// The Industry/Research toggle is defeated by one shared headline: "Software
-// Engineer" sitting above Research Interests and a research scholarship reads as
-// the wrong person. Each view names its own identity.
+// Each view names its own focus under the same PhD identity: distributed ML
+// systems for industry readers, federated learning and agentic AI for research.
 const headline = computed(() =>
   resumeStore.isResearchView ? t('profile.titleResearch') : t('profile.titleIndustry')
 )

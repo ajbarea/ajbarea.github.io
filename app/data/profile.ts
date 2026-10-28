@@ -2,7 +2,7 @@ import type { Profile, Education, HonorAward } from '~/types'
 
 export const profile: Profile = {
   name: 'AJ Barea',
-  title: 'Software Engineer',
+  title: 'PhD Student',
   profileImage: '/images/profile/profile.webp',
   contact: {
     email: 'ajbareaa@gmail.com',
@@ -59,7 +59,9 @@ export const education: Education[] = [
     field: 'Computing and Information Sciences',
     institution: 'Rochester Institute of Technology',
     location: 'Rochester, NY',
-    graduationDate: 'Aug 2026 – Present'
+    graduationDate: 'Aug 2026 – Present',
+    traineeship: 'NSF AWARE-AI National Research Traineeship (NRT), AI Software track',
+    advisor: 'Dr. Leon Reznik'
   },
   {
     degree: 'Master of Science',
@@ -81,13 +83,7 @@ export const education: Education[] = [
     capstoneResearch: {
       title: 'Enhancing Federated Learning Execution Framework',
       advisor: 'Dr. Leon Reznik',
-      focus: [
-        'Testing infrastructure',
-        'Full-stack developer interface',
-        'CI/CD pipelines',
-        'Cross-platform compatibility',
-        'Collaborative algorithm prototyping'
-      ]
+      focus: ['Testing infrastructure', 'CI/CD pipelines']
     }
   },
   {
@@ -122,6 +118,32 @@ export const education: Education[] = [
 ]
 
 export const honorsAwards: HonorAward[] = [
+  {
+    title: 'NSF AWARE-AI National Research Traineeship, Rochester Institute of Technology',
+    year: 2026
+  },
+  {
+    title:
+      'SCADS Summer Research Scholar, Laboratory for Analytic Sciences (LAS), NC State University',
+    year: 2026
+  },
+  {
+    title:
+      'Best Presentation, AWARE-AI Fall Hackathon, Rochester Institute of Technology · team entry',
+    year: 2026,
+    externalUrl: 'https://github.com/ajbarea/Hackathon'
+  },
+  {
+    title: 'HackerRank Orchestrate 2026 Hackathon · 11th of 1,349 (top 0.8%), solo entry',
+    year: 2026,
+    externalUrl: 'https://www.hackerrank.com/hackerrank-orchestrate-may26'
+  },
+  {
+    title:
+      'Best AI Model, AWARE-AI Spring Hackathon, Rochester Institute of Technology · team entry',
+    year: 2026,
+    externalUrl: 'https://www.rit.edu/events/aware-ai-spring-hackathon-1'
+  },
   {
     title: 'Certificate of Performance – Jeremy Ramos Phiquest',
     year: 2022,
