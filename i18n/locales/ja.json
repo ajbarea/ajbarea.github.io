@@ -186,6 +186,7 @@
       "demoAria": "{title}のデモを見る",
       "docsAria": "{title}のドキュメントを見る",
       "githubAria": "{title}のGitHubリポジトリを見る",
+      "codeAria": "{title}の{label}のコードを見る",
       "videoAria": "{title}のビデオデモを見る",
       "thumbnailAlt": "{title}のスクリーンショット",
       "emptyState": "このカテゴリに該当するプロジェクトはありません。",
@@ -233,7 +234,8 @@
     },
     "robot-navigation-rl": {
       "title": "強化学習によるロボットナビゲーション",
-      "description": "Webotsシミュレータ内で目標への到達と障害物の回避を学ぶQ学習エージェント。目標までの距離に応じたモーター制御と報酬設計を備える。"
+      "description": "Webots上で目標への到達と障害物の回避を学ぶロボット。目標までの距離に応じたモーター制御と報酬設計を備える。mainではテーブル型Q学習エージェントが動き、aj-q-learningブランチにはPyTorchによるDQNエージェント（Qネットワーク、ターゲットネットワーク、リプレイバッファ、CPU/GPU対応）がある。",
+      "codeLabel": "DQNエージェント"
     },
     "control-mobile-robots": {
       "title": "移動ロボットの制御",

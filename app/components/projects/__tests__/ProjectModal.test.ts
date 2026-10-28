@@ -101,6 +101,16 @@ describe('ProjectModal', () => {
     expect(hrefs).toContain('https://github.com/example/kourai-khryseai')
   })
 
+  it('renders a second code link when codeUrl is set', () => {
+    const wrapper = makeWrapper({
+      project: { ...mockProject, codeUrl: 'https://github.com/example/repo/tree/branch/dir' },
+      open: true
+    })
+    const hrefs = wrapper.findAll('nav a').map((l) => l.attributes('href'))
+    expect(hrefs).toHaveLength(3)
+    expect(hrefs).toContain('https://github.com/example/repo/tree/branch/dir')
+  })
+
   it('emits update:open=false when the close button is clicked', async () => {
     const wrapper = makeWrapper({ project: mockProject, open: true })
     const closeBtn = wrapper.find('button[aria-label]')

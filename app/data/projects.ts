@@ -106,10 +106,11 @@ export const projects: Project[] = [
   {
     id: 'robot-navigation-rl',
     title: 'Robot Navigation with RL',
-    technologies: ['Python', 'NumPy', 'Matplotlib', 'Webots', 'Q-learning'],
+    technologies: ['Python', 'PyTorch', 'NumPy', 'Matplotlib', 'Webots', 'Q-learning', 'DQN'],
     types: ['ai-ml', 'robotics'],
     thumbnailUrl: '/images/projects/robot.webp',
     githubUrl: 'https://github.com/ajbarea/goal-seeker-ai',
+    codeUrl: 'https://github.com/ajbarea/goal-seeker-ai/tree/aj-q-learning/controllers/slave',
     featured: true
   },
   {
