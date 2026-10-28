@@ -39,6 +39,11 @@ const only = process.argv.slice(2)
 const selected = only.length
   ? projects.filter((p) => only.some((name) => p.out.endsWith(`/${name}.webp`)))
   : projects
+const unknown = only.filter((name) => !projects.some((p) => p.out.endsWith(`/${name}.webp`)))
+if (unknown.length) {
+  console.error(`No cover named: ${unknown.join(', ')}`)
+  process.exit(1)
+}
 
 function featherMask(width, height) {
   return Buffer.from(
