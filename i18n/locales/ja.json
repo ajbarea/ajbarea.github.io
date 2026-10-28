@@ -186,7 +186,6 @@
       "demoAria": "{title}のデモを見る",
       "docsAria": "{title}のドキュメントを見る",
       "githubAria": "{title}のGitHubリポジトリを見る",
-      "codeAria": "{title}の{label}のコードを見る",
       "videoAria": "{title}のビデオデモを見る",
       "thumbnailAlt": "{title}のスクリーンショット",
       "emptyState": "このカテゴリに該当するプロジェクトはありません。",
@@ -234,8 +233,7 @@
     },
     "robot-navigation-rl": {
       "title": "強化学習によるロボットナビゲーション",
-      "description": "Webots上で目標への到達と障害物の回避を学ぶロボット。目標までの距離に応じたモーター制御と報酬設計を備える。mainではテーブル型Q学習エージェントが動き、aj-q-learningブランチにはPyTorchによるDQNエージェント（Qネットワーク、ターゲットネットワーク、リプレイバッファ、CPU/GPU対応）がある。",
-      "codeLabel": "DQNエージェント"
+      "description": "Webots上で目標への到達と障害物の回避を学ぶロボット。目標までの距離に応じたモーター制御を備える。テーブル型Q学習エージェントとPyTorchによるDouble DQN（ターゲットネットワーク、リプレイバッファ、早期終了）が同じ状態表現と報酬から学習し、報酬にはIvan Rojasによるポテンシャルベースの報酬シェーピングが含まれる。"
     },
     "control-mobile-robots": {
       "title": "移動ロボットの制御",

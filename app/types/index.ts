@@ -142,8 +142,6 @@ export interface Project {
   demoUrl?: string
   docsUrl?: string
   githubUrl?: string
-  /** Second code link, e.g. a branch or folder; its label is projects.<id>.codeLabel. */
-  codeUrl?: string
   youtubeUrl?: string
   featured?: boolean
 }

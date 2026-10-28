@@ -186,7 +186,6 @@
       "demoAria": "View demo for {title}",
       "docsAria": "View docs for {title}",
       "githubAria": "View GitHub repository for {title}",
-      "codeAria": "View the {label} code for {title}",
       "videoAria": "Watch video demo for {title}",
       "thumbnailAlt": "Screenshot of {title}",
       "emptyState": "No projects found for this category.",
@@ -234,8 +233,7 @@
     },
     "robot-navigation-rl": {
       "title": "Robot Navigation with RL",
-      "description": "Webots robot that learns to reach goals and avoid obstacles, with distance-adaptive motor control and reward shaping. A tabular Q-learning agent runs on main; a PyTorch DQN agent (Q-network, target network, replay buffer, CPU or GPU) is on the aj-q-learning branch.",
-      "codeLabel": "DQN agent"
+      "description": "Webots robot that learns to reach goals and avoid obstacles, with distance-adaptive motor control. A tabular Q-learning agent and a PyTorch Double DQN (target network, replay buffer, early stopping) learn from the same state encoding and reward, which includes Ivan Rojas's potential-based reward shaping."
     },
     "control-mobile-robots": {
       "title": "Control of Mobile Robots",

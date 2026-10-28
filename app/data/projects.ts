@@ -110,7 +110,6 @@ export const projects: Project[] = [
     types: ['ai-ml', 'robotics'],
     thumbnailUrl: '/images/projects/robot.webp',
     githubUrl: 'https://github.com/ajbarea/goal-seeker-ai',
-    codeUrl: 'https://github.com/ajbarea/goal-seeker-ai/tree/aj-q-learning/controllers/slave',
     featured: true
   },
   {
