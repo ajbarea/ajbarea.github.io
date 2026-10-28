@@ -462,5 +462,8 @@
         "description": "Triaje de incidencias con agentes sobre Claude Opus y la API Message Batches de Anthropic: clasifica, prioriza y enruta los reportes entrantes a escala de lote."
       }
     }
+  },
+  "footer": {
+    "sourceAria": "Código fuente de este sitio en GitHub"
   }
 }

@@ -462,5 +462,8 @@
         "description": "基于 Claude Opus 和 Anthropic Message Batches API 的智能体问题分诊：按批量规模对传入的报告进行分类、排序与路由。"
       }
     }
+  },
+  "footer": {
+    "sourceAria": "本站源代码（GitHub）"
   }
 }
