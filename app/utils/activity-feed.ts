@@ -66,6 +66,8 @@ export function buildActivityItems(input: BuildActivityItemsInput): ActivityFeed
   const items: ActivityFeedItem[] = []
 
   for (const p of publications) {
+    // A work with no year yet (in preparation) has no date to place it in the feed.
+    if (p.year === undefined) continue
     const msg = messages.publications?.[p.id]
     items.push({
       id: `${base}/#${p.id}`,

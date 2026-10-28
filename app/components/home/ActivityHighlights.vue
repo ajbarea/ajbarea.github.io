@@ -32,7 +32,7 @@ const highlights = computed<ActivityHighlight[]>(() => {
         id: p.id,
         kind: 'publication',
         title: te(titleOverride) ? t(titleOverride) : t(`publications.${p.id}.title`),
-        meta: `${p.venue} · ${p.year}`,
+        meta: p.year ? `${p.venue} · ${p.year}` : p.venue,
         description: te(descOverride)
           ? t(descOverride)
           : firstSentence(t(`publications.${p.id}.abstract`)),

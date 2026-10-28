@@ -38,6 +38,8 @@ export interface Education {
   gpa?: number
   maxGpa?: number
   relevantCoursework?: string[]
+  traineeship?: string
+  advisor?: string
   capstoneResearch?: {
     title: string
     advisor: string
@@ -96,8 +98,8 @@ export interface Publication {
   id: string
   authors: string[]
   venue: string
-  year: number
-  status: 'published' | 'under-review' | 'accepted'
+  year?: number
+  status: 'published' | 'under-review' | 'accepted' | 'in-preparation'
   doi?: string
   url?: string
   keywords?: string[]

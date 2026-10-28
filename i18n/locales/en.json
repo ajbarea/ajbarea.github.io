@@ -10,17 +10,17 @@
     "selectCurrent": "{language}, select language"
   },
   "meta": {
-    "homeTitle": "AJ Barea · Software Engineer",
-    "homeDescription": "Software Engineer specializing in full-stack development, AI/ML, and cloud solutions. Currently completing MS in Software Engineering at RIT.",
-    "homeOgDescription": "Portfolio showcasing projects, research, and technical expertise in software engineering, AI/ML, and cloud solutions.",
+    "homeTitle": "AJ Barea · PhD Student, Computing and Information Sciences",
+    "homeDescription": "AJ Barea is a PhD student in Computing and Information Sciences at Rochester Institute of Technology, working on federated learning, agentic AI and coding agents, and research software.",
+    "homeOgDescription": "Projects, publications, and research software from AJ Barea, a PhD student at RIT working on federated learning and agentic AI.",
     "homeTwitterDescription": "Portfolio showcasing projects, research, and technical expertise.",
     "resumeTitle": "Resume · AJ Barea",
-    "resumeDescription": "AJ Barea's professional resume - Software Engineer with expertise in full-stack development, AI/ML, and cloud solutions.",
-    "resumeOgDescription": "Professional resume showcasing software engineering experience, research, and technical skills.",
-    "resumeTwitterDescription": "Professional resume showcasing software engineering experience, research, and technical skills.",
+    "resumeDescription": "AJ Barea's resume: PhD student in Computing and Information Sciences at RIT researching federated learning, agentic AI, and coding agents, with industry experience as a software engineer.",
+    "resumeOgDescription": "Research and industry resumes covering federated learning and agentic AI research, publications, software engineering experience, and technical skills.",
+    "resumeTwitterDescription": "Research and industry resumes covering federated learning and agentic AI research, publications, software engineering experience, and technical skills.",
     "projectsTitle": "Projects · AJ Barea",
-    "projectsDescription": "Explore AJ Barea's portfolio of software projects including AI/ML applications, full-stack development, cloud solutions, and research work.",
-    "projectsTwitterDescription": "Explore AJ Barea's portfolio of software projects including AI/ML applications, full-stack development, and cloud solutions."
+    "projectsDescription": "Projects by AJ Barea, a PhD student at RIT: federated learning frameworks, agentic AI and coding-agent systems, research software, and full-stack work.",
+    "projectsTwitterDescription": "Federated learning frameworks, agentic AI systems, and research software by AJ Barea, a PhD student at RIT."
   },
   "profile": {
     "title": "Software Engineer",
@@ -28,11 +28,13 @@
     "titleResearch": "PhD Student · Federated Learning and Agentic AI",
     "summary": "I build federated learning frameworks and multi-agent development systems. My research sits at the intersection of trustworthy distributed ML, human-on-the-loop AI agents, and developer experience for AI-assisted software.",
     "researchInterests": [
-      "Federated learning systems",
-      "Agentic AI with tool use",
-      "Testing methodologies for distributed ML",
-      "Developer experience in ML research infrastructure",
-      "AI-assisted software development"
+      "Software engineering for federated and distributed ML systems",
+      "Agentic AI with tool use and human oversight",
+      "Testing, observability, and reproducibility infrastructure for ML research",
+      "Trustworthy and privacy-preserving learning from human-generated data",
+      "What shared model updates reveal about their source",
+      "Empirical software engineering on code review",
+      "Developer experience in AI research tooling"
     ]
   },
   "hero": {
@@ -83,29 +85,38 @@
     "rit-phd-2026": {
       "title": "Doctor of Philosophy",
       "subtitle": "Computing and Information Sciences",
-      "description": "Federated learning + agentic AI research continuing under Dr. Leon Reznik, extending the InteFL line from the MS capstone."
+      "description": "Research on coding agents that learn each organization's conventions and pool what generalizes, while each organization decides what may leave. Advised by Dr. Leon Reznik as an NSF AWARE-AI National Research Traineeship (NRT) trainee in the AI Software track."
+    },
+    "rit-fa-doctoral": {
+      "title": "Doctoral Researcher",
+      "bullets": [
+        "Leading a research direction on coding agents that learn each organization's conventions and pool what generalizes, while each organization decides what may leave",
+        "Designed a pre-registered test of whether learned house style transfers at the project or the organization boundary, written up as a Stage 1 registered report in preparation for MSR 2027",
+        "Built sphragis, an open study harness that collects public code review from Gerrit and GitHub under each host's terms, pseudonymizes it at ingestion, seals the test window by hash, and trains and scores LoRA adapters on Slurm GPU clusters",
+        "Built a source-attribution measurement of whether the shared/private adapter splits in the federated personalization literature reveal the source organization in the half they transmit"
+      ]
     },
     "ncsu-scads-2026": {
       "title": "Summer Research Scholar",
       "subtitle": "SCADS · Summer Conference on Applied Data Science",
-      "description": "Eight-week selective research program pairing grad students with IC and national-lab personnel on at-scale AI evaluation. Worked on agentic-AI orchestration over heterogeneous data sources.",
+      "description": "Selected for a competitive summer research cohort applying data science to analytic sensemaking problems. Built agentic sensemaking and governed MCP orchestration prototypes and a motion-first tracking pipeline for camouflaged targets in video.",
       "bullets": [
-        "Built and open-sourced Ariadne, an agentic sensemaking prototype on the Claude Agent SDK that traces a single entity's evidence across graph (Neo4j), relational, and text stores into a cited analytic note.",
-        "Grounded each architectural decision in current best-practice research before adoption, with OpenTelemetry and Jaeger tracing across the agent's tool calls."
+        "Selected for a competitive summer research cohort applying data science to analytic sensemaking problems",
+        "Prototyped an agentic sensemaking system on the Claude Agent SDK, tracing an entity's evidence across graph, relational, and text stores into a cited analytic note",
+        "Built a governed MCP orchestration platform for agentic analytic workflows, cutting a measured policy-leak rate from 75% to 0% under a deterministic red-team evaluation battery",
+        "Delivered a motion-first object tracking pipeline for camouflaged targets in video, benchmarked end to end against published state-of-the-art methods",
+        "Instrumented agent and pipeline runs so multi-step reasoning could be inspected, replayed, and evaluated rather than treated as a black box"
       ]
     },
     "rit-gra": {
       "title": "Graduate Research Assistant",
-      "subtitle": "Dr. Leon Reznik's Research Group",
-      "description": "Raised InteFL test coverage past 80%. Built the React + FastAPI surface for federated experiment management. Shipped Byzantine-robust aggregation strategies (Krum, Bulyan, RFA, Trimmed Mean).",
+      "subtitle": "Laboratory of Data Quality and Intelligent Security (LDQIS)",
+      "description": "Built InteFL's pytest suite (80%+ coverage, run in GitHub Actions CI), its attack and defense tooling, and its Hugging Face text-dataset loaders. Built the lab's new website.",
       "bullets": [
-        "Designed comprehensive pytest testing suite achieving 80%+ code coverage for distributed FL systems (InteFL framework)",
-        "Built React + FastAPI web interface improving researcher onboarding time and experimental reproducibility",
-        "Collaborated with PhD students to rapidly prototype novel aggregation strategies including Byzantine-robust methods (Krum, Bulyan, RFA, Trimmed Mean) and trust-based federated learning approaches",
-        "Implemented dynamic dataset poisoning system enabling adversarial robustness evaluation during federated training",
-        "Integrated transformer-based models for federated learning on text datasets spanning medical, legal, and financial domains",
-        "Extended framework compatibility across Python 3.9-3.11 and multiple operating systems (Windows, macOS, Linux)",
-        "Established CI pipeline and comprehensive error handling, transforming research prototype into production-ready system"
+        "Designed a pytest suite reaching 80%+ coverage, run in GitHub Actions CI, for InteFL, the lab's distributed federated learning framework, converting a research prototype into a dependable, reproducible platform",
+        "Built attack and defense tooling for InteFL: per-strategy schedules that start, stop, and stack label-flipping and Gaussian-noise poisoning by round, a multi-token sequence replacement attack, before/after snapshots of what each attack changed, and the FreqFed robust aggregation strategy",
+        "Added Hugging Face dataset loaders for financial, legal, and biomedical text (including MEDAL) for transformer experiments, and let InteFL's experiment-planning AI agent run on Claude, any OpenAI-compatible vendor, or local Ollama and vLLM models",
+        "Built the lab's new website (Astro, Tailwind, git-backed CMS) to replace its legacy Flask site"
       ]
     },
     "rit-ta": {
@@ -206,15 +217,15 @@
     },
     "phalanx-fl": {
       "title": "Phalanx-FL",
-      "description": "Solo federated learning execution and research framework: configurable aggregation, Byzantine fault tolerance, adversarial attack simulation, JSON-driven experiments."
+      "description": "Federated LoRA fine-tuning testbed on the current Flower app model, with OpenTelemetry traces and metrics for every round and every client."
     },
     "techne": {
       "title": "Techne",
-      "description": "Eight Claude Code skills installable as a single /plugin: audit builds, tame CI noise, hunt doc/code drift, keep sister repos in lockstep."
+      "description": "Claude Code plugin marketplace of agent workflows for repository maintenance, adversarial code review, LaTeX and slide builds, and bibliography verification against arXiv and Crossref."
     },
     "intellifl": {
       "title": "InteFL",
-      "description": "Federated learning framework with intelligent client selection and privacy-preserving aggregation."
+      "description": "Federated learning framework for configuring, benchmarking, and comparing FL strategies under static and dynamic adversarial attacks, with pluggable robust aggregation and an experiment-planning AI agent."
     },
     "security-eval": {
       "title": "Security Evaluation System",
@@ -222,7 +233,7 @@
     },
     "robot-navigation-rl": {
       "title": "Robot Navigation with RL",
-      "description": "Reinforcement learning agent for autonomous robot navigation in simulated environments."
+      "description": "Q-learning agent that learns to reach goals and avoid obstacles in the Webots simulator, with distance-adaptive motor control and reward shaping."
     },
     "control-mobile-robots": {
       "title": "Control of Mobile Robots",
@@ -242,7 +253,7 @@
     },
     "ldqis": {
       "title": "LDQIS Lab Website",
-      "description": "Public website for the Laboratory of Data Quality and Intelligent Security at RIT. Replaces a legacy Flask + Bootstrap site with a lean Astro 5 + Tailwind 4 build; custom domain handoff to dataqualitylabs.com pending."
+      "description": "Public website for the Laboratory of Data Quality and Intelligent Security at RIT, live at dataqualitylabs.com. An Astro and Tailwind build with a git-backed CMS replaces the lab's legacy Flask + Bootstrap site."
     }
   },
   "resume": {
@@ -266,7 +277,12 @@
       "skills": "Technical Skills"
     },
     "experience": {
-      "projectPrefix": "Project:"
+      "projectPrefix": "Project:",
+      "types": {
+        "full-time": "Full-time",
+        "contract": "Contract",
+        "internship": "Internship"
+      }
     },
     "education": {
       "degreeIn": "{degree} in {field}",
@@ -283,8 +299,12 @@
       "solo": "Solo",
       "team": "Team"
     },
+    "aware-ai-fall-2026": {
+      "description": "Myo Lever Controller: drives a simulated Clearpath Jackal from one forearm. The Myo armband's motion sensor sets speed and steering, and a per-driver EMG classifier reads a deliberate fist as the brake. Wrote the lever controller, the TCN study, and the deck generator.",
+      "result": "Best Presentation"
+    },
     "hackerrank-orchestrate-2026": {
-      "description": "Multi-domain support-triage agent: routes tickets across HackerRank, Claude, and Visa corpuses with corpus-grounded responses, async batching, and prompt-injection defense.",
+      "description": "Multi-domain support-triage agent: routes tickets across HackerRank, Claude, and Visa corpuses with corpus-grounded responses, batch processing through the Message Batches API, and prompt-injection defense.",
       "result": "Rank 11 / 1349"
     },
     "aware-ai-bioradio-2026": {
@@ -300,6 +320,14 @@
       "talk": "Talk",
       "demo": "Demo"
     },
+    "rocissa-2026": {
+      "title": "Federated Learning for the Real World: Privacy, Security, and Cost, Without the Trade-offs",
+      "description": "Talk with Dmitrii Korobeinikov and Leon Reznik on a decision framework for federated learning applications that detect and respond to attacks, balance security overhead against model performance, and adapt to changing conditions."
+    },
+    "fa-talk-rit-2026": {
+      "title": "Federated Agents: Coding Agents That Learn Each Company's House Rules Without Its Code Leaving",
+      "description": "Talk at RIT on coding agents that learn each organization's conventions and pool what generalizes, while each organization decides what may leave."
+    },
     "ne-agents-day-2026": {
       "title": "Kourai Khryseai: Transparent Human-on-the-Loop Multi-Agent Software Development",
       "description": "Reframes multi-agent coding as an interpretability problem via three pillars: Monitor (OpenTelemetry / Jaeger / Prometheus observability), Communicate (agents request clarification on ambiguous requirements), and Control (bounded repair loops for deliberate recovery). Demonstrates Hephaestus, an orchestrator routing to specialist agents over MCP with shared SQLite state."
@@ -314,6 +342,7 @@
       "published": "Published",
       "under-review": "Under Review",
       "accepted": "Accepted",
+      "in-preparation": "In Preparation",
       "doi": "DOI"
     },
     "list": {
@@ -335,6 +364,24 @@
     "kourai-ne-agents-day-2026": {
       "title": "Kourai Khryseai: Transparent Human-on-the-Loop Multi-Agent Software Development",
       "abstract": "Kourai is a transparent multi-agent software engineering system that streams specialist coordination and keeps the user in the loop."
+    },
+    "scads-tr-makesense-2026": {
+      "title": "makesense: A Governed Offline Interface for Multi-Source Intelligence Sensemaking"
+    },
+    "scads-tr-video-motion-2026": {
+      "title": "video-motion: Motion-First Segmentation of Camouflaged Objects in Video at Field-Deployable Speed"
+    },
+    "iaai-27-makesense": {
+      "title": "makesense: Governed Agentic Sensemaking over Heterogeneous Data Stores for Intelligence Analysis"
+    },
+    "msr-2027-house-style": {
+      "title": "Do Organizations Leave a Learnable House Style in Code Review?"
+    },
+    "zenodo-techne-2026": {
+      "title": "techne: a Claude Code plugin marketplace for repositories, documents, and bibliographies"
+    },
+    "zenodo-keryx-2026": {
+      "title": "keryx: gives Claude Code a voice"
     }
   },
   "highlights": {
@@ -344,6 +391,9 @@
       },
       "aware-ai-bioradio-2026": {
         "description": "Cosmic Ritual: BioRadio EMG gestures drive a real-time chord engine. Built the gesture classifier, MIDI engine, GUI music mode, and Zensical docs site."
+      },
+      "scads-tr-makesense-2026": {
+        "description": "A Model Context Protocol server that lets an agentic harness propose queries while the server enforces policy, runs read-only connector operations, records provenance, and builds cited reports."
       }
     }
   },
@@ -387,7 +437,7 @@
       },
       "phalanx-fl": {
         "name": "Phalanx-FL",
-        "description": "Federated-learning reference platform on Flower and Ray. Eight aggregation strategies with the attack vocabulary."
+        "description": "Federated LoRA fine-tuning testbed on the current Flower release, with OpenTelemetry traces and metrics for every round and client."
       },
       "pharos": {
         "name": "Pharos",
@@ -395,7 +445,7 @@
       },
       "vfl": {
         "name": "Velocity-FL",
-        "description": "Same FL strategies as Rust kernels via PyO3 and FastMCP. Performance and crowd-scale speed lane."
+        "description": "Federated learning research toolkit with a Rust core, Python bindings (maturin), PyTorch and Hugging Face model support, and an MCP server interface."
       },
       "ldqis": {
         "name": "LDQIS Lab",
@@ -403,7 +453,7 @@
       },
       "techne": {
         "name": "Techne",
-        "description": "Claude Code skills plugin: audits, lint and test gates, cross-repo drift detection."
+        "description": "Claude Code plugin marketplace: repository maintenance, adversarial code review, LaTeX and slide builds, and bibliography verification."
       },
       "orchestrate-triage": {
         "name": "Orchestrate Triage",

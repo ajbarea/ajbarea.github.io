@@ -2,6 +2,24 @@ import type { Conference } from '~/types'
 
 export const conferences: Conference[] = [
   {
+    id: 'rocissa-2026',
+    name: 'Rochester Security Summit 2026',
+    fullName: '2026 Rochester Security Summit (RocISSA)',
+    venue: 'Rochester, NY',
+    date: 'October 2026',
+    format: 'talk',
+    eventUrl: 'https://www.rochestersecurity.org/2026/day1/track-4/'
+  },
+  {
+    id: 'fa-talk-rit-2026',
+    name: 'Federated Agents talk',
+    fullName: 'Federated Agents talk, Rochester Institute of Technology',
+    venue: 'Rochester Institute of Technology, Rochester, NY',
+    date: 'October 2026',
+    format: 'talk',
+    writeupUrl: 'https://ajbarea.github.io/talks/federated-agents/'
+  },
+  {
     id: 'ne-agents-day-2026',
     name: 'NE Agents Day 2026',
     fullName: 'North-East AI Agents Day 2026',

@@ -112,4 +112,19 @@ describe('buildActivityItems', () => {
   it('builds stable guids anchored under the site URL', () => {
     expect(items.find((i) => i.id.endsWith('conf-a'))?.id).toBe('https://site.test/#conf-a')
   })
+
+  it('leaves out a publication with no year, which has no date to sort by', () => {
+    const withUndated = buildActivityItems({
+      messages,
+      publications: [
+        ...publications,
+        { id: 'pub-undated', authors: ['Z'], venue: 'V3', status: 'in-preparation' }
+      ],
+      hackathons,
+      conferences,
+      siteUrl: 'https://site.test'
+    })
+    expect(withUndated).toHaveLength(4)
+    expect(withUndated.some((i) => i.id.endsWith('pub-undated'))).toBe(false)
+  })
 })
