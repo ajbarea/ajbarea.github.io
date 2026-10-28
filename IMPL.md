@@ -1,4 +1,16 @@
-# Language Selector — Implementation Spec
+# IMPL
+
+## Now (2026-10-28)
+
+Portfolio review against CV #14, done: site copy matches the CV in en/es/ja/zh (#125), gallery photos no longer go blank after a long scroll (#126), and all 13 project thumbnails are real screenshots (#127, 1600x900 webp, same file names). Nothing in flight.
+
+Open questions for AJ: whether the robot-navigation DQN/PyTorch claim (CV, resume page) belongs to goal-seeker-ai, which is tabular Q-learning; whether the Phalanx-FL card keeps its video of the old framework UI.
+
+Next, when there is a reason: swap any README/docs thumbnail for a live-app capture while that project is running anyway.
+
+---
+
+## Language Selector — Implementation Spec
 
 Cross-property feature: visible language selector on the portfolio and every Zensical docs site. Free-tier only (hand-authored locale files + Qwen via Ollama for drafts; no paid translation APIs).
 
