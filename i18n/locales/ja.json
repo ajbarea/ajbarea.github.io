@@ -463,5 +463,8 @@
         "description": "Claude Opus と Anthropic Message Batches API を用いたエージェント型の問題トリアージ。受信したレポートをバッチ規模で分類・優先順位付け・振り分けします。"
       }
     }
+  },
+  "footer": {
+    "sourceAria": "このサイトのソースコード（GitHub）"
   }
 }
