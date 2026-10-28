@@ -186,7 +186,6 @@
       "demoAria": "查看{title}演示",
       "docsAria": "查看{title}文档",
       "githubAria": "查看 {title} 的 GitHub 仓库",
-      "codeAria": "查看{title}的{label}代码",
       "videoAria": "观看{title}的视频演示",
       "thumbnailAlt": "{title}截图",
       "emptyState": "暂无该类别的项目。",

@@ -186,7 +186,6 @@
       "demoAria": "View demo for {title}",
       "docsAria": "View docs for {title}",
       "githubAria": "View GitHub repository for {title}",
-      "codeAria": "View the {label} code for {title}",
       "videoAria": "Watch video demo for {title}",
       "thumbnailAlt": "Screenshot of {title}",
       "emptyState": "No projects found for this category.",

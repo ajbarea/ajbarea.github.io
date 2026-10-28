@@ -101,19 +101,6 @@ describe('ProjectModal', () => {
     expect(hrefs).toContain('https://github.com/example/kourai-khryseai')
   })
 
-  it('renders a second code link, labelled per project, when codeUrl is set', () => {
-    const codeUrl = 'https://github.com/example/repo/tree/main/agents'
-    const wrapper = makeWrapper({
-      project: { ...mockProject, id: 'robot-navigation-rl', codeUrl },
-      open: true
-    })
-    const links = wrapper.findAll('nav a')
-    expect(links).toHaveLength(3)
-    const code = links.find((l) => l.attributes('href') === codeUrl)
-    expect(code?.text()).toContain('DQN agent')
-    expect(code?.attributes('aria-label')).toContain('DQN agent')
-  })
-
   it('emits update:open=false when the close button is clicked', async () => {
     const wrapper = makeWrapper({ project: mockProject, open: true })
     const closeBtn = wrapper.find('button[aria-label]')

@@ -186,7 +186,6 @@
       "demoAria": "{title}のデモを見る",
       "docsAria": "{title}のドキュメントを見る",
       "githubAria": "{title}のGitHubリポジトリを見る",
-      "codeAria": "{title}の{label}のコードを見る",
       "videoAria": "{title}のビデオデモを見る",
       "thumbnailAlt": "{title}のスクリーンショット",
       "emptyState": "このカテゴリに該当するプロジェクトはありません。",
