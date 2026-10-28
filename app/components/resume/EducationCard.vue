@@ -47,11 +47,11 @@ defineProps<Props>()
             <p class="text-sm text-gray-500 dark:text-gray-400">
               {{ edu.location }}
             </p>
-            <p v-if="edu.traineeship" class="text-sm text-gray-600 dark:text-gray-300 mt-1">
-              {{ edu.traineeship }}
-            </p>
-            <p v-if="edu.advisor" class="text-sm text-gray-600 dark:text-gray-300">
+            <p v-if="edu.advisor" class="text-sm text-gray-600 dark:text-gray-300 mt-1">
               {{ $t('resume.education.advisor', { name: edu.advisor }) }}
+            </p>
+            <p v-if="edu.traineeship" class="text-sm text-gray-600 dark:text-gray-300">
+              {{ edu.traineeship }}
             </p>
           </div>
           <div class="text-sm text-gray-500 dark:text-gray-400 sm:text-right">
