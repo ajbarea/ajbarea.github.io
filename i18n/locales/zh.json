@@ -324,7 +324,7 @@
     },
     "rocissa-2026": {
       "title": "面向现实世界的联邦学习：兼顾隐私、安全与成本，无需取舍",
-      "description": "与 Dmitrii Korobeinikov 和 Leon Reznik 合作的演讲，介绍一套联邦学习应用的决策框架：能够检测并应对攻击，在安全开销与模型性能之间取得平衡，并适应不断变化的条件。"
+      "description": "由 Dmitrii Korobeinikov、AJ Barea 和 Leon Reznik 合作的演讲，介绍一套联邦学习应用的决策框架：能够检测并应对攻击，在安全开销与模型性能之间取得平衡，并适应不断变化的条件。"
     },
     "fa-talk-rit-2026": {
       "title": "Federated Agents：在代码不外流的前提下学习各公司内部规则的编程智能体",
