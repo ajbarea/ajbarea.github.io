@@ -211,6 +211,51 @@ watch(
               {{ $t('projects.' + project.id + '.description') }}
             </p>
 
+            <!-- Cover art on the card, real captures here: the app-store split.
+                 research(2026-10): Apple's product page guidance gives the icon
+                 the first impression and screenshots the real UI
+                 (developer.apple.com/app-store/product-page/). -->
+            <section
+              v-if="project.screenshots?.length"
+              data-test="project-screenshots"
+              :aria-labelledby="`${titleId}-screenshots`"
+            >
+              <h3
+                :id="`${titleId}-screenshots`"
+                class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3"
+              >
+                {{ $t('projects.page.screenshotsHeading') }}
+              </h3>
+              <div class="space-y-3">
+                <a
+                  v-for="src in project.screenshots"
+                  :key="src"
+                  :href="src"
+                  target="_blank"
+                  rel="noopener"
+                  class="block rounded-xl overflow-hidden ring-1 ring-gray-900/10 dark:ring-white/10 focus-visible:ring-2 focus-visible:ring-primary-500"
+                  :aria-label="
+                    $t('projects.page.screenshotOpenAria', {
+                      title: $t('projects.' + project.id + '.title')
+                    })
+                  "
+                >
+                  <img
+                    :src="src"
+                    :alt="
+                      $t('projects.page.screenshotAlt', {
+                        title: $t('projects.' + project.id + '.title')
+                      })
+                    "
+                    width="1600"
+                    height="900"
+                    class="w-full h-auto bg-gray-100 dark:bg-gray-900"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </section>
+
             <!-- Technologies (full list, no truncation) -->
             <section :aria-label="$t('projects.page.technologiesHeading')">
               <h3

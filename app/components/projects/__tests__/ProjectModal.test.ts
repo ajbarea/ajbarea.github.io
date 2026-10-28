@@ -69,6 +69,25 @@ describe('ProjectModal', () => {
     expect(title.text()).toBe('Kourai Khryseai')
   })
 
+  it('shows the cover at the top and each screenshot in its own section', () => {
+    const shots = ['/images/projects/screenshots/a.webp', '/images/projects/screenshots/b.webp']
+    const wrapper = makeWrapper({ project: { ...mockProject, screenshots: shots }, open: true })
+    const section = wrapper.find('[data-test="project-screenshots"]')
+    expect(section.exists()).toBe(true)
+    const imgs = section.findAll('img')
+    expect(imgs.map((i) => i.attributes('src'))).toEqual(shots)
+    expect(section.findAll('a').map((a) => a.attributes('href'))).toEqual(shots)
+    // The cover stays outside the screenshots section.
+    const cover = wrapper.find(`img[src="${mockProject.thumbnailUrl}"]`)
+    expect(cover.exists()).toBe(true)
+    expect(section.element.contains(cover.element)).toBe(false)
+  })
+
+  it('omits the screenshots section when a project has none', () => {
+    const wrapper = makeWrapper({ project: mockProject, open: true })
+    expect(wrapper.find('[data-test="project-screenshots"]').exists()).toBe(false)
+  })
+
   it('renders the FULL description, not a clamped excerpt', () => {
     const wrapper = makeWrapper({ project: mockProject, open: true })
     const dialog = wrapper.find('[role="dialog"]')
