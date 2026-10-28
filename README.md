@@ -29,7 +29,7 @@ The full content surface (~280 strings) lives in `i18n/locales/*.json`, and stru
 ## Features
 
 - **Four locales:** English (canonical), Spanish (hand-authored), Japanese, Simplified Chinese
-- **Project gallery:** 13 curated projects, filterable by AI/ML, Federated Learning, Full-Stack, Robotics, Hackathon
+- **Project gallery:** 14 curated projects, filterable by AI/ML, Federated Learning, Full-Stack, Robotics, Hackathon
 - **Dual resume views:** toggle between Industry and Research with separate experience streams
 - **Photo gallery:** PhotoSwipe lightbox over local WebP images
 - **Contact:** email with click-to-copy, no form and no third-party relay

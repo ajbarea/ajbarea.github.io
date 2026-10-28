@@ -222,6 +222,10 @@
       "title": "Phalanx-FL",
       "description": "Banco de pruebas de ajuste fino LoRA federado sobre el modelo de aplicación actual de Flower, con trazas y métricas de OpenTelemetry para cada ronda y cada cliente."
     },
+    "pharos": {
+      "title": "Pharos",
+      "description": "Banco de pruebas de personalización federada cuyos informes sintéticos llevan niveles de clasificación y compartimentos reales, de modo que dos titulares pueden ser incomparables en lugar de ordenarse. Mide el coste de un límite personal/compartido y cuánta privacidad se filtra a través de él con agregación segura y política de auditoría."
+    },
     "techne": {
       "title": "Techne",
       "description": "Marketplace de plugins para Claude Code con flujos de trabajo de agentes para el mantenimiento de repositorios, la revisión de código adversarial, la compilación de LaTeX y diapositivas, y la verificación de bibliografías contra arXiv y Crossref."

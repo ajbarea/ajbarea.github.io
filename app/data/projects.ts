@@ -99,6 +99,18 @@ export const projects: Project[] = [
     featured: true
   },
   {
+    id: 'pharos',
+    title: 'Pharos',
+    technologies: ['Python', 'NumPy', 'scikit-learn', 'OpenTelemetry', 'uv'],
+    types: ['ai-ml', 'federated-learning'],
+    thumbnailUrl: '/images/projects/pharos.webp',
+    screenshots: ['/images/projects/screenshots/pharos.webp'],
+    demoUrl: 'https://ajbarea.github.io/pharos/explorer/',
+    docsUrl: 'https://ajbarea.github.io/pharos/',
+    githubUrl: 'https://github.com/ajbarea/pharos',
+    featured: true
+  },
+  {
     id: 'techne',
     title: 'Techne',
     technologies: ['Claude Code', 'Python', 'TOML', 'Bash'],

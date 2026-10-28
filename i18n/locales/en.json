@@ -222,6 +222,10 @@
       "title": "Phalanx-FL",
       "description": "Federated LoRA fine-tuning testbed on the current Flower app model, with OpenTelemetry traces and metrics for every round and every client."
     },
+    "pharos": {
+      "title": "Pharos",
+      "description": "Federated personalization testbed whose synthetic reports carry real classification levels and compartments, so two holders can be incomparable rather than ranked. It measures what a personal/shared boundary costs and how much privacy leaks past it under secure aggregation and audit policy."
+    },
     "techne": {
       "title": "Techne",
       "description": "Claude Code plugin marketplace of agent workflows for repository maintenance, adversarial code review, LaTeX and slide builds, and bibliography verification against arXiv and Crossref."
