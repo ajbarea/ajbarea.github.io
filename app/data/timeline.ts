@@ -98,7 +98,7 @@ export const researchExperience: ResearchExperience[] = [
     endDate: '2025',
     bullets: [
       'Autonomous Robot Navigation RL - Developed Q-learning and DQN framework in Webots simulator with state discretization, replay buffers, and PyTorch-based hyperparameter optimization (documented via YouTube tutorials)',
-      'Federated Learning Security - Built evaluation system combining CLIPS rule-based expert systems, PyTorch neural networks, and federated learning techniques to assess Byzantine fault tolerance in distributed ML systems',
+      'Host Security Assessment - Built a Windows host security assessment tool that scores patches, open ports, firewall, antivirus, and password policy through a CLIPS expert system, a PyTorch network trained to approximate it, or federated training',
       'Natural Language Processing - Implemented news summarization system using Hugging Face Transformers (BART) with personalized recommendations via collaborative filtering (scikit-surprise)'
     ],
     isCurrent: false
@@ -220,12 +220,12 @@ const unsortedEntries: TimelineEntry[] = [
     title: 'Bachelor of Science',
     subtitle: 'Computer Engineering',
     organization: 'University of South Florida',
-    timeframe: 'Aug 2018 – May 2022',
+    timeframe: 'May 2019 – May 2022',
     description: 'GPA: 3.06/4.0.',
     skills: ['C', 'C++', 'Embedded Systems', 'Digital Logic', 'Microcontrollers'],
     icon: 'education',
     isCurrent: false,
-    sortDate: '2018-08-01'
+    sortDate: '2019-05-01'
   },
   {
     id: 'phiquest',
