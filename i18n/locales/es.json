@@ -23,13 +23,13 @@
     "projectsTwitterDescription": "Frameworks de aprendizaje federado, sistemas de IA con agentes y software de investigación de AJ Barea, doctorando en RIT."
   },
   "profile": {
-    "title": "Ingeniero de Software",
-    "titleIndustry": "Ingeniero de Software · Sistemas de ML Distribuido",
+    "title": "Doctorando",
+    "titleIndustry": "Doctorando · Sistemas de ML Distribuido",
     "titleResearch": "Doctorando · Aprendizaje Federado e IA con Agentes",
     "summary": "Construyo frameworks de aprendizaje federado y sistemas de desarrollo multi-agente. Mi investigación se sitúa en la intersección entre ML distribuido confiable, agentes de IA con supervisión humana y experiencia de desarrollador para software asistido por IA.",
     "researchInterests": [
       "Ingeniería de software para sistemas de ML federados y distribuidos",
-      "IA con agentes, uso de herramientas y supervisión humana",
+      "IA con agentes que usan herramientas bajo supervisión humana",
       "Infraestructura de pruebas, observabilidad y reproducibilidad para la investigación en ML",
       "Aprendizaje confiable y respetuoso de la privacidad a partir de datos generados por personas",
       "Lo que las actualizaciones de modelo compartidas revelan sobre su origen",
@@ -126,7 +126,7 @@
       "bullets": [
         "Mentoreo a estudiantes en patrones de diseño de software, estilos arquitectónicos, atributos de calidad y tácticas",
         "Lidero secciones de repaso y horas de oficina ofreciendo orientación técnica sobre decisiones arquitectónicas",
-        "Enseñé una sesión completa de clase durante la ausencia del instructor, recibiendo retroalimentación positiva de los estudiantes",
+        "Impartí una sesión completa de clase durante la ausencia del instructor",
         "Califico tareas con retroalimentación detallada, enfatizando prácticas rigurosas de ingeniería de software"
       ]
     },

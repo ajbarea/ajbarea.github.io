@@ -2,7 +2,7 @@ import type { Profile, Education, HonorAward } from '~/types'
 
 export const profile: Profile = {
   name: 'AJ Barea',
-  title: 'Software Engineer',
+  title: 'PhD Student',
   profileImage: '/images/profile/profile.webp',
   contact: {
     email: 'ajbareaa@gmail.com',

@@ -23,8 +23,8 @@
     "projectsTwitterDescription": "RIT 博士研究生 AJ Barea 的联邦学习框架、代理式 AI 系统与科研软件。"
   },
   "profile": {
-    "title": "软件工程师",
-    "titleIndustry": "软件工程师 · 分布式机器学习系统",
+    "title": "博士研究生",
+    "titleIndustry": "博士研究生 · 分布式机器学习系统",
     "titleResearch": "博士研究生 · 联合学习与代理 AI",
     "summary": "我构建联邦学习框架和多代理开发系统。我的研究位于可信赖分布式机器学习、人类在环AI代理以及AI辅助软件开发人员体验的交叉点。",
     "researchInterests": [
@@ -126,7 +126,7 @@
       "bullets": [
         "指导学生学习软件设计模式、架构风格、质量属性和策略",
         "带领诵读小组和办公室时间提供技术指导以决策架构",
-        "在教师缺席时讲完整堂课，获得学生积极反馈",
+        "在教师缺席时讲授一整堂课",
         "使用详细反馈评估作业，强调严格的软件工程实践"
       ]
     },
@@ -136,7 +136,7 @@
       "description": "GPA: 4.0/4.0。毕业设计：在 Leon Reznik 博士的指导下增强 InteFL 联合学习执行框架。"
     },
     "lowes": {
-      "title": "软件工程师（合同工）",
+      "title": "软件工程师（合同制）",
       "subtitle": "分布管理系统",
       "description": "在 RDC 之间将每日错误日志减少了 15 万条。构建了全栈自动化工具。将新员工入职时间缩短了 80%。",
       "bullets": [
@@ -280,7 +280,7 @@
       "projectPrefix": "项目:",
       "types": {
         "full-time": "全职",
-        "contract": "合同工",
+        "contract": "合同制",
         "internship": "实习"
       }
     },

@@ -72,8 +72,8 @@ export function buildActivityItems(input: BuildActivityItemsInput): ActivityFeed
     items.push({
       id: `${base}/#${p.id}`,
       title: msg?.title ?? p.id,
-      link: p.url ?? `${base}/#publications`,
-      description: msg?.abstract ?? '',
+      link: p.url ?? (p.doi ? `https://doi.org/${p.doi}` : `${base}/#publications`),
+      description: msg?.abstract ?? p.venue,
       date: parseActivityDate(p.year),
       category: 'publication'
     })

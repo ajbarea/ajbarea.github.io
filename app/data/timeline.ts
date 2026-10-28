@@ -116,7 +116,7 @@ export const teachingExperience: TeachingExperience[] = [
     bullets: [
       'Mentor students in software design patterns, architectural styles, quality attributes and tactics',
       'Lead recitation sections and office hours providing technical guidance on architecture decisions',
-      'Taught full class session during instructor absence, receiving positive student feedback',
+      "Taught a full class session during the instructor's absence",
       'Grade assignments with detailed feedback emphasizing rigorous software engineering practices'
     ]
   }

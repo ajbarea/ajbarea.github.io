@@ -23,8 +23,8 @@
     "projectsTwitterDescription": "Federated learning frameworks, agentic AI systems, and research software by AJ Barea, a PhD student at RIT."
   },
   "profile": {
-    "title": "Software Engineer",
-    "titleIndustry": "Software Engineer · Distributed ML Systems",
+    "title": "PhD Student",
+    "titleIndustry": "PhD Student · Distributed ML Systems",
     "titleResearch": "PhD Student · Federated Learning and Agentic AI",
     "summary": "I build federated learning frameworks and multi-agent development systems. My research sits at the intersection of trustworthy distributed ML, human-on-the-loop AI agents, and developer experience for AI-assisted software.",
     "researchInterests": [
@@ -126,7 +126,7 @@
       "bullets": [
         "Mentor students in software design patterns, architectural styles, quality attributes and tactics",
         "Lead recitation sections and office hours providing technical guidance on architecture decisions",
-        "Taught full class session during instructor absence, receiving positive student feedback",
+        "Taught a full class session during the instructor's absence",
         "Grade assignments with detailed feedback emphasizing rigorous software engineering practices"
       ]
     },
