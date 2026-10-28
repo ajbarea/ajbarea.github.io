@@ -132,7 +132,7 @@ const unsortedEntries: TimelineEntry[] = [
     organization: 'Rochester Institute of Technology',
     timeframe: 'Aug 2026 – Present',
     description:
-      "Research on coding agents that learn each organization's conventions and pool what generalizes, while each organization decides what may leave. Advised by Dr. Leon Reznik as an NSF AWARE-AI National Research Traineeship (NRT) trainee in the AI Software track.",
+      "Research on coding agents that learn each organization's conventions and pool what generalizes, while each organization decides what may leave. Advisor: Dr. Leon Reznik. Also an NSF AWARE-AI National Research Traineeship (NRT) trainee in the AI Software track.",
     skills: ['Federated Learning', 'Agentic AI', 'Code Review', 'LoRA'],
     icon: 'education',
     isCurrent: true,
