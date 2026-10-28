@@ -234,8 +234,7 @@
     },
     "robot-navigation-rl": {
       "title": "基于RL的机器人导航",
-      "description": "在 Webots 中学习到达目标并避开障碍物的机器人，具备随距离自适应的电机控制与奖励塑形。main 分支运行表格型 Q-learning 智能体；aj-q-learning 分支包含基于 PyTorch 的 DQN 智能体（Q 网络、目标网络、经验回放缓冲区，支持 CPU 或 GPU）。",
-      "codeLabel": "DQN 智能体"
+      "description": "在 Webots 中学习到达目标并避开障碍物的机器人，具备随距离自适应的电机控制。表格型 Q-learning 智能体与基于 PyTorch 的 Double DQN（目标网络、经验回放缓冲区、提前停止）基于相同的状态编码和奖励进行学习，奖励中包含 Ivan Rojas 设计的基于势函数的奖励塑形。"
     },
     "control-mobile-robots": {
       "title": "移动机器人控制",

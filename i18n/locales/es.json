@@ -234,8 +234,7 @@
     },
     "robot-navigation-rl": {
       "title": "Navegación de Robots con RL",
-      "description": "Robot en Webots que aprende a alcanzar objetivos y evitar obstáculos, con control de motores adaptado a la distancia y modelado de recompensas. Un agente de Q-learning tabular corre en main; un agente DQN en PyTorch (red Q, red objetivo, búfer de repetición, CPU o GPU) está en la rama aj-q-learning.",
-      "codeLabel": "Agente DQN"
+      "description": "Robot en Webots que aprende a alcanzar objetivos y evitar obstáculos, con control de motores adaptado a la distancia. Un agente de Q-learning tabular y una Double DQN en PyTorch (red objetivo, búfer de repetición, parada temprana) aprenden de la misma codificación de estados y la misma recompensa, que incluye el modelado de recompensas basado en potenciales de Ivan Rojas."
     },
     "control-mobile-robots": {
       "title": "Control de Robots Móviles",

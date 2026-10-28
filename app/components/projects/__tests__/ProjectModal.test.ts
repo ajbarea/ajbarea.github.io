@@ -102,7 +102,7 @@ describe('ProjectModal', () => {
   })
 
   it('renders a second code link, labelled per project, when codeUrl is set', () => {
-    const codeUrl = 'https://github.com/ajbarea/goal-seeker-ai/tree/aj-q-learning/controllers/slave'
+    const codeUrl = 'https://github.com/example/repo/tree/main/agents'
     const wrapper = makeWrapper({
       project: { ...mockProject, id: 'robot-navigation-rl', codeUrl },
       open: true
