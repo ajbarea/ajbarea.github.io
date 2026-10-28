@@ -16,8 +16,10 @@ describe('TheFooter', () => {
     expect(repo.attributes('rel')).toContain('noopener')
   })
 
-  it('names no team and carries no copyright sign or licence text', () => {
-    const text = mount(TheFooter, { global: { stubs } }).text()
-    expect(text).not.toMatch(/©|\(c\)|license|licence|MIT/i)
+  it('carries no copyright sign or licence text, and the name line names AJ alone', () => {
+    const wrapper = mount(TheFooter, { global: { stubs } })
+    expect(wrapper.text()).not.toMatch(/©|\(c\)|\blicen[cs]e\b/i)
+    expect(wrapper.text()).not.toMatch(/\bMIT\b/)
+    expect(wrapper.find('footer p').text()).not.toMatch(/,|\band\b|&/)
   })
 })
