@@ -115,7 +115,7 @@ function getTypeBadgeClasses(type: ProjectType): string {
       </div>
 
       <!-- Light-mode gallery frame: a hairline inset border + gentle inner shadow
-           so each screenshot reads as a deliberate framed screen on the light
+           so each cover reads as a deliberate framed piece on the light
            card. Near-invisible in dark mode. aria-hidden +
            pointer-events-none so the card-title click overlay still works.
            research(2026-05): 2026 light/dark card practice frames images as

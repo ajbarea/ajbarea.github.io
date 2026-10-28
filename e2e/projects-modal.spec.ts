@@ -30,6 +30,20 @@ test.describe('Project detail modal', () => {
     await expect(dialog).not.toContainText(/^\+\d+$/)
   })
 
+  test('card shows cover art; the modal adds the real screenshot', async ({ page }) => {
+    await page.goto('/projects')
+    const cardImg = page.locator('article.project-card img').first()
+    await expect(cardImg).toHaveAttribute('src', /^\/images\/projects\/[a-z-]+\.webp$/)
+
+    await page.locator('button.project-card__title').first().click()
+    const shots = page.getByRole('dialog').locator('[data-test="project-screenshots"] img')
+    await expect(shots.first()).toHaveAttribute('src', /\/images\/projects\/screenshots\/.+\.webp$/)
+    // The file is served, not a dangling path.
+    const src = await shots.first().getAttribute('src')
+    const res = await page.request.get(src!)
+    expect(res.ok()).toBe(true)
+  })
+
   test('closes via the close button and returns focus to the title', async ({ page }) => {
     await page.goto('/projects')
     const titleBtn = page.locator('button.project-card__title').first()

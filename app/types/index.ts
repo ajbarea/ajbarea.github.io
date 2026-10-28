@@ -139,6 +139,8 @@ export interface Project {
   technologies: string[]
   types: ProjectType[]
   thumbnailUrl?: string
+  /** Real captures of the running project, shown in its detail modal. */
+  screenshots?: string[]
   demoUrl?: string
   docsUrl?: string
   githubUrl?: string
