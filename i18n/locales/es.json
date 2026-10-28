@@ -324,7 +324,7 @@
     },
     "rocissa-2026": {
       "title": "Aprendizaje federado para el mundo real: privacidad, seguridad y costo, sin concesiones",
-      "description": "Charla con Dmitrii Korobeinikov y Leon Reznik sobre un marco de decisión para aplicaciones de aprendizaje federado que detectan y responden a ataques, equilibran el costo de la seguridad con el rendimiento del modelo y se adaptan a condiciones cambiantes."
+      "description": "Charla de Dmitrii Korobeinikov, AJ Barea y Leon Reznik sobre un marco de decisión para aplicaciones de aprendizaje federado que detectan y responden a ataques, equilibran el costo de la seguridad con el rendimiento del modelo y se adaptan a condiciones cambiantes."
     },
     "fa-talk-rit-2026": {
       "title": "Federated Agents: agentes de programación que aprenden las reglas internas de cada empresa sin que su código salga",

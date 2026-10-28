@@ -324,7 +324,7 @@
     },
     "rocissa-2026": {
       "title": "Federated Learning for the Real World: Privacy, Security, and Cost, Without the Trade-offs",
-      "description": "Talk with Dmitrii Korobeinikov and Leon Reznik on a decision framework for federated learning applications that detect and respond to attacks, balance security overhead against model performance, and adapt to changing conditions."
+      "description": "Talk by Dmitrii Korobeinikov, AJ Barea, and Leon Reznik on a decision framework for federated learning applications that detect and respond to attacks, balance security overhead against model performance, and adapt to changing conditions."
     },
     "fa-talk-rit-2026": {
       "title": "Federated Agents: Coding Agents That Learn Each Company's House Rules Without Its Code Leaving",
