@@ -76,10 +76,36 @@ Behavior:
 - LLM-MT: [Lokalise eval](https://lokalise.com/blog/what-is-the-best-llm-for-translation/), [Hakuna Matata 2026 benchmark](https://www.hakunamatatatech.com/our-resources/blog/best-llm-for-translation)
 - Module choice: `@nuxtjs/i18n` v10.2.4 retained; `nuxt-i18n-micro` v3.18.0 evaluated but static-prerender + `switchLocalePath` feature parity insufficient as of 2026-05-18.
 
-## Resume (2026-10-28, Review #2)
+## Resume (2026-10-28 15:00, Review #2 brief, fleet-briefing issue #2)
 
-Merged: #129 (Reznik as PhD advisor only), #130 (RocISSA order, resume PDFs from cv #17), #131
-(robot-nav card describes goal-seeker-ai main; codeUrl feature removed), #133 (SES copy, BS from
-May 2019). Open: #134 (illustrated covers on cards, real captures in modals), #132 (footer GitHub
-icon to this repo), the Pharos card (stacked on #134; retarget it to main before merging #134).
-Next: after merges, check the live /projects and footer at 1920, light and dark.
+Brief: ~/.local/state/fleet-orchestrator/task-review2.src (items 1-7). Shots for AJ:
+fleet-briefing shots/2026-10-28/ (files saved; shots/README.md lines NOT yet added).
+
+Done (merged): 1 Reznik PhD-advisor-only #129. 3 goal-seeker-ai#3 (both branches merged with
+history, Ivan's authorship kept, 28 tests, uv; branches deleted, repo re-archived) + card #131.
+6 SES copy and BS May 2019 #133; resume PDFs #130. 7 RocISSA order cv#17 + #130.
+
+Open PRs, all reviewed by independent reviewers; what each still needs:
+
+- #134 covers on cards + real captures in modals: review fixes pushed (path test, halved covers,
+  IMPL). Needs CI green, then merge. Retarget #135 to main BEFORE merging #134.
+- #135 Pharos card (stacked on #134): review fixes pushed (zh 联邦, script rejects unknown
+  names). After #134: retarget to main, CI, merge.
+- #132 footer GitHub icon to this repo: reviewed clean, CI green, shots filed. Merge.
+- ajbarea/techne#224 shared footer brand mark: review fix pushed (test now fails with the mask
+  removed: mutation run confirmed). Needs CI green, merge FIRST, then the syncs:
+  ariadne#75, keryx#63, pharos#100, periplus#61, phalanx-fl#137, sphragis#222,
+  ajbarea/Hackathon#13 (fork: always `gh ... -R ajbarea/Hackathon`; an earlier slip opened
+  AHRTLab/Hackathon#3, closed with a one-line note).
+- ajbarea/Hackathon#14 Myo photo (CC BY, full credit) + 5 pose panels: review fixes pushed
+  (title + Flickr link, 45° tip-down, grid 5 across / 2 on phone); shots filed. Merge after CI.
+- ajbarea/cv#18 IMPL update: trivial, merge after GitGuardian.
+
+After merging and deploy: re-check all ten live Zensical sites (landing + one inner page,
+light/dark; script pattern: scratchpad footshot.mjs, .md-footer-meta) and kourai-khryseai and
+velocity-fl unchanged; post the before/after table on fleet-briefing #2; tick its boxes with a
+one-line comment each (§2 PhD copy, §5 robot-nav question, §6 thumbnails; Hackathon footer/
+Myo under §1 routing). Add shots/README.md lines for 129,132,134,135, Hackathon-14, the
+_-footer-_ set. Then update the queue line (pane %9) and give AJ the short report.
+Lock note: other agents hold /tmp/fleet-heavy.lock for long runs; queue browser/build jobs in
+the background with `flock -w 9000`.
