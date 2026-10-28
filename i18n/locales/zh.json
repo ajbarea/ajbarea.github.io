@@ -222,6 +222,10 @@
       "title": "Phalanx-FL",
       "description": "基于最新 Flower 应用模型的联邦 LoRA 微调测试平台，为每一轮和每个客户端输出 OpenTelemetry 追踪与指标。"
     },
+    "pharos": {
+      "title": "Pharos",
+      "description": "联合个性化测试平台，其合成报告带有真实的密级与隔离分区，使两个持有者可以互不可比，而非简单排序。它在安全聚合与审计策略下，测量个人与共享边界的代价，以及有多少隐私越过该边界泄漏。"
+    },
     "techne": {
       "title": "Techne",
       "description": "Claude Code 插件市场，提供用于仓库维护、对抗式代码评审、LaTeX 与幻灯片构建，以及对照 arXiv 和 Crossref 验证参考文献的智能体工作流。"

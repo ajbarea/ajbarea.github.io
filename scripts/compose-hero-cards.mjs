@@ -27,8 +27,18 @@ const projects = [
     src: '/home/ajbar/ajsoftworks/phalanx-fl/docs/assets/phalanx-hero.png',
     out: `${OUT_DIR}/phalanx-fl.webp`
   },
-  { src: '/home/ajbar/ajsoftworks/techne/docs/assets/hero.png', out: `${OUT_DIR}/techne.webp` }
+  { src: '/home/ajbar/ajsoftworks/techne/docs/assets/hero.png', out: `${OUT_DIR}/techne.webp` },
+  {
+    src: '/home/ajbar/ajsoftworks/pharos/docs/assets/pharos-hero.png',
+    out: `${OUT_DIR}/pharos.webp`
+  }
 ]
+
+// `node scripts/compose-hero-cards.mjs pharos` composes only the named covers.
+const only = process.argv.slice(2)
+const selected = only.length
+  ? projects.filter((p) => only.some((name) => p.out.endsWith(`/${name}.webp`)))
+  : projects
 
 function featherMask(width, height) {
   return Buffer.from(
@@ -46,7 +56,7 @@ function featherMask(width, height) {
 }
 
 const results = []
-for (const p of projects) {
+for (const p of selected) {
   const resized = await sharp(p.src)
     .resize({ height: HERO_TARGET_HEIGHT, withoutEnlargement: false })
     .ensureAlpha()

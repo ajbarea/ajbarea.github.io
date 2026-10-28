@@ -75,3 +75,11 @@ Behavior:
 - Auto-detect: [Linguise](https://www.linguise.com/blog/guide/automatically-redirecting-users-to-their-browser-language-is-it-a-good-call/), Google multilingual best practice
 - LLM-MT: [Lokalise eval](https://lokalise.com/blog/what-is-the-best-llm-for-translation/), [Hakuna Matata 2026 benchmark](https://www.hakunamatatatech.com/our-resources/blog/best-llm-for-translation)
 - Module choice: `@nuxtjs/i18n` v10.2.4 retained; `nuxt-i18n-micro` v3.18.0 evaluated but static-prerender + `switchLocalePath` feature parity insufficient as of 2026-05-18.
+
+## Resume (2026-10-28, Review #2)
+
+Merged: #129 (Reznik as PhD advisor only), #130 (RocISSA order, resume PDFs from cv #17), #131
+(robot-nav card describes goal-seeker-ai main; codeUrl feature removed), #133 (SES copy, BS from
+May 2019). Open: #134 (illustrated covers on cards, real captures in modals), #132 (footer GitHub
+icon to this repo), the Pharos card (stacked on #134; retarget it to main before merging #134).
+Next: after merges, check the live /projects and footer at 1920, light and dark.
