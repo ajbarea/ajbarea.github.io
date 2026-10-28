@@ -217,8 +217,12 @@ onUnmounted(() => {
   --stagger-delay: 0ms;
 }
 
+/* backwards, not forwards: a forwards fill keeps the finished animation applied,
+   and Chromium then leaves some images in the CSS columns unpainted after a long
+   scroll. backwards holds the first keyframe through the stagger delay, then the
+   image's own opacity takes over. */
 .animate-fade-in {
-  animation: fadeInUp 0.4s ease-out forwards;
+  animation: fadeInUp 0.4s ease-out backwards;
   animation-delay: var(--stagger-delay);
 }
 
