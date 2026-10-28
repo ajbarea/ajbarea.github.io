@@ -166,10 +166,10 @@
       "title": "Machine Learning Research Projects",
       "bullets": [
         "Autonomous Robot Navigation RL - Developed Q-learning and DQN framework in Webots simulator with state discretization, replay buffers, and PyTorch-based hyperparameter optimization (documented via YouTube tutorials)",
-        "Federated Learning Security - Built evaluation system combining CLIPS rule-based expert systems, PyTorch neural networks, and federated learning techniques to assess Byzantine fault tolerance in distributed ML systems",
+        "Host Security Assessment - Built a Windows host security assessment tool that scores patches, open ports, firewall, antivirus, and password policy through a CLIPS expert system, a PyTorch network trained to approximate it, or federated training",
         "Natural Language Processing - Implemented news summarization system using Hugging Face Transformers (BART) with personalized recommendations via collaborative filtering (scikit-surprise)"
       ],
-      "description": "Three independent research projects exploring the FL + agentic AI directions that became the MS focus: reinforcement-learning navigation, federated-learning security, and NLP summarization."
+      "description": "Three independent research projects exploring the FL + agentic AI directions that became the MS focus: reinforcement-learning navigation, host security assessment, and NLP summarization."
     }
   },
   "projects": {

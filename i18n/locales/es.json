@@ -166,10 +166,10 @@
       "title": "Proyectos de Investigación en Aprendizaje Automático",
       "bullets": [
         "Navegación Autónoma de Robots con RL — Desarrollé un framework de Q-learning y DQN en el simulador Webots con discretización de estados, replay buffers y optimización de hiperparámetros basada en PyTorch (documentado mediante tutoriales en YouTube)",
-        "Seguridad en Aprendizaje Federado — Construí un sistema de evaluación que combina sistemas expertos basados en reglas CLIPS, redes neuronales en PyTorch y técnicas de aprendizaje federado para evaluar la tolerancia a fallos bizantinos en sistemas ML distribuidos",
+        "Evaluación de seguridad de equipos — Construí una herramienta de evaluación de seguridad para equipos Windows que puntúa parches, puertos abiertos, firewall, antivirus y política de contraseñas mediante un sistema experto CLIPS, una red de PyTorch entrenada para aproximarlo o entrenamiento federado",
         "Procesamiento de Lenguaje Natural — Implementé un sistema de resumen de noticias usando Hugging Face Transformers (BART) con recomendaciones personalizadas mediante filtrado colaborativo (scikit-surprise)"
       ],
-      "description": "Tres proyectos de investigación independientes que exploraron las direcciones de FL + IA con agentes que se convirtieron en el foco de la maestría: navegación con aprendizaje por refuerzo, seguridad en aprendizaje federado y resumen de PLN."
+      "description": "Tres proyectos de investigación independientes que exploraron las direcciones de FL + IA con agentes que se convirtieron en el foco de la maestría: navegación con aprendizaje por refuerzo, evaluación de seguridad de equipos y resumen de PLN."
     }
   },
   "projects": {
