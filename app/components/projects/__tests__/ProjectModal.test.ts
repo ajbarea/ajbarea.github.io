@@ -2,10 +2,8 @@ import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import ProjectModal from '../ProjectModal.vue'
 import type { Project } from '~/types'
-import en from '../../../../i18n/locales/en.json'
-import es from '../../../../i18n/locales/es.json'
-import ja from '../../../../i18n/locales/ja.json'
-import zh from '../../../../i18n/locales/zh.json'
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 
 const mockProject: Project = {
   id: 'kourai-khryseai',
@@ -160,14 +158,19 @@ describe('ProjectModal', () => {
   })
 
   it('starts every project video label for screen readers with its visible text (WCAG 2.5.3)', () => {
-    for (const locale of [en, es, ja, zh]) {
+    // Raw JSON: an import is compiled into message functions by the i18n plugin.
+    for (const code of ['en', 'es', 'ja', 'zh']) {
+      const locale = JSON.parse(readFileSync(resolve('i18n/locales', `${code}.json`), 'utf8'))
+      let checked = 0
       for (const [id, p] of Object.entries(locale.projects) as [
         string,
         Record<string, unknown>
       ][]) {
         if (id === 'page' || typeof p.videoAria !== 'string') continue
-        expect(p.videoAria.startsWith(String(p.video))).toBe(true)
+        expect(p.videoAria.startsWith(String(p.video)), `${code} ${id}`).toBe(true)
+        checked++
       }
+      expect(checked, code).toBeGreaterThan(0)
     }
   })
 })
