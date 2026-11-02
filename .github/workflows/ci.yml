@@ -15,6 +15,7 @@ jobs:
   lint:
     name: Lint + format
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
@@ -44,6 +45,7 @@ jobs:
   test-unit:
     name: Vitest (unit)
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
@@ -61,6 +63,7 @@ jobs:
   build-check:
     name: Nuxt generate (build smoke)
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
@@ -78,6 +81,7 @@ jobs:
   test-e2e:
     name: Playwright (e2e)
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
@@ -89,20 +93,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # Cache Playwright browsers keyed on installed version — saves the
-      # ~150 MB chromium download on cache hit. Per Playwright 2026 docs.
-      - name: Get Playwright version
-        id: playwright-version
-        run: |
-          version=$(node -p "require('@playwright/test/package.json').version")
-          echo "version=$version" >> "$GITHUB_OUTPUT"
-
-      - name: Cache Playwright browsers
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
-        with:
-          path: ~/.cache/ms-playwright
-          key: playwright-${{ runner.os }}-${{ steps.playwright-version.outputs.version }}
-
+      # Browsers are downloaded each run: Playwright's CI guide advises against
+      # caching them (restore time matches download, and OS deps are not cached).
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
