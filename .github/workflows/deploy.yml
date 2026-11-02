@@ -5,6 +5,11 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# One Pages deploy at a time; a queued one waits rather than cancelling a deploy in progress.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
