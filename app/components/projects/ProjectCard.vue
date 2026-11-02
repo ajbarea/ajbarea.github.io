@@ -2,6 +2,7 @@
 import { ref, computed, onMounted } from 'vue'
 import type { Project, ProjectType } from '~/types'
 import ProjectModal from './ProjectModal.vue'
+import { projectVideoText } from '~/utils/project-video'
 
 interface Props {
   project: Project
@@ -195,10 +196,8 @@ function getTypeBadgeClasses(type: ProjectType): string {
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-red-600/90 text-white hover:bg-red-600 hover:scale-110 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
-          :title="$t('projects.page.videoAria', { title: $t('projects.' + project.id + '.title') })"
-          :aria-label="
-            $t('projects.page.videoAria', { title: $t('projects.' + project.id + '.title') })
-          "
+          :title="projectVideoText($t, $te, project.id).aria"
+          :aria-label="projectVideoText($t, $te, project.id).aria"
         >
           <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path

@@ -2,6 +2,8 @@ import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import ProjectModal from '../ProjectModal.vue'
 import type { Project } from '~/types'
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 
 const mockProject: Project = {
   id: 'kourai-khryseai',
@@ -135,5 +137,40 @@ describe('ProjectModal', () => {
     expect(backdrop.exists()).toBe(true)
     await backdrop.trigger('click')
     expect(wrapper.emitted('update:open')).toEqual([[false]])
+  })
+
+  it('labels a project video with its own text when the locale gives one', () => {
+    const video = (project: Project) =>
+      makeWrapper({ project, open: true })
+        .findAll('a')
+        .find((a) => a.attributes('href') === project.youtubeUrl)!
+    const own = video({
+      ...mockProject,
+      id: 'phalanx-fl',
+      title: 'Phalanx-FL',
+      youtubeUrl: 'https://youtu.be/example'
+    })
+    expect(own.text()).toBe('Earlier version')
+    expect(own.attributes('aria-label')).toMatch(/^Earlier version: .*Phalanx-FL was rebuilt from/)
+    const plain = video({ ...mockProject, youtubeUrl: 'https://youtu.be/example' })
+    expect(plain.text()).toBe('Video')
+    expect(plain.attributes('aria-label')).toBe('Watch video demo for Kourai Khryseai')
+  })
+
+  it('starts every project video label for screen readers with its visible text (WCAG 2.5.3)', () => {
+    // Raw JSON: an import is compiled into message functions by the i18n plugin.
+    for (const code of ['en', 'es', 'ja', 'zh']) {
+      const locale = JSON.parse(readFileSync(resolve('i18n/locales', `${code}.json`), 'utf8'))
+      let checked = 0
+      for (const [id, p] of Object.entries(locale.projects) as [
+        string,
+        Record<string, unknown>
+      ][]) {
+        if (id === 'page' || typeof p.videoAria !== 'string') continue
+        expect(p.videoAria.startsWith(String(p.video)), `${code} ${id}`).toBe(true)
+        checked++
+      }
+      expect(checked, code).toBeGreaterThan(0)
+    }
   })
 })
