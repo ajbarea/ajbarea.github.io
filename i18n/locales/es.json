@@ -222,7 +222,7 @@
       "title": "Phalanx-FL",
       "description": "Banco de pruebas de ajuste fino LoRA federado sobre el modelo de aplicación actual de Flower, con trazas y métricas de OpenTelemetry para cada ronda y cada cliente.",
       "video": "Versión anterior",
-      "videoAria": "Ver un recorrido del framework anterior a partir del cual se reconstruyó Phalanx-FL (la interfaz educativa de InteFL)"
+      "videoAria": "Versión anterior: recorrido del framework a partir del cual se reconstruyó Phalanx-FL (la interfaz educativa de InteFL)"
     },
     "pharos": {
       "title": "Pharos",

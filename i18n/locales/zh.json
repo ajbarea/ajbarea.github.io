@@ -222,7 +222,7 @@
       "title": "Phalanx-FL",
       "description": "基于最新 Flower 应用模型的联邦 LoRA 微调测试平台，为每一轮和每个客户端输出 OpenTelemetry 追踪与指标。",
       "video": "早期版本",
-      "videoAria": "观看 Phalanx-FL 重建前的早期框架（InteFL 教学界面）的演示视频"
+      "videoAria": "早期版本：Phalanx-FL 重建前的框架（InteFL 教学界面）的演示视频"
     },
     "pharos": {
       "title": "Pharos",

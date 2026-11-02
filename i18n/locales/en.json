@@ -222,7 +222,7 @@
       "title": "Phalanx-FL",
       "description": "Federated LoRA fine-tuning testbed on the current Flower app model, with OpenTelemetry traces and metrics for every round and every client.",
       "video": "Earlier version",
-      "videoAria": "Watch a walkthrough of the earlier framework Phalanx-FL was rebuilt from (the InteFL educational UI)"
+      "videoAria": "Earlier version: a walkthrough of the framework Phalanx-FL was rebuilt from (the InteFL educational UI)"
     },
     "pharos": {
       "title": "Pharos",
