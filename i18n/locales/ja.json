@@ -220,7 +220,9 @@
     },
     "phalanx-fl": {
       "title": "Phalanx-FL",
-      "description": "最新のFlowerアプリモデル上に構築した連合LoRAファインチューニングのテストベッド。すべてのラウンドとクライアントについてOpenTelemetryのトレースとメトリクスを出力。"
+      "description": "最新のFlowerアプリモデル上に構築した連合LoRAファインチューニングのテストベッド。すべてのラウンドとクライアントについてOpenTelemetryのトレースとメトリクスを出力。",
+      "video": "旧バージョン",
+      "videoAria": "Phalanx-FL の再構築前の旧フレームワーク（InteFL の教育用 UI）のウォークスルー動画を見る"
     },
     "pharos": {
       "title": "Pharos",

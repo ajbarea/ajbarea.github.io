@@ -136,4 +136,22 @@ describe('ProjectModal', () => {
     await backdrop.trigger('click')
     expect(wrapper.emitted('update:open')).toEqual([[false]])
   })
+
+  it('labels a project video with its own text when the locale gives one', () => {
+    const video = (project: Project) =>
+      makeWrapper({ project, open: true })
+        .findAll('a')
+        .find((a) => a.attributes('href') === project.youtubeUrl)!
+    const own = video({
+      ...mockProject,
+      id: 'phalanx-fl',
+      title: 'Phalanx-FL',
+      youtubeUrl: 'https://youtu.be/example'
+    })
+    expect(own.text()).toBe('Earlier version')
+    expect(own.attributes('aria-label')).toMatch(/earlier framework Phalanx-FL was rebuilt from/)
+    const plain = video({ ...mockProject, youtubeUrl: 'https://youtu.be/example' })
+    expect(plain.text()).toBe('Video')
+    expect(plain.attributes('aria-label')).toBe('Watch video demo for Kourai Khryseai')
+  })
 })
