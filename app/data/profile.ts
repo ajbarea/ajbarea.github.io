@@ -131,7 +131,7 @@ export const honorsAwards: HonorAward[] = [
     title:
       'Best Presentation, AWARE-AI Fall Hackathon, Rochester Institute of Technology · team entry',
     year: 2026,
-    externalUrl: 'https://github.com/ajbarea/Hackathon'
+    externalUrl: 'https://github.com/ajbarea/myo-lever'
   },
   {
     title: 'HackerRank Orchestrate 2026 Hackathon · 11th of 1,349 (top 0.8%), solo entry',
