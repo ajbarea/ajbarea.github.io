@@ -17,8 +17,8 @@ export const hackathons: Hackathon[] = [
       'Zensical'
     ],
     links: {
-      repo: 'https://github.com/ajbarea/Hackathon',
-      docs: 'https://ajbarea.github.io/Hackathon/'
+      repo: 'https://github.com/ajbarea/myo-lever',
+      docs: 'https://ajbarea.github.io/myo-lever/'
     }
   },
   {
