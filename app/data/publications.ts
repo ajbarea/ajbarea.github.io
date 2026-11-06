@@ -90,9 +90,10 @@ export const publications: Publication[] = [
   {
     id: 'iaai-27-makesense',
     authors: ['AJ Barea', 'Benjamin K. Johnson', 'Jacob H. Tarosky', 'Jewel G. Padilla'],
-    venue: 'Submitted to Innovative Applications of Artificial Intelligence (IAAI-27)',
-    year: 2026,
-    status: 'under-review'
+    venue:
+      'Thirty-Ninth Annual Conference on Innovative Applications of Artificial Intelligence (IAAI-27), Montréal, Canada (Oral)',
+    year: 2027,
+    status: 'accepted'
   },
   {
     id: 'msr-2027-house-style',
