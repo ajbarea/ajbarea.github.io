@@ -5,6 +5,9 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: read
+
 # Cancel in-flight runs when a newer commit lands on the same PR or branch —
 # saves runner minutes and matches the 2026 Nuxt-repo / Playwright-docs pattern.
 concurrency:
