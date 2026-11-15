@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { ref, computed, nextTick, onMounted, onUnmounted } from 'vue'
 import { useThemeStore } from '~/stores/theme'
-import { PALETTE_THEMES, getHueDescription } from '~/data/themes'
+import {
+  PALETTE_THEMES,
+  DEFAULT_LIGHT_THEME_ID,
+  DEFAULT_DARK_THEME_ID,
+  getHueDescription
+} from '~/data/themes'
 import type { ThemeMode, SurfaceMode } from '~/types/theme'
 
 const themeStore = useThemeStore()
@@ -309,7 +314,21 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
               :style="{ backgroundColor: theme.sampleColor }"
               aria-hidden="true"
             />
-            <span class="truncate">{{ theme.name }}</span>
+            <span class="truncate flex-1">{{ theme.name }}</span>
+            <span
+              v-if="theme.id === DEFAULT_LIGHT_THEME_ID"
+              class="text-[9px] font-semibold uppercase px-1 py-0.5 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 shrink-0"
+              title="Curated Light Default"
+            >
+              Light
+            </span>
+            <span
+              v-else-if="theme.id === DEFAULT_DARK_THEME_ID"
+              class="text-[9px] font-semibold uppercase px-1 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 shrink-0"
+              title="Curated Dark Default"
+            >
+              Dark
+            </span>
           </button>
         </div>
       </div>
@@ -509,6 +528,20 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
             </button>
           </div>
         </div>
+      </div>
+
+      <!-- Section 7: Curated Defaults Bar -->
+      <div class="pt-3 border-t border-surface-border flex items-center justify-between gap-2">
+        <div class="text-[11px] text-gray-500 dark:text-gray-400">
+          <span class="font-medium">Curated Defaults:</span> Ember (Light) · Forest (Dark)
+        </div>
+        <button
+          type="button"
+          class="px-2 py-1 text-xs font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 shrink-0"
+          @click="themeStore.resetToDefaults()"
+        >
+          Reset to Defaults
+        </button>
       </div>
     </div>
   </div>

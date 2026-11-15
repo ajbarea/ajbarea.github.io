@@ -1,7 +1,12 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
 import { useThemeStore } from '../theme'
-import { DEFAULT_THEME_ID, PALETTE_THEMES } from '~/data/themes'
+import {
+  DEFAULT_THEME_ID,
+  DEFAULT_LIGHT_THEME_ID,
+  DEFAULT_DARK_THEME_ID,
+  PALETTE_THEMES
+} from '~/data/themes'
 
 describe('Theme & Palette Store', () => {
   beforeEach(() => {
@@ -130,5 +135,72 @@ describe('Theme & Palette Store', () => {
 
     expect(store.surfaceMode).toBe('oled')
     expect(document.documentElement.getAttribute('data-surface')).toBe('oled')
+  })
+
+  it('adapts to mode defaults: Ember for light ambiance and Forest for dark ambiance', () => {
+    const store = useThemeStore()
+    expect(DEFAULT_LIGHT_THEME_ID).toBe('ember')
+    expect(DEFAULT_DARK_THEME_ID).toBe('forest')
+
+    // In light mode by default
+    expect(store.currentThemeId).toBe('ember')
+    expect(store.activeHue).toBe(38)
+
+    // Switch to dark mode without manual palette override
+    store.setTheme('dark')
+    expect(store.currentThemeId).toBe('forest')
+    expect(store.activeHue).toBe(145)
+    expect(document.documentElement.getAttribute('data-theme')).toBe('forest')
+    expect(document.documentElement.style.getPropertyValue('--primary-h')).toBe('145')
+
+    // Switch back to light mode
+    store.setTheme('light')
+    expect(store.currentThemeId).toBe('ember')
+    expect(store.activeHue).toBe(38)
+    expect(document.documentElement.getAttribute('data-theme')).toBe('ember')
+    expect(document.documentElement.style.getPropertyValue('--primary-h')).toBe('38')
+  })
+
+  it('preserves an explicitly chosen theme across light and dark ambiance changes', () => {
+    const store = useThemeStore()
+    store.setPaletteTheme('ocean')
+    expect(store.currentThemeId).toBe('ocean')
+
+    // Switch to dark mode: explicit choice stays locked
+    store.setTheme('dark')
+    expect(store.currentThemeId).toBe('ocean')
+    expect(store.activeHue).toBe(195)
+    expect(document.documentElement.getAttribute('data-theme')).toBe('ocean')
+
+    // Switch to light mode: stays locked
+    store.setTheme('light')
+    expect(store.currentThemeId).toBe('ocean')
+    expect(store.activeHue).toBe(195)
+  })
+
+  it('resets to curated mode defaults via resetToDefaults()', () => {
+    const store = useThemeStore()
+    store.setPaletteTheme('plum')
+    store.setCustomHue(320)
+    store.setSurfaceMode('oled')
+    store.setTheme('dark')
+
+    expect(store.currentThemeId).toBe('plum')
+    expect(store.customHue).toBe(320)
+    expect(store.surfaceMode).toBe('oled')
+
+    store.resetToDefaults()
+
+    // Since we are in dark mode, reset restores Forest
+    expect(store.currentThemeId).toBe('forest')
+    expect(store.customHue).toBeNull()
+    expect(store.surfaceMode).toBe('palette')
+    expect(localStorage.getItem('palette-theme')).toBeNull()
+    expect(localStorage.getItem('palette-custom-hue')).toBeNull()
+    expect(localStorage.getItem('palette-surface-mode')).toBeNull()
+
+    // Switching to light restores Ember
+    store.setTheme('light')
+    expect(store.currentThemeId).toBe('ember')
   })
 })
