@@ -1,12 +1,25 @@
 # IMPL
 
-## Now (2026-10-28)
+## Now (2026-11-15) — Palette Studio (#148)
 
-Portfolio review against CV #14, done: site copy matches the CV in en/es/ja/zh (#125), gallery photos no longer go blank after a long scroll (#126). Cards show the illustrated covers (`public/images/projects/*.webp`); the real captures from #127 (1600x900) live in `public/images/projects/screenshots/` and show in each project's modal under "See it running" (#134).
-
-Answered by AJ (fleet-briefing #2): the DQN is real and now on goal-seeker-ai main next to the Q-learning (goal-seeker-ai#3, card #131); the Phalanx-FL card keeps its video.
-
-Next, when there is a reason: swap any README/docs thumbnail for a live-app capture while that project is running anyway.
+- **Slice**: Dynamic Palette Studio with 11 named curated themes, live OKLCH hue dial (0°–360°), and WCAG 2.1 AA mathematical contrast guarantee.
+- **Done**:
+  - `app/assets/styles/main.css`: Replaced default blue theme with warm non-blue default (`Ember`, hue 38, chroma 0.17). Integrated relative CSS custom property tokens mapped to Tailwind v4 `@theme`. Added `@supports (color: oklch(...))` dynamic ramp (`--color-primary-50` through `--color-primary-950`). Fallback static hex ramp for legacy runtimes.
+  - `app/types/theme.ts` & `app/types/index.ts`: Strongly typed `ThemeMode`, `PaletteTheme`, `PalettePreferences`.
+  - `app/data/themes.ts`: 11 curated named themes (`ember` [default], `terracotta`, `rose`, `plum`, `amethyst`, `iris`, `ocean`, `forest`, `olive`, `sand`, `ink`), lookup helpers, and hue angle descriptions.
+  - `app/utils/contrast.ts`: OKLCH to sRGB converter, WCAG 2.1 relative luminance, contrast ratio calculator, and `evaluatePaletteContrast` verifying body text contrast ($\ge 4.5:1$).
+  - `app/stores/theme.ts`: Pinia store with `safeGetItem`/`safeSetItem` (`try/catch`), reactive custom hue, theme switching, DOM attribute synchronization (`data-theme`, `data-custom-hue`, `--primary-h`, `--primary-c`), and safe `matchMedia` detection.
+  - `app/components/layout/PaletteStudio.vue`: Accessible popover modal with appearance mode selector (`Light`/`System`/`Dark`), 11 named theme radio cards with arrow navigation, continuous 0°–360° hue dial with live `aria-valuetext`, ramp preview swatches, and WCAG AA verification badge.
+  - `app/components/layout/TheNavigation.vue`: Integrated Palette Studio into desktop and mobile navigation headers.
+  - `app/components/resume/ResumeViewToggle.vue`: Tuned dark mode tab text color to `dark:text-primary-300` ensuring $\ge 4.5:1$ contrast against `dark:bg-gray-700`.
+  - Automated tests: 12 unit test files (90 tests) passing (`make test-unit`); all 32 Playwright E2E tests passing (`make test-e2e`); Prettier, ESLint, README claims, retired names passing (`make lint`); static prerendering of 54 routes with 0 errors (`nuxt generate`).
+- **Next**:
+  - Merge PR into `main` and deploy to GitHub Pages.
+- **Verify**:
+  - `make lint` exits 0.
+  - `make test-unit` exits 0 (90/90 passing).
+  - `make test-e2e` exits 0 (32/32 passing).
+  - Nuxt static generation prerenders all 54 routes with 0 errors.
 
 ---
 

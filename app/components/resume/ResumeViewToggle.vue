@@ -14,7 +14,7 @@ const resumeStore = useResumeStore()
       :class="[
         'min-h-[44px] px-3 sm:px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500',
         resumeStore.isIndustryView
-          ? 'bg-white dark:bg-gray-700 text-primary-600 dark:text-primary-400 shadow-sm'
+          ? 'bg-white dark:bg-gray-700 text-primary-600 dark:text-primary-300 shadow-sm'
           : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
       ]"
       role="tab"
@@ -44,7 +44,7 @@ const resumeStore = useResumeStore()
       :class="[
         'min-h-[44px] px-3 sm:px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500',
         resumeStore.isResearchView
-          ? 'bg-white dark:bg-gray-700 text-primary-600 dark:text-primary-400 shadow-sm'
+          ? 'bg-white dark:bg-gray-700 text-primary-600 dark:text-primary-300 shadow-sm'
           : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
       ]"
       role="tab"
