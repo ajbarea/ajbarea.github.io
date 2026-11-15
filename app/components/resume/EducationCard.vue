@@ -34,7 +34,7 @@ defineProps<Props>()
       <article
         v-for="(edu, idx) in education"
         :key="idx"
-        class="bg-white dark:bg-gray-800 rounded-lg p-5 border border-gray-100 dark:border-gray-700"
+        class="bg-surface-card rounded-lg p-5 border border-surface-border"
       >
         <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
           <div>
@@ -44,7 +44,7 @@ defineProps<Props>()
             <p class="text-primary-600 dark:text-primary-400 font-medium">
               {{ edu.institution }}
             </p>
-            <p class="text-sm text-gray-500 dark:text-gray-400">
+            <p class="text-sm text-gray-600 dark:text-gray-400">
               {{ edu.location }}
             </p>
             <p v-if="edu.advisor" class="text-sm text-gray-600 dark:text-gray-300 mt-1">
@@ -54,7 +54,7 @@ defineProps<Props>()
               {{ edu.traineeship }}
             </p>
           </div>
-          <div class="text-sm text-gray-500 dark:text-gray-400 sm:text-right">
+          <div class="text-sm text-gray-600 dark:text-gray-400 sm:text-right">
             <p>{{ edu.graduationDate }}</p>
             <p
               v-if="edu.gpa != null && edu.maxGpa != null"
@@ -96,7 +96,7 @@ defineProps<Props>()
           </p>
           <p
             v-if="edu.capstoneResearch.advisor"
-            class="text-xs text-gray-500 dark:text-gray-400 mt-1"
+            class="text-xs text-gray-600 dark:text-gray-400 mt-1"
           >
             {{ $t('resume.education.advisor', { name: edu.capstoneResearch.advisor }) }}
           </p>

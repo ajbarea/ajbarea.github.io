@@ -21,7 +21,7 @@ import { sisters } from '~/data/sisters'
       <li
         v-for="sister in sisters"
         :key="sister.id"
-        class="relative flex h-full flex-col list-none bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md hover:border-primary-200 dark:hover:border-primary-700 transition-all duration-200"
+        class="relative flex h-full flex-col list-none bg-surface-card rounded-lg p-4 shadow-sm border border-surface-border hover:shadow-md hover:border-primary-400 transition-all duration-200"
       >
         <h3 class="text-base font-semibold text-gray-900 dark:text-white mb-1">
           <a

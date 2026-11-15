@@ -1,4 +1,5 @@
 export type ThemeMode = 'light' | 'dark' | 'system'
+export type SurfaceMode = 'palette' | 'oled' | 'neutral'
 
 export interface PaletteTheme {
   id: string
@@ -11,6 +12,7 @@ export interface PaletteTheme {
 
 export interface PalettePreferences {
   mode: ThemeMode
+  surfaceMode: SurfaceMode
   themeId: string
   customHue: number | null
 }

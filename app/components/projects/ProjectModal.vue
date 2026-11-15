@@ -140,12 +140,12 @@ watch(
           aria-modal="true"
           :aria-labelledby="titleId"
           :aria-describedby="descId"
-          class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700"
+          class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-surface-card rounded-2xl shadow-2xl border border-surface-border"
           @keydown="trapTab"
         >
           <!-- Header -->
           <header
-            class="sticky top-0 z-10 flex items-start justify-between gap-4 p-5 sm:p-6 border-b border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800"
+            class="sticky top-0 z-10 flex items-start justify-between gap-4 p-5 sm:p-6 border-b border-surface-border bg-surface-card"
           >
             <div class="min-w-0 flex-1">
               <h2 :id="titleId" class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">

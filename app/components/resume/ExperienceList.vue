@@ -42,7 +42,7 @@ function bulletsFor(id: string): string[] {
         <article
           v-for="exp in professionalExperience"
           :key="exp.id"
-          class="bg-white dark:bg-gray-800 rounded-lg p-5 border border-gray-100 dark:border-gray-700"
+          class="bg-surface-card rounded-lg p-5 border border-surface-border"
         >
           <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
             <div>
@@ -60,11 +60,11 @@ function bulletsFor(id: string): string[] {
               <p class="text-primary-600 dark:text-primary-400 font-medium">
                 {{ exp.company }}
               </p>
-              <p class="text-sm text-gray-500 dark:text-gray-400">
+              <p class="text-sm text-gray-600 dark:text-gray-400">
                 {{ exp.location }}
               </p>
             </div>
-            <div class="text-sm text-gray-500 dark:text-gray-400 sm:text-right">
+            <div class="text-sm text-gray-600 dark:text-gray-400 sm:text-right">
               <p>{{ exp.startDate }} – {{ exp.endDate }}</p>
               <p>{{ $t('resume.experience.types.' + exp.type) }}</p>
             </div>
@@ -98,7 +98,7 @@ function bulletsFor(id: string): string[] {
         <article
           v-for="exp in researchExperience"
           :key="exp.id"
-          class="bg-white dark:bg-gray-800 rounded-lg p-5 border border-gray-100 dark:border-gray-700"
+          class="bg-surface-card rounded-lg p-5 border border-surface-border"
         >
           <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
             <div>
@@ -116,14 +116,14 @@ function bulletsFor(id: string): string[] {
               <p class="text-purple-600 dark:text-purple-400 font-medium">
                 {{ exp.institution }}
               </p>
-              <p v-if="exp.project" class="text-sm text-gray-500 dark:text-gray-400">
+              <p v-if="exp.project" class="text-sm text-gray-600 dark:text-gray-400">
                 {{ $t('resume.experience.projectPrefix') }} {{ exp.project }}
               </p>
-              <p v-if="exp.advisor" class="text-sm text-gray-500 dark:text-gray-400">
+              <p v-if="exp.advisor" class="text-sm text-gray-600 dark:text-gray-400">
                 {{ $t('resume.education.advisor', { name: exp.advisor }) }}
               </p>
             </div>
-            <div class="text-sm text-gray-500 dark:text-gray-400 sm:text-right">
+            <div class="text-sm text-gray-600 dark:text-gray-400 sm:text-right">
               <p>{{ exp.startDate }} – {{ exp.endDate }}</p>
             </div>
           </div>
@@ -159,7 +159,7 @@ function bulletsFor(id: string): string[] {
         <article
           v-for="exp in teachingExperience"
           :key="exp.id"
-          class="bg-white dark:bg-gray-800 rounded-lg p-5 border border-gray-100 dark:border-gray-700"
+          class="bg-surface-card rounded-lg p-5 border border-surface-border"
         >
           <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
             <div>
@@ -169,11 +169,11 @@ function bulletsFor(id: string): string[] {
               <p class="text-blue-600 dark:text-blue-400 font-medium">
                 {{ exp.course }}
               </p>
-              <p class="text-sm text-gray-500 dark:text-gray-400">
+              <p class="text-sm text-gray-600 dark:text-gray-400">
                 {{ exp.institution }}
               </p>
             </div>
-            <div class="text-sm text-gray-500 dark:text-gray-400 sm:text-right">
+            <div class="text-sm text-gray-600 dark:text-gray-400 sm:text-right">
               <p>{{ exp.startDate }} – {{ exp.endDate }}</p>
             </div>
           </div>

@@ -304,7 +304,7 @@ function downloadResume(type: 'industry' | 'research') {
                   </svg>
                 </a>
                 <span v-else>{{ award.title }}</span>
-                <span class="text-gray-500 dark:text-gray-400">({{ award.year }})</span>
+                <span class="text-gray-600 dark:text-gray-400">({{ award.year }})</span>
               </span>
             </li>
           </ul>

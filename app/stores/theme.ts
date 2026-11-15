@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
-import type { Theme } from '~/types'
+import type { Theme, SurfaceMode } from '~/types'
 import { DEFAULT_THEME_ID, PALETTE_THEMES, getThemeById } from '~/data/themes'
 
 function safeGetItem(key: string): string | null {
@@ -43,6 +43,7 @@ export const useThemeStore = defineStore('theme', () => {
   // Palette Studio state
   const currentThemeId = ref<string>(DEFAULT_THEME_ID)
   const customHue = ref<number | null>(null)
+  const surfaceMode = ref<SurfaceMode>('palette')
 
   const currentTheme = computed(() => getThemeById(currentThemeId.value))
   const activeHue = computed(() =>
@@ -54,6 +55,12 @@ export const useThemeStore = defineStore('theme', () => {
     theme.value = newTheme
     safeSetItem('theme', newTheme)
     applyTheme()
+  }
+
+  function setSurfaceMode(mode: SurfaceMode) {
+    surfaceMode.value = mode
+    safeSetItem('palette-surface-mode', mode)
+    applyPalette()
   }
 
   function setPaletteTheme(themeId: string) {
@@ -104,6 +111,7 @@ export const useThemeStore = defineStore('theme', () => {
     root.style.setProperty('--primary-h', String(activeHue.value))
     root.style.setProperty('--primary-c', String(activeChroma.value))
     root.setAttribute('data-theme', currentThemeId.value)
+    root.setAttribute('data-surface', surfaceMode.value)
     if (customHue.value !== null) {
       root.setAttribute('data-custom-hue', String(customHue.value))
     } else {
@@ -134,6 +142,13 @@ export const useThemeStore = defineStore('theme', () => {
       customHue.value = null
     }
 
+    const savedSurface = safeGetItem('palette-surface-mode') as SurfaceMode | null
+    if (savedSurface === 'palette' || savedSurface === 'oled' || savedSurface === 'neutral') {
+      surfaceMode.value = savedSurface
+    } else {
+      surfaceMode.value = 'palette'
+    }
+
     applyPalette()
 
     // 3. Listen for system appearance preference changes
@@ -156,6 +171,8 @@ export const useThemeStore = defineStore('theme', () => {
     customHue,
     activeHue,
     activeChroma,
+    surfaceMode,
+    setSurfaceMode,
     setPaletteTheme,
     setCustomHue,
     resetCustomHue,

@@ -1,5 +1,11 @@
 import { describe, it, expect } from 'vitest'
-import { oklchToRgb, contrastRatio, evaluatePaletteContrast, WHITE_RGB } from '../contrast'
+import {
+  oklchToRgb,
+  contrastRatio,
+  evaluatePaletteContrast,
+  evaluateCanvasContrast,
+  WHITE_RGB
+} from '../contrast'
 import { PALETTE_THEMES } from '~/data/themes'
 
 describe('Palette Studio Contrast Gate & WCAG 2.1 Compliance', () => {
@@ -77,5 +83,43 @@ describe('Palette Studio Contrast Gate & WCAG 2.1 Compliance', () => {
 
     const maxContrast = contrastRatio(WHITE_RGB, [0, 0, 0])
     expect(maxContrast).toBeCloseTo(21, 0) // Max WCAG contrast is 21:1
+  })
+
+  it('guarantees WCAG AA canvas and resting icon contrast for all 11 named themes', () => {
+    for (const theme of PALETTE_THEMES) {
+      const evaluation = evaluateCanvasContrast(theme.hue, theme.chroma)
+      expect(
+        evaluation.lightCanvasPassesAA,
+        `Theme ${theme.name} light canvas text contrast failed: ${evaluation.lightCanvasTextContrast.toFixed(2)}:1`
+      ).toBe(true)
+      expect(evaluation.lightCanvasTextContrast).toBeGreaterThanOrEqual(10.0)
+
+      expect(
+        evaluation.darkCanvasPassesAA,
+        `Theme ${theme.name} dark canvas text contrast failed: ${evaluation.darkCanvasTextContrast.toFixed(2)}:1`
+      ).toBe(true)
+      expect(evaluation.darkCanvasTextContrast).toBeGreaterThanOrEqual(10.0)
+
+      expect(
+        evaluation.lightIconPassesAA,
+        `Theme ${theme.name} light icon contrast failed: ${evaluation.lightIconContrast.toFixed(2)}:1`
+      ).toBe(true)
+      expect(evaluation.lightIconContrast).toBeGreaterThanOrEqual(3.0)
+
+      expect(
+        evaluation.darkIconPassesAA,
+        `Theme ${theme.name} dark icon contrast failed: ${evaluation.darkIconContrast.toFixed(2)}:1`
+      ).toBe(true)
+      expect(evaluation.darkIconContrast).toBeGreaterThanOrEqual(4.5)
+    }
+  })
+
+  it('guarantees resting icon contrast across all 360 degrees of the hue dial', () => {
+    const defaultChroma = 0.16
+    for (let hue = 0; hue < 360; hue++) {
+      const evaluation = evaluateCanvasContrast(hue, defaultChroma)
+      expect(evaluation.lightIconPassesAA).toBe(true)
+      expect(evaluation.darkIconPassesAA).toBe(true)
+    }
   })
 })

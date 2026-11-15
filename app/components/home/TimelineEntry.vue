@@ -63,7 +63,7 @@ function getTypeColor(type: string): string {
 
     <!-- Content -->
     <div
-      class="bg-white dark:bg-gray-800 rounded-lg p-3 sm:p-4 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow duration-200"
+      class="bg-surface-card rounded-lg p-3 sm:p-4 shadow-sm border border-surface-border hover:shadow-md transition-shadow duration-200"
     >
       <div
         class="flex flex-col sm:flex-row sm:flex-wrap sm:items-start sm:justify-between gap-1 sm:gap-2 mb-2"

@@ -7,6 +7,16 @@
   --primary-h: 38;
   --primary-c: 0.17;
 
+  /* Canvas and surface defaults (Light: primary-50, Dark: primary-950) */
+  --color-canvas: var(--color-primary-50);
+  --color-surface-card: #ffffff;
+  --color-surface-elevated: var(--color-primary-100);
+  --color-surface-border: var(--color-primary-200);
+  --color-theme-icon: var(--color-primary-700);
+  --color-theme-icon-hover: var(--color-primary-900);
+  --color-text-main: #111827;
+  --color-text-muted: #4b5563;
+
   /* Fallback static hex ramp (Ember) for engines lacking OKLCH support */
   --color-primary-50: #fff7ed;
   --color-primary-100: #ffedd5;
@@ -34,11 +44,63 @@
     --color-primary-800: oklch(0.32 calc(var(--primary-c) * 0.9) var(--primary-h));
     --color-primary-900: oklch(0.24 calc(var(--primary-c) * 0.8) var(--primary-h));
     --color-primary-950: oklch(0.16 calc(var(--primary-c) * 0.7) var(--primary-h));
+
+    /* Dynamic Canvas and Surface tokens in OKLCH */
+    --color-canvas: var(--color-primary-50);
+    --color-surface-card: #ffffff;
+    --color-surface-elevated: var(--color-primary-100);
+    --color-surface-border: var(--color-primary-200);
+  }
+
+  /* Dark mode surface definitions (Swatch #5 primary-950 canvas, primary-900 card) */
+  :root.dark,
+  .dark {
+    --color-canvas: var(--color-primary-950);
+    --color-surface-card: oklch(0.2 calc(var(--primary-c) * 0.75) var(--primary-h));
+    --color-surface-elevated: var(--color-primary-900);
+    --color-surface-border: oklch(0.28 calc(var(--primary-c) * 0.7) var(--primary-h));
+    --color-theme-icon: var(--color-primary-400);
+    --color-theme-icon-hover: var(--color-primary-200);
+    --color-text-main: #f9fafb;
+    --color-text-muted: #9ca3af;
+  }
+
+  /* OLED Pure Black mode */
+  :root.dark[data-surface='oled'],
+  .dark[data-surface='oled'],
+  [data-surface='oled'] .dark {
+    --color-canvas: #000000;
+    --color-surface-card: oklch(0.13 calc(var(--primary-c) * 0.45) var(--primary-h));
+    --color-surface-elevated: oklch(0.18 calc(var(--primary-c) * 0.5) var(--primary-h));
+    --color-surface-border: oklch(0.24 calc(var(--primary-c) * 0.5) var(--primary-h));
+  }
+
+  /* Classic Neutral mode */
+  :root[data-surface='neutral'] {
+    --color-canvas: #ffffff;
+    --color-surface-card: #ffffff;
+    --color-surface-elevated: #f3f4f6;
+    --color-surface-border: #e5e7eb;
+  }
+  :root.dark[data-surface='neutral'],
+  .dark[data-surface='neutral'],
+  [data-surface='neutral'] .dark {
+    --color-canvas: #111827;
+    --color-surface-card: #1f2937;
+    --color-surface-elevated: #374151;
+    --color-surface-border: #374151;
   }
 }
 
 /* Define custom theme for Tailwind v4 */
 @theme {
+  --color-canvas: var(--color-canvas);
+  --color-surface-card: var(--color-surface-card);
+  --color-surface-elevated: var(--color-surface-elevated);
+  --color-surface-border: var(--color-surface-border);
+  --color-theme-icon: var(--color-theme-icon);
+  --color-theme-icon-hover: var(--color-theme-icon-hover);
+
   /* Primary color palette mapped to dynamic CSS custom properties */
   --color-primary-50: var(--color-primary-50);
   --color-primary-100: var(--color-primary-100);
@@ -95,8 +157,8 @@
       system-ui,
       -apple-system,
       sans-serif;
-    background-color: white;
-    color: #111827;
+    background-color: var(--color-canvas);
+    color: var(--color-text-main, #111827);
     transition-property: color, background-color;
     transition-duration: 200ms;
   }
@@ -108,8 +170,8 @@
   }
 
   .dark body {
-    background-color: #111827;
-    color: #f3f4f6;
+    background-color: var(--color-canvas);
+    color: var(--color-text-main, #f9fafb);
   }
 
   /* Accessibility: Visible focus indicators for all interactive elements */

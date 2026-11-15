@@ -1,24 +1,26 @@
 # IMPL
 
-## Now (2026-11-15) — Palette Studio (#148)
+## Now (2026-11-15) — Palette Studio v2: Visual Atmosphere & Dynamic Surfaces (#154)
 
-- **Slice**: Dynamic Palette Studio with 11 named curated themes, live OKLCH hue dial (0°–360°), and WCAG 2.1 AA mathematical contrast guarantee.
+- **Slice**: Complete visual atmosphere transformation with palette-driven canvas (`primary-50` light, `primary-950` dark), resting icon tinting (`text-theme-icon`), unified Ambiance control (Light/System/Dark), surface tone modes (Palette Tinted, OLED Pure Black, Classic Neutral), fine-tune hue steppers (±5°), and interactive active ramp swatches.
 - **Done**:
-  - `app/assets/styles/main.css`: Replaced default blue theme with warm non-blue default (`Ember`, hue 38, chroma 0.17). Integrated relative CSS custom property tokens mapped to Tailwind v4 `@theme`. Added `@supports (color: oklch(...))` dynamic ramp (`--color-primary-50` through `--color-primary-950`). Fallback static hex ramp for legacy runtimes.
-  - `app/types/theme.ts` & `app/types/index.ts`: Strongly typed `ThemeMode`, `PaletteTheme`, `PalettePreferences`.
-  - `app/data/themes.ts`: 11 curated named themes (`ember` [default], `terracotta`, `rose`, `plum`, `amethyst`, `iris`, `ocean`, `forest`, `olive`, `sand`, `ink`), lookup helpers, and hue angle descriptions.
-  - `app/utils/contrast.ts`: OKLCH to sRGB converter, WCAG 2.1 relative luminance, contrast ratio calculator, and `evaluatePaletteContrast` verifying body text contrast ($\ge 4.5:1$).
-  - `app/stores/theme.ts`: Pinia store with `safeGetItem`/`safeSetItem` (`try/catch`), reactive custom hue, theme switching, DOM attribute synchronization (`data-theme`, `data-custom-hue`, `--primary-h`, `--primary-c`), and safe `matchMedia` detection.
-  - `app/components/layout/PaletteStudio.vue`: Accessible popover modal with appearance mode selector (`Light`/`System`/`Dark`), 11 named theme radio cards with arrow navigation, continuous 0°–360° hue dial with live `aria-valuetext`, ramp preview swatches, and WCAG AA verification badge.
-  - `app/components/layout/TheNavigation.vue`: Integrated Palette Studio into desktop and mobile navigation headers.
-  - `app/components/resume/ResumeViewToggle.vue`: Tuned dark mode tab text color to `dark:text-primary-300` ensuring $\ge 4.5:1$ contrast against `dark:bg-gray-700`.
-  - Automated tests: 12 unit test files (90 tests) passing (`make test-unit`); all 32 Playwright E2E tests passing (`make test-e2e`); Prettier, ESLint, README claims, retired names passing (`make lint`); static prerendering of 54 routes with 0 errors (`nuxt generate`).
+  - `app/assets/styles/main.css`: Introduced semantic canvas tokens (`--color-canvas`, `--color-surface-card`, `--color-surface-elevated`, `--color-surface-border`, `--color-theme-icon`, `--color-theme-icon-hover`). Bound `body` and `.dark body` background to `--color-canvas`. Registered tokens in Tailwind v4 `@theme`. Added `[data-surface="oled"]` and `[data-surface="neutral"]` selectors.
+  - `app/types/theme.ts`: Added `SurfaceMode = 'palette' | 'oled' | 'neutral'` and updated `PalettePreferences`.
+  - `app/stores/theme.ts`: Added `surfaceMode` state, `setSurfaceMode()`, `data-surface` DOM synchronization on root, and localStorage persistence under `'palette-surface-mode'`.
+  - `app/components/layout/TheNavigation.vue`: Removed redundant standalone `ThemeToggle` sun/moon button in favor of unified visual atmosphere controls inside Palette Studio. Styled navigation container with `bg-canvas/85 backdrop-blur-md border-surface-border`.
+  - `app/components/layout/PaletteStudio.vue`: Redesigned popover with Ambiance selector (`Light`/`System`/`Dark`), Surface Atmosphere selector (`Palette Tinted`/`OLED Pure Black`/`Classic Neutral`), 11 named theme cards, live hue dial with `±5°` micro-adjustment steppers, interactive 5-step active ramp swatches (click swatch 50 for Light, swatch 950 for Dark), and Live Atmosphere Preview card demonstrating surfaces, CTA button, and resting theme icon.
+  - `app/layouts/default.vue`: Replaced hardcoded `bg-white dark:bg-gray-950` with semantic `bg-canvas`.
+  - `app/components/layout/TheFooter.vue`: Switched container to `bg-canvas border-surface-border`, social links to `text-theme-icon hover:text-theme-icon-hover`, and footer copy to `text-gray-600` for guaranteed $\ge 5.5:1$ contrast against light canvas.
+  - `app/components/home/AuthorCard.vue`: Social navigation links tint in resting state with `text-theme-icon hover:text-theme-icon-hover`.
+  - `app/components/home/` (`ActivityHighlights.vue`, `ExpertiseGrid.vue`, `SisterEcosystem.vue`, `TimelineEntry.vue`) & `app/components/projects/` (`ProjectCard.vue`, `ProjectModal.vue`) & `app/components/resume/` (`EducationCard.vue`, `ExperienceList.vue`, `PublicationList.vue`): Harmonized cards to `bg-surface-card border-surface-border` and updated subtext tokens to pass WCAG AA against all dynamic palette canvases.
+  - `app/utils/contrast.ts`: Added `evaluateCanvasContrast` mathematical verification for light canvas (`primary-50`), dark canvas (`primary-950`), and resting icon tokens.
+  - Automated tests: All 12 unit test files (97 tests) passing (`make test-unit`); all 33 Playwright E2E tests passing (`npx playwright test`); Prettier, ESLint, README claims, retired names passing with zero errors (`make lint`); static prerendering of 54 routes with 0 errors (`make build`).
 - **Next**:
-  - Merge PR into `main` and deploy to GitHub Pages.
+  - Open PR on GitHub, verify checks, squash merge into `origin/main`.
 - **Verify**:
   - `make lint` exits 0.
-  - `make test-unit` exits 0 (90/90 passing).
-  - `make test-e2e` exits 0 (32/32 passing).
+  - `make test-unit` exits 0 (97/97 passing).
+  - `npx playwright test` exits 0 (33/33 passing, 0 axe-core violations).
   - Nuxt static generation prerenders all 54 routes with 0 errors.
 
 ---
