@@ -52,27 +52,29 @@
     --color-surface-border: var(--color-primary-200);
   }
 
-  /* Default palette for dark ambiance: Forest theme (hue 145, chroma 0.16) */
+  /* Default palette for dark ambiance: Ocean theme (hue 195, chroma 0.16) */
   @media (prefers-color-scheme: dark) {
     :root:not(.light):not([data-theme]) {
-      --primary-h: 145;
+      --primary-h: 195;
       --primary-c: 0.16;
     }
   }
 
   :root.dark:not([data-theme]),
   .dark:not([data-theme]) {
-    --primary-h: 145;
+    --primary-h: 195;
     --primary-c: 0.16;
   }
 
-  /* Dark mode surface definitions (Swatch #5 primary-950 canvas, primary-900 card) */
+  /* Dark mode surface definitions: Two-Tone Duotone Architecture */
+  /* Tone 1: Deep Midnight Slate foundation (low-fatigue, zero halation) */
+  /* Tone 2: Dynamic chromatic accents (buttons, links, badges, dials) */
   :root.dark,
   .dark {
-    --color-canvas: var(--color-primary-950);
-    --color-surface-card: oklch(0.2 calc(var(--primary-c) * 0.75) var(--primary-h));
-    --color-surface-elevated: var(--color-primary-900);
-    --color-surface-border: oklch(0.28 calc(var(--primary-c) * 0.7) var(--primary-h));
+    --color-canvas: oklch(0.13 calc(var(--primary-c) * 0.12) var(--primary-h));
+    --color-surface-card: oklch(0.17 0.018 250);
+    --color-surface-elevated: oklch(0.21 0.02 250);
+    --color-surface-border: oklch(0.27 0.02 250);
     --color-theme-icon: var(--color-primary-400);
     --color-theme-icon-hover: var(--color-primary-200);
     --color-text-main: #f9fafb;

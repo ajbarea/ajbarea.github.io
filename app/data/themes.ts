@@ -1,7 +1,7 @@
 import type { PaletteTheme } from '~/types/theme'
 
 export const DEFAULT_LIGHT_THEME_ID = 'ember'
-export const DEFAULT_DARK_THEME_ID = 'forest'
+export const DEFAULT_DARK_THEME_ID = 'ocean'
 export const DEFAULT_THEME_ID = 'ember'
 
 export function getDefaultThemeId(isDark: boolean): string {
@@ -62,7 +62,7 @@ export const PALETTE_THEMES: PaletteTheme[] = [
     name: 'Ocean',
     hue: 195,
     chroma: 0.16,
-    description: 'Deep cyan & marine teal',
+    description: 'Deep cyan & marine teal (Dark Default)',
     sampleColor: '#0284c7'
   },
   {
@@ -70,7 +70,7 @@ export const PALETTE_THEMES: PaletteTheme[] = [
     name: 'Forest',
     hue: 145,
     chroma: 0.16,
-    description: 'Pine & lush emerald green (Dark Default)',
+    description: 'Pine & lush emerald green',
     sampleColor: '#059669'
   },
   {

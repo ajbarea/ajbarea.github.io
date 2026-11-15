@@ -137,10 +137,10 @@ describe('Theme & Palette Store', () => {
     expect(document.documentElement.getAttribute('data-surface')).toBe('oled')
   })
 
-  it('adapts to mode defaults: Ember for light ambiance and Forest for dark ambiance', () => {
+  it('adapts to mode defaults: Ember for light ambiance and Ocean for dark ambiance', () => {
     const store = useThemeStore()
     expect(DEFAULT_LIGHT_THEME_ID).toBe('ember')
-    expect(DEFAULT_DARK_THEME_ID).toBe('forest')
+    expect(DEFAULT_DARK_THEME_ID).toBe('ocean')
 
     // In light mode by default
     expect(store.currentThemeId).toBe('ember')
@@ -148,10 +148,10 @@ describe('Theme & Palette Store', () => {
 
     // Switch to dark mode without manual palette override
     store.setTheme('dark')
-    expect(store.currentThemeId).toBe('forest')
-    expect(store.activeHue).toBe(145)
-    expect(document.documentElement.getAttribute('data-theme')).toBe('forest')
-    expect(document.documentElement.style.getPropertyValue('--primary-h')).toBe('145')
+    expect(store.currentThemeId).toBe('ocean')
+    expect(store.activeHue).toBe(195)
+    expect(document.documentElement.getAttribute('data-theme')).toBe('ocean')
+    expect(document.documentElement.style.getPropertyValue('--primary-h')).toBe('195')
 
     // Switch back to light mode
     store.setTheme('light')
@@ -163,19 +163,19 @@ describe('Theme & Palette Store', () => {
 
   it('preserves an explicitly chosen theme across light and dark ambiance changes', () => {
     const store = useThemeStore()
-    store.setPaletteTheme('ocean')
-    expect(store.currentThemeId).toBe('ocean')
+    store.setPaletteTheme('forest')
+    expect(store.currentThemeId).toBe('forest')
 
     // Switch to dark mode: explicit choice stays locked
     store.setTheme('dark')
-    expect(store.currentThemeId).toBe('ocean')
-    expect(store.activeHue).toBe(195)
-    expect(document.documentElement.getAttribute('data-theme')).toBe('ocean')
+    expect(store.currentThemeId).toBe('forest')
+    expect(store.activeHue).toBe(145)
+    expect(document.documentElement.getAttribute('data-theme')).toBe('forest')
 
     // Switch to light mode: stays locked
     store.setTheme('light')
-    expect(store.currentThemeId).toBe('ocean')
-    expect(store.activeHue).toBe(195)
+    expect(store.currentThemeId).toBe('forest')
+    expect(store.activeHue).toBe(145)
   })
 
   it('resets to curated mode defaults via resetToDefaults()', () => {
@@ -191,8 +191,8 @@ describe('Theme & Palette Store', () => {
 
     store.resetToDefaults()
 
-    // Since we are in dark mode, reset restores Forest
-    expect(store.currentThemeId).toBe('forest')
+    // Since we are in dark mode, reset restores Ocean
+    expect(store.currentThemeId).toBe('ocean')
     expect(store.customHue).toBeNull()
     expect(store.surfaceMode).toBe('palette')
     expect(localStorage.getItem('palette-theme')).toBeNull()
