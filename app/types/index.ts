@@ -238,5 +238,6 @@ export interface GalleryImage {
 // Resume View Mode
 export type ResumeViewMode = 'industry' | 'research'
 
-// Theme
+// Theme & Palette
+export * from './theme'
 export type Theme = 'light' | 'dark' | 'system'

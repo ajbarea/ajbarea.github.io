@@ -1,20 +1,56 @@
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
 
+/* Palette Studio Root Tokens & Dynamic OKLCH Color Engine */
+:root {
+  /* Default: Ember theme (Warm amber & terracotta) */
+  --primary-h: 38;
+  --primary-c: 0.17;
+
+  /* Fallback static hex ramp (Ember) for engines lacking OKLCH support */
+  --color-primary-50: #fff7ed;
+  --color-primary-100: #ffedd5;
+  --color-primary-200: #fed7aa;
+  --color-primary-300: #fdba74;
+  --color-primary-400: #fb923c;
+  --color-primary-500: #f97316;
+  --color-primary-600: #ea580c;
+  --color-primary-700: #c2410c;
+  --color-primary-800: #9a3412;
+  --color-primary-900: #7c2d12;
+  --color-primary-950: #431407;
+}
+
+@supports (color: oklch(0.5 0.1 0)) {
+  :root {
+    --color-primary-50: oklch(0.97 calc(var(--primary-c) * 0.22) var(--primary-h));
+    --color-primary-100: oklch(0.93 calc(var(--primary-c) * 0.38) var(--primary-h));
+    --color-primary-200: oklch(0.87 calc(var(--primary-c) * 0.58) var(--primary-h));
+    --color-primary-300: oklch(0.82 calc(var(--primary-c) * 0.78) var(--primary-h));
+    --color-primary-400: oklch(0.76 calc(var(--primary-c) * 0.88) var(--primary-h));
+    --color-primary-500: oklch(0.62 var(--primary-c) var(--primary-h));
+    --color-primary-600: oklch(0.48 var(--primary-c) var(--primary-h));
+    --color-primary-700: oklch(0.4 var(--primary-c) var(--primary-h));
+    --color-primary-800: oklch(0.32 calc(var(--primary-c) * 0.9) var(--primary-h));
+    --color-primary-900: oklch(0.24 calc(var(--primary-c) * 0.8) var(--primary-h));
+    --color-primary-950: oklch(0.16 calc(var(--primary-c) * 0.7) var(--primary-h));
+  }
+}
+
 /* Define custom theme for Tailwind v4 */
 @theme {
-  /* Primary color palette */
-  --color-primary-50: #f0f9ff;
-  --color-primary-100: #e0f2fe;
-  --color-primary-200: #bae6fd;
-  --color-primary-300: #7dd3fc;
-  --color-primary-400: #38bdf8;
-  --color-primary-500: #0ea5e9;
-  --color-primary-600: #0369a1;
-  --color-primary-700: #075985;
-  --color-primary-800: #0c4a6e;
-  --color-primary-900: #082f49;
-  --color-primary-950: #051f33;
+  /* Primary color palette mapped to dynamic CSS custom properties */
+  --color-primary-50: var(--color-primary-50);
+  --color-primary-100: var(--color-primary-100);
+  --color-primary-200: var(--color-primary-200);
+  --color-primary-300: var(--color-primary-300);
+  --color-primary-400: var(--color-primary-400);
+  --color-primary-500: var(--color-primary-500);
+  --color-primary-600: var(--color-primary-600);
+  --color-primary-700: var(--color-primary-700);
+  --color-primary-800: var(--color-primary-800);
+  --color-primary-900: var(--color-primary-900);
+  --color-primary-950: var(--color-primary-950);
 
   /* Font families */
   --font-sans: 'Inter', 'Inter Fallback', system-ui, -apple-system, sans-serif;

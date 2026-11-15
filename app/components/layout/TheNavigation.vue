@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 
 import LanguageSelector from './LanguageSelector.vue'
+import PaletteStudio from './PaletteStudio.vue'
 import ThemeToggle from './ThemeToggle.vue'
 
 const localePath = useLocalePath()
@@ -53,12 +54,14 @@ function closeMobileMenu() {
             {{ link.name }}
           </NuxtLink>
           <LanguageSelector class="ml-2" />
-          <ThemeToggle class="ml-2" />
+          <PaletteStudio class="ml-1" />
+          <ThemeToggle class="ml-1" />
         </nav>
 
         <!-- Mobile Menu Button -->
         <div class="flex items-center md:hidden">
           <LanguageSelector class="mr-2" />
+          <PaletteStudio class="mr-1" />
           <ThemeToggle class="mr-2" />
           <button
             type="button"
