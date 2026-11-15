@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import type { Theme, SurfaceMode } from '~/types'
-import { DEFAULT_THEME_ID, PALETTE_THEMES, getThemeById } from '~/data/themes'
+import { DEFAULT_THEME_ID, getDefaultThemeId, PALETTE_THEMES, getThemeById } from '~/data/themes'
 
 function safeGetItem(key: string): string | null {
   try {
@@ -55,6 +55,11 @@ export const useThemeStore = defineStore('theme', () => {
     theme.value = newTheme
     safeSetItem('theme', newTheme)
     applyTheme()
+    const savedTheme = safeGetItem('palette-theme')
+    if (!savedTheme) {
+      currentThemeId.value = getDefaultThemeId(isDark.value)
+    }
+    applyPalette()
   }
 
   function setSurfaceMode(mode: SurfaceMode) {
@@ -72,6 +77,16 @@ export const useThemeStore = defineStore('theme', () => {
       safeRemoveItem('palette-custom-hue')
       applyPalette()
     }
+  }
+
+  function resetToDefaults() {
+    safeRemoveItem('palette-theme')
+    safeRemoveItem('palette-custom-hue')
+    safeRemoveItem('palette-surface-mode')
+    customHue.value = null
+    surfaceMode.value = 'palette'
+    currentThemeId.value = getDefaultThemeId(isDark.value)
+    applyPalette()
   }
 
   function setCustomHue(hue: number | null) {
@@ -132,7 +147,7 @@ export const useThemeStore = defineStore('theme', () => {
     if (savedTheme && PALETTE_THEMES.some((t) => t.id === savedTheme)) {
       currentThemeId.value = savedTheme
     } else {
-      currentThemeId.value = DEFAULT_THEME_ID
+      currentThemeId.value = getDefaultThemeId(isDark.value)
     }
 
     const savedHue = safeGetItem('palette-custom-hue')
@@ -154,7 +169,14 @@ export const useThemeStore = defineStore('theme', () => {
     // 3. Listen for system appearance preference changes
     if (typeof window.matchMedia === 'function') {
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-        if (theme.value === 'system') applyTheme()
+        if (theme.value === 'system') {
+          applyTheme()
+          const savedTheme = safeGetItem('palette-theme')
+          if (!savedTheme) {
+            currentThemeId.value = getDefaultThemeId(isDark.value)
+          }
+          applyPalette()
+        }
       })
     }
   }
@@ -176,6 +198,7 @@ export const useThemeStore = defineStore('theme', () => {
     setPaletteTheme,
     setCustomHue,
     resetCustomHue,
+    resetToDefaults,
     applyTheme,
     applyPalette,
     initTheme

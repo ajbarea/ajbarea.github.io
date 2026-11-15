@@ -52,6 +52,20 @@
     --color-surface-border: var(--color-primary-200);
   }
 
+  /* Default palette for dark ambiance: Forest theme (hue 145, chroma 0.16) */
+  @media (prefers-color-scheme: dark) {
+    :root:not(.light):not([data-theme]) {
+      --primary-h: 145;
+      --primary-c: 0.16;
+    }
+  }
+
+  :root.dark:not([data-theme]),
+  .dark:not([data-theme]) {
+    --primary-h: 145;
+    --primary-c: 0.16;
+  }
+
   /* Dark mode surface definitions (Swatch #5 primary-950 canvas, primary-900 card) */
   :root.dark,
   .dark {

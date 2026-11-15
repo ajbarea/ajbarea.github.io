@@ -171,4 +171,27 @@ describe('PaletteStudio Component', () => {
     await swatch950.trigger('click')
     expect(themeStore.theme).toBe('dark')
   })
+
+  it('displays curated default badges on Ember and Forest theme cards', async () => {
+    const wrapper = mount(PaletteStudio)
+    await wrapper.find('button[aria-haspopup="dialog"]').trigger('click')
+
+    expect(wrapper.text()).toContain('Light')
+    expect(wrapper.text()).toContain('Dark')
+    expect(wrapper.text()).toContain('Curated Defaults:')
+  })
+
+  it('triggers resetToDefaults() when clicking Reset to Defaults button', async () => {
+    const wrapper = mount(PaletteStudio)
+    const themeStore = useThemeStore()
+    const resetSpy = vi.spyOn(themeStore, 'resetToDefaults')
+    await wrapper.find('button[aria-haspopup="dialog"]').trigger('click')
+
+    const buttons = wrapper.findAll('button')
+    const resetBtn = buttons.find((b) => b.text().includes('Reset to Defaults'))
+    expect(resetBtn?.exists()).toBe(true)
+    await resetBtn?.trigger('click')
+
+    expect(resetSpy).toHaveBeenCalledTimes(1)
+  })
 })
