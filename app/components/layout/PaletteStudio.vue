@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, nextTick, onMounted, onUnmounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useThemeStore } from '~/stores/theme'
 import {
   PALETTE_THEMES,
@@ -9,6 +10,7 @@ import {
 } from '~/data/themes'
 import type { ThemeMode, SurfaceMode } from '~/types/theme'
 
+const { t } = useI18n()
 const themeStore = useThemeStore()
 
 const isOpen = ref(false)
@@ -100,29 +102,41 @@ function stepHue(delta: number) {
 
 const currentHueLabel = computed(() => getHueDescription(themeStore.activeHue))
 
-const ambianceOptions: { id: ThemeMode; label: string; icon: string }[] = [
+const ambianceOptions = computed<{ id: ThemeMode; label: string; icon: string }[]>(() => [
   {
     id: 'light',
-    label: 'Light',
+    label: t('palette.modes.light'),
     icon: 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
   },
   {
     id: 'system',
-    label: 'System',
+    label: t('palette.modes.system'),
     icon: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'
   },
   {
     id: 'dark',
-    label: 'Dark',
+    label: t('palette.modes.dark'),
     icon: 'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'
   }
-]
+])
 
-const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
-  { id: 'palette', label: 'Palette Tinted', badge: 'Active Ramp' },
-  { id: 'oled', label: 'OLED Pure Black', badge: '#000000' },
-  { id: 'neutral', label: 'Classic Neutral', badge: 'Clean Slate' }
-]
+const surfaceOptions = computed<{ id: SurfaceMode; label: string; badge: string }[]>(() => [
+  {
+    id: 'palette',
+    label: t('palette.surfaces.palette'),
+    badge: t('palette.surfaces.paletteBadge')
+  },
+  {
+    id: 'oled',
+    label: t('palette.surfaces.oled'),
+    badge: t('palette.surfaces.oledBadge')
+  },
+  {
+    id: 'neutral',
+    label: t('palette.surfaces.neutral'),
+    badge: t('palette.surfaces.neutralBadge')
+  }
+])
 </script>
 
 <template>
@@ -132,7 +146,7 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
       ref="triggerRef"
       type="button"
       class="relative min-w-[44px] min-h-[44px] p-2 rounded-lg text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900 flex items-center justify-center gap-1.5"
-      :aria-label="'Palette Studio: ' + themeStore.currentTheme.name"
+      :aria-label="t('palette.triggerAria', { theme: themeStore.currentTheme.name })"
       aria-haspopup="dialog"
       :aria-expanded="isOpen"
       @click="togglePopover"
@@ -159,14 +173,14 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
       v-if="isOpen"
       ref="popoverRef"
       role="dialog"
-      aria-label="Palette Studio"
+      :aria-label="t('palette.title')"
       class="absolute right-0 mt-2 w-84 sm:w-96 max-w-[calc(100vw-2rem)] max-h-[85vh] overflow-y-auto bg-surface-card rounded-2xl shadow-2xl border border-surface-border p-4 sm:p-5 z-50 text-gray-900 dark:text-gray-100 transition-all duration-200"
     >
       <!-- Popover Header -->
       <div class="flex items-center justify-between pb-3 border-b border-surface-border">
         <div>
           <h2 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
-            <span>Palette Studio</span>
+            <span>{{ t('palette.title') }}</span>
             <span
               class="text-xs px-2 py-0.5 rounded-full bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 font-medium"
             >
@@ -174,13 +188,13 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
             </span>
           </h2>
           <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
-            Dynamic atmosphere & custom canvas
+            {{ t('palette.subtitle') }}
           </p>
         </div>
         <button
           type="button"
           class="p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
-          aria-label="Close Palette Studio"
+          :aria-label="t('palette.closeAria')"
           @click="closePopover"
         >
           <svg
@@ -205,12 +219,12 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
         <label
           class="block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2"
         >
-          Ambiance
+          {{ t('palette.ambiance') }}
         </label>
         <div
           class="grid grid-cols-3 gap-1 bg-gray-100 dark:bg-gray-800/60 p-1 rounded-xl"
           role="radiogroup"
-          aria-label="Ambiance mode"
+          :aria-label="t('palette.ambiance')"
         >
           <button
             v-for="mode in ambianceOptions"
@@ -250,9 +264,13 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
         <label
           class="block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2"
         >
-          Surface Atmosphere
+          {{ t('palette.surface') }}
         </label>
-        <div class="grid grid-cols-3 gap-1.5" role="radiogroup" aria-label="Surface tone selection">
+        <div
+          class="grid grid-cols-3 gap-1.5"
+          role="radiogroup"
+          :aria-label="t('palette.surfaceAria')"
+        >
           <button
             v-for="surf in surfaceOptions"
             :key="surf.id"
@@ -281,7 +299,7 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
           <label
             class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400"
           >
-            Named Themes
+            {{ t('palette.namedThemes') }}
           </label>
           <span class="text-xs text-primary-600 dark:text-primary-400 font-medium">
             {{ themeStore.currentTheme.name }}
@@ -290,7 +308,7 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
         <div
           class="grid grid-cols-2 sm:grid-cols-3 gap-1.5"
           role="radiogroup"
-          aria-label="Preset color themes"
+          :aria-label="t('palette.presetThemesAria')"
         >
           <button
             v-for="(theme, idx) in PALETTE_THEMES"
@@ -318,16 +336,16 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
             <span
               v-if="theme.id === DEFAULT_LIGHT_THEME_ID"
               class="text-[9px] font-semibold uppercase px-1 py-0.5 rounded bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 shrink-0"
-              title="Curated Light Default"
+              :title="t('palette.titleDefaultLight')"
             >
-              Light
+              {{ t('palette.badgeLight') }}
             </span>
             <span
               v-else-if="theme.id === DEFAULT_DARK_THEME_ID"
               class="text-[9px] font-semibold uppercase px-1 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 shrink-0"
-              title="Curated Dark Default"
+              :title="t('palette.titleDefaultDark')"
             >
-              Dark
+              {{ t('palette.badgeDark') }}
             </span>
           </button>
         </div>
@@ -340,7 +358,7 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
             for="hue-dial-input"
             class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400"
           >
-            Live Hue Dial
+            {{ t('palette.liveHueDial') }}
           </label>
           <div class="flex items-center gap-1.5">
             <span class="text-xs font-mono font-medium text-primary-600 dark:text-primary-400">
@@ -352,7 +370,7 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
               class="text-[11px] text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 underline focus:outline-none focus-visible:ring-1 focus-visible:ring-primary-500"
               @click="themeStore.resetCustomHue"
             >
-              Reset
+              {{ t('palette.resetHue') }}
             </button>
           </div>
         </div>
@@ -363,8 +381,8 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
           <button
             type="button"
             class="px-2 py-1 text-xs rounded-md border border-surface-border hover:bg-gray-100 dark:hover:bg-gray-800 font-mono text-gray-600 dark:text-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
-            title="Step hue backward by 5 degrees"
-            aria-label="Decrease hue by 5 degrees"
+            :title="t('palette.stepDownAria')"
+            :aria-label="t('palette.stepDownAria')"
             @click="stepHue(-5)"
           >
             -5°
@@ -378,7 +396,7 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
               step="1"
               :value="themeStore.activeHue"
               :aria-valuetext="currentHueLabel"
-              aria-label="Color spectrum hue dial (0 to 360 degrees)"
+              :aria-label="t('palette.liveHueDial')"
               class="hue-slider w-full h-2 rounded-lg appearance-none cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
               @input="handleHueInput"
             />
@@ -386,8 +404,8 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
           <button
             type="button"
             class="px-2 py-1 text-xs rounded-md border border-surface-border hover:bg-gray-100 dark:hover:bg-gray-800 font-mono text-gray-600 dark:text-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
-            title="Step hue forward by 5 degrees"
-            aria-label="Increase hue by 5 degrees"
+            :title="t('palette.stepUpAria')"
+            :aria-label="t('palette.stepUpAria')"
             @click="stepHue(5)"
           >
             +5°
@@ -400,7 +418,7 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
         <div
           class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mb-2"
         >
-          <span>Active ramp & canvas swatches</span>
+          <span>{{ t('palette.swatchesLabel') }}</span>
           <span
             class="flex items-center gap-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-medium"
           >
@@ -418,7 +436,7 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
         <div
           class="grid grid-cols-5 gap-1.5 h-10 rounded-lg p-1 bg-gray-100 dark:bg-gray-800/50 border border-surface-border"
           role="group"
-          aria-label="Active palette ramp swatches"
+          :aria-label="t('palette.swatchesLabel')"
         >
           <!-- Swatch 1: primary-50 (Light canvas) -->
           <button
@@ -429,8 +447,8 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
                 ? 'border-primary-600 ring-2 ring-primary-500 shadow-sm'
                 : 'border-transparent hover:scale-105'
             ]"
-            title="Swatch #1 (primary-50): Light Ambiance Canvas (Click to activate)"
-            aria-label="Swatch 50: Light Ambiance Canvas"
+            :title="t('palette.swatch50')"
+            :aria-label="t('palette.swatch50')"
             @click="themeStore.setTheme('light')"
           >
             <span class="text-[9px] font-mono font-bold text-gray-800">50</span>
@@ -439,8 +457,8 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
           <!-- Swatch 2: primary-200 -->
           <div
             class="rounded h-full bg-primary-200 flex items-center justify-center text-[9px] font-mono font-bold text-gray-800 select-none"
-            title="Swatch #2 (primary-200): Subtle borders & elevated surfaces"
-            aria-label="Swatch 200: Borders and surfaces"
+            title="primary-200"
+            aria-hidden="true"
           >
             200
           </div>
@@ -448,8 +466,8 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
           <!-- Swatch 3: primary-500 -->
           <div
             class="rounded h-full bg-primary-500 flex items-center justify-center text-[9px] font-mono font-bold text-white select-none"
-            title="Swatch #3 (primary-500): Vibrant accent color"
-            aria-label="Swatch 500: Vibrant accent"
+            title="primary-500"
+            aria-hidden="true"
           >
             500
           </div>
@@ -457,8 +475,8 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
           <!-- Swatch 4: primary-800 -->
           <div
             class="rounded h-full bg-primary-800 flex items-center justify-center text-[9px] font-mono font-bold text-white select-none"
-            title="Swatch #4 (primary-800): Deep cards & high contrast text"
-            aria-label="Swatch 800: Deep surfaces"
+            title="primary-800"
+            aria-hidden="true"
           >
             800
           </div>
@@ -472,8 +490,8 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
                 ? 'border-primary-400 ring-2 ring-primary-400 shadow-sm'
                 : 'border-transparent hover:scale-105'
             ]"
-            title="Swatch #5 (primary-950): Dark Ambiance Canvas (Click to activate)"
-            aria-label="Swatch 950: Dark Ambiance Canvas"
+            :title="t('palette.swatch950')"
+            :aria-label="t('palette.swatch950')"
             @click="themeStore.setTheme('dark')"
           >
             <span class="text-[9px] font-mono font-bold text-white">950</span>
@@ -486,7 +504,7 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
         <label
           class="block text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2"
         >
-          Live Atmosphere Preview
+          {{ t('palette.previewLabel') }}
         </label>
         <div
           class="p-3.5 rounded-xl border border-surface-border bg-canvas transition-colors duration-200"
@@ -513,10 +531,10 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
               </span>
               <div class="min-w-0">
                 <p class="text-xs font-bold text-gray-900 dark:text-white truncate">
-                  Visual Atmosphere
+                  {{ t('palette.previewTitle') }}
                 </p>
                 <p class="text-[11px] text-gray-500 dark:text-gray-400 truncate">
-                  Resting icon & surface harmony
+                  {{ t('palette.previewSubtitle') }}
                 </p>
               </div>
             </div>
@@ -524,7 +542,7 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
               type="button"
               class="px-2.5 py-1 text-xs font-medium rounded-md bg-primary-600 text-white hover:bg-primary-700 transition-colors shrink-0"
             >
-              Action
+              {{ t('palette.previewAction') }}
             </button>
           </div>
         </div>
@@ -533,14 +551,15 @@ const surfaceOptions: { id: SurfaceMode; label: string; badge: string }[] = [
       <!-- Section 7: Curated Defaults Bar -->
       <div class="pt-3 border-t border-surface-border flex items-center justify-between gap-2">
         <div class="text-[11px] text-gray-500 dark:text-gray-400">
-          <span class="font-medium">Curated Defaults:</span> Ember (Light) · Forest (Dark)
+          <span class="font-medium">{{ t('palette.curatedDefaults') }}</span>
+          {{ t('palette.defaultsSummary') }}
         </div>
         <button
           type="button"
           class="px-2 py-1 text-xs font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 shrink-0"
           @click="themeStore.resetToDefaults()"
         >
-          Reset to Defaults
+          {{ t('palette.resetDefaults') }}
         </button>
       </div>
     </div>
