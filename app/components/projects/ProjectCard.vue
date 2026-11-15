@@ -74,7 +74,7 @@ function getTypeBadgeClasses(type: ProjectType): string {
 
 <template>
   <article
-    class="project-card group relative bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl focus-within:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 flex flex-col"
+    class="project-card group relative bg-surface-card rounded-xl shadow-md hover:shadow-xl focus-within:shadow-xl transition-all duration-300 overflow-hidden border border-surface-border flex flex-col"
   >
     <!-- Thumbnail -->
     <div

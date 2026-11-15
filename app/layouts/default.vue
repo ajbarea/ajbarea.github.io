@@ -13,7 +13,9 @@ function handleError(error: Error) {
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col bg-white dark:bg-gray-950 transition-colors duration-200">
+  <div
+    class="min-h-screen flex flex-col bg-canvas text-gray-900 dark:text-gray-100 transition-colors duration-200"
+  >
     <LayoutTheNavigation />
     <main id="main-content" class="flex-1 px-4 sm:px-6 lg:px-8" role="main">
       <LayoutErrorBoundary

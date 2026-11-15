@@ -97,3 +97,33 @@ export function evaluatePaletteContrast(
     darkPassesLarge: darkContrast >= 3.0
   }
 }
+
+/**
+ * Verifies WCAG accessibility for palette-driven canvas and resting icon tokens:
+ * - Light Ambiance: primary-50 canvas with #111827 text (>= 4.5:1) and primary-700 icon (>= 3.0:1)
+ * - Dark Ambiance: primary-950 canvas with #f9fafb text (>= 4.5:1) and primary-400 icon (>= 4.5:1)
+ */
+export function evaluateCanvasContrast(hue: number, chroma: number) {
+  const primary50 = oklchToRgb(0.97, chroma * 0.22, hue)
+  const primary950 = oklchToRgb(0.16, chroma * 0.7, hue)
+  const textDark: [number, number, number] = [0x11 / 255, 0x18 / 255, 0x27 / 255]
+  const textLight: [number, number, number] = [0xf9 / 255, 0xfa / 255, 0xfb / 255]
+  const iconLight = oklchToRgb(0.4, chroma, hue) // primary-700
+  const iconDark = oklchToRgb(0.76, chroma * 0.88, hue) // primary-400
+
+  const lightCanvasTextContrast = contrastRatio(textDark, primary50)
+  const darkCanvasTextContrast = contrastRatio(textLight, primary950)
+  const lightIconContrast = contrastRatio(iconLight, primary50)
+  const darkIconContrast = contrastRatio(iconDark, primary950)
+
+  return {
+    lightCanvasTextContrast,
+    darkCanvasTextContrast,
+    lightIconContrast,
+    darkIconContrast,
+    lightCanvasPassesAA: lightCanvasTextContrast >= 4.5,
+    darkCanvasPassesAA: darkCanvasTextContrast >= 4.5,
+    lightIconPassesAA: lightIconContrast >= 3.0,
+    darkIconPassesAA: darkIconContrast >= 3.0
+  }
+}

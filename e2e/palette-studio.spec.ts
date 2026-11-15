@@ -17,9 +17,9 @@ test.describe('Palette Studio', () => {
     const dialog = page.locator('div[role="dialog"][aria-label="Palette Studio"]')
     await expect(dialog).toBeVisible()
 
-    // Verify 11 named themes exist
+    // Verify 11 named themes and options exist
     const themeRadios = dialog.locator('button[role="radio"]')
-    await expect(themeRadios).toHaveCount(14) // 3 mode options + 11 theme options
+    await expect(themeRadios).toHaveCount(17) // 3 ambiance + 3 surface + 11 theme options
 
     // Click 'Forest' theme
     const forestRadio = dialog.locator('button[role="radio"]:has-text("Forest")')
@@ -46,6 +46,9 @@ test.describe('Palette Studio', () => {
 
     const trigger = page.locator('button[aria-label^="Palette Studio:"]:visible')
     await trigger.click()
+
+    const dialog = page.locator('div[role="dialog"][aria-label="Palette Studio"]')
+    await expect(dialog).toBeVisible()
 
     const slider = page.locator('input#hue-dial-input')
     await expect(slider).toBeVisible()
@@ -76,5 +79,29 @@ test.describe('Palette Studio', () => {
 
     await page.keyboard.press('Escape')
     await expect(dialog).not.toBeVisible()
+  })
+
+  test('adjusts hue with fine-tune steppers and selects surface tone', async ({ page }) => {
+    await page.goto('/')
+
+    const trigger = page.locator('button[aria-label^="Palette Studio:"]:visible')
+    await trigger.click()
+
+    const stepUp = page.locator('button[aria-label="Increase hue by 5 degrees"]')
+    await expect(stepUp).toBeVisible()
+    await stepUp.click()
+
+    // 38 (Ember) + 5 = 43
+    await expect(page.locator('html')).toHaveAttribute('data-custom-hue', '43')
+
+    // Switch surface tone to OLED Pure Black
+    const oledBtn = page.locator('button[role="radio"]:has-text("OLED Pure Black")')
+    await oledBtn.click()
+    await expect(page.locator('html')).toHaveAttribute('data-surface', 'oled')
+
+    // Click Swatch 950 to activate dark ambiance
+    const swatch950 = page.locator('button[aria-label="Swatch 950: Dark Ambiance Canvas"]')
+    await swatch950.click()
+    await expect(page.locator('html')).toHaveClass(/dark/)
   })
 })

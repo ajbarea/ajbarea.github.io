@@ -12,13 +12,13 @@ function handleEmailClick() {
 
 <template>
   <footer
-    class="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 transition-colors duration-200"
+    class="bg-canvas border-t border-surface-border transition-colors duration-200"
     role="contentinfo"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
         <!-- Brand of Sacrifice -->
-        <p class="text-sm text-gray-500 dark:text-gray-400 inline-flex items-center gap-1.5">
+        <p class="text-sm text-gray-600 dark:text-gray-400 inline-flex items-center gap-1.5">
           {{ currentYear }}
 
           <img
@@ -34,7 +34,7 @@ function handleEmailClick() {
             target="_blank"
             rel="noopener noreferrer"
             :aria-label="$t('footer.sourceAria')"
-            class="ml-1 inline-flex items-center justify-center min-w-[24px] min-h-[24px] text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-200 rounded focus-visible:ring-2 focus-visible:ring-primary-500"
+            class="ml-1 inline-flex items-center justify-center min-w-[24px] min-h-[24px] text-theme-icon hover:text-theme-icon-hover transition-colors duration-200 rounded focus-visible:ring-2 focus-visible:ring-primary-500"
           >
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path
@@ -51,7 +51,7 @@ function handleEmailClick() {
             <button
               v-if="link.platform === 'email'"
               aria-label="Copy email address"
-              class="min-w-[44px] min-h-[44px] p-2 flex items-center justify-center text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-200 rounded-lg focus-visible:ring-2 focus-visible:ring-primary-500 cursor-pointer"
+              class="min-w-[44px] min-h-[44px] p-2 flex items-center justify-center text-theme-icon hover:text-theme-icon-hover transition-colors duration-200 rounded-lg focus-visible:ring-2 focus-visible:ring-primary-500 cursor-pointer"
               @click="handleEmailClick"
             >
               <svg
@@ -75,7 +75,7 @@ function handleEmailClick() {
               :aria-label="link.label"
               target="_blank"
               :rel="link.rel ?? 'noopener noreferrer'"
-              class="min-w-[44px] min-h-[44px] p-2 flex items-center justify-center text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-200 rounded-lg focus-visible:ring-2 focus-visible:ring-primary-500"
+              class="min-w-[44px] min-h-[44px] p-2 flex items-center justify-center text-theme-icon hover:text-theme-icon-hover transition-colors duration-200 rounded-lg focus-visible:ring-2 focus-visible:ring-primary-500"
             >
               <!-- GitHub -->
               <svg
@@ -124,7 +124,7 @@ function handleEmailClick() {
         </nav>
 
         <!-- Skull Knight Quote -->
-        <p class="text-sm text-gray-500 dark:text-gray-400 italic">
+        <p class="text-sm text-gray-600 dark:text-gray-400 italic">
           "Struggle, Contend, Wriggle." – Skull Knight
         </p>
       </div>

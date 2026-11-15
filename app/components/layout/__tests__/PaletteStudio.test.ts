@@ -120,4 +120,55 @@ describe('PaletteStudio Component', () => {
 
     expect(themeStore.currentThemeId).toBe('terracotta')
   })
+
+  it('adjusts hue dial using -5° and +5° steppers', async () => {
+    const wrapper = mount(PaletteStudio)
+    const themeStore = useThemeStore()
+    await wrapper.find('button[aria-haspopup="dialog"]').trigger('click')
+
+    const initialHue = themeStore.activeHue
+    const stepUpBtn = wrapper.find('button[aria-label="Increase hue by 5 degrees"]')
+    expect(stepUpBtn.exists()).toBe(true)
+    await stepUpBtn.trigger('click')
+    expect(themeStore.activeHue).toBe((initialHue + 5) % 360)
+
+    const stepDownBtn = wrapper.find('button[aria-label="Decrease hue by 5 degrees"]')
+    expect(stepDownBtn.exists()).toBe(true)
+    await stepDownBtn.trigger('click')
+    expect(themeStore.activeHue).toBe(initialHue)
+  })
+
+  it('selects surface mode from surface atmosphere options', async () => {
+    const wrapper = mount(PaletteStudio)
+    const themeStore = useThemeStore()
+    await wrapper.find('button[aria-haspopup="dialog"]').trigger('click')
+
+    const surfaceRadios = wrapper.findAll(
+      'div[role="radiogroup"][aria-label="Surface tone selection"] button[role="radio"]'
+    )
+    expect(surfaceRadios.length).toBe(3)
+
+    // Click OLED Pure Black
+    const oledRadio = surfaceRadios.find((r) => r.text().includes('OLED Pure Black'))
+    expect(oledRadio?.exists()).toBe(true)
+    await oledRadio?.trigger('click')
+
+    expect(themeStore.surfaceMode).toBe('oled')
+  })
+
+  it('swatch buttons activate light ambiance (swatch 50) and dark ambiance (swatch 950)', async () => {
+    const wrapper = mount(PaletteStudio)
+    const themeStore = useThemeStore()
+    await wrapper.find('button[aria-haspopup="dialog"]').trigger('click')
+
+    const swatch50 = wrapper.find('button[aria-label="Swatch 50: Light Ambiance Canvas"]')
+    expect(swatch50.exists()).toBe(true)
+    await swatch50.trigger('click')
+    expect(themeStore.theme).toBe('light')
+
+    const swatch950 = wrapper.find('button[aria-label="Swatch 950: Dark Ambiance Canvas"]')
+    expect(swatch950.exists()).toBe(true)
+    await swatch950.trigger('click')
+    expect(themeStore.theme).toBe('dark')
+  })
 })

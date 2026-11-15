@@ -3,7 +3,6 @@ import { ref } from 'vue'
 
 import LanguageSelector from './LanguageSelector.vue'
 import PaletteStudio from './PaletteStudio.vue'
-import ThemeToggle from './ThemeToggle.vue'
 
 const localePath = useLocalePath()
 
@@ -28,7 +27,7 @@ function closeMobileMenu() {
 
 <template>
   <header
-    class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-200"
+    class="sticky top-0 z-50 bg-canvas/85 backdrop-blur-md border-b border-surface-border transition-colors duration-200"
   >
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
       <div class="flex items-center justify-between h-16">
@@ -55,14 +54,12 @@ function closeMobileMenu() {
           </NuxtLink>
           <LanguageSelector class="ml-2" />
           <PaletteStudio class="ml-1" />
-          <ThemeToggle class="ml-1" />
         </nav>
 
         <!-- Mobile Menu Button -->
         <div class="flex items-center md:hidden">
           <LanguageSelector class="mr-2" />
           <PaletteStudio class="mr-1" />
-          <ThemeToggle class="mr-2" />
           <button
             type="button"
             class="min-w-[44px] min-h-[44px] p-2 rounded-lg text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
@@ -120,7 +117,7 @@ function closeMobileMenu() {
       <nav
         v-if="isMobileMenuOpen"
         id="mobile-menu"
-        class="md:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"
+        class="md:hidden border-t border-surface-border bg-canvas/95 backdrop-blur-md"
         aria-label="Mobile navigation"
       >
         <div class="px-4 py-3 space-y-1">

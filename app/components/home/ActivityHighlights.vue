@@ -91,7 +91,7 @@ const highlights = computed<ActivityHighlight[]>(() => {
           :href="h.url || undefined"
           :target="h.url ? '_blank' : undefined"
           :rel="h.url ? 'noopener noreferrer' : undefined"
-          class="flex h-full flex-col bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md hover:border-primary-200 dark:hover:border-primary-700 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
+          class="flex h-full flex-col bg-surface-card rounded-lg p-4 shadow-sm border border-surface-border hover:shadow-md hover:border-primary-400 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
         >
           <div class="flex items-start justify-between gap-2 mb-3">
             <span

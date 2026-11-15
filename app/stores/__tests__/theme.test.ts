@@ -107,4 +107,28 @@ describe('Theme & Palette Store', () => {
     expect(ids).toContain('sand')
     expect(ids).toContain('ink')
   })
+
+  it('manages surfaceMode state, data-surface attribute and storage persistence', () => {
+    const store = useThemeStore()
+    expect(store.surfaceMode).toBe('palette')
+
+    store.setSurfaceMode('oled')
+    expect(store.surfaceMode).toBe('oled')
+    expect(localStorage.getItem('palette-surface-mode')).toBe('oled')
+    expect(document.documentElement.getAttribute('data-surface')).toBe('oled')
+
+    store.setSurfaceMode('neutral')
+    expect(store.surfaceMode).toBe('neutral')
+    expect(localStorage.getItem('palette-surface-mode')).toBe('neutral')
+    expect(document.documentElement.getAttribute('data-surface')).toBe('neutral')
+  })
+
+  it('restores saved surfaceMode during initTheme()', () => {
+    localStorage.setItem('palette-surface-mode', 'oled')
+    const store = useThemeStore()
+    store.initTheme()
+
+    expect(store.surfaceMode).toBe('oled')
+    expect(document.documentElement.getAttribute('data-surface')).toBe('oled')
+  })
 })

@@ -101,7 +101,7 @@ function requestPaper(_pub: Publication): void {
       <article
         v-for="pub in publications"
         :key="pub.id"
-        class="bg-white dark:bg-gray-800 rounded-lg p-5 border border-gray-100 dark:border-gray-700"
+        class="bg-surface-card rounded-lg p-5 border border-surface-border"
       >
         <!-- Title and Status Badge -->
         <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
@@ -141,7 +141,7 @@ function requestPaper(_pub: Publication): void {
 
         <!-- Venue, Year, and Links -->
         <div
-          class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500 dark:text-gray-400 mb-3"
+          class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600 dark:text-gray-400 mb-3"
         >
           <span class="font-medium text-primary-600 dark:text-primary-400">
             {{ pub.venue }}
