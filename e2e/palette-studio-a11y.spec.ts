@@ -15,7 +15,7 @@ for (const theme of ['light', 'dark'] as const) {
     const dialog = page.locator('div[role="dialog"][aria-label="Palette Studio"]')
     await expect(dialog).toBeVisible()
     await dialog.locator('input[type="range"]').fill('200')
-    await expect(dialog.getByRole('button', { name: /reset/i })).toBeVisible()
+    await expect(dialog.getByRole('button', { name: 'Reset', exact: true })).toBeVisible()
 
     const results = await new AxeBuilder({ page })
       .include('div[role="dialog"][aria-label="Palette Studio"]')
