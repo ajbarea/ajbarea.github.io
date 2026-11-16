@@ -420,7 +420,7 @@ const surfaceOptions = computed<{ id: SurfaceMode; label: string; badge: string 
         >
           <span>{{ t('palette.swatchesLabel') }}</span>
           <span
-            class="flex items-center gap-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-medium"
+            class="flex items-center gap-1 text-[11px] text-emerald-700 dark:text-emerald-400 font-medium"
           >
             <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
               <path
@@ -465,7 +465,7 @@ const surfaceOptions = computed<{ id: SurfaceMode; label: string; badge: string 
 
           <!-- Swatch 3: primary-500 -->
           <div
-            class="rounded h-full bg-primary-500 flex items-center justify-center text-[9px] font-mono font-bold text-white select-none"
+            class="rounded h-full bg-primary-500 flex items-center justify-center text-[9px] font-mono font-bold text-gray-950 select-none"
             title="primary-500"
             aria-hidden="true"
           >
