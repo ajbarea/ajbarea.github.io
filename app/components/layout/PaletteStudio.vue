@@ -193,7 +193,7 @@ const surfaceOptions = computed<{ id: SurfaceMode; label: string; badge: string 
         </div>
         <button
           type="button"
-          class="p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+          class="p-1.5 rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
           :aria-label="t('palette.closeAria')"
           @click="closePopover"
         >
@@ -367,7 +367,7 @@ const surfaceOptions = computed<{ id: SurfaceMode; label: string; badge: string 
             <button
               v-if="themeStore.customHue !== null"
               type="button"
-              class="text-[11px] text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 underline focus:outline-none focus-visible:ring-1 focus-visible:ring-primary-500"
+              class="text-[11px] text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 underline focus:outline-none focus-visible:ring-1 focus-visible:ring-primary-500"
               @click="themeStore.resetCustomHue"
             >
               {{ t('palette.resetHue') }}
