@@ -69,7 +69,7 @@
     "title": "博士研究生",
     "titleIndustry": "博士研究生 · 分布式机器学习系统",
     "titleResearch": "博士研究生 · 联邦学习与智能体 AI",
-    "summary": "我构建联邦学习框架和多智能体开发系统。我的研究位于可信分布式机器学习、人在回路监督的 AI 智能体以及 AI 辅助软件的开发者体验交叉领域。",
+    "summary": "我构建联邦学习框架和多智能体开发系统。我的研究位于可信分布式机器学习、人在回路上监督的 AI 智能体以及 AI 辅助软件的开发者体验交叉领域。",
     "researchInterests": [
       "面向联邦与分布式机器学习系统的软件工程",
       "具备工具调用能力与人类监督的智能体 AI",
@@ -485,7 +485,7 @@
     "items": {
       "kourai-khryseai": {
         "name": "Kourai Khryseai",
-        "description": "多智能体软件开发熔炉：通过 A2A 协议组织的少女专家、MCP 边车以及透明的人在回路。"
+        "description": "多智能体软件开发熔炉：通过 A2A 协议组织的少女专家、MCP 边车以及透明的人在回路上监督。"
       },
       "phalanx-fl": {
         "name": "Phalanx-FL",

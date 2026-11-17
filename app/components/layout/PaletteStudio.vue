@@ -193,7 +193,7 @@ const surfaceOptions = computed<{ id: SurfaceMode; label: string; badge: string 
         </div>
         <button
           type="button"
-          class="p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+          class="p-1.5 rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
           :aria-label="t('palette.closeAria')"
           @click="closePopover"
         >
@@ -367,7 +367,7 @@ const surfaceOptions = computed<{ id: SurfaceMode; label: string; badge: string 
             <button
               v-if="themeStore.customHue !== null"
               type="button"
-              class="text-[11px] text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 underline focus:outline-none focus-visible:ring-1 focus-visible:ring-primary-500"
+              class="text-[11px] text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 underline focus:outline-none focus-visible:ring-1 focus-visible:ring-primary-500"
               @click="themeStore.resetCustomHue"
             >
               {{ t('palette.resetHue') }}
@@ -420,7 +420,7 @@ const surfaceOptions = computed<{ id: SurfaceMode; label: string; badge: string 
         >
           <span>{{ t('palette.swatchesLabel') }}</span>
           <span
-            class="flex items-center gap-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-medium"
+            class="flex items-center gap-1 text-[11px] text-emerald-700 dark:text-emerald-400 font-medium"
           >
             <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
               <path
@@ -465,7 +465,7 @@ const surfaceOptions = computed<{ id: SurfaceMode; label: string; badge: string 
 
           <!-- Swatch 3: primary-500 -->
           <div
-            class="rounded h-full bg-primary-500 flex items-center justify-center text-[9px] font-mono font-bold text-white select-none"
+            class="rounded h-full bg-primary-500 flex items-center justify-center text-[9px] font-mono font-bold text-gray-950 select-none"
             title="primary-500"
             aria-hidden="true"
           >
