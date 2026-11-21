@@ -1,6 +1,19 @@
 # IMPL
 
-## Now (2026-11-15) — Palette Studio v2: Visual Atmosphere & Dynamic Surfaces (#154)
+## Now (2026-11-21) — Resume Link Navigation & 2-Page Industry PDF
+
+- **Slice**: Replaced hero direct PDF download with navigation to `/resume`, eliminating forced browser file downloads and exposing interactive resume and view controls. Synced updated 2-page industry resume.
+- **Done**:
+  - `app/components/home/AuthorCard.vue`: Replaced `<a href="...Research_Resume.pdf" download>` with `<NuxtLink :to="localePath('/resume')">`.
+  - `i18n/locales/`: Updated `hero.resumeAria` across EN/ES/JA/ZH from "Download ... (PDF)" to "View AJ Barea's resume".
+  - `public/documents/AJ_Barea_Industry_Resume.pdf`: Updated from `cv` build (condensed to strict 2 pages).
+- **Verify**:
+  - Unit tests exit 0.
+  - Lint checks exit 0.
+
+---
+
+## Palette Studio v2: Visual Atmosphere & Dynamic Surfaces (#154)
 
 - **Slice**: Complete visual atmosphere transformation with palette-driven canvas (`primary-50` light, `primary-950` dark), resting icon tinting (`text-theme-icon`), unified Ambiance control (Light/System/Dark), surface tone modes (Palette Tinted, OLED Pure Black, Classic Neutral), fine-tune hue steppers (±5°), and interactive active ramp swatches.
 - **Done**:

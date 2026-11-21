@@ -107,14 +107,13 @@ function getSocialIcon(platform: string): string {
         >
           {{ $t('hero.viewProjects') }}
         </NuxtLink>
-        <a
-          href="/documents/AJ_Barea_Research_Resume.pdf"
-          download
+        <NuxtLink
+          :to="localePath('/resume')"
           class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-sm"
           :aria-label="$t('hero.resumeAria')"
         >
           {{ $t('hero.resume') }}
-        </a>
+        </NuxtLink>
         <a
           href="https://doi.org/10.1109/MIS.2026.3658072"
           target="_blank"
