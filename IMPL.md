@@ -1,15 +1,15 @@
 # IMPL
 
-## Now (2026-11-21) — Resume Link Navigation & 2-Page Industry PDF
+## Now (2026-11-23) — Hero Resume link opens /resume; 2-page industry PDF (PR #163)
 
-- **Slice**: Replaced hero direct PDF download with navigation to `/resume`, eliminating forced browser file downloads and exposing interactive resume and view controls. Synced updated 2-page industry resume.
-- **Done**:
-  - `app/components/home/AuthorCard.vue`: Replaced `<a href="...Research_Resume.pdf" download>` with `<NuxtLink :to="localePath('/resume')">`.
-  - `i18n/locales/`: Updated `hero.resumeAria` across EN/ES/JA/ZH from "Download ... (PDF)" to "View AJ Barea's resume".
-  - `public/documents/AJ_Barea_Industry_Resume.pdf`: Updated from `cv` build (condensed to strict 2 pages).
-- **Verify**:
-  - Unit tests exit 0.
-  - Lint checks exit 0.
+- Slice: the hero "Resume" link goes to `/resume` (Industry view, with its PDF button) instead of
+  downloading the 4-page research PDF; `hero.resumeAria` in all four locales; the industry PDF synced
+  from cv#27 (merged: 2 pages, 0.65/0.7 in margins).
+- ✅ Opus review: the change is right; e2e test added (link is `/resume`, no `download`, click lands on
+  /resume). Live on a local `nuxt generate` build, headless Chromium at 1920 and 390, light and dark:
+  no download, no horizontal scroll, `/documents/AJ_Barea_Industry_Resume.pdf` served (200518 bytes).
+- 📋 Next: CI green, merge.
+- Verify: `npx playwright test e2e/navigation.spec.ts`; `npm run lint`; `npx vitest run`.
 
 ---
 
