@@ -194,4 +194,14 @@ describe('PaletteStudio Component', () => {
 
     expect(resetSpy).toHaveBeenCalledTimes(1)
   })
+
+  it('keeps the live preview decorative: inert, with nothing to focus or click', async () => {
+    const wrapper = mount(PaletteStudio)
+    await wrapper.find('button[aria-haspopup="dialog"]').trigger('click')
+
+    const preview = wrapper.find('[inert]')
+    expect(preview.exists()).toBe(true)
+    expect(preview.text()).toContain('Sample card')
+    expect(preview.findAll('button, a[href], input, select, textarea, [tabindex]')).toHaveLength(0)
+  })
 })
