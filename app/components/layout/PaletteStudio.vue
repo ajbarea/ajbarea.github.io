@@ -507,7 +507,8 @@ const surfaceOptions = computed<{ id: SurfaceMode; label: string; badge: string 
           {{ t('palette.previewLabel') }}
         </label>
         <div
-          class="p-3.5 rounded-xl border border-surface-border bg-canvas transition-colors duration-200"
+          inert
+          class="p-3.5 rounded-xl border border-dashed border-surface-border bg-canvas transition-colors duration-200 select-none"
         >
           <div
             class="p-3 rounded-lg bg-surface-card border border-surface-border shadow-sm flex items-center justify-between gap-3"
@@ -538,12 +539,11 @@ const surfaceOptions = computed<{ id: SurfaceMode; label: string; badge: string 
                 </p>
               </div>
             </div>
-            <button
-              type="button"
-              class="px-2.5 py-1 text-xs font-medium rounded-md bg-primary-600 text-white hover:bg-primary-700 transition-colors shrink-0"
+            <span
+              class="px-2.5 py-1 text-xs font-medium rounded-md bg-primary-600 text-white shrink-0"
             >
               {{ t('palette.previewAction') }}
-            </button>
+            </span>
           </div>
         </div>
       </div>
