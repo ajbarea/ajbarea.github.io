@@ -36,6 +36,15 @@ test.describe('Navigation', () => {
     await expect(page.locator('#main-content')).toBeVisible()
   })
 
+  test('the hero Resume link opens the resume page, never a download', async ({ page }) => {
+    await page.goto('/')
+    const link = page.getByRole('link', { name: "View AJ Barea's resume" })
+    await expect(link).toHaveAttribute('href', '/resume')
+    await expect(link).not.toHaveAttribute('download')
+    await link.click()
+    await expect(page).toHaveURL(/\/resume/)
+  })
+
   test('withdraws /blog: no nav link, and the route lands on home', async ({ page }) => {
     // The articles were placeholder drafts, so the section is unpublished
     // rather than merely hidden. Both halves matter: a nav link that is gone

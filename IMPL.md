@@ -1,6 +1,19 @@
 # IMPL
 
-## Now (2026-11-15) — Palette Studio v2: Visual Atmosphere & Dynamic Surfaces (#154)
+## Now (2026-11-23) — Hero Resume link opens /resume; 2-page industry PDF (PR #163)
+
+- Slice: the hero "Resume" link goes to `/resume` (Industry view, with its PDF button) instead of
+  downloading the 4-page research PDF; `hero.resumeAria` in all four locales; the industry PDF synced
+  from cv#27 (merged: 2 pages, 0.65/0.7 in margins).
+- ✅ Opus review: the change is right; e2e test added (link is `/resume`, no `download`, click lands on
+  /resume). Live on a local `nuxt generate` build, headless Chromium at 1920 and 390, light and dark:
+  no download, no horizontal scroll, `/documents/AJ_Barea_Industry_Resume.pdf` served (200518 bytes).
+- 📋 Next: CI green, merge.
+- Verify: `npx playwright test e2e/navigation.spec.ts`; `npm run lint`; `npx vitest run`.
+
+---
+
+## Palette Studio v2: Visual Atmosphere & Dynamic Surfaces (#154)
 
 - **Slice**: Complete visual atmosphere transformation with palette-driven canvas (`primary-50` light, `primary-950` dark), resting icon tinting (`text-theme-icon`), unified Ambiance control (Light/System/Dark), surface tone modes (Palette Tinted, OLED Pure Black, Classic Neutral), fine-tune hue steppers (±5°), and interactive active ramp swatches.
 - **Done**:
