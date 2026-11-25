@@ -93,7 +93,8 @@ export const publications: Publication[] = [
     venue:
       'Thirty-Ninth Annual Conference on Innovative Applications of Artificial Intelligence (IAAI-27), Montréal, Canada (Oral)',
     year: 2027,
-    status: 'accepted'
+    status: 'accepted',
+    doi: '10.5281/zenodo.24537544'
   },
   {
     id: 'msr-2027-house-style',
