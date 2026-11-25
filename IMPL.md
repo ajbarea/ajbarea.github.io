@@ -1,5 +1,13 @@
 # IMPL
 
+## Now (2026-11-25) — IAAI-27 makesense entry links its Zenodo DOI (#167)
+
+- Slice: `iaai-27-makesense` in `app/data/publications.ts` gains `doi: '10.5281/zenodo.24537544'`
+  (the extended version, the DOI the camera-ready cites), so the publications list and the activity
+  feed link it like the other DOIs.
+- 📋 Verify live after merge: the IAAI-27 card on /resume shows "DOI 10.5281/zenodo.24537544".
+- The resume PDFs carry the same link once cv#28's PR merges and `make publish` syncs them.
+
 ## Now (2026-11-23) — Hero Resume link opens /resume; 2-page industry PDF (PR #163)
 
 - Slice: the hero "Resume" link goes to `/resume` (Industry view, with its PDF button) instead of
